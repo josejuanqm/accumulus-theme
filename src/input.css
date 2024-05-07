@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'TP Fors';
+  src: url('fonts/woff2/TT_Fors_Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/woff/TT_Fors_Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/ttf/TT-Fors-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+	font-family: 'TP Fors';
+  src: url('fonts/woff2/TT_Fors_Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/woff/TT_Fors_Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/ttf/TT_Fors_Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+	font-family: 'TP Fors';
+  src: url('fonts/woff2/TT_Fors_Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/woff/TT_Fors_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/ttf/TT_Fors_Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-weight: 700;
+   font-style: normal;
+}
+
+body {
+	font-family: 'TP Fors';
+	font-size: 16px;
+	@apply text-neutral-dgray;
+}
+
+.logoMarqueeSection {
+	width: 100%;
+	overflow: hidden;
+}
+
+.marquee {
+	display: flex;
+	align-items: center;
+	animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+	flex: 0 0 auto;
+  margin: 0 1vw;
+}
+
+@keyframes marquee {
+	0% { transform: translateX(0); }
+  100% { transform: translatex(-98%); }
+}
+
+a {
+  transition: .3s;
+}
+
+/* Components */
+@layer components {
+  .btn-primary {
+    @apply rounded-full bg-primary-glaciar text-cta-dark px-s3 py-s1 font-medium;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta bg-cta-dark hover:bg-white hover:text-cta-dark transition-all;
+  }
+  
+  .btn-tertiary {
+    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-cta-dark hover:text-primary-violet text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-transparent hover:bg-transparent hover:border-primary-violet transition-all;
+  }
+  
+  .btn-linear-white {
+    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-white bg-transparent hover:bg-white hover:text-primary-violet transition-all;
+  }
+
+  .section {
+    @apply px-s2 md:px-s4;
+  }
+}
+
+
+/* slick slider */
+
+/* slick dots */
+.slick-dots {
+  position: relative;
+  bottom: 0;
+  padding-top: 3rem;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+}
+
+.slick-dots li button { 
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  background-color: #d5d5d5;
+  border-radius: 2px;
+}
+
+.slick-dots li button:before {
+  content: '';
+}
+
+.slick-dots .slick-active button {
+  background-color: #444;
+}
+
+.slick-disabled {
+  opacity: .4;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width:768px) {
+  .slick-dots {
+    padding-top: 5rem;
+  }
+}
+
+
+/* Form */
+
+.wpforms-container {
+  @apply pt-s6 lg:pt-s4 !mb-0;
+}
+
+.wpforms-field-label {
+  @apply text-h3 uppercase font-semibold;
+}
+
+.wpforms-container input.wpforms-field-medium {
+  @apply !max-w-full bg-transparent border-b border-neutral-fnude p-3 outline-none text-neutral-dgray;
+}
+
+.wpforms-field-container {
+  @apply flex flex-col gap-s3;
+}
+
+.wpforms-container .wpforms-field {
+  @apply !p-0;
+}
+
+.wpforms-submit-container {
+  @apply pt-s16 lg:pt-s8;
+}
+
+.wpforms-submit {
+  @apply flex items-center justify-center h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-cta-dark hover:bg-transparent hover:text-cta-dark transition-all;
+}
