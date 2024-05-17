@@ -67,15 +67,19 @@ a {
   }
 
   .btn-secondary {
-    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta bg-cta-dark hover:bg-white hover:text-cta-dark transition-all;
+    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-cta-dark hover:bg-white hover:text-cta-dark transition-all;
   }
   
   .btn-tertiary {
     @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-cta-dark hover:text-primary-violet text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-transparent hover:bg-transparent hover:border-primary-violet transition-all;
   }
   
-  .btn-linear-white {
-    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-white bg-transparent hover:bg-white hover:text-primary-violet transition-all;
+  .btn-tertiary-white {
+    @apply flex items-center justify-center h-[48px] md:h-[82px] lg:h-[45px] px-10 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-white bg-transparent hover:bg-transparent hover:text-secondary-aqua hover:border-secondary-aqua transition-all;
+  }
+
+  .btn-text-link {
+    @apply text-textlink text-neutral-dgray hover:text-primary-violet;
   }
 
   .section {
@@ -128,6 +132,54 @@ a {
   .slick-dots {
     padding-top: 5rem;
   }
+}
+
+/* Filters */
+
+/* .search-filter-results { */
+#search-filter-results-85 {
+  @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
+}
+
+#search-filter-results-94 {
+  @apply col-span-12 lg:col-span-7;
+}
+
+#search-filter-results-91 {
+  @apply col-span-12 grid grid-cols-12 gap-s2;
+}
+
+.searchandfilter {
+  @apply col-span-12 grid grid-cols-12;
+}
+
+.searchandfilter > ul {
+  @apply col-span-12 grid grid-cols-12;
+}
+
+.searchandfilter > ul li {
+  @apply col-span-12;
+}
+
+.searchandfilter > ul li > ul {
+  @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
+}
+
+.searchandfilter > ul li > ul li {
+  @apply col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] rounded-button;
+}
+
+.searchandfilter > ul li > ul li label {
+  @apply block w-full !p-0 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center uppercase cursor-pointer;
+}
+
+
+.searchandfilter > ul li > ul li input {
+  @apply hidden;
+}
+
+.sf-option-active {
+  @apply bg-neutral-dgray text-neutral-nwhite;
 }
 
 

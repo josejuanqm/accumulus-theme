@@ -86,7 +86,7 @@
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_first_description; ?></p>
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_second_description; ?></p>
 			<div class="col-span-12 lg:col-span-3 lg:col-start-4">
-				<a href="<?php echo $what_link_about; ?>" class="btn-linear-white">About Accumulus</a>
+				<a href="<?php echo $what_link_about; ?>" class="btn-tertiary-white">About Accumulus</a>
 			</div>
 
 		</div>

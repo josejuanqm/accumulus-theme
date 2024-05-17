@@ -17,7 +17,7 @@
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
 
-      <div class="col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
+      <!-- <div class="col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
 
         <div class="relative">
           <img class="block" src="<?php bloginfo('template_url'); ?>/images/resources/thumb-main-resources.png" alt="title" />
@@ -42,7 +42,8 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
+      <?php echo do_shortcode('[searchandfilter id="94" show="results"]'); ?>
       <!-- Main post -->
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-s4">
@@ -51,73 +52,8 @@
 
         <div class="grid grid-cols-12 gap-s2">
 
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">1</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.8867 2.66722V10.6669H11.5536V1.00132C11.5536 0.448013 11.1056 0 10.5523 0H1.88804C1.33473 0 0.886719 0.448013 0.886719 1.00132V10.6669C0.886719 11.403 1.48374 12 2.21983 12H12.8867C13.6228 12 14.2198 11.403 14.2198 10.6669V2.66722H12.8867ZM2.21983 10.6669V1.33311H10.2195V10.6659H2.21983V10.6669Z" fill="#444444"/>
-                    <path d="M8.88423 7.99854H3.55078V9.33165H8.88423V7.99854Z" fill="#444444"/>
-                    <path d="M8.88423 5.33398H3.55078V6.6671H8.88423V5.33398Z" fill="#444444"/>
-                    <path d="M8.88423 2.66602H3.55078V3.99913H8.88423V2.66602Z" fill="#444444"/>
-                  </svg>
-                  ARTICLE
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/1-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
-
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">2</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.38681 11.9983H5.38589V5.99902H2.38681C1.55872 5.99902 0.886719 6.67102 0.886719 7.49911V10.4993C0.886719 11.3274 1.55872 11.9994 2.38681 11.9994V11.9983ZM2.38681 8.99921V7.49911H3.8869V10.4993H2.38681V8.99921Z" fill="#444444"/>
-                    <path d="M11.3868 5.99916H9.88672V11.9984H12.8858C13.7139 11.9984 14.3859 11.3264 14.3859 10.4983V7.49814C14.3859 6.67004 13.7139 5.99805 12.8858 5.99805H11.3857L11.3868 5.99916ZM12.8869 8.99934V10.4994H11.3868V7.49925H12.8869V8.99934Z" fill="#444444"/>
-                    <path d="M5.38153 0H3.88144C3.05335 0 2.38135 0.671998 2.38135 1.50009V4.50028H3.88144V1.50009H11.3808V4.50028H12.8809V1.50009C12.8809 0.671998 12.2089 0 11.3808 0H5.38153Z" fill="#444444"/>
-                  </svg>
-                  Podcast
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/2-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
-
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">3</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.99934 10.6674H1.33257V1.33355H2.66612V0H1.27942C0.572788 0 0 0.572788 0 1.27942V10.631C0 11.3869 0.613136 12 1.36898 12H7.9649C8.72074 12 9.33388 11.3869 9.33388 10.631V5.33322H8.00033V10.6664L7.99934 10.6674Z" fill="#444444"/>
-                    <path d="M9.09657 3.21823L5.8803 0.000976562H3.99463H3.99561V5.3342H9.32883V3.44951L9.09657 3.21823ZM5.32818 4.00065V1.33453L6.67945 2.68678L7.9943 4.00065H5.32818Z" fill="#444444"/>
-                  </svg>
-                  White Paper
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/3-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
-
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">4</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.442 0H2.3314C1.53389 0 0.886719 0.647175 0.886719 1.44468V13H2.3314V1.44468H12.442V11.5553H3.77502V13H12.442C13.2395 13 13.8867 12.3528 13.8867 11.5553V1.44468C13.8867 0.647175 13.2395 0 12.442 0Z" fill="#444444"/>
-                    <path d="M6.57088 3.94824V3.95784H5.46631V9.09792H6.50158L9.65215 6.99753V6.00278L6.57088 3.94824ZM6.85235 5.80127L7.90041 6.49962L6.85235 7.19798V5.80021V5.80127Z" fill="#444444"/>
-                    <path d="M12.442 0H2.3314C1.53389 0 0.886719 0.647175 0.886719 1.44468V13H2.3314V1.44468H12.442V11.5553H3.77502V13H12.442C13.2395 13 13.8867 12.3528 13.8867 11.5553V1.44468C13.8867 0.647175 13.2395 0 12.442 0Z" fill="#444444"/>
-                    <path d="M6.57088 3.94824V3.95784H5.46631V9.09792H6.50158L9.65215 6.99753V6.00278L6.57088 3.94824ZM6.85235 5.80127L7.90041 6.49962L6.85235 7.19798V5.80021V5.80127Z" fill="#444444"/>
-                  </svg>
-                  Media
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/4-mini-thumb.png" alt="" />
-          </div>
+          <?php echo do_shortcode('[searchandfilter id="91" show="results"]'); ?>
+          
           <!-- cat -->
 
         </div>
@@ -132,6 +68,9 @@
 </section>
 <!-- Main banner -->
 
+<?php
+  $purpleSection = get_field('purple_section');
+?>
 
 <section class="section w-full pt-s8 md:pt-s10 lg:pt-s8 pb-s8 md:pb-s2 lg:pb-s4 bg-primary-violet bg-no-repeat bg-cover bg-left-top text-white" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/bg-purple.png);">
 
@@ -139,18 +78,18 @@
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-0">
 
-      <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">LOREM IPSUM</h4>
+      <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase"><?php echo $purpleSection['eye_text']; ?></h4>
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Lorem Ipsum Dolor</h2>
-        <h2 class="col-span-3 md:col-span-5 col-start-4 md:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Sit Amet</h2>
+        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $purpleSection['first_line_title']; ?></h2>
+        <h2 class="col-span-3 md:col-span-5 col-start-4 md:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $purpleSection['second_line_title']; ?></h2>
       </div>
 
-      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-5 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
-      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
+      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-5 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $purpleSection['first_paragraph']; ?></p>
+      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $purpleSection['second_paragraph']; ?></p>
 
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-5 pt-s5 md:pt-s6 md:pb-s10 lg:pb-s8">
-				<a href="#" class="btn-linear-white">Read More</a>
+				<a href="<?php echo $purpleSection['url_cta']; ?>" class="btn-tertiary-white">Read More</a>
 			</div>
 
     </div>
@@ -167,57 +106,23 @@
 
 		<div class="grid grid-cols-12 gap-s2">
 
-      <div class="col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 gap-s2">
+      <!-- <div class="col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 gap-s2">
 
         <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite" href="#">All resources</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">EBOOKS & WHITE PAPERS</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">THOUGHT LEADERSHIP</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">MEDIA</a>
+        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">EBOOKS & WHITE PAPERS</a>
+        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">THOUGHT LEADERSHIP</a>
+        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">MEDIA</a>
 
-      </div>
+      </div> -->
+
+      <?php echo do_shortcode('[searchandfilter id="85"]'); ?>
+
       <div class="col-span-12 pt-0 pb-s4 md:pt-s1 md:pb-s10 lg:pb-s6">
         <h2 class="text-h2Mobile md:text-h2Tablet lg:text-h2">Latest Articles</h2>
       </div>
 
-      <div class="card col-span-12 md:col-span-6 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden bg-primary-glaciar">
-        <a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-        <div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] lg:h-full bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/mask-group8.png)">
-          <!-- <img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
-        </div>
-        <div class="flex flex-col lg:w-1/2 lg:justify-end p-7 gap-2">
-          <div class="flex items-center gap-3 text-neutral-dgray uppercase">
-            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.8327 0H1.72202C0.924517 0 0.277344 0.647175 0.277344 1.44468V13H1.72202V1.44468H11.8327V11.5553H3.16564V13H11.8327C12.6302 13 13.2773 12.3528 13.2773 11.5553V1.44468C13.2773 0.647175 12.6302 0 11.8327 0Z" fill="#444444"/>
-              <path d="M5.9615 3.94824V3.95784H4.85693V9.09792H5.8922L9.04278 6.99753V6.00278L5.9615 3.94824ZM6.24297 5.80127L7.29104 6.49962L6.24297 7.19798V5.80021V5.80127Z" fill="#444444"/>
-              <path d="M11.8327 0H1.72202C0.924517 0 0.277344 0.647175 0.277344 1.44468V13H1.72202V1.44468H11.8327V11.5553H3.16564V13H11.8327C12.6302 13 13.2773 12.3528 13.2773 11.5553V1.44468C13.2773 0.647175 12.6302 0 11.8327 0Z" fill="#444444"/>
-              <path d="M5.9615 3.94824V3.95784H4.85693V9.09792H5.8922L9.04278 6.99753V6.00278L5.9615 3.94824ZM6.24297 5.80127L7.29104 6.49962L6.24297 7.19798V5.80021V5.80127Z" fill="#444444"/>
-            </svg>
-            <span>Events</span>
-          </div>
-          <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
-        </div>
-      </div>
-
-      <?php for($i=1;$i<=7;$i++): ?>
-      <div class="<?php echo $i; ?> card col-span-12 md:col-span-6 lg:col-span-4 relative w-full rounded-card overflow-hidden <?php if ($i===1 || $i === 6): ?> bg-secondary-green text-neutral-nwhite <?php elseif ($i===2 || $i===4): ?> bg-primary-glaciar text-neutral-dgray <?php elseif ($i===3 || $i===5 || $i===7): ?> bg-neutral-offwhite text-neutral-dgray<?php endif; ?>">
-        <a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-        <div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/mask-group<?php echo $i; ?>.png)">
-          <!-- <img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
-        </div>
-        <div class="flex flex-col p-7 gap-2">
-          <div class="flex items-center gap-3 uppercase">
-            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.2773 2.88949V11.5558H11.8331V1.08477C11.8331 0.485348 11.3478 0 10.7484 0H1.36211C0.762687 0 0.277344 0.485348 0.277344 1.08477V11.5558C0.277344 12.3532 0.924114 13 1.72155 13H13.2773C14.0748 13 14.7215 12.3532 14.7215 11.5558V2.88949H13.2773ZM1.72155 11.5558V1.44421H10.3879V11.5547H1.72155V11.5558Z" class=" fill-current"/>
-              <path d="M8.94196 8.66504H3.16406V10.1092H8.94196V8.66504Z" class="fill-current"/>
-              <path d="M8.94196 5.77832H3.16406V7.22253H8.94196V5.77832Z" class="fill-current"/>
-              <path d="M8.94196 2.8877H3.16406V4.3319H8.94196V2.8877Z" class="fill-current"/>
-            </svg>
-            <span>Category</span>
-          </div>
-          <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
-        </div>
-      </div>
-      <?php endfor; ?>
+      <?php echo do_shortcode('[searchandfilter id="85" show="results"]'); ?>
+      <!-- Displaying data -->
 
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
         <a class="btn-secondary" href="#">See More</a>
@@ -229,6 +134,9 @@
 
 </section>
 
+<?php
+  $eventSection = get_field('events_section');
+?>
 
 <section class="section w-full lg:pt-s8 pb-s8 md:pb-s10 lg:pb-s4 bg-secondary-carbon text-white relative">
 
@@ -236,20 +144,20 @@
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-4 lg:gap-y-0 pt-[320px] lg:pt-0">
 
-      <img class="absolute top-0 left-0 w-full h-[320px] lg:max-w-[500px] lg:h-full" src="<?php bloginfo('template_url'); ?>/images/resources/thumb-main-events.png" alt="Events" />
+      <img class="absolute top-0 left-0 w-full h-[320px] lg:max-w-[500px] lg:h-full" src="<?php echo $eventSection['image']; ?>" alt="Events" />
 
       <h4 class="col-span-4 col-start-1 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-6 pt-s4 md:pt-s8 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">EVENTS</h4>
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s6 md:pt-s5 md:pb-s5">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Lorem Ipsum Dolor</h2>
-        <h2 class="col-span-3 md:col-span-6 lg:col-span-3 col-start-4 md:col-start-6 lg:col-start-10 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Sit Amet</h2>
+        <h2 class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['first_line_title']; ?></h2>
+        <h2 class="col-span-3 md:col-span-6 lg:col-span-3 col-start-4 md:col-start-6 lg:col-start-10 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?></h2>
       </div>
 
-      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-6 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
-      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
+      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-6 text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $eventSection['first_paragraph']; ?></p>
+      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $eventSection['second_paragraph']; ?></p>
       
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-6 pt-s5 lg:pb-s8 md:pt-s5">
-				<a href="#" class="btn-linear-white">Read More</a>
+				<a href="<?php echo $eventSection['link_cta']; ?>" class="btn-tertiary-white">Read More</a>
 			</div>
 
     </div>
