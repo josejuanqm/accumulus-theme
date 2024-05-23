@@ -99,7 +99,7 @@ if ( $query->have_posts() )
             </a>
             <span class="text-b2 text-neutral-dgray">|</span>
             <a href="#" class="flex items-center gap-s1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-dgray uppercase">
-              By Lorem Ipsum
+              By <?php echo get_the_author(); ?>
             </a>
           </div>
         </div>

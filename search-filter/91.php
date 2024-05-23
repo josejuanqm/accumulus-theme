@@ -53,7 +53,7 @@ if ( $query->have_posts() )
 			endif;
 	?>
 
-      <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
+        <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
           <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
               <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
               <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase text-neutral-dgray <?php echo $categorySlug; ?>">
