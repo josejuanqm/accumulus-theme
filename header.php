@@ -43,7 +43,7 @@
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
 
-	<header class="sticky top-0 right-0 left-0 bg-neutral-nwhite z-50">
+	<header class="fixed top-0 right-0 left-0 bg-neutral-nwhite z-50">
 		<section class="section hidden lg:block py-s2 px-s2 md:px-s4 border-b border-b-neutral-200">
 			<div class="container mx-auto">
 				<div class="grid grid-cols-12 gap-x-s3">

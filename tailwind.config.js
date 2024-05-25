@@ -265,7 +265,7 @@ module.exports = {
 					'1.25rem',
 					{
 						fontWeight: '400',
-						lineHeight: '100%',
+						lineHeight: '28px',
 						letterSpacing: '0'
 					}
 				],
@@ -281,7 +281,7 @@ module.exports = {
 					'1.125rem',
 					{
 						fontWeight: '400',
-						lineHeight: 'auto',
+						lineHeight: '120%',
 						letterSpacing: '0'
 					}
 				],

@@ -29,7 +29,7 @@ get_header();
 
 				<div class="col-span-12 lg:col-span-4 lg:col-start-8 flex flex-col gap-s8 lg:gap-s4">
 					<p class="text-b2 text-neutral-nwhite max-lg:max-w-[380px]">This page has moved, is under construction, or doesn’t exist.</p>
-					<a class="btn-linear-white" href="<?php echo get_home_url(); ?>">Back to Home</a>
+					<a class="btn-tertiary-white" href="<?php echo get_home_url(); ?>">Back to Home</a>
 				</div>
 
 			</div>

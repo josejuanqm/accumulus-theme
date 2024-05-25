@@ -83,3 +83,30 @@
   </div>
   <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/4-mini-thumb.png" alt="" />
 </div>
+
+<!-- Featured story -->
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
+  <div class="relative">
+    <img class="block" src="<?php bloginfo('template_url'); ?>/images/resources/thumb-main-resources.png" alt="title" />
+    <h1 class="absolute bottom-s3 left-0  pl-s6 text-h1Mobile md:text-h1Tablet lg:text-h1 text-neutral-nwhite">Lorem Ipsum Dolor</h1>
+  </div>
+
+  <div class="flex flex-col gap-s3">
+    <p class="text-b2Mobile md:text-b2Tablet lg:text-b2">We’re a global, nonprofit industry association developing a groundbreaking SaaS platform to accelerate the exchange of information between those who develop medicines and those who review and approve them.</p>
+    <div class="flex gap-s2">
+      <a href="#" class="flex items-center gap-s1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-dgray uppercase">
+        <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.41033 15.9983H6.40921V7.99902H2.41033C1.30618 7.99902 0.410156 8.89504 0.410156 9.9992V13.9996C0.410156 15.1037 1.30618 15.9997 2.41033 15.9997V15.9983ZM2.41033 11.9994V9.9992H4.41051V13.9996H2.41033V11.9994Z" fill="#444444"/>
+          <path d="M14.4103 7.99855H12.4102V15.9978H16.409C17.5132 15.9978 18.4092 15.1018 18.4092 13.9976V9.99725C18.4092 8.89309 17.5132 7.99707 16.409 7.99707H14.4089L14.4103 7.99855ZM16.4105 11.9989V13.9991H14.4103V9.99872H16.4105V11.9989Z" fill="#444444"/>
+          <path d="M6.4027 0H4.40252C3.29836 0 2.40234 0.896021 2.40234 2.00018V6.00054H4.40252V2.00018H14.4019V6.00054H16.4021V2.00018C16.4021 0.896021 15.5061 0 14.4019 0H6.4027Z" fill="#444444"/>
+        </svg>
+        PODCAST
+      </a>
+      <span class="text-b2 text-neutral-dgray">|</span>
+      <a href="#" class="flex items-center gap-s1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-dgray uppercase">
+        By Lorem Ipsum
+      </a>
+    </div>
+  </div>
+
+</div>
