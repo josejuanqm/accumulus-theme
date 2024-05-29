@@ -19,7 +19,7 @@
 	$marquee = get_field('marquee_images');
 ?>
 
-<section class="section w-full pt-s11 lg:pt-s8 pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo $bg_image_main ?>)">
+<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo $bg_image_main ?>)">
 
 	<div class="container mx-auto">
 
