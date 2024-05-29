@@ -267,6 +267,13 @@
 
       <?php echo do_shortcode('[searchandfilter id="85" show="results"]'); ?>
       <!-- Displaying data -->
+      <!-- <ul class="nav">
+          <li id="term-88"><a class="yourtermname ajax" onclick="term_ajax_get('88');" href="#">Your Term Name</a></li>
+          <li id="term-2"><a class="yourtermname ajax" onclick="term_ajax_get('2');" href="#">Your Term Name</a></li>
+      </ul>
+      <div id="category-post-content">
+        <div id="loading-animation">cargando</div>
+      </div> -->
 
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
         <a class="btn-secondary" href="#">See More</a>
@@ -392,3 +399,5 @@
 	</div>
 </section>
 <!-- Events carousel -->
+
+
