@@ -11,7 +11,7 @@
 
 
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
+<section class="section w-full pt-s9 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
 
 	<div class="container mx-auto">
 
@@ -176,7 +176,7 @@
                 <?php endif; ?>
                 <?php echo $category; ?>
               </span>
-              <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3"><?php the_title(); ?></h3>
+              <h3 class="text-h3Mobile md:text-h3"><?php the_title(); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
@@ -244,37 +244,53 @@
 <!-- Purple section -->
 
 
+<?php
+
+$categories = array();
+$args = array(
+  'taxonomy' => 'resources-taxonomies',
+  'style' => 'list',
+  'hide_empty' => 1,
+);
+
+$result = get_categories($args);
+
+// var_dump($result);
+if (count($result) > 0 ){
+  $categories = $result;
+}
+
+?>
+
 <section class="section w-full pt-s8 pb-s8 md:pb-s10 md:pt-s10 lg:pt-s8 lg:pb-s8 bg-white">
 
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-s2">
 
-      <!-- <div class="col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 gap-s2">
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4">
 
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite" href="#">All resources</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">EBOOKS & WHITE PAPERS</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">THOUGHT LEADERSHIP</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center btn-text-link" href="#">MEDIA</a>
+        <input type="hidden" id="category" value="0" data-catName="Last Articles">
 
-      </div> -->
+        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite">All</a>
 
-      <?php echo do_shortcode('[searchandfilter id="85"]'); ?>
+        <?php foreach($categories as $category): ?>
+        <a href="javascript:void(0)" data-id="<?php echo $category->term_id; ?>" data-name="Latest <?php echo $category->name; ?>" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link"><?= $category->name ?></a>
+        <?php endforeach; ?>
 
-      <div class="col-span-12 pt-0 pb-s4 md:pt-s1 md:pb-s10 lg:pb-s6">
-        <h2 class="text-h2Mobile md:text-h2Tablet lg:text-h2">Latest Articles</h2>
       </div>
 
-      <?php echo do_shortcode('[searchandfilter id="85" show="results"]'); ?>
+      <div class="col-span-12 pt-0 pb-s4 md:pt-s1 md:pb-s10 lg:pb-s6">
+        <h2 id="title-section" class="text-h2Mobile md:text-h2Tablet lg:text-h2">Latest Articles</h2>
+      </div>
       <!-- Displaying data -->
-      <!-- <ul class="nav">
-          <li id="term-88"><a class="yourtermname ajax" onclick="term_ajax_get('88');" href="#">Your Term Name</a></li>
-          <li id="term-2"><a class="yourtermname ajax" onclick="term_ajax_get('2');" href="#">Your Term Name</a></li>
-      </ul>
-      <div id="category-post-content">
-        <div id="loading-animation">cargando</div>
-      </div> -->
 
+      <div id="category-post-content">
+      </div> 
+      <div class="post-paginator">
+          <ul class="pagination" id="paginador-blog">
+          </ul>
+      </div>
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
         <a class="btn-secondary" href="#">See More</a>
       </div>

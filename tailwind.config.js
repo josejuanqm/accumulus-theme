@@ -366,6 +366,7 @@ module.exports = {
 					'green': '#008277',
 					'carbon': '#345D61',
 					'aqua': '#d2e9ea',
+					'darkaqua':'#AFD1D2',
 					'lilac': '#f3f5fe',
 					'mpurple': '#c2a2ff',
 					'glaciar': '#acefff',

@@ -137,7 +137,8 @@ a {
 /* Filters */
 
 /* .search-filter-results { */
-#search-filter-results-85 {
+#search-filter-results-85,
+#category-post-content {
   @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
 }
 
