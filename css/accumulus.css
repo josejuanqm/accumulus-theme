@@ -1173,11 +1173,6 @@ video {
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
-.bg-\[\#AFD1D2\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(175 209 210 / var(--tw-bg-opacity));
-}
-
 .bg-neutral-dgray {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
@@ -1233,7 +1228,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-secondary-darkaqua {
+.bg-secondary-deepAqua {
   --tw-bg-opacity: 1;
   background-color: rgb(175 209 210 / var(--tw-bg-opacity));
 }

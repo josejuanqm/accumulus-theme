@@ -70,7 +70,7 @@
                 $url_new_realice = get_field('url_new_realice');
           ?>
 
-          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-darkaqua text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
+          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepAqua text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
             
             <?php if ($categorySlug == 'media-coverage'): ?>
               <a href="<?php echo $url_new_realice; ?>" target="_blank" class="absolute top-0 left-0 w-full h-full z-10"></a>
