@@ -236,6 +236,15 @@ module.exports = {
 					}
 				],
 
+				h10: [
+					'1.625rem',
+					{
+						fontWeight: '500',
+						lineHeight: '120%',
+						letterSpacing: '0'
+					}
+				],
+
 				b1: [
 					'1.75rem',
 					{
@@ -438,6 +447,10 @@ module.exports = {
         'what-we-do-desktop': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png')",
         'what-we-do-tablet': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png')",
         'what-we-do-mobile': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
+        // News
+				'news-banner-desktop': "url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp')",
+        'news-banner-tablet': "url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp')",
+        'news-banner-mobile': "url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp')",
       }
 		},
   },

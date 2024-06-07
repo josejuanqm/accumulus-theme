@@ -344,7 +344,7 @@ if (count($result) > 0 ){
 
             // WP_Query arguments
             $args = array(
-              'post_type'              => array( 'events' ),
+              'post_type'              => array( 'event' ),
               'nopaging'               => true,
               'posts_per_page'         => '9',
             );
