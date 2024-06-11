@@ -1233,12 +1233,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-what-we-do-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
 .bg-news-banner-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
+}
+
+.bg-what-we-do-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
 .bg-contain {
@@ -1540,13 +1540,6 @@ video {
   font-weight: 400;
 }
 
-.text-h3 {
-  font-size: 1.75rem;
-  line-height: 120%;
-  letter-spacing: 0;
-  font-weight: 500;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -1588,12 +1581,12 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .filter {
@@ -2075,10 +2068,6 @@ a {
     grid-column: span 6 / span 6;
   }
 
-  .md\:col-span-7 {
-    grid-column: span 7 / span 7;
-  }
-
   .md\:col-start-1 {
     grid-column-start: 1;
   }
@@ -2175,12 +2164,12 @@ a {
     row-gap: 4rem;
   }
 
-  .md\:bg-what-we-do-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
-  }
-
   .md\:bg-news-banner-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp');
+  }
+
+  .md\:bg-what-we-do-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
 
   .md\:px-0 {
@@ -2606,12 +2595,12 @@ a {
     row-gap: 0px;
   }
 
-  .lg\:bg-what-we-do-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
-  }
-
   .lg\:bg-news-banner-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
+  }
+
+  .lg\:bg-what-we-do-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
   .lg\:bg-contain {
