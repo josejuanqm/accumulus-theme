@@ -124,6 +124,7 @@
               'post_type'              => array( 'resource-cms' ),
               'nopaging'               => true,
               'posts_per_page'         => '9',
+              'post__not_in' => array( get_the_ID() )
             );
 
             // The Query

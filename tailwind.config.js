@@ -447,10 +447,21 @@ module.exports = {
         'what-we-do-desktop': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png')",
         'what-we-do-tablet': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png')",
         'what-we-do-mobile': "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
+
         // News
 				'news-banner-desktop': "url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp')",
         'news-banner-tablet': "url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp')",
         'news-banner-mobile': "url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp')",
+
+				// Get started page
+				'get-started-desktop': "url('/wp-content/themes/accumulus-website/images/get-started/main-banner-desktop.png')",
+        'get-started-tablet': "url('/wp-content/themes/accumulus-website/images/get-started/main-banner-tablet.png')",
+        'get-started-mobile': "url('/wp-content/themes/accumulus-website/images/get-started/main-banner-mobile.png')",
+
+				// Get started block
+				'get-started-section-desktop': "url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png')",
+        'get-started-section-tablet': "url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png')",
+        'get-started-section-mobile': "url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png')",
       }
 		},
   },

@@ -16,10 +16,9 @@
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
 	$link_learn_more = get_field('link_learn_more');
-	$marquee = get_field('marquee_images');
 ?>
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo $bg_image_main ?>)">
+<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-get-started-mobile md:bg-get-started-tablet lg:bg-get-started-desktop bg-cover bg-no-repeat bg-center">
 
 	<div class="container mx-auto">
 
@@ -32,8 +31,7 @@
 				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary">Lear more</a>
-				<a href="#" class="btn-tertiary">About Accumulus</a>
+				<a href="<?php echo $link_learn_more; ?>" class="btn-tertiary-white">Our mission</a>
 			</div>
 
 		</div>
@@ -45,11 +43,7 @@
 
 
 <?php
-// Fields why accumulus
-
-$why_title_tag = get_field('why_title_tag');
-$why_first_line_title = get_field('why_first_line_title');
-$why_second_line_title = get_field('why_second_line_title');
+// Fields values
 $why_values = get_field('why_values');
 
 ?>
@@ -59,11 +53,9 @@ $why_values = get_field('why_values');
 
 	<div class="container mx-auto">
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s8">
-			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase"><?php echo $why_title_tag; ?></h4>
-			<h2 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $why_first_line_title; ?></h2>
-			<h2 class="col-span-10 col-start-2 lg:col-start-3 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $why_second_line_title; ?></h2>
-		</div>
+    <div class="w-full pb-s6">
+      <h4 class="text-h4Mobile md:text-h4Tablet lg:text-h4">HOW YOU CAN GET INVOLVED</h4>
+    </div>
 		
 		<?php
 			// Values view
@@ -78,8 +70,8 @@ $why_values = get_field('why_values');
 				if($i % 2 == 1): 	
 			?>
 
-				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12">
-					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col gap-s3">
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12 last-of-type:lg:!pb-0">
+					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s3">
 
 						<?php  foreach($row['card_item'] as $card) : ?>
 
@@ -105,7 +97,7 @@ $why_values = get_field('why_values');
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'cta'): ?>
-								<a class="btn-text-link" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+								<a class="btn-tertiary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -139,7 +131,7 @@ $why_values = get_field('why_values');
 						<?php endforeach; ?>
 
 					</div>
-					<div class="col-span-12 md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-8 flex flex-col gap-s3">
+					<div class="col-span-12 md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-8 flex flex-col items-start gap-s3">
 
 						<?php foreach($row['card_item'] as $card) : ?>
 
@@ -165,7 +157,7 @@ $why_values = get_field('why_values');
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'cta'): ?>
-								<a class="btn-text-link" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+								<a class="btn-tertiary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -184,50 +176,7 @@ $why_values = get_field('why_values');
 
 </section>
 
-<!-- Why accumulus -->
+<!-- Values -->
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
-	<div class="container mx-auto">
-		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Related Resources</h2>
-			<div class="relative w-full">
-				<div class="related">
-					<?php for($i=1;$i<7;$i++): ?>
-						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
-							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
-								<img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" />
-							</div>
-							<div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
-								<div class="flex items-center gap-3 text-primary-violet uppercase">
-									<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M5.2189 4.95996H3.59375V6.58511H5.2189V4.95996Z" fill="#411693"/>
-										<path d="M5.2189 8.20996H3.59375V9.83511H5.2189V8.20996Z" fill="#411693"/>
-										<path d="M8.4689 8.20996H6.84375V9.83511H8.4689V8.20996Z" fill="#411693"/>
-										<path d="M11.7169 8.20996H10.0918V9.83511H11.7169V8.20996Z" fill="#411693"/>
-										<path d="M8.4689 4.95996H6.84375V6.58511H8.4689V4.95996Z" fill="#411693"/>
-										<path d="M11.7169 4.95996H10.0918V6.58511H11.7169V4.95996Z" fill="#411693"/>
-										<path d="M13.3425 1.71011H11.7174V0.0849609H10.0923V1.71011H5.218V0.0849609H3.59285V1.71011H1.9677C1.07177 1.71011 0.34375 2.43693 0.34375 3.33406V11.4586H1.9689V3.33526H13.3425V11.4598H3.59285V13.085H13.3425C14.2397 13.085 14.9677 12.3569 14.9677 11.4598V3.33526C14.9677 2.43813 14.2397 1.71011 13.3425 1.71011Z" fill="#411693"/>
-									</svg>
-									<span>Events</span>
-								</div>
-								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
-							</div>
-						</div>
-						<?php endfor; ?>
-				</div>
-					
-				<div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4 max-sm:pt-s6 max-lg:pt-s10">
-					<div class="prev lg:absolute lg:-left-20 lg:top-1/4 cursor-pointer">
-						<img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
-					</div>
-					<div class="next lg:absolute lg:-right-20 lg:top-1/4 cursor-pointer">
-						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Related resources -->
+<?php include get_theme_file_path( 'components/get-started-section.php' ); ?>
+<!-- Get statted section -->

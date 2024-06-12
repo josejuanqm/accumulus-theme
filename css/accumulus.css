@@ -580,6 +580,7 @@ video {
 .btn-secondary {
   display: flex;
   height: 48px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
@@ -588,8 +589,8 @@ video {
   border-color: rgb(32 32 32 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(32 32 32 / var(--tw-bg-opacity));
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-align: center;
@@ -624,6 +625,7 @@ video {
 @media (min-width: 1025px) {
   .btn-secondary {
     height: 45px;
+    width: auto;
     font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
@@ -634,6 +636,7 @@ video {
 .btn-tertiary {
   display: flex;
   height: 48px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
@@ -641,8 +644,8 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(32 32 32 / var(--tw-border-opacity));
   background-color: transparent;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-align: center;
@@ -678,6 +681,7 @@ video {
 @media (min-width: 1025px) {
   .btn-tertiary {
     height: 45px;
+    width: auto;
     font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
@@ -688,15 +692,15 @@ video {
 .btn-tertiary-white {
   display: flex;
   height: 48px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  background-color: transparent;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-align: center;
@@ -732,6 +736,7 @@ video {
 @media (min-width: 1025px) {
   .btn-tertiary-white {
     height: 45px;
+    width: auto;
     font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
@@ -1144,6 +1149,10 @@ video {
   row-gap: 3rem;
 }
 
+.gap-y-s3 {
+  row-gap: 1.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1233,12 +1242,25 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-nude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
+}
+
+.bg-get-started-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-mobile.png');
+}
+
 .bg-news-banner-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
 }
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
+}
+
+.bg-get-started-section-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
 
 .bg-contain {
@@ -1559,6 +1581,11 @@ video {
 .text-neutral-dgray {
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.text-neutral-fnude {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
 }
 
 .text-neutral-nwhite {
@@ -2164,12 +2191,24 @@ a {
     row-gap: 4rem;
   }
 
+  .md\:gap-y-s6 {
+    row-gap: 3rem;
+  }
+
+  .md\:bg-get-started-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-tablet.png');
+  }
+
   .md\:bg-news-banner-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp');
   }
 
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
+  }
+
+  .md\:bg-get-started-section-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
   }
 
   .md\:px-0 {
@@ -2595,12 +2634,20 @@ a {
     row-gap: 0px;
   }
 
+  .lg\:bg-get-started-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-desktop.png');
+  }
+
   .lg\:bg-news-banner-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
   }
 
   .lg\:bg-what-we-do-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
+  }
+
+  .lg\:bg-get-started-section-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
   }
 
   .lg\:bg-contain {

@@ -661,7 +661,6 @@ function getNews() {
 
 
 
-
 add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
@@ -749,7 +748,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_666200ea823a4',
@@ -792,7 +791,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_666785a13b672',
@@ -919,7 +918,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_66175352040c8',
@@ -1117,7 +1116,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_665d32031bdca',
@@ -1167,7 +1166,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_6642e1ea9e53a',
@@ -1465,7 +1464,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_66564927d29db',
@@ -1720,6 +1719,13 @@ add_action( 'acf/include_fields', function() {
 				'value' => 'page-home.php',
 			),
 		),
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-get-started.php',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
@@ -1730,7 +1736,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_661b23ef6a60f',
@@ -1858,7 +1864,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 
 	acf_add_local_field_group( array(
 	'key' => 'group_661f406de42bf',
@@ -1943,7 +1949,7 @@ add_action( 'acf/include_fields', function() {
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-	) );
+) );
 } );
 
 add_action( 'init', function() {
