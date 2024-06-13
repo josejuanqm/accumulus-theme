@@ -70,6 +70,10 @@ a {
     @apply flex items-center justify-center w-full lg:w-auto h-[48px] md:h-[82px] lg:h-[45px] px-s3 py-3 rounded-full text-center text-white text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-cta-dark hover:bg-white hover:text-cta-dark transition-all;
   }
   
+  .btn-secondary-inverted {
+    @apply flex items-center justify-center w-full lg:w-auto h-[48px] md:h-[82px] lg:h-[45px] px-s3 py-3 rounded-full text-center text-ctaMobile md:text-ctaTablet lg:text-cta border bg-white hover:bg-cta-dark text-cta-dark hover:text-white border-white hover:border-cta-dark transition-all;
+  }
+  
   .btn-tertiary {
     @apply flex items-center justify-center w-full lg:w-auto h-[48px] md:h-[82px] lg:h-[45px] px-s3 py-3 rounded-full text-center text-cta-dark hover:text-primary-violet text-ctaMobile md:text-ctaTablet lg:text-cta border border-cta-dark bg-transparent hover:bg-transparent hover:border-primary-violet transition-all;
   }
