@@ -1050,6 +1050,10 @@ video {
   height: 1.5rem;
 }
 
+.h-s4 {
+  height: 2rem;
+}
+
 .max-h-\[144px\] {
   max-height: 144px;
 }
@@ -1080,6 +1084,18 @@ video {
 
 .w-s3 {
   width: 1.5rem;
+}
+
+.w-s4 {
+  width: 2rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-\[1135px\] {
@@ -1251,12 +1267,24 @@ video {
   row-gap: 0.5rem;
 }
 
+.gap-y-s2 {
+  row-gap: 1rem;
+}
+
 .gap-y-s3 {
   row-gap: 1.5rem;
 }
 
 .gap-y-s6 {
   row-gap: 3rem;
+}
+
+.gap-y-s8 {
+  row-gap: 4rem;
+}
+
+.gap-y-16 {
+  row-gap: 4rem;
 }
 
 .overflow-hidden {
@@ -1297,9 +1325,9 @@ video {
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-fnude {
+.bg-neutral-lfnude {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  background-color: rgb(255 248 241 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-nude {
@@ -1360,11 +1388,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-lfnude {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 248 241 / var(--tw-bg-opacity));
 }
 
 .bg-get-started-mobile {
@@ -2558,8 +2581,28 @@ a {
     grid-column: span 6 / span 6;
   }
 
+  .md\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .md\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .md\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .md\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
   .md\:col-start-1 {
     grid-column-start: 1;
+  }
+
+  .md\:col-start-5 {
+    grid-column-start: 5;
   }
 
   .md\:col-start-6 {
@@ -2578,6 +2621,14 @@ a {
     grid-column-start: 9;
   }
 
+  .md\:col-start-4 {
+    grid-column-start: 4;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
   .md\:row-auto {
     grid-row: auto;
   }
@@ -2588,6 +2639,10 @@ a {
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:h-s8 {
+    height: 4rem;
   }
 
   .md\:max-h-\[200px\] {
@@ -2604,6 +2659,18 @@ a {
 
   .md\:w-\[175px\] {
     width: 175px;
+  }
+
+  .md\:w-s8 {
+    width: 4rem;
+  }
+
+  .md\:w-4 {
+    width: 1rem;
+  }
+
+  .md\:w-\[224px\] {
+    width: 224px;
   }
 
   .md\:max-w-550 {
@@ -2655,6 +2722,14 @@ a {
   }
 
   .md\:gap-y-s8 {
+    row-gap: 4rem;
+  }
+
+  .md\:gap-y-s2 {
+    row-gap: 1rem;
+  }
+
+  .md\:gap-y-16 {
     row-gap: 4rem;
   }
 
@@ -3095,6 +3170,10 @@ a {
 
   .lg\:gap-y-0 {
     row-gap: 0px;
+  }
+
+  .lg\:gap-y-s6 {
+    row-gap: 3rem;
   }
 
   .lg\:bg-get-started-desktop {

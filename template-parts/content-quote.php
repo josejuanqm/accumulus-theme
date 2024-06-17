@@ -2,15 +2,15 @@
 <section class="section relative py-s6 <?php echo $args['bg_color']; ?>">
   <div class="container mx-auto">
     <div class="grid grid-cols-12">
-      <h2 class="col-start-1 col-span-9 <?php echo $args['inverted'] ? 'row-start-2 heading-2' : 'heading-3' ?>">
+      <h2 class="col-start-1 col-span-12 md:col-span-9 <?php echo $args['inverted'] ? 'row-start-2 heading-2' : 'heading-3' ?>">
         <?php echo $args['main_quote'] ?>
       </h2>
       <h3
-        class="col-start-4 col-span-8 pt-s6 pb-s4 <?php echo $args['inverted'] ? 'row-start-3 body-1' : 'body-2' ?>">
+        class="col-start-3 md:col-start-4 col-span-9 md:col-span-8 pt-s8 pb-s8 lg:pt-s6 lg:pb-s4 <?php echo $args['inverted'] ? 'row-start-3 body-1' : 'body-2' ?>">
         <?php echo $args['sub_quote'] ?>
       </h3>
-      <div class="flex flex-row items-start justify-normal col-start-6 col-span-5 <?php echo $args['inverted'] ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
-        <div class="relative w-[224px] aspect-square rounded-3xl bg-primary-glaciar overflow-hidden flex-shrink-0">
+      <div class="flex flex-row items-start justify-normal col-start-1 md:col-start-6 col-span-12 md:col-span-6 lg:col-span-5 <?php echo $args['inverted'] ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
+        <div class="relative w-40 md:w-[224px] aspect-square rounded-3xl bg-primary-glaciar overflow-hidden flex-shrink-0">
           <img class="w-full h-full" src="<?php echo $args['image']; ?>" alt="<?php echo $args['author']; ?>" />
           <svg class="absolute bottom-s3 right-s3" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.03125" y="0.619141" width="52" height="52" rx="14" fill="#12D0FF"/>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <?php if ($args['references']) { ?>
-      <ul class="flex flex-col items-start col-start-2 col-span-10 <?php echo $args['inverted'] ? 'row-start-4' : '' ?>">
+      <ul class="flex flex-col items-start col-start-1 md:col-start-2 col-span-12 md:col-span-10 <?php echo $args['inverted'] ? 'row-start-4' : '' ?>">
         <?php
           for ($i=0; $i < count($args['references']); $i++) { 
             ?>

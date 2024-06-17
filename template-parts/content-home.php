@@ -100,30 +100,30 @@
 <!-- BEGIN PARADIGM SHIFT -->
  <section class="section relative w-full py-s6 bg-neutral-lfnude">
 		<div class="container mx-auto">
-			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6">
+			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
 				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
 					<span class="block col-span-12">
 						A Needed
 					</span>
-					<span class="block col-span-7 col-start-3 row-start-2">
+					<span class="block col-span-10 col-start-3 row-start-2">
 						Paradigm Shift
 					</span>
 				</h2>
-				<p class="col-span-6 col-start-6 body-2">
+				<p class="col-start-1 col-span-12 md:col-start-5 md:col-span-7 lg:col-span-6 lg:col-start-6 body-2">
 					Bringing an approved drug to market is inefficient and expensive.
 				</p>
 			</div>
-			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6">
+			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
 				<?php
 					for ($i=0; $i < 3; $i++) { 
 						?>
-						<div class="col-span-4">
-							<div class="grid grid-cols-[64px, 1fr] gap-y-s6 gap-x-s2">
-								<div class="col-start-1 col-span-1">
-								<svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
-									<path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
-								</svg>
+						<div class="col-span-12 md:col-span-6 lg:col-span-4">
+							<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2">
+								<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+									<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
+										<path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
+									</svg>
 								</div>
 								<h3 class="heading-2 col-start-2 col-span-1">
 								13 Years
