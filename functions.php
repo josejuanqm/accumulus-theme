@@ -2389,6 +2389,111 @@ add_action( 'init', function() {
 	),
 	'delete_with_user' => false,
 ) );
+
+	acf_add_local_field_group(
+		array(
+			'key' => 'about_us_page_fields',
+			'title' => 'About Us Page - Fields',
+			'fields' => array(
+				array(
+					'key' => 'banner_section',
+					'label' => 'Banner Section',
+					'name' => 'banner_section',
+					'aria-label' => 'banner_section',
+					'type' => 'group',
+					'instructions' => 'Banner section parameters',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'layout' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'eyebrow_text',
+							'label' => 'Eyebrow text',
+							'name' => 'eyebrow_text',
+							'aria-label' => '',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => 'COMPANY',
+							'maxlength' => '',
+							'placeholder' => 'COMPANY',
+							'prepend' => '',
+							'append' => '',
+						),
+						array(
+							'key' => 'main_title',
+							'label' => 'Main title',
+							'name' => 'main_title',
+							'aria-label' => 'main title',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => 'Responsible Innovation in the Life Sciences-Regulatory Ecosystem',
+							'maxlength' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+						),
+						array(
+							'key' => 'paragraph',
+							'label' => 'Paragraph',
+							'name' => 'paragraph',
+							'aria-label' => 'paragraph',
+							'type' => 'textarea',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => 'We’re a nonprofit organization advancing the interaction and information exchange between life sciences organizations and global health authorities',
+							'maxlength' => '',
+							'rows' => 4,
+							'placeholder' => '',
+							'new_lines' => '',
+						)
+					),
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'page_template',
+						'operator' => '==',
+						'value' => 'page-about-us.php',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => true,
+			'description' => '',
+			'show_in_rest' => 0,
+		)
+	);
 } );
 
 

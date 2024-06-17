@@ -29,6 +29,63 @@
    font-style: normal;
 }
 
+/* FONTS */
+.heading-1 {
+  @apply lg:text-h1 md:text-h1Tablet text-h1Mobile;
+}
+
+.heading-2 {
+  @apply lg:text-h2 md:text-h2Tablet text-h2Mobile;
+}
+
+.heading-3 {
+  @apply lg:text-h3 md:text-h3Tablet text-h3Mobile;
+}
+
+.heading-4 {
+  @apply lg:text-h4 md:text-h4Tablet text-h4Mobile;
+}
+
+.heading-5 {
+  @apply lg:text-h5 md:text-h5Tablet text-h5Mobile;
+}
+
+.heading-6 {
+  @apply lg:text-h6 md:text-h6Tablet text-h6Mobile;
+}
+
+.heading-7 {
+  @apply lg:text-h7 md:text-h7Tablet text-h7Mobile;
+}
+
+.heading-8 {
+  @apply lg:text-h8 md:text-h8Tablet text-h8Mobile;
+}
+
+.heading-9 {
+  @apply lg:text-h9 md:text-h9Tablet text-h9Mobile;
+}
+
+.body-1 {
+  @apply lg:text-b1 md:text-b1Tablet text-b1Mobile;
+}
+
+.body-2 {
+  @apply lg:text-b2 md:text-b2Tablet text-b2Mobile;
+}
+
+.body-3 {
+  @apply lg:text-b3 md:text-b3Tablet text-b3Mobile;
+}
+
+.link {
+  @apply lg:text-textlink text-textlinkMobile;
+}
+
+.cta {
+  @apply lg:text-cta md:text-ctaTablet text-ctaMobile;
+}
+
 body {
 	font-family: 'TP Fors';
 	font-size: 16px;
