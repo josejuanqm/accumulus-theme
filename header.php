@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:static' : ''); ?>>
+<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden' : ''); ?>>
 <?php wp_body_open(); ?>
 <script>
 	let navigation_state = {

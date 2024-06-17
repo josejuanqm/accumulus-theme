@@ -864,6 +864,10 @@ video {
   right: 0px;
 }
 
+.right-s3 {
+  right: 1.5rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -892,6 +896,10 @@ video {
   order: 9999;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .col-span-10 {
   grid-column: span 10 / span 10;
 }
@@ -900,12 +908,20 @@ video {
   grid-column: span 12 / span 12;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
 
 .col-span-4 {
   grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
 }
 
 .col-span-6 {
@@ -918,6 +934,10 @@ video {
 
 .col-span-8 {
   grid-column: span 8 / span 8;
+}
+
+.col-span-9 {
+  grid-column: span 9 / span 9;
 }
 
 .col-start-1 {
@@ -936,8 +956,16 @@ video {
   grid-column-start: 4;
 }
 
+.col-start-6 {
+  grid-column-start: 6;
+}
+
 .col-start-7 {
   grid-column-start: 7;
+}
+
+.col-start-9 {
+  grid-column-start: 9;
 }
 
 .row-start-1 {
@@ -946,6 +974,10 @@ video {
 
 .row-start-2 {
   grid-row-start: 2;
+}
+
+.row-start-3 {
+  grid-row-start: 3;
 }
 
 .row-start-4 {
@@ -1034,6 +1066,10 @@ video {
   width: 0.25rem;
 }
 
+.w-\[224px\] {
+  width: 224px;
+}
+
 .w-\[54px\] {
   width: 54px;
 }
@@ -1062,6 +1098,10 @@ video {
   flex: 1 1 0%;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1085,6 +1125,10 @@ video {
 
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1113,6 +1157,10 @@ video {
 
 .items-stretch {
   align-items: stretch;
+}
+
+.justify-normal {
+  justify-content: normal;
 }
 
 .justify-start {
@@ -1203,16 +1251,20 @@ video {
   row-gap: 0.5rem;
 }
 
-.gap-y-s6 {
-  row-gap: 3rem;
-}
-
 .gap-y-s3 {
   row-gap: 1.5rem;
 }
 
+.gap-y-s6 {
+  row-gap: 3rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-button {
@@ -1243,6 +1295,16 @@ video {
 .bg-neutral-dgray {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-fnude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-nude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-nwhite {
@@ -1300,13 +1362,17 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-nude {
+.bg-neutral-lfnude {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
+  background-color: rgb(255 248 241 / var(--tw-bg-opacity));
 }
 
 .bg-get-started-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-mobile.png');
+}
+
+.bg-get-started-section-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
 
 .bg-news-banner-mobile {
@@ -1315,10 +1381,6 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
-.bg-get-started-section-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
 
 .bg-contain {
@@ -1718,6 +1780,349 @@ video {
   font-weight: 700;
 
   font-style: normal;
+}
+
+/* FONTS */
+
+.heading-1 {
+  font-size: 2.25rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .heading-1 {
+    font-size: 4.875rem;
+    line-height: 106%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-1 {
+    font-size: 5.938rem;
+    line-height: 106%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.heading-2 {
+  font-size: 1.625rem;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-2 {
+    font-size: 3rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-2 {
+    font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-3 {
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-3 {
+    font-size: 2.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-3 {
+    font-size: 1.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-4 {
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-4 {
+    font-size: 1.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-4 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-5 {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-5 {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-5 {
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-6 {
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-6 {
+    font-size: 1.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-6 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-7 {
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-7 {
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-7 {
+    font-size: 1.375rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-8 {
+  font-size: 7.063rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .heading-8 {
+    font-size: 13.063rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-8 {
+    font-size: 7.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.heading-9 {
+  font-size: 4.875rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .heading-9 {
+    font-size: 5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .heading-9 {
+    font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.body-1 {
+  font-size: 1.25rem;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-1 {
+    font-size: 1.875rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .body-1 {
+    font-size: 1.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.body-2 {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-2 {
+    font-size: 1.625rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .body-2 {
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.body-3 {
+  font-size: 0.875rem;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-3 {
+    font-size: 1.375rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .body-3 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+}
+
+.link {
+  font-size: 1.625rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 1025px) {
+  .link {
+    font-size: 1.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.cta {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .cta {
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cta {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
 }
 
 body {
@@ -2245,12 +2650,16 @@ a {
     gap: 2rem;
   }
 
+  .md\:gap-y-s6 {
+    row-gap: 3rem;
+  }
+
   .md\:gap-y-s8 {
     row-gap: 4rem;
   }
 
-  .md\:gap-y-s6 {
-    row-gap: 3rem;
+  .md\:bg-get-started-section-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
   }
 
   .md\:bg-get-started-tablet {
@@ -2263,10 +2672,6 @@ a {
 
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
-  }
-
-  .md\:bg-get-started-section-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
   }
 
   .md\:px-0 {
@@ -2696,16 +3101,16 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-desktop.png');
   }
 
+  .lg\:bg-get-started-section-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
+  }
+
   .lg\:bg-news-banner-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
   }
 
   .lg\:bg-what-we-do-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
-  }
-
-  .lg\:bg-get-started-section-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
   }
 
   .lg\:bg-contain {
@@ -2729,6 +3134,11 @@ a {
   .lg\:py-s16 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .lg\:py-s6 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .lg\:pb-0 {
@@ -2892,8 +3302,8 @@ a {
   }
 }
 
-.\[\&\>\#wpadminbar\]\:static>#wpadminbar {
-  position: static;
+.\[\&\>\#wpadminbar\]\:hidden>#wpadminbar {
+  display: none;
 }
 
 .\[\&\>\.opened\>section\.mobile-menu\]\:block>.opened>section.mobile-menu {
