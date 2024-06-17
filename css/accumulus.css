@@ -920,6 +920,10 @@ video {
   grid-column: span 8 / span 8;
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1056,6 +1060,14 @@ video {
 
 .max-w-\[465px\] {
   max-width: 465px;
+}
+
+.max-w-\[145px\] {
+  max-width: 145px;
+}
+
+.max-w-\[195px\] {
+  max-width: 195px;
 }
 
 .flex-1 {
@@ -1203,16 +1215,32 @@ video {
   row-gap: 0.5rem;
 }
 
-.gap-y-s6 {
-  row-gap: 3rem;
-}
-
 .gap-y-s3 {
   row-gap: 1.5rem;
 }
 
+.gap-y-s6 {
+  row-gap: 3rem;
+}
+
+.gap-y-s4 {
+  row-gap: 2rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-button {
@@ -1243,6 +1271,11 @@ video {
 .bg-neutral-dgray {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-nude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-nwhite {
@@ -1300,13 +1333,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-nude {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
-}
-
 .bg-get-started-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-mobile.png');
+}
+
+.bg-get-started-section-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
 
 .bg-news-banner-mobile {
@@ -1317,8 +1349,8 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
-.bg-get-started-section-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
+.bg-case-for-change-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-mobile.png');
 }
 
 .bg-contain {
@@ -1514,6 +1546,10 @@ video {
   padding-top: 4.5rem;
 }
 
+.pl-s2 {
+  padding-left: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1616,6 +1652,20 @@ video {
 .text-h9Mobile {
   font-size: 4.875rem;
   line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-b3 {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+
+.text-b1Mobile {
+  font-size: 1.25rem;
+  line-height: auto;
   letter-spacing: 0;
   font-weight: 400;
 }
@@ -2153,6 +2203,18 @@ a {
     grid-column: span 6 / span 6;
   }
 
+  .md\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .md\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .md\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
   .md\:col-start-1 {
     grid-column-start: 1;
   }
@@ -2171,6 +2233,10 @@ a {
 
   .md\:col-start-9 {
     grid-column-start: 9;
+  }
+
+  .md\:col-start-3 {
+    grid-column-start: 3;
   }
 
   .md\:row-auto {
@@ -2203,6 +2269,14 @@ a {
 
   .md\:max-w-550 {
     max-width: 550px;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
+  .md\:max-w-\[195px\] {
+    max-width: 195px;
   }
 
   .md\:grid-cols-12 {
@@ -2245,12 +2319,20 @@ a {
     gap: 2rem;
   }
 
+  .md\:gap-y-s6 {
+    row-gap: 3rem;
+  }
+
   .md\:gap-y-s8 {
     row-gap: 4rem;
   }
 
-  .md\:gap-y-s6 {
-    row-gap: 3rem;
+  .md\:gap-y-s10 {
+    row-gap: 5rem;
+  }
+
+  .md\:bg-get-started-section-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
   }
 
   .md\:bg-get-started-tablet {
@@ -2265,8 +2347,8 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
 
-  .md\:bg-get-started-section-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
+  .md\:bg-case-for-change-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-tablet.png');
   }
 
   .md\:px-0 {
@@ -2456,6 +2538,13 @@ a {
     font-weight: 400;
   }
 
+  .md\:text-b1Tablet {
+    font-size: 1.875rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
   @media not all and (min-width: 1025px) {
     .md\:max-lg\:col-start-6 {
       grid-column-start: 6;
@@ -2530,6 +2619,10 @@ a {
 
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
+  }
+
+  .lg\:col-span-9 {
+    grid-column: span 9 / span 9;
   }
 
   .lg\:col-start-10 {
@@ -2668,6 +2761,10 @@ a {
     justify-content: center;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:gap-8 {
     gap: 2rem;
   }
@@ -2692,8 +2789,16 @@ a {
     row-gap: 0px;
   }
 
+  .lg\:gap-y-s6 {
+    row-gap: 3rem;
+  }
+
   .lg\:bg-get-started-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-desktop.png');
+  }
+
+  .lg\:bg-get-started-section-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
   }
 
   .lg\:bg-news-banner-desktop {
@@ -2704,8 +2809,8 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
-  .lg\:bg-get-started-section-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
+  .lg\:bg-case-for-change-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-desktop.png');
   }
 
   .lg\:bg-contain {
@@ -2811,6 +2916,26 @@ a {
     padding-top: 4rem;
   }
 
+  .lg\:pt-s12 {
+    padding-top: 6rem;
+  }
+
+  .lg\:pl-s3 {
+    padding-left: 1.5rem;
+  }
+
+  .lg\:pl-s5 {
+    padding-left: 2.5rem;
+  }
+
+  .lg\:pl-s6 {
+    padding-left: 3rem;
+  }
+
+  .lg\:pl-s2 {
+    padding-left: 1rem;
+  }
+
   .lg\:text-b2 {
     font-size: 1.25rem;
     line-height: 28px;
@@ -2876,6 +3001,13 @@ a {
 
   .lg\:text-h9 {
     font-size: 3.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .lg\:text-b1 {
+    font-size: 1.75rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
