@@ -660,7 +660,6 @@ function getNews() {
 */
 
 
-
 add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
@@ -1156,7 +1155,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'RESPONSIBLE INNOVATION',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -1176,7 +1175,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Advancing collaboration and data exchange in drug development',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -1196,7 +1195,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'We’re a global, nonprofit industry association with a groundbreaking SaaS platform, built to expedite review and approval cycles between life science organizations and global regulators.',
 			'maxlength' => '',
 			'rows' => '',
 			'placeholder' => '',
@@ -1216,7 +1215,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'https://google.com/',
 			'placeholder' => '',
 		),
 		array(
@@ -1226,7 +1225,7 @@ add_action( 'acf/include_fields', function() {
 			'aria-label' => '',
 			'type' => 'repeater',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
@@ -1248,7 +1247,7 @@ add_action( 'acf/include_fields', function() {
 					'aria-label' => '',
 					'type' => 'image',
 					'instructions' => '',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
@@ -1956,7 +1955,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'WHAT WE DO',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -1976,7 +1975,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Accumulus Synergy is on a mission to accelerate critical therapies to citizens of the world.',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -1996,7 +1995,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Together with key stakeholders in the life sciences-regulatory ecosystem, we’ve developed a first-of-its-kind platform that facilitates the secure, real-time exchange of data and information for regulatory submissions.',
 			'maxlength' => '',
 			'rows' => 5,
 			'placeholder' => '',
@@ -2016,7 +2015,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Our goal is to help move the industry toward a fully data-driven global dossier in the cloud.',
 			'maxlength' => '',
 			'rows' => 5,
 			'placeholder' => '',
@@ -2084,7 +2083,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'WHY ACCUMULUS',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -2104,7 +2103,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'What Makes',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -2124,7 +2123,7 @@ add_action( 'acf/include_fields', function() {
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Us Different',
 			'maxlength' => '',
 			'placeholder' => '',
 			'prepend' => '',
@@ -2389,112 +2388,11 @@ add_action( 'init', function() {
 	),
 	'delete_with_user' => false,
 ) );
-
-	acf_add_local_field_group(
-		array(
-			'key' => 'about_us_page_fields',
-			'title' => 'About Us Page - Fields',
-			'fields' => array(
-				array(
-					'key' => 'banner_section',
-					'label' => 'Banner Section',
-					'name' => 'banner_section',
-					'aria-label' => 'banner_section',
-					'type' => 'group',
-					'instructions' => 'Banner section parameters',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'layout' => 'block',
-					'sub_fields' => array(
-						array(
-							'key' => 'eyebrow_text',
-							'label' => 'Eyebrow text',
-							'name' => 'eyebrow_text',
-							'aria-label' => '',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'COMPANY',
-							'maxlength' => '',
-							'placeholder' => 'COMPANY',
-							'prepend' => '',
-							'append' => '',
-						),
-						array(
-							'key' => 'main_title',
-							'label' => 'Main title',
-							'name' => 'main_title',
-							'aria-label' => 'main title',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'Responsible Innovation in the Life Sciences-Regulatory Ecosystem',
-							'maxlength' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-						),
-						array(
-							'key' => 'paragraph',
-							'label' => 'Paragraph',
-							'name' => 'paragraph',
-							'aria-label' => 'paragraph',
-							'type' => 'textarea',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'We’re a nonprofit organization advancing the interaction and information exchange between life sciences organizations and global health authorities',
-							'maxlength' => '',
-							'rows' => 4,
-							'placeholder' => '',
-							'new_lines' => '',
-						)
-					),
-				),
-			),
-			'location' => array(
-				array(
-					array(
-						'param' => 'page_template',
-						'operator' => '==',
-						'value' => 'page-about-us.php',
-					),
-				),
-			),
-			'menu_order' => 0,
-			'position' => 'normal',
-			'style' => 'default',
-			'label_placement' => 'top',
-			'instruction_placement' => 'label',
-			'hide_on_screen' => '',
-			'active' => true,
-			'description' => '',
-			'show_in_rest' => 0,
-		)
-	);
 } );
+
+
+
+
 
 
 
