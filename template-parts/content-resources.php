@@ -334,6 +334,7 @@ if (count($result) > 0 ){
 </section>
 <!-- Main events -->
 
+
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
 	<div class="container mx-auto px-s4 lg:px-0">
 		<div class="flex flex-col gap-s8">
