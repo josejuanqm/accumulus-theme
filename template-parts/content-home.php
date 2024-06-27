@@ -175,8 +175,10 @@ $why_values = get_field('why_values');
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s8">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase"><?php echo $why_title_tag; ?></h4>
-			<h2 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $why_first_line_title; ?></h2>
-			<h2 class="col-span-10 col-start-2 lg:col-start-3 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $why_second_line_title; ?></h2>
+			<h2 class="col-span-12 heading-1 grid grid-cols-12">
+				<span class="col-span-12"><?php echo $why_first_line_title; ?></span>
+				<span class="col-span-10 col-start-2 lg:col-start-3"><?php echo $why_second_line_title; ?></span>
+			</h2>
 		</div>
 		
 		<?php

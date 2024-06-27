@@ -2569,6 +2569,10 @@ a {
     display: flex;
   }
 
+  .max-lg\:hidden {
+    display: none;
+  }
+
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
   }

@@ -266,11 +266,18 @@ $value_propositions = get_field('value_propositions');
 									<?php endif; ?>
 	
 									<?php if($card['acf_fc_layout'] == 'cta'): ?>
-										<a class="btn-secondary mt-s6" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+										<a class="btn-secondary mt-s6 max-lg:hidden" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
 									<?php endif; ?>
-	
+									
+									<?php endforeach; ?>
+									
+							</div>
+							<div class="col-span-12 lg:hidden">
+								<?php foreach($row['slide_item'] as $card) : ?>
+										<?php if($card['acf_fc_layout'] == 'cta'): ?>
+											<a class="btn-secondary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+										<?php endif; ?>
 								<?php endforeach; ?>
-	
 							</div>
 						</div>
 					</div>

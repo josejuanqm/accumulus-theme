@@ -225,8 +225,10 @@
       <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase"><?php echo $purpleSection['eye_text']; ?></h4>
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $purpleSection['first_line_title']; ?></h2>
-        <h2 class="col-span-3 md:col-span-5 col-start-4 md:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $purpleSection['second_line_title']; ?></h2>
+        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 grid grid-cols-12 heading-2 capitalize">
+            <span class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2"><?php echo $purpleSection['first_line_title']; ?></span>
+            <span class="col-span-3 md:col-span-5 lg:col-span-6 col-start-4 md:col-start-6 lg:col-start-7"><?php echo $purpleSection['second_line_title']; ?></span>
+        </h2>
       </div>
 
       <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-5 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $purpleSection['first_paragraph']; ?></p>
