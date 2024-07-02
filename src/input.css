@@ -75,6 +75,10 @@
   @apply lg:text-h9 md:text-h9Tablet text-h9Mobile;
 }
 
+.heading-10 {
+  @apply text-h10;
+}
+
 .body-1 {
   @apply lg:text-b1 md:text-b1Tablet text-b1Mobile;
 }
@@ -207,54 +211,6 @@ a {
   }
 }
 
-/* Filters */
-
-/* .search-filter-results { */
-#search-filter-results-85,
-#category-post-content {
-  @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
-}
-
-#search-filter-results-94 {
-  @apply col-span-12 lg:col-span-7;
-}
-
-#search-filter-results-91 {
-  @apply col-span-12 grid grid-cols-12 gap-s2;
-}
-
-.searchandfilter {
-  @apply col-span-12 grid grid-cols-12;
-}
-
-.searchandfilter > ul {
-  @apply col-span-12 grid grid-cols-12;
-}
-
-.searchandfilter > ul li {
-  @apply col-span-12;
-}
-
-.searchandfilter > ul li > ul {
-  @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
-}
-
-.searchandfilter > ul li > ul li {
-  @apply col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] rounded-button;
-}
-
-.searchandfilter > ul li > ul li label {
-  @apply block w-full !p-0 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center uppercase cursor-pointer;
-}
-
-.searchandfilter > ul li > ul li input {
-  @apply hidden;
-}
-
-.sf-option-active {
-  @apply bg-neutral-dgray text-neutral-nwhite;
-}
-
 /* Form */
 
 .wpforms-container {
@@ -306,4 +262,12 @@ a {
 
 .video-container iframe {
   @apply w-full aspect-video lg:min-h-[650px];
+}
+
+.description-wysiwyg p {
+  @apply body-2;
+}
+
+.description-wysiwyg a {
+  @apply text-secondary-green no-underline hover:text-secondary-carbon;
 }

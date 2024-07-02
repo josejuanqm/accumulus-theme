@@ -8,6 +8,8 @@
 
 			$values_row = get_field('values_row');
 
+      if($values_row):
+
 			$i = 0;		
 			
 			foreach($values_row as $row) :
@@ -27,6 +29,10 @@
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
 								<p class="text-b2"><?php echo $card['description']; ?></p>
+							<?php endif; ?>
+
+              <?php if($card['acf_fc_layout'] == 'description_wysiwig'): ?>
+								<div class="description-wysiwyg"><?php echo $card['wysiwyg']; ?></div>
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
@@ -88,6 +94,10 @@
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
 								<p class="text-b2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
+
+              <?php if($card['acf_fc_layout'] == 'description_wysiwig'): ?>
+								<div class="description-wysiwyg"><?php echo $card['wysiwyg']; ?></div>
+							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
 								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
@@ -116,6 +126,8 @@
 
 		<?php
 			endforeach;
+
+      endif;
 		?>
 
 	</div>

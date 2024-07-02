@@ -501,6 +501,14 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png')",
         'benefits-mobile':
           "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png')",
+
+        // Core capabilities
+        'core-capabilities-desktop':
+          "url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities.png')",
+        'core-capabilities-tablet':
+          "url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-tablet.png')",
+        'core-capabilities-mobile':
+          "url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-mobile.png')",
       },
     },
   },
