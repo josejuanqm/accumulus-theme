@@ -21,12 +21,12 @@
 
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 
-      <h4 class="col-span-6 md:col-span-6 lg:row-start-1 heading-4 uppercase"><?php echo $main_banner['flag_title']; ?></h4>
+      <h4 class="col-span-6 md:col-span-12 lg:row-start-1 heading-4 uppercase"><?php echo $main_banner['flag_title']; ?></h4>
 
 			<h1 class="col-span-5 md:col-span-6 lg:col-span-7 lg:row-start-2 heading-1"><?php echo $main_banner['title']; ?></h1>
 
-      <div class="col-span-6 md:col-span-6 lg:col-span-5 lg:row-start-2">
-        <img class="relative" src="<?php echo $main_banner['image']; ?>" alt="<?php echo $main_banner['title']; ?>" />
+      <div class="col-span-6 md:col-span-6 lg:col-span-5 lg:row-start-2 text-end">
+        <img class="relative inline-block" src="<?php echo $main_banner['image']; ?>" alt="<?php echo $main_banner['title']; ?>" />
       </div>
 
 			<div class="col-span-6 md:col-span-6 lg:col-span-4 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
@@ -75,11 +75,11 @@
             ?>
 				</div>
 					
-				<div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4 max-sm:pt-s6 max-lg:pt-s10">
-					<div class="prev lg:absolute lg:-left-20 lg:top-1/4 cursor-pointer">
+				<div class="max-xl:flex max-xl:items-center max-xl:justify-center max-xl:gap-4 max-sm:pt-s6 max-xl:pt-s10">
+					<div class="prev xl:absolute xl:-left-20 xl:top-1/4 cursor-pointer">
 						<img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
 					</div>
-					<div class="next lg:absolute lg:-right-20 lg:top-1/4 cursor-pointer">
+					<div class="next xl:absolute xl:-right-20 xl:top-1/4 cursor-pointer">
 						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
 					</div>
 				</div>

@@ -405,11 +405,11 @@ if (count($result) > 0 ){
             ?>
 				</div>
 					
-				<div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4 max-sm:pt-s6 max-lg:pt-s10">
-					<div class="prev lg:absolute lg:-left-20 lg:top-1/4 cursor-pointer">
+				<div class="max-xl:flex max-xl:items-center max-xl:justify-center max-xl:gap-4 max-sm:pt-s6 max-xl:pt-s10">
+					<div class="prev xl:absolute xl:-left-20 xl:top-1/4 cursor-pointer">
 						<img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
 					</div>
-					<div class="next lg:absolute lg:-right-20 lg:top-1/4 cursor-pointer">
+					<div class="next xl:absolute xl:-right-20 xl:top-1/4 cursor-pointer">
 						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
 					</div>
 				</div>

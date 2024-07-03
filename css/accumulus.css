@@ -1452,6 +1452,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-benefits-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png');
 }
@@ -1718,8 +1723,16 @@ video {
   text-align: right;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .align-middle {
   vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .text-b1Mobile {
@@ -2592,6 +2605,28 @@ a {
   color: rgb(252 252 252 / var(--tw-text-opacity));
 }
 
+@media not all and (min-width: 1280px) {
+  .max-xl\:flex {
+    display: flex;
+  }
+
+  .max-xl\:items-center {
+    align-items: center;
+  }
+
+  .max-xl\:justify-center {
+    justify-content: center;
+  }
+
+  .max-xl\:gap-4 {
+    gap: 1rem;
+  }
+
+  .max-xl\:pt-s10 {
+    padding-top: 5rem;
+  }
+}
+
 @media not all and (min-width: 1025px) {
   .max-lg\:flex {
     display: flex;
@@ -2605,8 +2640,20 @@ a {
     max-width: 380px;
   }
 
+  .max-lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-lg\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .max-lg\:items-center {
     align-items: center;
+  }
+
+  .max-lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .max-lg\:justify-center {
@@ -2645,6 +2692,10 @@ a {
 
   .max-md\:flex-col {
     flex-direction: column;
+  }
+
+  .max-md\:justify-end {
+    justify-content: flex-end;
   }
 }
 
@@ -3123,6 +3174,14 @@ a {
 
   .lg\:top-1\/4 {
     top: 25%;
+  }
+
+  .lg\:left-20 {
+    left: 5rem;
+  }
+
+  .lg\:right-20 {
+    right: 5rem;
   }
 
   .lg\:order-none {
@@ -3616,6 +3675,24 @@ a {
 
   .last-of-type\:lg\:\!pb-0:last-of-type {
     padding-bottom: 0px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:absolute {
+    position: absolute;
+  }
+
+  .xl\:-left-20 {
+    left: -5rem;
+  }
+
+  .xl\:-right-20 {
+    right: -5rem;
+  }
+
+  .xl\:top-1\/4 {
+    top: 25%;
   }
 }
 
