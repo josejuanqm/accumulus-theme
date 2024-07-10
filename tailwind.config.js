@@ -509,6 +509,22 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-tablet.png')",
         'core-capabilities-mobile':
           "url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-mobile.png')",
+
+        // Regulator forum
+        'regulator-forum-desktop':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum.png')",
+        'regulator-forum-tablet':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-tablet.png')",
+        'regulator-forum-mobile':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-mobile.png')",
+
+        // Regulator form - related
+        'increase-feedback-desktop':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-increase-feedback.png')",
+        'increase-feedback-tablet':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-increase-feedback-tablet.png')",
+        'increase-feedback-mobile':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-increase-feedback-mobile.png')",
       },
     },
   },
