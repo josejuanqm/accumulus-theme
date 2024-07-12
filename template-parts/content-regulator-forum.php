@@ -175,14 +175,14 @@ if($related_topics):
 ?>
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-aqua bg-increase-feedback-mobile md:increase-feedback-tablet lg:increase-feedback-desktop bg-left-bottom bg-no-repeat bg-contain">
-	<div class="container mx-auto px-s4 lg:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-10 gap-s8">
-      <h2 class="heading-1 font-normal col-span-6 md:col-span-12"><?php echo $related_topics['title_section']; ?></h2>
+	<div class="container mx-auto px-s2 md:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-10 gap-s2">
+      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 pb-s14 md:pb-s10"><?php echo $related_topics['title_section']; ?></h2>
 
       <?php foreach($related_topics['list_items'] as $item) : ?>
-      <div class="col-span-5 md:col-span-6 col-start-2 md:col-start-6 lg:col-start-7 flex items-center gap-s3">
+      <div class="col-span-5 md:col-span-7 lg:col-span-6 col-start-2 md:col-start-6 lg:col-start-7 flex items-center gap-s3 py-s3 md:py-s5 first-of-type:pt-0">
         <img src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
-        <h3 class="heading-3"><?php echo $item['title']; ?></h3>
+        <h3 class="heading-3 font-medium"><?php echo $item['title']; ?></h3>
       </div>
       <?php endforeach; ?>
 
@@ -204,12 +204,12 @@ if($participation_looks):
 
 ?>
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12">
-	<div class="container mx-auto px-s4 lg:px-0">
-		<div class="grid grid-cols-12 gap-s8">
+	<div class="container mx-auto px-s2 md:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-y-s11">
 
-			<h2 class="col-span-10 heading-1"><?php echo $participation_looks['title_section']; ?></h2>
+			<h2 class="col-span-6 md:col-span-12 lg:col-span-10 heading-1"><?php echo $participation_looks['title_section']; ?></h2>
 
-			<div class="col-span-12 grid grid-cols-12 gap-s2">
+			<div class="col-span-6 md:col-span-12 grid grid-cols-12 gap-s2 gap-y-s4 md:gap-y-s11">
         
         <?php foreach($participation_looks['list_participation'] as $item) : ?>
 
@@ -242,23 +242,35 @@ $observers = get_field('observers');
 
 if($regulatory_authorities): 
 
+$repeater = $regulatory_authorities['list_authorities'];
+$order = array();
+
 ?>
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite">
-	<div class="container mx-auto px-s4 lg:px-0">
-		<div class="grid grid-cols-12 gap-s6">
+	<div class="container mx-auto px-s2 lg:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-s2 md:gap-s6">
 
-      <h4 class="heading-4 col-span-12 uppercase"><?php echo $regulatory_authorities['flag_title_regulatory_authorities']; ?></h4>
+      <h4 class="heading-4 col-span-6 md:col-span-12 uppercase"><?php echo $regulatory_authorities['flag_title_regulatory_authorities']; ?></h4>
 
-			<h2 class="col-span-10 heading-1"><?php echo $regulatory_authorities['title_regulatory_authorities']; ?></h2>
+			<h2 class="col-span-6 md:col-span-10 col-start-1 md:col-start-1 heading-1"><?php echo $regulatory_authorities['title_regulatory_authorities']; ?></h2>
 
-			<div class="col-span-12 grid grid-cols-12 gap-s5 pt-s6">
+			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 md:grid-rows-4 md:grid-flow-col gap-s5 pt-s6">
         
-        <?php foreach($regulatory_authorities['list_authorities'] as $item) : ?>
+        <?php 
+					foreach($repeater as $item => $row) {
+						$order[$item] = $row['title'];
+					}
 
-        <div class="card relative col-span-12 md:col-span-6 lg:col-span-3">
+					array_multisort($order, SORT_STRING, $repeater);
+
+					foreach($repeater as $item => $row) : 
+					
+				?>
+
+        <div class="relative col-span-3 md:col-span-6 lg:col-span-4">
           <div class="flex flex-col gap-s4">
-            <h4 class="heading-7 color-neutral-dgray"><?php echo $item['title']; ?></h4>
-            <p class="body-2"><?php echo $item['description']; ?></p>
+            <h4 class="heading-7 color-neutral-dgray"><?php echo $row['title']; ?></h4>
+            <p class="body-2"><?php echo $row['description']; ?></p>
           </div>
         </div>
 
@@ -269,9 +281,9 @@ if($regulatory_authorities):
       
       <?php if($observers): ?>
         
-        <h2 class="heading-1 col-span-12"><?php echo $observers['title']; ?></h2>
+        <h2 class="heading-1 col-span-6 md:col-span-12 pt-s8"><?php echo $observers['title']; ?></h2>
 
-        <ul class="col-span-7 lg:col-start-6 flex flex-col gap-s3">
+        <ul class="col-span-6 md:col-span-7 lg:col-start-6 flex flex-col gap-s3">
           <?php foreach($observers['observers'] as $item): ?>
             <li class="heading-7"><?php echo $item['title'] ?></li>
           <?php endforeach; ?>
@@ -301,8 +313,8 @@ if($join_the_forum):
 ?>
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12">
-	<div class="container mx-auto px-s4 lg:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-10 gap-s8">
+	<div class="container mx-auto px-s2 md:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s8">
 
       <h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2">
         <span class="col-span-6 md:col-span-12">
@@ -314,9 +326,9 @@ if($join_the_forum):
       </h2>
 
       <?php foreach($join_the_forum['steps_join'] as $item) : ?>
-      <div class="col-span-5 md:col-span-6 col-start-2 md:col-start-6 lg:col-start-7 flex items-start gap-s3">
-        <img src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
-        <div class="description-wysiwyg">
+      <div class="col-span-6 md:col-span-7 lg:col-span-5 col-start-1 md:col-start-5 lg:col-start-6 flex items-start gap-s3">
+        <img class="w-[55px] md:w-[64px] aspect-square" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
+        <div class="description-wysiwyg w-auto">
           <h3 class="heading-2 pb-s2"><?php echo $item['title']; ?></h3>
           <?php echo $item['description']; ?>
         </div>
