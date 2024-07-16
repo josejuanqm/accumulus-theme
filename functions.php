@@ -212,13 +212,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_action('wp_ajax_nopriv_get_resources', 'getResources');
 add_action('wp_ajax_get_resources', 'getResources');
 function getResources() {
-	$category = (int)$_REQUEST["c"];
-	$offset = $_REQUEST["page"]-1;
-	$per_page = 8;
+    $page = $_REQUEST["page"];
+    $per_page = (int)$page === 1 ? 8 : 9;
+    $category = (int)$_REQUEST["c"];
+    $taxonomy = $_REQUEST["t"];
+    $offset = ($page - 1) * $per_page;
+
 	$args = array(
 		'post_type' => 'resource-cms',
 		'post_status' => 'publish',
-		'offset' => $offset*$per_page,
+        'offset' => $offset,
 		'posts_per_page' => $per_page,
 		'order' => 'DESC',
 	);
@@ -226,18 +229,21 @@ function getResources() {
 	if($category != 0) {
 		$args['tax_query'] = array(
 			array(
-				'taxonomy' => 'resources-taxonomies',
+				'taxonomy' => $taxonomy, //resources-taxonomies
 				'terms' => $category,
 				'include_children' => false // Remove if you need posts from term 7 child terms
 			)
 		);
 	}
+
+
 	// var_dump($args);
 	$posts = new WP_Query($args);
 	// var_dump($posts);
 	$pages = $posts->max_num_pages;
 	$page = $offset+1;
 	$posts = $posts->posts;
+    $more_pages_available = (int)$_REQUEST["page"] < $pages;
 
 	// var_dump($posts);
 
@@ -248,8 +254,13 @@ function getResources() {
 	$html = "";
 	$paginador = "";
 
-	$destacados = array_slice($posts, 0, 1, true);
-	$restantes = array_slice($posts, 1);
+    if ($page == 1) {
+        $destacados = array_slice($posts, 0, 1, true);
+        $restantes = array_slice($posts, 1);
+    } else {
+        $destacados = [];
+        $restantes = $posts;
+    }
 
 	foreach($destacados as $key => $post){
 		$category = '';
@@ -488,7 +499,9 @@ function getResources() {
 
 	wp_send_json(array(
 		"html" => $html,
-		"paginador" => $paginador
+		"paginador" => $paginador,
+        "morePagesAvailable" => $more_pages_available,
+        "pages" => $pages
 	));
 }																		
 																		
@@ -505,33 +518,37 @@ function getResources() {
 add_action('wp_ajax_nopriv_get_news', 'getNews');
 add_action('wp_ajax_get_news', 'getNews');
 function getNews() {
-	$category = (int)$_REQUEST["c"];
-	$offset = $_REQUEST["page"]-1;
-	$per_page = 8;
-	$args = array(
-		'post_type' => 'news',
-		'post_status' => 'publish',
-		'offset' => $offset*$per_page,
-		'posts_per_page' => $per_page,
-		'order' => 'DESC',
-	);
+    $page = $_REQUEST["page"];
+    $per_page = (int)$page === 1 ? 8 : 9;
+    $category = (int)$_REQUEST["c"];
+    $taxonomy = $_REQUEST["t"];
+    $offset = ($page - 1) * $per_page;
+//	$category = (int)$_REQUEST["c"];
+//	$offset = $_REQUEST["page"]-1;
 
-	if($category != 0) {
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'news-categories',
-				'terms' => $category,
-				'include_children' => false // Remove if you need posts from term 7 child terms
-			)
-		);
-	}
+    $args = array(
+        'post_type' => 'news',
+        'post_status' => 'publish',
+        'offset' => $offset,
+        'posts_per_page' => $per_page,
+        'order' => 'DESC',
+    );
+
+    if ($category != 0) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => $taxonomy, //news-categories
+                'terms' => $category,
+                'include_children' => false
+            )
+        );
+    }
+
 	// var_dump($args);
-	$posts = new WP_Query($args);
-	// var_dump($posts);
-	$pages = $posts->max_num_pages;
-	$page = $offset+1;
-	$posts = $posts->posts;
-
+    $posts_query = new WP_Query($args);
+    $pages = $posts_query->max_num_pages;
+    $posts = $posts_query->posts;
+    $more_pages_available = (int)$_REQUEST["page"] < $pages;
 	// var_dump($posts);
 
 
@@ -541,8 +558,13 @@ function getNews() {
 	$html = "";
 	$paginador = "";
 
-	$destacados = array_slice($posts, 0, 1, true);
-	$restantes = array_slice($posts, 1);
+    if ($page == 1) {
+        $destacados = array_slice($posts, 0, 1, true);
+        $restantes = array_slice($posts, 1);
+    } else {
+        $destacados = [];
+        $restantes = $posts;
+    }
 
 	foreach($destacados as $key => $post){
 		$category = '';
@@ -709,9 +731,197 @@ function getNews() {
 
 	wp_send_json(array(
 		"html" => $html,
-		"paginador" => $paginador
+		"paginador" => $paginador,
+        "morePagesAvailable" => $more_pages_available,
 	));
 }
+
+/**
+* 
+* GET EVENTS
+* 
+*/
+
+add_action('wp_ajax_nopriv_get_events', 'getEvents');
+add_action('wp_ajax_get_events', 'getEvents');
+function getEvents() {
+    $page = isset($_REQUEST["page"]) ? (int)$_REQUEST["page"] : 1;
+    $category = isset($_REQUEST["c"]) ? (int)$_REQUEST["c"] : 0;
+
+    $future_event_query = new WP_Query(array(
+        'post_type' => 'event',
+        'post_status' => 'publish',
+        'posts_per_page' => '-1',
+        'order' => 'DESC',
+        'orderby' => 'meta_value_num',
+        'meta_key' => 'date_event',
+    ));
+
+    $future_date = '';
+    if ($future_event_query->have_posts()) {
+        $future_event_query->the_post();
+        $future_date = get_post_meta(get_the_ID(), 'date_event', true);
+    }
+    wp_reset_postdata();
+
+    if (empty($future_date)) {
+        $future_date = current_time('Ymd');
+    }
+
+    $months_per_page = 3;
+    $months_ago = date('Ymd', strtotime($future_date . ' -' . (($page - 1) * $months_per_page + $months_per_page) . ' months'));
+
+    $months_past = $page * 3;
+    $months_to_past = date('Ymd', strtotime('-'.$months_past.' months'));
+
+    $args = array(
+        'post_type' => 'event',
+        'post_status' => 'publish',
+        'posts_per_page' => '-1',
+        'order' => 'DESC',
+        'orderby' => 'meta_value_num',
+        'meta_key' => 'date_event',
+    );
+
+    switch ($category) {
+        case 0:
+            $args['meta_query'] = array(
+                'relation' => 'OR',
+                array(
+                    'key' => 'date_event',
+                    'value' => array($months_ago, $future_date),
+                    'compare' => 'BETWEEN',
+                    'type' => 'NUMERIC'
+                ),
+                array(
+                    'key' => 'date_event',
+                    'value' => $future_date,
+                    'compare' => '>',
+                    'type' => 'NUMERIC'
+                ),
+            );
+            break;
+        case 1:
+            $args['meta_query'] = array(
+                array(
+                    'key' => 'date_event',
+                    'value' => array($months_to_past, current_time('Ymd')),
+                    'compare' => 'BETWEEN',
+                    'type' => 'NUMERIC'
+                ),
+            );
+            break;
+        case 2:
+            $args['meta_query'] = array(
+                'key' => 'date_event',
+                'value' => array($months_ago, $future_date),
+                'compare' => 'BETWEEN',
+                'type' => 'NUMERIC'
+            );
+            break;
+    }
+
+    // var_dump($args);
+    $posts_query = new WP_Query($args);
+    $pages = $posts_query->max_num_pages;
+    $posts = $posts_query->posts;
+    $total_posts = $posts_query->found_posts;
+
+// Inicialización de la estructura para agrupar eventos
+    $group_posts = [];
+
+    $current_date = new DateTime(current_time('Ymd'));
+
+    foreach ($posts as $post) {
+        $date = get_field('date_event', $post->ID, false);
+        $dateEvent = new DateTime($date);
+        $year = $dateEvent->format('Y');
+        $month = $dateEvent->format('F');
+        $isFutureEvent = $dateEvent >= $current_date;
+
+        // Si category es igual a 2, solo considerar eventos futuros o del día actual
+        if ($category == 2 && !$isFutureEvent) {
+            continue; // Salta al siguiente post si este evento no cumple con la condición
+        }
+
+        $isExpired = $date < $future_date;
+        // Verificar si el evento está vencido y limitar a 3 por mes
+        if ($isExpired) {
+            if (!isset($group_posts[$year][$month]) || count($group_posts[$year][$month]) < 3) {
+                $group_posts[$year][$month][] = array($post, $dateEvent);
+            }
+        } else {
+            $group_posts[$year][$month][] = array($post, $dateEvent);
+        }
+    }
+
+    $html = "";
+
+    foreach ($group_posts as $yearKey => $years) {
+
+        foreach ($years as $monthKey => $months) {
+
+            $html .= ' <h3 class="col-span-12 text-h3Mobile md:text-h3Tablet lg:text-h3 pt-s8 pb-s4 first-of-type:pt-0">'. $monthKey . ' ' . $yearKey .'</h3>';
+
+            foreach ($months as $postKey => $posts) {
+                // Get category by post
+                $category = '';
+                $categorySlug = '';
+                $post_type = get_post_type($posts[0]->ID);
+                $taxonomies = get_object_taxonomies($post_type);
+                $taxonomy_names = wp_get_object_terms($posts[0]->ID, $taxonomies,  array("fields" => "names"));
+                if(!empty($taxonomy_names)) {
+                    foreach($taxonomy_names as $tax_name) {
+                        $category = $tax_name;
+                        $categorySlug = str_replace(' ', '-', strtolower($tax_name));
+                    }
+                }
+
+                $today = date( 'Ymd' );
+
+                $date = get_field( 'date_event', $posts[0]->ID );
+                $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
+
+                $html .= '<div class="relative col-span-12 max-md:flex max-md:flex-col md:grid md:grid-cols-12 md:gap-s2 items-center bg-neutral-offwhite text-neutral-dgray rounded-miniCard overflow-hidden '. $categorySlug . ' ' . (($today <= $date) ? ' opacity-100' : ' opacity-50') . '">';
+                $html .= '<div class="max-md:w-full md:col-span-2 flex md:flex-col max-md:order-2 items-center justify-start md:justify-center gap-s2 text-center pt-s4 md:py-0 px-s4 md:px-0 md:pl-s2">';
+                $html .= '<h5 class="text-h2Mobile md:text-h2Tablet lg:text-h2">'. $dateEvent->format( 'j' ) .'</h5>';
+                $html .= '<h6 class="text-h10">'. $dateEvent->format( 'F' ) .'</h6>';
+                $html .= '</div>';
+
+                $html .= '<div class="relative max-md:w-full md:col-span-6 flex flex-col max-md:order-3 gap-s1 lg:gap-s2 p-s4 md:py-s2 md:px-s2">';
+                $html .= '<span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase text-neutral-dgray '. $categorySlug . '">';
+                $html .= '<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">';
+                $html .= '<path d="M12 2.83909V10.8388H10.6669V1.1732C10.6669 0.619888 10.2189 0.171875 9.66556 0.171875H1.00132C0.448009 0.171875 0 0.619888 0 1.1732V10.8388C0 11.5749 0.597018 12.1719 1.33311 12.1719H12C12.7361 12.1719 13.3331 11.5749 13.3331 10.8388V2.83909H12ZM1.33311 10.8388V1.50499H9.33278V10.8378H1.33311V10.8388Z" class="fill-current"/>';
+                $html .= '<path d="M7.99946 8.17188H2.66602V9.50499H7.99946V8.17188Z" class="fill-current"/>';
+                $html .= '<path d="M7.99946 5.50391H2.66602V6.83702H7.99946V5.50391Z" class="fill-current"/>';
+                $html .= '<path d="M7.99946 2.83594H2.66602V4.16905H7.99946V2.83594Z" class="fill-current"/>';
+                $html .= '</svg>';
+                $html .= $category;
+                $html .= '</span>';
+                $html .= '<h3 class="text-h10">'. get_the_title() .'</h3>';
+                $html .= '<p class="text-b2Mobile md:text-b2Tablet lg:text-b2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+                $html .= '</div>';
+
+                if (has_post_thumbnail( $posts[0]->ID ) ) {
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts[0]->ID ), 'full' );
+                    $html .= '<div class="max-md:w-full max-md:order-1 md:col-span-4">';
+                    $html .= '<img class="w-full max-h-[144px] md:max-h-[200px] lg:max-h-[192px] object-cover" src="'. $image[0] .'" alt="'. get_the_title($posts[0]->ID) .'" />';
+                    $html .= '</div>';
+                }
+                $html .= '</div>';
+            }
+        }
+    }
+
+    $html = trim(preg_replace('/\s\s+/', ' ', $html));
+
+    wp_send_json(array(
+        "html" => $html,
+        "posts" => $posts,
+        "totalPosts" => $total_posts
+    ));
+}
+
 
 
 

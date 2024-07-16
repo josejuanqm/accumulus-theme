@@ -2677,12 +2677,32 @@ a {
 }
 
 @media not all and (min-width: 1025px) {
+  .max-lg\:flex {
+    display: flex;
+  }
+
   .max-lg\:hidden {
     display: none;
   }
 
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
+  }
+
+  .max-lg\:items-center {
+    align-items: center;
+  }
+
+  .max-lg\:justify-center {
+    justify-content: center;
+  }
+
+  .max-lg\:gap-4 {
+    gap: 1rem;
+  }
+
+  .max-lg\:pt-s10 {
+    padding-top: 5rem;
   }
 }
 
@@ -3208,6 +3228,18 @@ a {
 
   .lg\:top-0 {
     top: 0px;
+  }
+
+  .lg\:-left-20 {
+    left: -5rem;
+  }
+
+  .lg\:-right-20 {
+    right: -5rem;
+  }
+
+  .lg\:top-1\/4 {
+    top: 25%;
   }
 
   .lg\:order-none {
