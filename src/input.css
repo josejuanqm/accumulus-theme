@@ -283,3 +283,11 @@ a {
 .description-wysiwyg a {
   @apply text-secondary-green no-underline hover:text-secondary-carbon;
 }
+
+/*
+* Grid posts
+*/
+
+#category-post-content {
+  @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
+}

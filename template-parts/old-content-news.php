@@ -174,16 +174,16 @@ if (count($result) > 0 ){
       </div> -->
       <!-- Displaying data -->
 
-      <div id="category-post-content">
+      <div id="category-post-content" class="col-span-12 grid grid-cols-12 gap-s2">
       </div> 
-<!--      <div class="post-paginator">-->
-<!--          <ul class="pagination" id="paginador-blog">-->
-<!--          </ul>-->
-<!--      </div>-->
-      <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
-        <a id="btn-news-see-more" class="btn-secondary" href="#">See More</a>
+      <div class="post-paginator">
+          <ul class="pagination" id="paginador-blog">
+          </ul>
       </div>
-            <input type="hidden" value="1" id="current-page"/>
+      <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
+        <a class="btn-secondary" href="#">See More</a>
+      </div>
+
     </div>
 
   </div>
