@@ -32,8 +32,14 @@
 				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary">Lear more</a>
-				<a href="#" class="btn-tertiary">About Accumulus</a>
+				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary">Get started</a>
+				<a href="#" class="btn-tertiary">
+					<svg width="16" height="16" viewBox="0 0 16 16" class="fill-inherit mr-2">
+						<path d="M13.6407 0.393555H1.73275C0.79347 0.393555 0.03125 1.15578 0.03125 2.09505V15.7045H1.73275V2.09505H13.6407V14.003H3.433V15.7045H13.6407C14.58 15.7045 15.3422 14.9423 15.3422 14.003V2.09505C15.3422 1.15578 14.58 0.393555 13.6407 0.393555Z" class="fill-inherit" />
+						<path d="M6.72573 5.04395V5.05525H5.4248V11.1091H6.64411L10.3548 8.6353V7.46372L6.72573 5.04395ZM7.05724 7.22638L8.29161 8.04888L7.05724 8.87138V7.22513V7.22638Z" class="fill-inherit" />
+					</svg>
+					About Accumulus
+				</a>
 			</div>
 
 		</div>
@@ -86,7 +92,7 @@
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_first_description; ?></p>
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_second_description; ?></p>
 			<div class="col-span-12 lg:col-span-3 lg:col-start-4">
-				<a href="<?php echo $what_link_about; ?>" class="btn-tertiary-white">About Accumulus</a>
+				<a href="<?php echo $what_link_about; ?>" class="btn-tertiary-white">A Case for Change</a>
 			</div>
 
 		</div>
