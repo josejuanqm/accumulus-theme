@@ -615,7 +615,7 @@ video {
 @media (min-width: 768px) {
   .btn-secondary {
     height: 82px;
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -674,7 +674,7 @@ video {
 @media (min-width: 768px) {
   .btn-secondary-inverted {
     height: 82px;
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -731,7 +731,7 @@ video {
 @media (min-width: 768px) {
   .btn-tertiary {
     height: 82px;
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -787,7 +787,7 @@ video {
 @media (min-width: 768px) {
   .btn-tertiary-white {
     height: 82px;
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -1011,12 +1011,12 @@ video {
   margin-top: -5rem;
 }
 
-.mt-s6 {
-  margin-top: 3rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-s6 {
+  margin-top: 3rem;
 }
 
 .block {
@@ -1410,7 +1410,7 @@ video {
 
 .bg-neutral-nude {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 236 229 / var(--tw-bg-opacity));
+  background-color: rgb(255 248 241 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-nwhite {
@@ -1799,7 +1799,7 @@ video {
 }
 
 .text-h1Mobile {
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   line-height: 120%;
   letter-spacing: 0;
   font-weight: 400;
@@ -1827,7 +1827,7 @@ video {
 }
 
 .text-h4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 120%;
   letter-spacing: 0;
   font-weight: 500;
@@ -1905,6 +1905,11 @@ video {
 .text-neutral-fnude {
   --tw-text-opacity: 1;
   color: rgb(229 229 229 / var(--tw-text-opacity));
+}
+
+.text-neutral-nude {
+  --tw-text-opacity: 1;
+  color: rgb(255 248 241 / var(--tw-text-opacity));
 }
 
 .text-neutral-nwhite {
@@ -2008,7 +2013,7 @@ video {
 /* FONTS */
 
 .heading-1 {
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   line-height: 120%;
   letter-spacing: 0;
   font-weight: 400;
@@ -2016,7 +2021,7 @@ video {
 
 @media (min-width: 768px) {
   .heading-1 {
-    font-size: 4.875rem;
+    font-size: 4.5rem;
     line-height: 106%;
     letter-spacing: 0;
     font-weight: 400;
@@ -2100,7 +2105,7 @@ video {
 
 @media (min-width: 1025px) {
   .heading-4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -2339,7 +2344,7 @@ video {
 
 @media (min-width: 768px) {
   .cta {
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -2530,7 +2535,7 @@ a {
 
 @media (min-width: 768px) {
   .wpforms-submit {
-    font-size: 2rem;
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -3137,7 +3142,7 @@ a {
   }
 
   .md\:text-h1Tablet {
-    font-size: 4.875rem;
+    font-size: 4.5rem;
     line-height: 106%;
     letter-spacing: 0;
     font-weight: 400;
@@ -3698,7 +3703,7 @@ a {
   }
 
   .lg\:text-h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -3820,7 +3825,7 @@ a {
 
 @media (min-width: 1025px) {
   .lg\:\[\&\>h4\]\:text-h4>h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;

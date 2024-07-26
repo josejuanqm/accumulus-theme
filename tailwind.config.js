@@ -17,7 +17,7 @@ module.exports = {
           },
         ],
         h1Tablet: [
-          '4.875rem',
+          '4.5rem',
           // '3.5rem',
           {
             fontWeight: '400',
@@ -27,7 +27,7 @@ module.exports = {
         ],
         h1Mobile: [
           // '4.875rem',
-          '2.25rem',
+          '2.125rem',
           {
             fontWeight: '400',
             lineHeight: '120%',
@@ -86,7 +86,7 @@ module.exports = {
         ],
 
         h4: [
-          '1.125rem',
+          '1rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -345,7 +345,7 @@ module.exports = {
           },
         ],
         ctaTablet: [
-          '2rem',
+          '1.625rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -381,7 +381,7 @@ module.exports = {
         },
 
         neutral: {
-          nude: '#F1ECE5',
+          nude: '#FFF8F1',
           offwhite: '#f5f5f5',
           nwhite: '#fcfcfc',
           fnude: '#e5e5e5',
