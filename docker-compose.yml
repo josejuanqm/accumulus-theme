@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   db:
     image: mysql:5.7
@@ -30,3 +28,4 @@ services:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 volumes:
   db_data:
+

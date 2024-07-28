@@ -95,6 +95,50 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script>
+  let showingCookies = true
+
+  function hideCookies() {
+    showingCookies = false
+    let prompt = document.querySelector('#cookies-prompt')
+    console.log(prompt)
+    if (prompt) {
+      prompt.remove()
+    }
+  }
+</script>
+
+<section id="cookies-prompt" class="fixed bottom-0 left-0 right-0 py-s4 shadow-lg bg-white">
+  <div class="container mx-auto px-s2">
+    <div class="flex flex-col md:flex-row lg:flex-row items-start md:items-center gap-s4">
+      <h3 class="heading-3">Our Website Uses Cookies</h3>
+      <p class="body-2">
+      Accumulus Synergy uses cookies to give you the best experience when visiting our website. By clicking “Accept,” you’re agreeing to the use of cookies as described in our privacy policy
+      </p>
+      <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto">
+        <button class="btn btn-secondary" id="cookie-prompt-primary-btn">
+          Accept Cookies
+        </button>
+        <div class="btn btn-tertiary" id="cookie-prompt-secondary-btn">
+          Decline
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let primary = document.getElementById('cookie-prompt-primary-btn')
+  if (primary) {
+    primary.addEventListener('click', hideCookies)
+  }
+
+  let secondary = document.getElementById('cookie-prompt-secondary-btn')
+  if (secondary) {
+    secondary.addEventListener('click', hideCookies)
+  }
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
