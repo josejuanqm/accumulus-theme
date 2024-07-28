@@ -15,7 +15,7 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="section w-full relative pt-0 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-neutral-white bg-core-capabilities-mobile md:bg-core-capabilities-tablet lg:bg-core-capabilities-desktop bg-cover bg-no-repeat bg-left-bottom">
+<section class="section w-full relative pt-s3 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-neutral-white bg-core-capabilities-mobile md:bg-core-capabilities-tablet lg:bg-core-capabilities-desktop bg-cover bg-no-repeat bg-left-bottom">
 
 	<div class="container mx-auto">
 
@@ -30,7 +30,7 @@
       </div>
 
 			<div class="col-span-6 md:col-span-6 lg:col-span-4 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="text-b2"><?php echo $main_banner['first_resume']; ?></p>
+				<p class="body-2"><?php echo $main_banner['first_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Get Started</a>
@@ -48,17 +48,17 @@
 	// Fields main banner
 	$benefits = get_field('benefits');
 ?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
-	<div class="container mx-auto px-s4 lg:px-0">
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite max-lg:!pr-0 max-md:!pr-s2">
+	<div class="container mx-auto px-s4 md:px-0 lg:px-0">
 		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Benefits</h2>
+			<h2 class="w-full heading-1">Benefits</h2>
 			<div class="relative w-full">
 				<div class="benefits-slide">
 					<?php 
 
             foreach($benefits as $benefit):
           ?>
-						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-s1">
+						<div class="card relative w-full max-w-[370px] mx-s1">
 
 							<div class="relative w-full flex items-center justify-center">
                   <img class="block w-full h-full object-cover" src="<?php echo $benefit['image']; ?>" alt="<?php echo $benefit['title']; ?>" />
@@ -66,7 +66,7 @@
 
 							<div class="flex flex-col pt-s2 gap-2">
 								<h3 class="heading-10 color-neutral-dgray"><?php echo $benefit['title']; ?></h3>
-                <p class="body-3"><?php echo $benefit['resume']; ?></p>
+                <p class="body-2 md:body-3"><?php echo $benefit['resume']; ?></p>
 							</div>
 
 						</div>

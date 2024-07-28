@@ -2718,6 +2718,10 @@ a {
   .max-lg\:pt-s10 {
     padding-top: 5rem;
   }
+
+  .max-lg\:\!pr-0 {
+    padding-right: 0px !important;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -2747,6 +2751,10 @@ a {
 
   .max-md\:pt-s1 {
     padding-top: 0.5rem;
+  }
+
+  .max-md\:\!pr-s2 {
+    padding-right: 1rem !important;
   }
 }
 
@@ -2976,6 +2984,14 @@ a {
 
   .md\:gap-y-s8 {
     row-gap: 4rem;
+  }
+
+  .md\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .md\:rounded-card {
+    border-radius: 20px;
   }
 
   .md\:bg-benefits-tablet {
