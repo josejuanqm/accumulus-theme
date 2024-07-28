@@ -18,7 +18,7 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="section w-full pt-0 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-get-started-mobile md:bg-get-started-tablet lg:bg-get-started-desktop bg-cover bg-no-repeat bg-center">
+<section class="section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-get-started-mobile md:bg-get-started-tablet lg:bg-get-started-desktop bg-cover bg-no-repeat bg-center">
 
 	<div class="container mx-auto">
 

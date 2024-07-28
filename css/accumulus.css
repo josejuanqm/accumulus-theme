@@ -1727,6 +1727,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-s3 {
+  padding-top: 1.5rem;
+}
+
 .pt-s4 {
   padding-top: 2rem;
 }
@@ -1745,6 +1749,10 @@ video {
 
 .pt-s9 {
   padding-top: 4.5rem;
+}
+
+.pt-s16 {
+  padding-top: 8rem;
 }
 
 .text-center {
@@ -1821,7 +1829,7 @@ video {
 
 .text-h3Mobile {
   font-size: 1.25rem;
-  line-height: 120%;
+  line-height: 28px;
   letter-spacing: 0;
   font-weight: 500;
 }
@@ -2064,7 +2072,7 @@ video {
 
 .heading-3 {
   font-size: 1.25rem;
-  line-height: 120%;
+  line-height: 28px;
   letter-spacing: 0;
   font-weight: 500;
 }
@@ -2096,7 +2104,7 @@ video {
 
 @media (min-width: 768px) {
   .heading-4 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -2278,7 +2286,7 @@ video {
 
 @media (min-width: 768px) {
   .body-2 {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -2608,7 +2616,7 @@ a {
 
 @media (min-width: 768px) {
   .description-wysiwyg p {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -2687,6 +2695,10 @@ a {
     display: none;
   }
 
+  .max-lg\:h-full {
+    height: 100%;
+  }
+
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
   }
@@ -2731,6 +2743,10 @@ a {
 
   .max-md\:flex-col {
     flex-direction: column;
+  }
+
+  .max-md\:pt-s1 {
+    padding-top: 0.5rem;
   }
 }
 
@@ -3113,6 +3129,10 @@ a {
     padding-top: 4rem;
   }
 
+  .md\:pt-s20 {
+    padding-top: 10rem;
+  }
+
   .md\:text-b1Tablet {
     font-size: 1.875rem;
     line-height: 120%;
@@ -3121,7 +3141,7 @@ a {
   }
 
   .md\:text-b2Tablet {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -3170,7 +3190,7 @@ a {
   }
 
   .md\:text-h4Tablet {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -3784,7 +3804,7 @@ a {
 
 .\[\&\>h3\]\:text-h3Mobile>h3 {
   font-size: 1.25rem;
-  line-height: 120%;
+  line-height: 28px;
   letter-spacing: 0;
   font-weight: 500;
 }
@@ -3816,7 +3836,7 @@ a {
 
 @media (min-width: 768px) {
   .md\:\[\&\>h4\]\:text-h4Tablet>h4 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;

@@ -80,7 +80,7 @@ module.exports = {
           '1.25rem',
           {
             fontWeight: '500',
-            lineHeight: '120%',
+            lineHeight: '28px',
             letterSpacing: '0',
           },
         ],
@@ -94,7 +94,7 @@ module.exports = {
           },
         ],
         h4Tablet: [
-          '1.25rem',
+          '1.125rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -278,7 +278,7 @@ module.exports = {
           },
         ],
         b2Tablet: [
-          '1.625rem',
+          '1.5rem',
           {
             fontWeight: '400',
             lineHeight: '120%',

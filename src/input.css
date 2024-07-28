@@ -52,39 +52,39 @@
 
 /* FONTS */
 .heading-1 {
-  @apply lg:text-h1 md:text-h1Tablet text-h1Mobile;
+  @apply text-h1Mobile md:text-h1Tablet lg:text-h1;
 }
 
 .heading-2 {
-  @apply lg:text-h2 md:text-h2Tablet text-h2Mobile;
+  @apply text-h2Mobile md:text-h2Tablet lg:text-h2;
 }
 
 .heading-3 {
-  @apply lg:text-h3 md:text-h3Tablet text-h3Mobile;
+  @apply text-h3Mobile md:text-h3Tablet lg:text-h3;
 }
 
 .heading-4 {
-  @apply lg:text-h4 md:text-h4Tablet text-h4Mobile;
+  @apply text-h4Mobile md:text-h4Tablet lg:text-h4;
 }
 
 .heading-5 {
-  @apply lg:text-h5 md:text-h5Tablet text-h5Mobile;
+  @apply text-h5Mobile md:text-h5Tablet lg:text-h5;
 }
 
 .heading-6 {
-  @apply lg:text-h6 md:text-h6Tablet text-h6Mobile;
+  @apply text-h6Mobile md:text-h6Tablet lg:text-h6;
 }
 
 .heading-7 {
-  @apply lg:text-h7 md:text-h7Tablet text-h7Mobile;
+  @apply text-h7Mobile md:text-h7Tablet lg:text-h7;
 }
 
 .heading-8 {
-  @apply lg:text-h8 md:text-h8Tablet text-h8Mobile;
+  @apply text-h8Mobile md:text-h8Tablet lg:text-h8;
 }
 
 .heading-9 {
-  @apply lg:text-h9 md:text-h9Tablet text-h9Mobile;
+  @apply text-h9Mobile md:text-h9Tablet lg:text-h9;
 }
 
 .heading-10 {
@@ -92,23 +92,23 @@
 }
 
 .body-1 {
-  @apply lg:text-b1 md:text-b1Tablet text-b1Mobile;
+  @apply text-b1Mobile md:text-b1Tablet lg:text-b1;
 }
 
 .body-2 {
-  @apply lg:text-b2 md:text-b2Tablet text-b2Mobile;
+  @apply text-b2Mobile md:text-b2Tablet lg:text-b2;
 }
 
 .body-3 {
-  @apply lg:text-b3 md:text-b3Tablet text-b3Mobile;
+  @apply text-b3Mobile md:text-b3Tablet lg:text-b3;
 }
 
 .link {
-  @apply lg:text-textlink text-textlinkMobile;
+  @apply text-textlinkMobile lg:text-textlink;
 }
 
 .cta {
-  @apply lg:text-cta md:text-ctaTablet text-ctaMobile;
+  @apply text-ctaMobile md:text-ctaTablet lg:text-cta;
 }
 
 body {
