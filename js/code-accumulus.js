@@ -64,14 +64,21 @@ jQuery(document).ready(function ($) {
     nextArrow: $('.next'),
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 1025,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3.5,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 675,
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 720,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

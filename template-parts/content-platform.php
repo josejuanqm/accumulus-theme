@@ -15,7 +15,7 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="section w-full relative pt-0 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-neutral-white bg-main-platform-mobile md:bg-main-platform-tablet lg:bg-main-platform-desktop bg-cover bg-no-repeat bg-left-bottom">
+<section class="section w-full relative pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white bg-main-platform-mobile md:bg-main-platform-tablet lg:bg-main-platform-desktop bg-cover bg-no-repeat bg-left-bottom">
 
 	<div class="container mx-auto">
 
@@ -30,10 +30,10 @@
       </div>
 
 			<div class="col-span-6 md:col-span-6 lg:col-span-4 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="text-b2"><?php echo $main_banner['first_resume']; ?></p>
+				<p class="body-2"><?php echo $main_banner['first_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-5 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="text-b2"><?php echo $main_banner['second_resume']; ?></p>
+				<p class="body-2"><?php echo $main_banner['second_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Get Started</a>
@@ -55,7 +55,7 @@ $video = get_field('video');
 ?>
 
 <?php if($video): ?>
-<section class="relative section w-full lg:pt-s16 lg:pb-s16">
+<section class="relative section w-full md:pt-s12 md:pb-s12 lg:pt-s16 lg:pb-s16">
   <div class="container mx-auto video-container">
     <?php echo $video; ?>
   </div>
@@ -71,16 +71,16 @@ $value_propositions = get_field('value_propositions');
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 lg:pb-s12">
+<section class="relative section w-full pt-s12 md:pt-s12 lg:pb-s12">
 
 	<div class="container mx-auto">
     <?php if($value_propositions) : ?>
     <div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s16 lg:mb-s2">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 heading-4 uppercase"><?php echo $value_propositions['flag_title']; ?></h4>
-			<h2 class="col-span-12 grid grid-cols-12 heading-2 !font-normal">
+			<h2 class="col-span-12 grid grid-cols-12 heading-1 gap-4 !font-normal">
         <span class="col-span-12 "><?php echo $value_propositions['title_first_line']; ?></span>
         <span class="col-span-12"><?php echo $value_propositions['title_second_line']; ?></span>
-        <span class="col-span-9 col-start-2 lg:col-start-3"><?php echo $value_propositions['title_third_line']; ?></span>
+        <span class="col-span-10 lg:col-span-9 col-start-2 lg:col-start-3"><?php echo $value_propositions['title_third_line']; ?></span>
       </h2>
 		</div>
     <?php endif; ?>
@@ -108,7 +108,7 @@ $value_propositions = get_field('value_propositions');
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
@@ -168,7 +168,7 @@ $value_propositions = get_field('value_propositions');
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
@@ -228,13 +228,13 @@ $value_propositions = get_field('value_propositions');
 			?>
 
 					<div class="key-features__item relative">
-						<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 lg:pb-s12 last-of-type:lg:!pb-0">
+						<div class="grid grid-cols-12 gap-x-s2 gap-y-s4  md:gap-y-s6 lg:gap-y-0 lg:pb-s12 last-of-type:lg:!pb-0">
 							<div class="col-span-12 md:col-span-6 lg:col-span-7">
 	
 								<?php foreach($row['slide_item'] as $card) : ?>
 	
 									<?php if ($card['acf_fc_layout'] == 'image') : ?>
-										<img src="<?php echo $card['image']; ?>"  />
+										<img src="<?php echo $card['image']; ?>" class="max-lg:h-full"  />
 									<?php endif; ?>
 	
 								<?php endforeach; ?>
@@ -256,7 +256,7 @@ $value_propositions = get_field('value_propositions');
 										<ul class="flex flex-col gap-2 body-3">
 	
 											<?php foreach($card['bullet_list'] as $item): ?>
-											<li class="relative pl-3">
+											<li class="relative body-3 pl-3">
 												<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 												<?php echo $item['item']; ?>
 											</li>
@@ -272,7 +272,7 @@ $value_propositions = get_field('value_propositions');
 									<?php endforeach; ?>
 									
 							</div>
-							<div class="col-span-12 lg:hidden">
+							<div class="col-span-12 max-md:pt-s1 lg:hidden">
 								<?php foreach($row['slide_item'] as $card) : ?>
 										<?php if($card['acf_fc_layout'] == 'cta'): ?>
 											<a class="btn-secondary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
@@ -338,17 +338,17 @@ $value_propositions = get_field('value_propositions');
 ?>
 <section class="relative section w-full pt-s8 md:pt-s12 pb-s8 md:pb-s12 bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
   <div class="container mx-auto">
-    <div class="grid grid-cols-6 md:grid-cols-12 gap-s2">
+    <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
 
       <h4 class="col-span-6 md:col-span-12 heading-4 uppercase"><?php echo $benefits['title_flag']; ?></h4>
 
-      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2"><?php echo $benefits['title']; ?></h2>
+      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $benefits['title']; ?></h2>
 			
-			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 lg:pt-s20">
+			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s16 lg:pt-s20 md:pb-s10 lg:pb-0">
 				<p class="body-2"><?php echo $benefits['resume']; ?></p>
 			</div>
 
-      <div class="col-span-6 md:col-span-6 lg:col-start-7 flex flex-col lg:flex-row lg:pt-s4">
+      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row pt-s1 md:pt-s20 lg:pt-s4">
 				<a href="<?php echo $benefits['link_cta']; ?>" class="btn-secondary">CTA</a>
 			</div>
     </div>
