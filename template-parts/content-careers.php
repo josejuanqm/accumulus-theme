@@ -101,7 +101,7 @@
               }
 
               // Restore original Post Data
-              wp_reset_postdata();kj
+              wp_reset_postdata();
             ?>
 				</div>
 					
