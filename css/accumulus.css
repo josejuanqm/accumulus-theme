@@ -888,6 +888,10 @@ video {
   top: 1rem;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -898,10 +902,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .order-last {
@@ -1198,12 +1198,12 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1402,12 +1402,12 @@ video {
   border-radius: 40px;
 }
 
-.rounded-miniCard {
-  border-radius: 10px;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-miniCard {
+  border-radius: 10px;
 }
 
 .border-b {
@@ -1629,6 +1629,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-s4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-s6 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1637,11 +1642,6 @@ video {
 .py-s8 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-s4 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .pb-\[33\%\] {
@@ -1744,6 +1744,10 @@ video {
   padding-top: 7.5rem;
 }
 
+.pt-s16 {
+  padding-top: 8rem;
+}
+
 .pt-s2 {
   padding-top: 1rem;
 }
@@ -1770,10 +1774,6 @@ video {
 
 .pt-s9 {
   padding-top: 4.5rem;
-}
-
-.pt-s16 {
-  padding-top: 8rem;
 }
 
 .text-center {
@@ -2489,40 +2489,40 @@ a {
 
 .wpforms-container {
   margin-bottom: 0px !important;
-  padding-top: 3rem;
+  padding-top: 3rem !important;
 }
 
 @media (min-width: 1025px) {
   .wpforms-container {
-    padding-top: 2rem;
+    padding-top: 2rem !important;
   }
 }
 
 .wpforms-field-label {
-  font-size: 1.75rem;
-  line-height: 120%;
-  letter-spacing: 0;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 1.75rem !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
 }
 
 .wpforms-container input.wpforms-field-medium {
   max-width: 100% !important;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 229 229 / var(--tw-border-opacity));
-  background-color: transparent;
-  padding: 0.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(68 68 68 / var(--tw-text-opacity));
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  border-bottom-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity)) !important;
+  background-color: transparent !important;
+  padding: 0.75rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
 }
 
 .wpforms-field-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
 }
 
 .wpforms-container .wpforms-field {
@@ -2530,64 +2530,64 @@ a {
 }
 
 .wpforms-submit-container {
-  padding-top: 8rem;
+  padding-top: 8rem !important;
 }
 
 @media (min-width: 1025px) {
   .wpforms-submit-container {
-    padding-top: 4rem;
+    padding-top: 4rem !important;
   }
 }
 
 .wpforms-submit {
-  display: flex;
-  height: 82px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(32 32 32 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
-  font-size: 1.125rem;
-  line-height: 120%;
-  letter-spacing: 0;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  display: flex !important;
+  height: 82px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9999px !important;
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(32 32 32 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity)) !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  text-align: center !important;
+  font-size: 1.125rem !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
 }
 
 .wpforms-submit:hover {
-  background-color: transparent;
-  --tw-text-opacity: 1;
-  color: rgb(32 32 32 / var(--tw-text-opacity));
+  background-color: transparent !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(32 32 32 / var(--tw-text-opacity)) !important;
 }
 
 @media (min-width: 768px) {
   .wpforms-submit {
-    font-size: 1.625rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    font-weight: 500;
+    font-size: 1.625rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
   }
 }
 
 @media (min-width: 1025px) {
   .wpforms-submit {
-    height: 45px;
-    font-size: 1.125rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    font-weight: 500;
+    height: 45px !important;
+    font-size: 1.125rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
   }
 }
 
@@ -2746,12 +2746,12 @@ a {
     gap: 1rem;
   }
 
-  .max-lg\:pt-s10 {
-    padding-top: 5rem;
-  }
-
   .max-lg\:\!pr-0 {
     padding-right: 0px !important;
+  }
+
+  .max-lg\:pt-s10 {
+    padding-top: 5rem;
   }
 }
 
@@ -2780,12 +2780,12 @@ a {
     flex-direction: column;
   }
 
-  .max-md\:pt-s1 {
-    padding-top: 0.5rem;
-  }
-
   .max-md\:\!pr-s2 {
     padding-right: 1rem !important;
+  }
+
+  .max-md\:pt-s1 {
+    padding-top: 0.5rem;
   }
 }
 
@@ -2796,6 +2796,10 @@ a {
 }
 
 @media (min-width: 768px) {
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .md\:col-span-10 {
     grid-column: span 10 / span 10;
   }
@@ -2838,10 +2842,6 @@ a {
 
   .md\:col-span-9 {
     grid-column: span 9 / span 9;
-  }
-
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
   }
 
   .md\:col-start-1 {
@@ -2928,12 +2928,12 @@ a {
     width: 64px;
   }
 
-  .md\:w-s8 {
-    width: 4rem;
-  }
-
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-s8 {
+    width: 4rem;
   }
 
   .md\:max-w-550 {
@@ -3027,14 +3027,6 @@ a {
 
   .md\:gap-y-s8 {
     row-gap: 4rem;
-  }
-
-  .md\:overflow-hidden {
-    overflow: hidden;
-  }
-
-  .md\:rounded-card {
-    border-radius: 20px;
   }
 
   .md\:bg-benefits-tablet {
@@ -3172,6 +3164,10 @@ a {
     padding-top: 1rem;
   }
 
+  .md\:pt-s20 {
+    padding-top: 10rem;
+  }
+
   .md\:pt-s3 {
     padding-top: 1.5rem;
   }
@@ -3186,10 +3182,6 @@ a {
 
   .md\:pt-s8 {
     padding-top: 4rem;
-  }
-
-  .md\:pt-s20 {
-    padding-top: 10rem;
   }
 
   .md\:text-b1Tablet {
