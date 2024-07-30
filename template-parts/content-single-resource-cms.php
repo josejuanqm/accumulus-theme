@@ -167,7 +167,7 @@
 
 							<div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
 								<div class="flex items-center gap-3 text-primary-violet uppercase">
-									<?php if ($categorySlug == 'thought-leadership'): ?>
+                <?php if ($categorySlug == 'thought-leadership'): ?>
 										<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
 										</svg>
