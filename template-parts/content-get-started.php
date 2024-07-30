@@ -12,15 +12,24 @@
 <?php
 	// Fields main banner
 	$bg_image_main = get_field('bg_image_main');
+	$bg_image_for_desktop = get_field('bg_image_for_desktop');
+	$bg_image_for_tablet = get_field('bg_image_for_tablet');
+	$bg_image_for_mobile = get_field('bg_image_for_mobile');
 	$title_tag = get_field('title_tag');
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-get-started-mobile md:bg-get-started-tablet lg:bg-get-started-desktop bg-cover bg-no-repeat bg-center">
+<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon">
 
-	<div class="container mx-auto">
+	<picture class="absolute top-0 left-0 w-full h-full">
+		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
+		<source media="(min-width:768px)" srcset="<?php echo $bg_image_for_tablet; ?>">
+		<img src="<?php echo $bg_image_for_mobile; ?>" alt="Flowers" class="w-full h-full">
+	</picture>
+
+	<div class="relative container mx-auto">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 
