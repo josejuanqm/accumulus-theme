@@ -15,9 +15,15 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="section w-full relative pt-s3 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-neutral-white bg-core-capabilities-mobile md:bg-core-capabilities-tablet lg:bg-core-capabilities-desktop bg-cover bg-no-repeat bg-left-bottom">
+<section class="section w-full relative pt-s3 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-secondary-green">
 
-	<div class="container mx-auto">
+	<picture class="absolute top-0 left-0 w-full h-full">
+		<source media="(min-width:1024px)" srcset="<?php echo $main_banner['bg_image_for_desktop']; ?>">
+		<source media="(min-width:768px)" srcset="<?php echo $main_banner['bg_image_for_tablet']; ?>">
+		<img src="<?php echo $main_banner['bg_image_for_mobile']; ?>" alt="<?php echo $main_banner['title']; ?>" class="w-full h-full">
+	</picture>
+
+	<div class="relative container mx-auto">
 
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 
@@ -48,7 +54,7 @@
 	// Fields main banner
 	$benefits = get_field('benefits');
 ?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-carbon max-lg:!pr-0 max-md:!pr-s2">
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac max-lg:!pr-0 max-md:!pr-s2">
 	<div class="container mx-auto px-s4 md:px-0 lg:px-0">
 		<div class="flex flex-col gap-s8">
 			<h2 class="w-full heading-1">Benefits</h2>
