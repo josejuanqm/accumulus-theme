@@ -19,6 +19,12 @@
 
 <section class="section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s8 md:pb-s10 lg:pb-s12 text-neutral-fnude bg-primary-violet bg-case-for-change-mobile md:bg-case-for-change-tablet lg:bg-case-for-change-desktop bg-cover bg-no-repeat bg-center">
 
+	<picture>
+		<source media="(min-width:1024px)" srcset="img_pink_flowers.jpg">
+		<source media="(min-width:768px)" srcset="img_white_flower.jpg">
+		<img src="img_orange_flowers.jpg" alt="Flowers" class="w-full">
+	</picture>
+
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
