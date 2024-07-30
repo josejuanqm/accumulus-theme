@@ -48,7 +48,7 @@
 	// Fields main banner
 	$benefits = get_field('benefits');
 ?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite max-lg:!pr-0 max-md:!pr-s2">
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-carbon max-lg:!pr-0 max-md:!pr-s2">
 	<div class="container mx-auto px-s4 md:px-0 lg:px-0">
 		<div class="flex flex-col gap-s8">
 			<h2 class="w-full heading-1">Benefits</h2>
