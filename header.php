@@ -20,15 +20,21 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden' : ''); ?>>
+<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden !mb-0' : ''); ?>>
 <?php wp_body_open(); ?>
+<?php 
+  // switch url path
+  $url_path = $_SERVER['REQUEST_URI'];
+  $url_path = explode('/', $url_path);
+  $url_path = $url_path[1];
+?>
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
   <header class="fixed w-full z-[999999]">
-    <div class="section bg-white border-b border-b-neutral-200">
+    <div class="hidden lg:block section bg-white border-b border-b-neutral-200">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
-          <ul class="flex flex-row items-center justify-end gap-s2">
+          <ul class="flex flex-row items-center justify-end gap-s2 text-sm">
             <li><a class="hover:underline" href="">Regulator Forum</a></li>
             <li><a class="hover:underline" href="">Contact Us</a></li>
             <li><a class="hover:underline" href="">Careers</a></li>
@@ -45,7 +51,7 @@
               <img class="h-s8" src="<?php echo get_template_directory_uri(); ?>/images/logo-navigation-light.svg" alt="Accumulus" class="w-32 h-auto">
             </a>
           </div>
-          <div class="flex flex-row items-center">
+          <div class="flex-row items-center hidden lg:flex">
             <ul class="flex flex-row items-center gap-s4">
               <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="platform">
                 <a class="py-s2" href="#">Platform</a>
@@ -71,7 +77,14 @@
             </ul>
           </div>
           <div class="flex flex-row items-center ms-auto">
-            <button class="my-s2 btn btn-primary">
+            <button onclick="setMobileMenuOpened()" class="block lg:hidden">
+              <svg width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4749 3.93832H15.3016H19.1283H22.9551H26.779H30.6057V0H26.779H22.9551H19.1283H15.3016H11.4749H7.65095H3.82422V3.93832H7.65095H11.4749Z" fill="#444444"/>
+                <path d="M30.6082 7.87109H26.7815H22.9576H19.1308H15.3041H11.4774H7.65347H3.82673H0V11.8094H3.82673H7.65347H11.4774H15.3041H19.1308H22.9576H26.7815H30.6082H34.4349V7.87109H30.6082Z" fill="#444444"/>
+                <path d="M22.9551 15.7412H19.1283H15.3016H11.4749H7.65095H3.82422V19.6766H7.65095H11.4749H15.3016H19.1283H22.9551H26.779H30.6057V15.7412H26.779H22.9551Z" fill="#444444"/>
+              </svg>
+            </button>
+            <button class="hidden lg:block my-s2 btn btn-primary">
               Get Started
             </button>
           </div>
@@ -82,7 +95,7 @@
       <div class="container mx-auto px-s2">
         <ul class="dropdown-menu flex flex-row items-center justify-center mx-auto">
           <li>
-            <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px]" href="#">
+            <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
               <div class="p-s1 w-4 h-4 box-content rounded-md bg-primary-glaciar col-start-1 col-end-2">
                 <img class="h-s2 w-s2 aspect-square bg-primary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
               </div>
@@ -98,8 +111,50 @@
       </div>
     </section>
   </header> 
+  <section id="mobile-menu" style="display: none;" class="section fixed bg-white lg:!hidden top-0 left-0 w-screen h-screen z-[999] pb-s4">
+    <div class="container mx-auto w-full flex-col items-center justify-between h-full flex pt-s6">
+      <ul class="w-full flex flex-col items-start gap-s1 md:gap-s2 body-1 px-s2">
+        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="platform">
+          <a class="py-s2" href="#">Platform</a>
+          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1">
+          <a class="py-s2" href="#">Case for Change</a>
+        </li>
+        <li class="menu-item flex flex-row items-center gap-s1" idata-dentifier="resources">
+          <a class="py-s2" href="#">Resources</a>
+          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" idata-dentifier="company">
+          <a class="py-s2" href="#">Company</a>
+          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
+      </ul>
+      <div class="flex flex-col items-center justify-between w-full">
+        <div class="btn btn-primary w-full">
+          Get Started
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script>
+    function setMobileMenuOpened() {
+      const mobileMenu = document.querySelector('#mobile-menu');
+      const opened = mobileMenu.style.display === 'none';
+      if (opened) {
+        mobileMenu.style.display = 'block';
+      } else {
+        mobileMenu.style.display = 'none';
+      }
+    }
+
     function setMegaMenuOpened(opened, id) {
       const page = document.querySelector('#page > header');
       if (opened) {
@@ -153,10 +208,12 @@
     // place bottom margin to the body to avoid the content to be hidden by the fixed header
     document.addEventListener('DOMContentLoaded', function() {
       document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
 
     // Also add a listener to the resize event to update the margin top
     window.addEventListener('resize', function() {
       document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
   </script>

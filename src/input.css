@@ -3,37 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'TP Fors';
-  src:
-    url('fonts/woff2/TT_Fors_Regular.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Regular.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT-Fors-Regular.ttf')
-      format('truetype'); /* Safari, Android, iOS */
+  font-family: "TP Fors";
+  src: url("fonts/woff2/TT_Fors_Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Regular.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT-Fors-Regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TP Fors';
-  src:
-    url('fonts/woff2/TT_Fors_Medium.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Medium.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Medium.ttf')
-      format('truetype'); /* Safari, Android, iOS */
+  font-family: "TP Fors";
+  src: url("fonts/woff2/TT_Fors_Medium.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Medium.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Medium.ttf")
+      format("truetype"); /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TP Fors';
-  src:
-    url('fonts/woff2/TT_Fors_Bold.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Bold.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Bold.ttf')
-      format('truetype'); /* Safari, Android, iOS */
+  font-family: "TP Fors";
+  src: url("fonts/woff2/TT_Fors_Bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Bold.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal;
 }
@@ -112,7 +109,7 @@
 }
 
 body {
-  font-family: 'TP Fors';
+  font-family: "TP Fors";
   font-size: 16px;
   @apply text-neutral-dgray;
 }
@@ -149,7 +146,7 @@ a {
 /* Components */
 @layer components {
   .btn-primary {
-    @apply rounded-full bg-primary-glaciar text-cta-dark px-s3 py-s1 font-medium;
+    @apply flex items-center justify-center w-full lg:w-auto h-[48px] md:h-[48px] lg:h-[45px] lg:min-w-[205px] px-s3 py-3 rounded-full text-center bg-primary-glaciar hover:bg-secondary-glaciar text-cta-dark text-ctaMobile md:text-ctaTablet lg:text-cta border border-transparent hover:text-cta-dark transition-all;
   }
 
   .btn-secondary {
@@ -202,7 +199,7 @@ a {
 }
 
 .slick-dots li button:before {
-  content: '';
+  content: "";
 }
 
 .slick-dots .slick-active button {
