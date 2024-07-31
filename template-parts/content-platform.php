@@ -15,9 +15,15 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="section w-full relative pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white bg-main-platform-mobile md:bg-main-platform-tablet lg:bg-main-platform-desktop bg-cover bg-no-repeat bg-left-bottom">
+<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white">
 
-	<div class="container mx-auto">
+	<picture class="absolute top-0 left-0 w-full h-full -z-[1]">
+		<source media="(min-width:1024px)" srcset="<?php echo $main_banner['bg_image_desktop']; ?>">
+		<source media="(min-width:768px)" srcset="<?php echo $main_banner['bg_image_tablet']; ?>">
+		<img src="<?php echo $main_banner['bg_image_mobile']; ?>" alt="<?php echo $main_banner['title']; ?>" class="w-full h-full">
+	</picture>
+
+	<div class="container mx-auto z-10">
 
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 
