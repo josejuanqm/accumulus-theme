@@ -1545,14 +1545,6 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-mobile.png');
 }
 
-.bg-core-capabilities-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-mobile.png');
-}
-
-.bg-get-started-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-mobile.png');
-}
-
 .bg-get-started-section-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
@@ -1567,10 +1559,6 @@ video {
 
 .bg-news-banner-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
-}
-
-.bg-regulator-forum-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-mobile.png');
 }
 
 .bg-what-we-do-mobile {
@@ -2418,6 +2406,31 @@ video {
   }
 }
 
+.body-4 {
+  font-size: 0.875rem;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-4 {
+    font-size: 1.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .body-4 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+}
+
 .link {
   font-size: 1.625rem;
   line-height: 120%;
@@ -3105,16 +3118,8 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-tablet.png');
   }
 
-  .md\:bg-core-capabilities-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities-tablet.png');
-  }
-
   .md\:bg-get-started-section-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
-  }
-
-  .md\:bg-get-started-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-tablet.png');
   }
 
   .md\:bg-main-platform-tablet {
@@ -3123,10 +3128,6 @@ a {
 
   .md\:bg-news-banner-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp');
-  }
-
-  .md\:bg-regulator-forum-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-tablet.png');
   }
 
   .md\:bg-what-we-do-tablet {
@@ -3624,6 +3625,10 @@ a {
     gap: 3.5rem;
   }
 
+  .lg\:gap-s5 {
+    gap: 2.5rem;
+  }
+
   .lg\:gap-y-0 {
     row-gap: 0px;
   }
@@ -3640,14 +3645,6 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-desktop.png');
   }
 
-  .lg\:bg-core-capabilities-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/core-capabilities/bg-core-capabilities.png');
-  }
-
-  .lg\:bg-get-started-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/get-started/main-banner-desktop.png');
-  }
-
   .lg\:bg-get-started-section-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
   }
@@ -3658,10 +3655,6 @@ a {
 
   .lg\:bg-news-banner-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
-  }
-
-  .lg\:bg-regulator-forum-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum.png');
   }
 
   .lg\:bg-what-we-do-desktop {
