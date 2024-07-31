@@ -2162,13 +2162,14 @@ video {
 }
 
 @font-face {
-  font-family: "TP Fors";
+  font-family: 'TP Fors';
 
-  src: url("fonts/woff2/TT_Fors_Regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Regular.woff")
-      format("woff"),
-    /* Pretty Modern Browsers */ url("fonts/ttf/TT-Fors-Regular.ttf")
-      format("truetype");
+  src:
+    url('fonts/woff2/TT_Fors_Regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Regular.woff')
+      format('woff'),
+    /* Pretty Modern Browsers */ url('fonts/ttf/TT-Fors-Regular.ttf')
+      format('truetype');
 
   /* Safari, Android, iOS */
 
@@ -2178,13 +2179,14 @@ video {
 }
 
 @font-face {
-  font-family: "TP Fors";
+  font-family: 'TP Fors';
 
-  src: url("fonts/woff2/TT_Fors_Medium.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Medium.woff")
-      format("woff"),
-    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Medium.ttf")
-      format("truetype");
+  src:
+    url('fonts/woff2/TT_Fors_Medium.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Medium.woff')
+      format('woff'),
+    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Medium.ttf')
+      format('truetype');
 
   /* Safari, Android, iOS */
 
@@ -2194,13 +2196,14 @@ video {
 }
 
 @font-face {
-  font-family: "TP Fors";
+  font-family: 'TP Fors';
 
-  src: url("fonts/woff2/TT_Fors_Bold.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Bold.woff")
-      format("woff"),
-    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Bold.ttf")
-      format("truetype");
+  src:
+    url('fonts/woff2/TT_Fors_Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Bold.woff')
+      format('woff'),
+    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Bold.ttf')
+      format('truetype');
 
   /* Safari, Android, iOS */
 
@@ -2585,7 +2588,7 @@ video {
 }
 
 body {
-  font-family: "TP Fors";
+  font-family: 'TP Fors';
   font-size: 16px;
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
@@ -2649,7 +2652,7 @@ a {
 }
 
 .slick-dots li button:before {
-  content: "";
+  content: '';
 }
 
 .slick-dots .slick-active button {
@@ -2730,6 +2733,7 @@ a {
 .wpforms-submit {
   display: flex !important;
   height: 82px !important;
+  cursor: pointer;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 9999px !important;
@@ -2755,7 +2759,8 @@ a {
 }
 
 .wpforms-submit:hover {
-  background-color: transparent !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(32 32 32 / var(--tw-text-opacity)) !important;
 }
