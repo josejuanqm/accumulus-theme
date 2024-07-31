@@ -17,24 +17,18 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-case-for-change-mobile md:bg-case-for-change-tablet lg:bg-case-for-change-desktop bg-cover bg-no-repeat bg-center">
-
+<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-cover bg-no-repeat bg-center">
 	<div class="container mx-auto">
-
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
-
-			<h1 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
-
+			<h1 class="col-span-12 text-neutral-fnude text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+				<p class="text-b2 text-neutral-nwhite md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary-inverted">Explore More</a>
       </div>
-
 		</div>
 	</div>
-
 </section>
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">

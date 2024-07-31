@@ -11,11 +11,12 @@
 
 ?>
 
-	<footer id="colophon" class="section bg-primary-violet text-white py-s10">
+<section class="bg-primary-violet">
+<footer id="colophon" class="section body-3 text-neutral-nwhite py-s10 bg-blend-color-dodge bg-opacity-30 !bg-[length:200%_auto] md:!bg-[length:75%_auto] lg:!bg-[length:75%_auto] bg-left-bottom md:bg-left-top" style="background: #411693 url(<?php echo get_template_directory_uri() . '/images/footer-bg.png'; ?>) no-repeat">
 		<div class="container mx-auto px-4 lg:px-0">
 			<div class="grid grid-cols-12 gap-x-s3">
-				<div class="flex flex-col md:py-s5 md:gap-y-s8 col-span-12">
-					<div class="flex flex-col lg:flex-row items-start justify-between">
+				<div class="flex flex-col gap-y-s4 md:py-s5 md:gap-y-s8 col-span-12">
+					<div class="flex flex-col md:flex-row items-start justify-between">
 						<div class="flex flex-col items-start justify-between h-full">
 							<p class="flex-1">
 								Accumulus Synergy <br/>
@@ -28,7 +29,7 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s3">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple">Company</p></li>
+								<li><p class="text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Our Team</a></li>
 								<li><a href="">News</a></li>
@@ -38,13 +39,13 @@
 								<li><a href="">Careers</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple">Platform</p></li>
+								<li><p class="text-secondary-mpurple heading-6">Platform</p></li>
 								<li><a href="">Accumulus Platform</a></li>
 								<li><a href="">Core Capabilities</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="flex flex-row items-start justify-start order-last lg:order-none pt-s13 lg:pt-0">
+					<div class="flex flex-row items-start justify-start order-none lg:order-none pt-s13 lg:pt-0">
 						<svg width="80%" viewBox="0 0 241 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_2010_8587)">
 								<path d="M61.5254 8.4375L53.8115 30.7014H58.2819L59.7771 26.244H68.6105L70.1057 30.7014H74.5761L66.8622 8.4375H61.5331H61.5254ZM61.0807 22.2956L64.1708 13.1494L67.2609 22.2956H61.073H61.0807Z" fill="#FFF"/>
@@ -77,26 +78,35 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s16">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple">Resources</p></li>
+								<li><p class="text-secondary-mpurple heading-6">Resources</p></li>
 								<li><a href="">eBooks and White Papers</a></li>
 								<li><a href="">Thought Leadership</a></li>
 								<li><a href="">Media</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple">Legal</p></li>
+								<li><p class="text-secondary-mpurple heading-6">Legal</p></li>
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>
 							</ul>
 						</div>
 					</div>
+          <div class="lg:hidden flex flex-row items-start justify-between pt-s8"> 
+						<div class="flex flex-col items-start justify-between">
+							<ul class="flex flex-col items-start gap-s2 list-none">
+								<li><a href="">LinkedIn</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
+						</div>
+          </div>
 				</div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+</section>
 </div><!-- #page -->
 
 <script>
-  let showingCookies = false
+  let showingCookies = true
 
   function hideCookies() {
     showingCookies = false
@@ -106,13 +116,23 @@
       prompt.remove()
     }
   }
+
+  window.addEventListener('load', function() {
+    if (showingCookies) {
+      let prompt = document.querySelector('#cookies-prompt')
+      if (prompt) {
+        prompt.style.display = 'block'
+        prompt.style.position = 'fixed'
+      }
+    }
+  })
 </script>
 
-<section id="cookies-prompt" style="display: hidden;" class="bottom-0 left-0 right-0 py-s4 shadow-lg bg-white">
+<section id="cookies-prompt" style="display: none;" class="bottom-0 left-0 right-0 py-s4 shadow-lg bg-white z-[999999]">
   <div class="container mx-auto px-s2">
     <div class="flex flex-col md:flex-row lg:flex-row items-start md:items-center gap-s4">
       <h3 class="heading-3">Our Website Uses Cookies</h3>
-      <p class="body-2">
+      <p class="body-3">
       Accumulus Synergy uses cookies to give you the best experience when visiting our website. By clicking “Accept,” you’re agreeing to the use of cookies as described in our privacy policy
       </p>
       <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto">

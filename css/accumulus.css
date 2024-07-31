@@ -565,16 +565,59 @@ video {
 }
 
 .btn-primary {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
+  border-width: 1px;
+  border-color: transparent;
   --tw-bg-opacity: 1;
   background-color: rgb(18 208 255 / var(--tw-bg-opacity));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(32 32 32 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 239 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    height: 48px;
+    font-size: 1.625rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .btn-primary {
+    height: 45px;
+    width: auto;
+    min-width: 205px;
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
 }
 
 .btn-secondary {
@@ -900,8 +943,12 @@ video {
   z-index: 999999;
 }
 
-.order-last {
-  order: 9999;
+.z-\[999\] {
+  z-index: 999;
+}
+
+.order-none {
+  order: 0;
 }
 
 .col-span-1 {
@@ -1010,6 +1057,10 @@ video {
 .my-s2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.\!mb-0 {
+  margin-bottom: 0px !important;
 }
 
 .-mt-s10 {
@@ -1124,6 +1175,10 @@ video {
   height: 4rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .max-h-\[144px\] {
   max-height: 144px;
 }
@@ -1184,6 +1239,10 @@ video {
   width: 2rem;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .min-w-s7 {
   min-width: 3.5rem;
 }
@@ -1206,6 +1265,10 @@ video {
 
 .max-w-\[465px\] {
   max-width: 465px;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1479,8 +1542,20 @@ video {
   border-radius: 10px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .border-b-neutral-200 {
@@ -1553,12 +1628,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-benefits-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png');
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
 }
 
-.bg-case-for-change-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-mobile.png');
+.bg-benefits-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png');
 }
 
 .bg-get-started-section-mobile {
@@ -1579,6 +1654,10 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
+}
+
+.\!bg-\[length\:200\%_auto\] {
+  background-size: 200% auto !important;
 }
 
 .bg-contain {
@@ -1644,6 +1723,10 @@ video {
 
 .p-s1 {
   padding: 0.5rem;
+}
+
+.p-s2 {
+  padding: 1rem;
 }
 
 .p-s4 {
@@ -1873,6 +1956,13 @@ video {
   font-weight: 400;
 }
 
+.text-b3 {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+
 .text-b3Mobile {
   font-size: 0.875rem;
   line-height: auto;
@@ -1948,6 +2038,11 @@ video {
   line-height: 120%;
   letter-spacing: 0;
   font-weight: 400;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .\!font-normal {
@@ -2027,6 +2122,10 @@ video {
   opacity: 0.5;
 }
 
+.bg-blend-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
 .mix-blend-multiply {
   mix-blend-mode: multiply;
 }
@@ -2063,14 +2162,13 @@ video {
 }
 
 @font-face {
-  font-family: 'TP Fors';
+  font-family: "TP Fors";
 
-  src:
-    url('fonts/woff2/TT_Fors_Regular.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Regular.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT-Fors-Regular.ttf')
-      format('truetype');
+  src: url("fonts/woff2/TT_Fors_Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Regular.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT-Fors-Regular.ttf")
+      format("truetype");
 
   /* Safari, Android, iOS */
 
@@ -2080,14 +2178,13 @@ video {
 }
 
 @font-face {
-  font-family: 'TP Fors';
+  font-family: "TP Fors";
 
-  src:
-    url('fonts/woff2/TT_Fors_Medium.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Medium.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Medium.ttf')
-      format('truetype');
+  src: url("fonts/woff2/TT_Fors_Medium.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Medium.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Medium.ttf")
+      format("truetype");
 
   /* Safari, Android, iOS */
 
@@ -2097,14 +2194,13 @@ video {
 }
 
 @font-face {
-  font-family: 'TP Fors';
+  font-family: "TP Fors";
 
-  src:
-    url('fonts/woff2/TT_Fors_Bold.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('fonts/woff/TT_Fors_Bold.woff')
-      format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/ttf/TT_Fors_Bold.ttf')
-      format('truetype');
+  src: url("fonts/woff2/TT_Fors_Bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/woff/TT_Fors_Bold.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("fonts/ttf/TT_Fors_Bold.ttf")
+      format("truetype");
 
   /* Safari, Android, iOS */
 
@@ -2489,7 +2585,7 @@ video {
 }
 
 body {
-  font-family: 'TP Fors';
+  font-family: "TP Fors";
   font-size: 16px;
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
@@ -2553,7 +2649,7 @@ a {
 }
 
 .slick-dots li button:before {
-  content: '';
+  content: "";
 }
 
 .slick-dots .slick-active button {
@@ -2780,6 +2876,11 @@ a {
 
 .first-of-type\:pt-0:first-of-type {
   padding-top: 0px;
+}
+
+.hover\:border-neutral-200:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
 .hover\:text-neutral-nwhite:hover {
@@ -3133,10 +3234,6 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png');
   }
 
-  .md\:bg-case-for-change-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-tablet.png');
-  }
-
   .md\:bg-get-started-section-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-tablet.png');
   }
@@ -3151,6 +3248,14 @@ a {
 
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
+  }
+
+  .md\:\!bg-\[length\:75\%_auto\] {
+    background-size: 75% auto !important;
+  }
+
+  .md\:bg-left-top {
+    background-position: left top;
   }
 
   .md\:px-0 {
@@ -3520,12 +3625,20 @@ a {
     margin-bottom: 1rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
 
   .lg\:grid {
     display: grid;
+  }
+
+  .lg\:\!hidden {
+    display: none !important;
   }
 
   .lg\:hidden {
@@ -3656,10 +3769,6 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-desktop.png');
   }
 
-  .lg\:bg-case-for-change-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/main-banner-desktop.png');
-  }
-
   .lg\:bg-get-started-section-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-web.png');
   }
@@ -3674,6 +3783,10 @@ a {
 
   .lg\:bg-what-we-do-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
+  }
+
+  .lg\:\!bg-\[length\:75\%_auto\] {
+    background-size: 75% auto !important;
   }
 
   .lg\:bg-contain {
