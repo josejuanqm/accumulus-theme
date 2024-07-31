@@ -278,7 +278,7 @@ module.exports = {
           },
         ],
         b2Tablet: [
-          '1.625rem',
+          '1.5rem',
           {
             fontWeight: '400',
             lineHeight: '120%',

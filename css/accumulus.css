@@ -2480,7 +2480,7 @@ video {
 
 @media (min-width: 768px) {
   .body-2 {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -2687,14 +2687,32 @@ a {
 }
 
 .wpforms-field-label {
-  font-size: 1.75rem !important;
-  line-height: 120% !important;
-  letter-spacing: 0 !important;
-  font-weight: 600 !important;
   text-transform: uppercase !important;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
-.wpforms-container input.wpforms-field-medium {
+@media (min-width: 768px) {
+  .wpforms-field-label {
+    font-size: 1.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wpforms-field-label {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.wpforms-container .wpforms-form input.wpforms-field-medium {
   max-width: 100% !important;
   border-left-width: 0px !important;
   border-right-width: 0px !important;
@@ -2704,10 +2722,56 @@ a {
   border-color: rgb(229 229 229 / var(--tw-border-opacity)) !important;
   background-color: transparent !important;
   padding: 0.75rem !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  font-size: 1.125rem !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
+}
+
+.wpforms-container .wpforms-form input.wpforms-field-medium::-moz-placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(122 122 122 / var(--tw-text-opacity)) !important;
+}
+
+.wpforms-container .wpforms-form input.wpforms-field-medium::placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(122 122 122 / var(--tw-text-opacity)) !important;
+}
+
+@media (min-width: 768px) {
+  .wpforms-container .wpforms-form input.wpforms-field-medium {
+    font-size: 1.5rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wpforms-container .wpforms-form input.wpforms-field-medium {
+    font-size: 1.25rem !important;
+    line-height: 28px !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media not all and (min-width: 1025px) {
+  .wpforms-container .wpforms-form .wpforms-field {
+    padding-left: 35% !important;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .wpforms-container .wpforms-form .wpforms-field {
+    padding-left: 0px !important;
+  }
 }
 
 .wpforms-field-container {
@@ -2721,7 +2785,13 @@ a {
 }
 
 .wpforms-submit-container {
-  padding-top: 8rem !important;
+  padding-top: 4rem !important;
+}
+
+@media (min-width: 768px) {
+  .wpforms-submit-container {
+    padding-top: 8rem !important;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -2732,7 +2802,7 @@ a {
 
 .wpforms-submit {
   display: flex !important;
-  height: 82px !important;
+  height: 48px !important;
   cursor: pointer;
   align-items: center !important;
   justify-content: center !important;
@@ -2763,6 +2833,12 @@ a {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(32 32 32 / var(--tw-text-opacity)) !important;
+}
+
+@media not all and (min-width: 1025px) {
+  .wpforms-submit {
+    width: 100% !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2840,7 +2916,7 @@ a {
 
 @media (min-width: 768px) {
   .description-wysiwyg p {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -2952,6 +3028,10 @@ a {
     padding-right: 0px !important;
   }
 
+  .max-lg\:pl-\[35\%\] {
+    padding-left: 35%;
+  }
+
   .max-lg\:pt-s10 {
     padding-top: 5rem;
   }
@@ -2984,6 +3064,10 @@ a {
 
   .max-md\:\!pr-s2 {
     padding-right: 1rem !important;
+  }
+
+  .max-md\:pl-0 {
+    padding-left: 0px;
   }
 
   .max-md\:pt-s1 {
@@ -3394,7 +3478,7 @@ a {
   }
 
   .md\:text-b2Tablet {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
@@ -3468,12 +3552,6 @@ a {
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
-  }
-
-  @media not all and (min-width: 1025px) {
-    .md\:max-lg\:col-start-6 {
-      grid-column-start: 6;
-    }
   }
 }
 
@@ -3594,14 +3672,6 @@ a {
     grid-column-start: 9;
   }
 
-  .lg\:row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-
-  .lg\:row-span-3 {
-    grid-row: span 3 / span 3;
-  }
-
   .lg\:row-start-1 {
     grid-row-start: 1;
   }
@@ -3698,14 +3768,6 @@ a {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .lg\:grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -3736,6 +3798,10 @@ a {
 
   .lg\:justify-center {
     justify-content: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:gap-8 {
