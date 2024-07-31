@@ -32,3 +32,53 @@ get_header();
 
 <?php
 get_footer();
+
+?>
+
+<script>
+(function ($) {
+	$('#btn-events-see-more').on('click', function (e) {
+			var page = $('#current-page').val();
+			e.preventDefault();
+			get_list_events(parseInt(page) + 1);
+	});
+
+	function get_list_events(page, isCategory = false) {
+			$s = $("#s").val();
+			$c = $("#category").val();
+			$.ajax({
+					url: "/wp-admin/admin-ajax.php?action=get_events",
+					method: 'POST',
+					data: {
+							'page': page,
+							'c': $c
+					}
+			}).done(function (response) {
+					console.log('response', response);
+					$("#category-post-content").html(response.html);
+					$('#current-page').val(page);
+			}).fail(function () {
+
+			});
+	}
+
+	get_list_events(1);
+
+
+	$(".filters a").on("click", function () {
+
+		$filter = $(this).data("id");
+		$cat = $(this).data("name");
+
+		console.log('filter click', $filter)
+
+		$("#category").val($filter);
+		$("#title-section").html($cat);
+
+		$(".filters a").removeClass("bg-neutral-dgray text-neutral-nwhite hover:text-neutral-nwhite");
+		$(this).addClass("bg-neutral-dgray text-neutral-nwhite hover:text-neutral-nwhite");
+		get_list_events(1, true);
+
+	});
+})(jQuery);
+</script>

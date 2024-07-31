@@ -100,6 +100,10 @@
   @apply text-b3Mobile md:text-b3Tablet lg:text-b3;
 }
 
+.body-4 {
+  @apply text-b4Mobile md:text-b4Tablet lg:text-b4;
+}
+
 .link {
   @apply text-textlinkMobile lg:text-textlink;
 }

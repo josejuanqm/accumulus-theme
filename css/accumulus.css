@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1322,16 +1322,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-cols-\[auto_auto\] {
   grid-template-columns: auto auto;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1654,10 +1654,6 @@ video {
 
 .bg-news-banner-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
-}
-
-.bg-regulator-forum-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-mobile.png');
 }
 
 .bg-what-we-do-mobile {
@@ -2526,6 +2522,31 @@ video {
   }
 }
 
+.body-4 {
+  font-size: 0.875rem;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-4 {
+    font-size: 1.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .body-4 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+}
+
 .link {
   font-size: 1.625rem;
   line-height: 120%;
@@ -3230,10 +3251,6 @@ a {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp');
   }
 
-  .md\:bg-regulator-forum-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-tablet.png');
-  }
-
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
@@ -3745,6 +3762,10 @@ a {
     gap: 3.5rem;
   }
 
+  .lg\:gap-s5 {
+    gap: 2.5rem;
+  }
+
   .lg\:gap-y-0 {
     row-gap: 0px;
   }
@@ -3771,10 +3792,6 @@ a {
 
   .lg\:bg-news-banner-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
-  }
-
-  .lg\:bg-regulator-forum-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum.png');
   }
 
   .lg\:bg-what-we-do-desktop {

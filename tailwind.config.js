@@ -319,6 +319,31 @@ module.exports = {
           },
         ],
 
+        b4: [
+          '1.125rem',
+          {
+            fontWeight: '300',
+            lineHeight: '120%',
+            letterSpacing: '0',
+          },
+        ],
+        b4Tablet: [
+          '1.25rem',
+          {
+            fontWeight: '400',
+            lineHeight: '120%',
+            letterSpacing: '0',
+          },
+        ],
+        b4Mobile: [
+          '0.875rem',
+          {
+            fontWeight: '400',
+            lineHeight: 'auto',
+            letterSpacing: '0',
+          },
+        ],
+
         textlink: [
           '1.25rem',
           {
