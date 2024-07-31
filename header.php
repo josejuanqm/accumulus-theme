@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden !mb-0' : ''); ?>>
+<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden !mb-0' : '!mb-0'); ?>>
 <?php wp_body_open(); ?>
 <?php 
   // switch url path
