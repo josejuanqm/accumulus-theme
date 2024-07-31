@@ -90,7 +90,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '20%',
           },
         ],
         h4Tablet: [
@@ -98,7 +98,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '20%',
           },
         ],
         h4Mobile: [
@@ -106,7 +106,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '20%',
           },
         ],
 

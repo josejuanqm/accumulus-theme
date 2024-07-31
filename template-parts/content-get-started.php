@@ -187,7 +187,7 @@
 
 			<h6 class="col-span-12 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">GET STARTED</h6>
 			<h2 class="col-span-12 text-h2Mobile md:text-h2Tablet lg:text-h2">Ready to Join Us?</h2>
-			<p class="col-span-12 md:col-span-4 text-b3Mobile md:text-b3Tablet lg:text-b3 py-s2 md:py-0">
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 text-b3Mobile md:text-b3Tablet lg:text-b3 py-s2 md:py-0">
 				Take the first step toward transforming the life sciences-regulatory ecosystem.
 				<br /><br />
 				Together, let’s make a difference!

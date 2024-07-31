@@ -35,8 +35,8 @@ $contact_email = get_field('contact_email');
             <br />
             <a href="#"><?php echo $contact_email; ?></a>
           </p>
-          <p class="text-b2">
-            <a href="#">LinkdIn</a>
+          <p class="text-b2 lg:-mb-1">
+            <a href="#">LinkedIn</a>
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ $contact_email = get_field('contact_email');
           <a href="#"><?php echo $contact_email; ?></a>
         </p>
         <p class="text-b2">
-          <a href="#" class="leading-6">LinkdIn</a>
+          <a href="#" class="leading-6">LinkedIn</a>
         </p>
       </div>
 

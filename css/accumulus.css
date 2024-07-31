@@ -2001,14 +2001,14 @@ video {
 .text-h4 {
   font-size: 1rem;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: 20%;
   font-weight: 500;
 }
 
 .text-h4Mobile {
   font-size: 1rem;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: 20%;
   font-weight: 500;
 }
 
@@ -2292,7 +2292,7 @@ video {
 .heading-4 {
   font-size: 1rem;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: 20%;
   font-weight: 500;
 }
 
@@ -2300,7 +2300,7 @@ video {
   .heading-4 {
     font-size: 1.125rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 }
@@ -2309,7 +2309,7 @@ video {
   .heading-4 {
     font-size: 1rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 }
@@ -3522,7 +3522,7 @@ a {
   .md\:text-h4Tablet {
     font-size: 1.125rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 
@@ -3686,6 +3686,10 @@ a {
 
   .lg\:row-start-4 {
     grid-row-start: 4;
+  }
+
+  .lg\:-mb-1 {
+    margin-bottom: -0.25rem;
   }
 
   .lg\:-mt-14 {
@@ -4029,7 +4033,7 @@ a {
   .lg\:text-h4 {
     font-size: 1rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 
@@ -4138,7 +4142,7 @@ a {
 .\[\&\>h4\]\:text-h4Mobile>h4 {
   font-size: 1rem;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: 20%;
   font-weight: 500;
 }
 
@@ -4146,7 +4150,7 @@ a {
   .md\:\[\&\>h4\]\:text-h4Tablet>h4 {
     font-size: 1.125rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 }
@@ -4155,7 +4159,7 @@ a {
   .lg\:\[\&\>h4\]\:text-h4>h4 {
     font-size: 1rem;
     line-height: 120%;
-    letter-spacing: 0;
+    letter-spacing: 20%;
     font-weight: 500;
   }
 }
