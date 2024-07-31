@@ -321,6 +321,62 @@ $order = array();
 
 
 
+<?php
+
+  $categories = array();
+  $args = array(
+    'taxonomy' => 'news-categories',
+    'style' => 'list',
+    'hide_empty' => 1,
+  );
+  
+  $result = get_categories($args);
+  
+  // var_dump($result);
+  if (count($result) > 0 ){
+    $categories = $result;
+  }
+
+?>
+  
+<section class="section w-full pt-s8 pb-s8 md:pb-s10 md:pt-s10 lg:pt-s8 lg:pb-s8 bg-neutral-nwhite">
+  
+  <div class="container mx-auto">
+  
+    <div class="grid grid-cols-12 gap-s2">
+  
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4">
+    
+        <input type="hidden" id="category" value="0" data-catName="Last Articles">
+        
+        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite">All</a>
+        <a href="javascript:void(0)" data-id="1" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link">Past events</a>
+        <a href="javascript:void(0)" data-id="2" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link">Upcoming events</a>
+        
+        <!-- <?php //foreach($categories as $category): ?>
+          <a href="javascript:void(0)" data-id="<?php //echo $category->term_id; ?>" data-name="Latest <?php //echo $category->name; ?>" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link"><?php //$category->name ?></a>
+        <?php //endforeach; ?> -->
+          
+      </div>
+
+
+        <div id="category-post-content">
+        </div>
+        <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
+        <a id="btn-events-see-more" class="btn-secondary" href="#">See More</a>
+      </div>
+        <input type="hidden" value="1" id="current-page"/>
+    </div>
+      
+  </div>
+      
+</section>
+
+
+<!-- Grid events -->
+
+
+
 <?php 
 
 $join_the_forum = get_field('join_the_forum');
@@ -329,7 +385,7 @@ if($join_the_forum):
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12">
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
 	<div class="container mx-auto px-s2 md:px-0">
 		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s8">
 
