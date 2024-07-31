@@ -2,11 +2,11 @@
 <section class="section relative py-s6 <?php echo $args['bg_color']; ?>">
   <div class="container mx-auto">
     <div class="grid grid-cols-12">
-      <h2 class="col-start-1 col-span-12 md:col-span-9 <?php echo $args['inverted'] ? 'row-start-2 heading-2' : 'heading-3' ?>">
+      <h2 class="col-start-1 col-span-12 md:col-span-9 <?php echo array_key_exists('inverted', $args) ? 'row-start-2 heading-2' : 'heading-3' ?>">
         <?php echo $args['main_quote'] ?>
       </h2>
       <h3
-        class="col-start-3 md:col-start-4 col-span-9 md:col-span-8 pt-s8 pb-s8 lg:pt-s6 lg:pb-s4 <?php echo $args['inverted'] ? 'row-start-3 body-1' : 'body-2' ?>">
+        class="col-start-3 md:col-start-4 col-span-9 md:col-span-8 pt-s8 pb-s8 lg:pt-s6 lg:pb-s4 <?php echo array_key_exists('inverted', $args) ? 'row-start-3 body-1' : 'body-2' ?>">
         <?php echo $args['sub_quote'] ?>
       </h3>
       <div class="flex flex-row items-start justify-normal col-start-1 md:col-start-6 col-span-12 md:col-span-6 lg:col-span-5 <?php echo $args['inverted'] ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
@@ -27,8 +27,8 @@
         </p>
         </div>
       </div>
-      <?php if ($args['references']) { ?>
-      <ul class="flex flex-col items-start col-start-1 md:col-start-2 col-span-12 md:col-span-10 <?php echo $args['inverted'] ? 'row-start-4' : '' ?>">
+      <?php if (array_key_exists('references', $args)) { ?>
+      <ul class="flex flex-col items-start col-start-1 md:col-start-2 col-span-12 md:col-span-10 <?php echo array_key_exists('inverted', $args) ? 'row-start-4' : '' ?>">
         <?php
           for ($i=0; $i < count($args['references']); $i++) { 
             ?>

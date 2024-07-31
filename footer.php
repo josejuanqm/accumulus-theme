@@ -96,7 +96,7 @@
 </div><!-- #page -->
 
 <script>
-  let showingCookies = true
+  let showingCookies = false
 
   function hideCookies() {
     showingCookies = false
@@ -108,7 +108,7 @@
   }
 </script>
 
-<section id="cookies-prompt" class="fixed bottom-0 left-0 right-0 py-s4 shadow-lg bg-white">
+<section id="cookies-prompt" style="display: hidden;" class="bottom-0 left-0 right-0 py-s4 shadow-lg bg-white">
   <div class="container mx-auto px-s2">
     <div class="flex flex-col md:flex-row lg:flex-row items-start md:items-center gap-s4">
       <h3 class="heading-3">Our Website Uses Cookies</h3>
