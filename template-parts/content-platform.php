@@ -32,8 +32,8 @@
 			<h1 class="col-span-5 md:col-span-12 lg:col-span-7 lg:row-start-2 heading-1"><?php echo $main_banner['title']; ?></h1>
 
       <div class="col-span-6 md:col-span-12 lg:absolute lg:right-0 flex justify-end">
-				<picture class="relative">
-					<source media="(min-width:1024px)" srcset="<?php echo $main_banner['image']; ?>">
+				<picture class="relative max-lg:max-w-[75%] max-md:max-w-full">
+					<source media="(min-width:1025px)" srcset="<?php echo $main_banner['image']; ?>">
 					<source media="(min-width:768px)" srcset="<?php echo $main_banner['image_tablet']; ?>">
 					<img src="<?php echo $main_banner['image_mobile']; ?>" alt="<?php echo $main_banner['title']; ?>" class="w-full h-full">
 				</picture>

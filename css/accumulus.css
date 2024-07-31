@@ -3020,6 +3020,14 @@ a {
     max-width: 380px;
   }
 
+  .max-lg\:max-w-\[80\%\] {
+    max-width: 80%;
+  }
+
+  .max-lg\:max-w-\[75\%\] {
+    max-width: 75%;
+  }
+
   .max-lg\:items-center {
     align-items: center;
   }
@@ -3064,6 +3072,10 @@ a {
 
   .max-md\:w-full {
     width: 100%;
+  }
+
+  .max-md\:max-w-full {
+    max-width: 100%;
   }
 
   .max-md\:flex-col {
