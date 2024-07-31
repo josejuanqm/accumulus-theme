@@ -238,7 +238,7 @@ a {
 }
 
 .wpforms-container input.wpforms-field-medium {
-  @apply !max-w-full !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray;
+  @apply !max-w-full !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray;
 }
 
 .wpforms-field-container {

@@ -1016,6 +1016,10 @@ video {
   margin-top: -5rem;
 }
 
+.mb-s3 {
+  margin-bottom: 1.5rem;
+}
+
 .me-auto {
   margin-inline-end: auto;
 }
@@ -1030,10 +1034,6 @@ video {
 
 .mt-s6 {
   margin-top: 3rem;
-}
-
-.mb-s3 {
-  margin-bottom: 1.5rem;
 }
 
 .box-content {
@@ -1259,16 +1259,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-cols-\[auto_auto\] {
   grid-template-columns: auto auto;
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1451,6 +1451,10 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-\[40px\] {
+  border-radius: 40px;
+}
+
 .rounded-button {
   border-radius: 15px;
 }
@@ -1473,10 +1477,6 @@ video {
 
 .rounded-miniCard {
   border-radius: 10px;
-}
-
-.rounded-\[40px\] {
-  border-radius: 40px;
 }
 
 .border-b {
@@ -2597,6 +2597,9 @@ a {
 
 .wpforms-container input.wpforms-field-medium {
   max-width: 100% !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  border-top-width: 0px !important;
   border-bottom-width: 1px !important;
   --tw-border-opacity: 1 !important;
   border-color: rgb(229 229 229 / var(--tw-border-opacity)) !important;
@@ -3639,10 +3642,6 @@ a {
 
   .lg\:gap-s7 {
     gap: 3.5rem;
-  }
-
-  .lg\:gap-s5 {
-    gap: 2.5rem;
   }
 
   .lg\:gap-y-0 {
