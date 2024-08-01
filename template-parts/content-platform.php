@@ -61,23 +61,6 @@
 
 <?php 
 
-$video = get_field('video');
-
-?>
-
-<?php if($video): ?>
-<section class="relative section w-full md:pt-s12 md:pb-s12 lg:pt-s16 lg:pb-s16">
-  <div class="container mx-auto video-container">
-    <?php echo $video; ?>
-  </div>
-</section>
-<?php endif; ?>
-
-<!-- Video -->
-
-
-<?php 
-
 $value_propositions = get_field('value_propositions');
 
 ?>
