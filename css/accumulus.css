@@ -1637,7 +1637,7 @@ video {
 }
 
 .bg-benefits-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png');
+  background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png');
 }
 
 .bg-get-started-section-mobile {
@@ -3387,7 +3387,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .md\:bg-benefits-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png');
+    background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-tablet.png');
   }
 
   .md\:bg-get-started-section-tablet {
@@ -3904,7 +3904,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .lg\:bg-benefits-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-desktop.png');
+    background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-desktop.png');
   }
 
   .lg\:bg-get-started-section-desktop {

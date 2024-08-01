@@ -225,9 +225,10 @@ $value_propositions = get_field('value_propositions');
 <?php if($key_features): ?>
 <section class="relative section w-full pt-s8 md:pt-s12 pb-s8 md:pb-s6 lg:pb-s12 bg-neutral-nude">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s7">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s7">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 heading-4 uppercase">KEY FEATURES
 			</h4>
+			<p class="col-span-12 md:col-span-5 body-2">We’re paving the way to a global dossier in the cloud and continuing to build on our core platform. Evolving features include:</p>
 		</div>
 
 		<div class="key-features">
@@ -348,7 +349,7 @@ $value_propositions = get_field('value_propositions');
   if($benefits) :
 ?>
 <section class="relative section w-full pt-s8 md:pt-s12 pb-s8 md:pb-s12 bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
-  <div class="container mx-auto">
+  <div class="container mx-auto flex flex-col gap-s8">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
 
       <h4 class="col-span-6 md:col-span-12 heading-4 uppercase"><?php echo $benefits['title_flag']; ?></h4>
@@ -360,7 +361,19 @@ $value_propositions = get_field('value_propositions');
 			</div>
 
       <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row pt-s1 md:pt-s20 lg:pt-s4">
-				<a href="<?php echo $benefits['link_cta']; ?>" class="btn-secondary">CTA</a>
+				<a href="<?php echo $benefits['link_cta']; ?>" class="btn-secondary">Accumulus overview</a>
+			</div>
+    </div>
+    <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
+
+      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $benefits['title_2']; ?></h2>
+			
+			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s16 lg:pt-s20 md:pb-s10 lg:pb-0">
+				<p class="body-2"><?php echo $benefits['resume_2']; ?></p>
+			</div>
+
+      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row pt-s1 md:pt-s20 lg:pt-s4">
+				<a href="<?php echo $benefits['link_cta_2']; ?>" class="btn-secondary">Our security program</a>
 			</div>
     </div>
   </div>
