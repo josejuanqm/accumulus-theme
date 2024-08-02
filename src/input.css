@@ -233,12 +233,20 @@ a {
   @apply !pt-s6 lg:!pt-s4 !mb-0;
 }
 
+div.wpforms-container-full .wpforms-field-label,
+.wp-core-ui div.wpforms-container-full .wpforms-field-label,
 .wpforms-field-label {
   @apply heading-6 !uppercase !font-semibold;
 }
 
+.wpforms-field.wpforms-field-text,
+.wpforms-field.wpforms-field-email,
+.wpforms-field.wpforms-field-select.wpforms-field-select-style-modern {
+  @apply flex flex-col gap-s1;
+}
+
 .wpforms-container .wpforms-form input.wpforms-field-medium {
-  @apply !max-w-full !px-0 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray;
+  @apply !max-w-full !px-0 !pt-0 !pb-s1 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray !shadow-none;
 }
 
 .wpforms-container .wpforms-form .wpforms-field {
@@ -261,12 +269,16 @@ a {
   @apply !flex !items-center !justify-center !h-[48px] lg:!h-[45px] !px-10 !py-3 !rounded-full !text-center !text-white !text-ctaMobile md:!text-ctaTablet lg:!text-cta !border !border-cta-dark !bg-cta-dark hover:!bg-white hover:!text-cta-dark !transition-all cursor-pointer max-lg:!w-full;
 }
 
+div.wpforms-container-full button[type='submit']:hover {
+  @apply !bg-white !text-cta-dark !transition-all cursor-pointer;
+}
+
 div.wpforms-container .wpforms-form .choices {
   @apply !w-full !max-w-full;
 }
 
 .wpforms-container .wpforms-form .choices .choices__inner {
-  @apply !border-t-0 !border-x-0 !border-b-neutral-fnude !w-full !max-w-full !mt-s2;
+  @apply !border-t-0 !border-x-0 !border-b-neutral-fnude !w-full !max-w-full !pt-0 !pl-0;
 }
 
 div.wpforms-container .wpforms-form .choices__list--single {
@@ -279,6 +291,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown {
 
 div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   @apply border-b border-b-neutral-fnude last-of-type:border-b-0;
+}
+
+.wpforms-required-label {
+  @apply !text-neutral-dgray;
 }
 
 /* Detail posts */

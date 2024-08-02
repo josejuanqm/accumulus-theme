@@ -53,7 +53,7 @@ $contact_email = get_field('contact_email');
           <br />
           <a href="#"><?php echo $contact_email; ?></a>
         </p>
-        <p class="text-b2">
+        <p class="text-b2 -mb-1">
           <a href="#" class="leading-6">LinkedIn</a>
         </p>
       </div>

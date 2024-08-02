@@ -1011,16 +1011,16 @@ video {
   grid-column-start: 4;
 }
 
+.col-start-6 {
+  grid-column-start: 6;
+}
+
 .col-start-7 {
   grid-column-start: 7;
 }
 
 .col-start-9 {
   grid-column-start: 9;
-}
-
-.col-start-6 {
-  grid-column-start: 6;
 }
 
 .col-end-2 {
@@ -1099,6 +1099,10 @@ video {
   margin-top: 3rem;
 }
 
+.-mb-1 {
+  margin-bottom: -0.25rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -1137,6 +1141,10 @@ video {
 
 .h-4 {
   height: 1rem;
+}
+
+.h-\[150px\] {
+  height: 150px;
 }
 
 .h-\[275px\] {
@@ -1189,14 +1197,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[170px\] {
-  height: 170px;
-}
-
-.h-\[150px\] {
-  height: 150px;
 }
 
 .max-h-\[144px\] {
@@ -1648,11 +1648,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-sgray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(122 122 122 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -1673,12 +1668,12 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
 }
 
-.bg-what-we-do-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
 .bg-purple-section-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-purple-mobile.png');
+}
+
+.bg-what-we-do-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
 .\!bg-\[length\:200\%_auto\] {
@@ -1995,6 +1990,13 @@ video {
   font-weight: 400;
 }
 
+.text-cta {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
 .text-h10 {
   font-size: 1.625rem;
   line-height: 120%;
@@ -2070,13 +2072,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-cta {
-  font-size: 1.125rem;
-  line-height: 120%;
-  letter-spacing: 0;
-  font-weight: 500;
-}
-
 .\!font-normal {
   font-weight: 400 !important;
 }
@@ -2103,6 +2098,16 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.\!text-neutral-nwhite {
+  --tw-text-opacity: 1 !important;
+  color: rgb(252 252 252 / var(--tw-text-opacity)) !important;
+}
+
+.\!text-neutral-sgray {
+  --tw-text-opacity: 1 !important;
+  color: rgb(122 122 122 / var(--tw-text-opacity)) !important;
 }
 
 .text-neutral-500 {
@@ -2148,16 +2153,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.\!text-neutral-sgray {
-  --tw-text-opacity: 1 !important;
-  color: rgb(122 122 122 / var(--tw-text-opacity)) !important;
-}
-
-.\!text-neutral-nwhite {
-  --tw-text-opacity: 1 !important;
-  color: rgb(252 252 252 / var(--tw-text-opacity)) !important;
 }
 
 .opacity-100 {
@@ -2732,6 +2727,8 @@ a {
   }
 }
 
+div.wpforms-container-full .wpforms-field-label,
+.wp-core-ui div.wpforms-container-full .wpforms-field-label,
 .wpforms-field-label {
   text-transform: uppercase !important;
   font-size: 1rem;
@@ -2741,7 +2738,9 @@ a {
 }
 
 @media (min-width: 768px) {
-  .wpforms-field-label {
+  div.wpforms-container-full .wpforms-field-label,
+.wp-core-ui div.wpforms-container-full .wpforms-field-label,
+.wpforms-field-label {
     font-size: 1.75rem;
     line-height: 120%;
     letter-spacing: 0;
@@ -2750,12 +2749,22 @@ a {
 }
 
 @media (min-width: 1025px) {
-  .wpforms-field-label {
+  div.wpforms-container-full .wpforms-field-label,
+.wp-core-ui div.wpforms-container-full .wpforms-field-label,
+.wpforms-field-label {
     font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
   }
+}
+
+.wpforms-field.wpforms-field-text,
+.wpforms-field.wpforms-field-email,
+.wpforms-field.wpforms-field-select.wpforms-field-select-style-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .wpforms-container .wpforms-form input.wpforms-field-medium {
@@ -2770,12 +2779,17 @@ a {
   padding: 0.75rem !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0.5rem !important;
   font-size: 1.125rem !important;
   line-height: 120% !important;
   letter-spacing: 0 !important;
   font-weight: 400 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
 }
@@ -2906,13 +2920,23 @@ a {
   }
 }
 
+div.wpforms-container-full button[type='submit']:hover {
+  cursor: pointer;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(32 32 32 / var(--tw-text-opacity)) !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
 div.wpforms-container .wpforms-form .choices {
   width: 100% !important;
   max-width: 100% !important;
 }
 
 .wpforms-container .wpforms-form .choices .choices__inner {
-  margin-top: 1rem !important;
   width: 100% !important;
   max-width: 100% !important;
   border-left-width: 0px !important;
@@ -2920,6 +2944,8 @@ div.wpforms-container .wpforms-form .choices {
   border-top-width: 0px !important;
   --tw-border-opacity: 1 !important;
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity)) !important;
+  padding-top: 0px !important;
+  padding-left: 0px !important;
 }
 
 div.wpforms-container .wpforms-form .choices__list--single {
@@ -2963,6 +2989,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 
 div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last-of-type {
   border-bottom-width: 0px;
+}
+
+.wpforms-required-label {
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
 }
 
 /* Detail posts */
@@ -3308,24 +3339,20 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     display: grid;
   }
 
-  .md\:h-full {
-    height: 100%;
-  }
-
-  .md\:h-s8 {
-    height: 4rem;
-  }
-
-  .md\:h-\[500\] {
-    height: 500;
+  .md\:h-\[300px\] {
+    height: 300px;
   }
 
   .md\:h-\[500px\] {
     height: 500px;
   }
 
-  .md\:h-\[300px\] {
-    height: 300px;
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:h-s8 {
+    height: 4rem;
   }
 
   .md\:max-h-\[200px\] {
@@ -3473,12 +3500,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-tablet.webp');
   }
 
-  .md\:bg-what-we-do-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
-  }
-
   .md\:bg-purple-section-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-purple-tablet.png');
+  }
+
+  .md\:bg-what-we-do-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
 
   .md\:\!bg-\[length\:75\%_auto\] {
@@ -3637,6 +3664,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     font-weight: 400;
   }
 
+  .md\:text-ctaMobile {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
   .md\:text-h1Tablet {
     font-size: 4.5rem;
     line-height: 106%;
@@ -3698,13 +3732,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
-  }
-
-  .md\:text-ctaMobile {
-    font-size: 1.125rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    font-weight: 500;
   }
 }
 
@@ -3885,10 +3912,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     height: 100%;
   }
 
-  .lg\:h-\[170px\] {
-    height: 170px;
-  }
-
   .lg\:max-h-\[192px\] {
     max-height: 192px;
   }
@@ -4009,12 +4032,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp');
   }
 
-  .lg\:bg-what-we-do-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
-  }
-
   .lg\:bg-purple-section-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-purple-desktop.png');
+  }
+
+  .lg\:bg-what-we-do-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
   .lg\:\!bg-\[length\:75\%_auto\] {
