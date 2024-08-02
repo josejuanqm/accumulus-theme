@@ -15,7 +15,7 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white">
+<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white md:overflow-hidden">
 
 	<picture class="absolute top-0 left-0 w-full h-full -z-[1]">
 		<source media="(min-width:1024px)" srcset="<?php echo $main_banner['bg_image_desktop']; ?>">
@@ -29,9 +29,9 @@
 
       <h4 class="col-span-6 md:col-span-12 lg:row-start-1 heading-4 uppercase"><?php echo $main_banner['flag_title']; ?></h4>
 
-			<h1 class="col-span-5 md:col-span-12 lg:col-span-7 lg:row-start-2 heading-1"><?php echo $main_banner['title']; ?></h1>
+			<h1 class="col-span-5 md:col-span-12 lg:col-span-8 lg:row-start-2 heading-1"><?php echo $main_banner['title']; ?></h1>
 
-      <div class="col-span-6 md:col-span-12 lg:absolute lg:right-0 flex justify-end">
+      <div class="col-span-6 md:col-span-12 lg:absolute lg:-right-[80px] xl:right-0 flex justify-end">
 				<picture class="relative max-lg:max-w-[75%] max-md:max-w-full">
 					<source media="(min-width:1025px)" srcset="<?php echo $main_banner['image']; ?>">
 					<source media="(min-width:768px)" srcset="<?php echo $main_banner['image_tablet']; ?>">
@@ -47,7 +47,7 @@
 				<p class="body-2"><?php echo $main_banner['second_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Get Started</a>
+				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Why a cloud-based platform</a>
 			</div>
 
 		</div>
@@ -211,7 +211,7 @@ $value_propositions = get_field('value_propositions');
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s7">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 heading-4 uppercase">KEY FEATURES
 			</h4>
-			<p class="col-span-12 md:col-span-5 body-2">We’re paving the way to a global dossier in the cloud and continuing to build on our core platform. Evolving features include:</p>
+			<p class="col-span-12 md:col-span-9 lg:col-span-5 md:pr-s4 lg:pr-0 body-2">We’re paving the way to a global dossier in the cloud and continuing to build on our core platform. Evolving features include:</p>
 		</div>
 
 		<div class="key-features">
@@ -332,30 +332,30 @@ $value_propositions = get_field('value_propositions');
   if($benefits) :
 ?>
 <section class="relative section w-full pt-s8 md:pt-s12 pb-s8 md:pb-s12 bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
-  <div class="container mx-auto flex flex-col gap-s8">
+  <div class="container mx-auto flex flex-col gap-s8 md:gap-s10 lg:gap-s8">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
 
       <h4 class="col-span-6 md:col-span-12 heading-4 uppercase"><?php echo $benefits['title_flag']; ?></h4>
 
       <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $benefits['title']; ?></h2>
 			
-			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s16 lg:pt-s20 md:pb-s10 lg:pb-0">
+			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s2 md:pt-s6 lg:pt-s20 pb-s1 lg:pb-0">
 				<p class="body-2"><?php echo $benefits['resume']; ?></p>
 			</div>
 
-      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row pt-s1 md:pt-s20 lg:pt-s4">
+      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row lg:pt-s4">
 				<a href="<?php echo $benefits['link_cta']; ?>" class="btn-secondary">Accumulus overview</a>
 			</div>
     </div>
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
 
-      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $benefits['title_2']; ?></h2>
+      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2"><?php echo $benefits['title_2']; ?></h2>
 			
-			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s16 lg:pt-s20 md:pb-s10 lg:pb-0">
+			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s2 md:pt-s6 lg:pt-s20 pb-s1 lg:pb-0">
 				<p class="body-2"><?php echo $benefits['resume_2']; ?></p>
 			</div>
 
-      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row pt-s1 md:pt-s20 lg:pt-s4">
+      <div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col lg:flex-row lg:pt-s4">
 				<a href="<?php echo $benefits['link_cta_2']; ?>" class="btn-secondary">Our security program</a>
 			</div>
     </div>
