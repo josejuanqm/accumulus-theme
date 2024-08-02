@@ -479,6 +479,14 @@ module.exports = {
         'what-we-do-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
 
+        // Purple section - resources page
+        'purple-section-desktop':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-desktop.png')",
+        'purple-section-tablet':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-tablet.png')",
+        'purple-section-mobile':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-mobile.png')",
+
         // News
         'news-banner-desktop':
           "url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp')",

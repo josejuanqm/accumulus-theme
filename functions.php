@@ -278,7 +278,7 @@ function getResources() {
 		if($key == 0){
 			// Large post
 			$html .= '
-			<div class="card col-span-12 md:col-span-6 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden ';
+			<div class="card col-span-12 md:col-span-12 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden ';
 			if ($categorySlug == 'thought-leadership'): 
 			$html .= 'bg-secondary-green text-neutral-nwhite';
 			elseif ($categorySlug == 'regulatory-insights'): 
@@ -295,7 +295,7 @@ function getResources() {
 			if (has_post_thumbnail( $post->ID ) ):
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
-			$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] lg:h-full bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url('. $image[0] .')">
+			$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url('. $image[0] .')">
 			</div>';
 
 			endif;
@@ -395,7 +395,7 @@ function getResources() {
 		if (has_post_thumbnail( $post->ID ) ):
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
-			$html .= '<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url('. $image[0] .')">
+			$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url('. $image[0] .')">
 			</div>';
 
 		endif;
