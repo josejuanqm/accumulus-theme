@@ -304,11 +304,11 @@ if (count($result) > 0 ){
 
 		<div class="grid grid-cols-12 gap-s2">
 
-      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4">
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4 text-neutral-sgray">
 
         <input type="hidden" id="category" value="0" data-catName="Last Articles">
 
-        <a href="javascript:void(0)" data-id="0" data-name="Latest Resources" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 heading-4 text-center rounded-button uppercase bg-neutral-dgray !text-neutral-sgray">All</a>
+        <a href="javascript:void(0)" data-id="0" data-name="Latest Resources" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 heading-4 text-center rounded-button uppercase bg-neutral-dgray  active-filter">All</a>
 
         <?php foreach($categories as $category): ?>
         <a href="javascript:void(0)" data-id="<?php echo $category->term_id; ?>" data-name="Latest <?php echo $category->name; ?>" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link !text-neutral-sgray"><?= $category->name ?></a>
@@ -446,7 +446,7 @@ if (count($result) > 0 ){
             <img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
           </div>
         </div>
-        
+
         <div class="flex items-center justify-center pt-s5 md:pt-s10">
           <a href="<?php echo get_home_url(); ?>/events" class="btn-secondary">See all</a>
         </div>

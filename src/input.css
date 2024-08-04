@@ -335,3 +335,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 #category-post-content {
   @apply col-span-12 grid grid-cols-12 gap-s2 w-full;
 }
+
+.active-filter {
+  @apply !bg-neutral-dgray !text-neutral-nwhite hover:!text-neutral-nwhite;
+}
