@@ -300,7 +300,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 /* Detail posts */
 
 .detail p {
-  @apply text-b2 text-neutral-dgray lg:max-w-[750px];
+  @apply body-2 text-neutral-dgray lg:max-w-[750px];
 }
 
 .detail figure {
