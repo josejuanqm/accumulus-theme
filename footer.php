@@ -18,7 +18,7 @@
 				<div class="flex flex-col gap-y-s4 md:py-s5 md:gap-y-s8 col-span-12">
 					<div class="flex flex-col md:flex-row items-start justify-between">
 						<div class="flex flex-col items-start justify-between h-full">
-							<p class="flex-1">
+							<p class="flex-1 whitespace-nowrap">
 								Accumulus Synergy <br/>
 								A Nonprofit Industry  <br/>
 								Association
