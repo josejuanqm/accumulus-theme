@@ -186,7 +186,7 @@ module.exports = {
         ],
 
         h8: [
-          '7.5rem',
+          '8.75rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -194,7 +194,7 @@ module.exports = {
           },
         ],
         h8Tablet: [
-          '13.063rem',
+          '11.25rem',
           {
             fontWeight: '500',
             lineHeight: '120%',

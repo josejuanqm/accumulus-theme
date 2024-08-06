@@ -1664,6 +1664,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -1784,6 +1789,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-s3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-s4 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1817,11 +1827,6 @@ video {
 .py-s6 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.px-s3 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pb-\[33\%\] {
@@ -1896,6 +1901,10 @@ video {
   padding-top: 0.25rem;
 }
 
+.pt-40 {
+  padding-top: 10rem;
+}
+
 .pt-\[320px\] {
   padding-top: 320px;
 }
@@ -1906,10 +1915,6 @@ video {
 
 .pt-s10 {
   padding-top: 5rem;
-}
-
-.pt-s11 {
-  padding-top: 5.5rem;
 }
 
 .pt-s12 {
@@ -2449,7 +2454,7 @@ video {
 
 @media (min-width: 768px) {
   .heading-8 {
-    font-size: 13.063rem;
+    font-size: 11.25rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -2458,7 +2463,7 @@ video {
 
 @media (min-width: 1025px) {
   .heading-8 {
-    font-size: 7.5rem;
+    font-size: 8.75rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -3183,6 +3188,27 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     height: 100%;
   }
 
+  .max-lg\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .max-lg\:h-screen {
+    height: 100vh;
+  }
+
+  .max-lg\:h-\[80\%\] {
+    height: 80%;
+  }
+
+  .max-lg\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .max-lg\:h-\[800px\] {
+    height: 800px;
+  }
+
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
   }
@@ -3195,12 +3221,20 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     flex-wrap: wrap;
   }
 
+  .max-lg\:content-between {
+    align-content: space-between;
+  }
+
   .max-lg\:items-center {
     align-items: center;
   }
 
   .max-lg\:justify-center {
     justify-content: center;
+  }
+
+  .max-lg\:justify-between {
+    justify-content: space-between;
   }
 
   .max-lg\:gap-4 {
@@ -3240,6 +3274,18 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:flex {
     display: flex;
+  }
+
+  .max-md\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .max-md\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .max-md\:h-screen {
+    height: 100vh;
   }
 
   .max-md\:w-full {
@@ -3374,10 +3420,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-row-start: 1;
   }
 
-  .md\:flex {
-    display: flex;
-  }
-
   .md\:grid {
     display: grid;
   }
@@ -3442,10 +3484,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 4rem;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:max-w-550 {
     max-width: 550px;
   }
@@ -3480,10 +3518,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:flex-col {
     flex-direction: column;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
   }
 
   .md\:items-end {
@@ -3614,11 +3648,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 4rem;
   }
 
-  .md\:px-s3 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3669,6 +3698,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:pt-52 {
     padding-top: 13rem;
+  }
+
+  .md\:pt-60 {
+    padding-top: 15rem;
   }
 
   .md\:pt-s1 {
@@ -3789,7 +3822,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .md\:text-h8Tablet {
-    font-size: 13.063rem;
+    font-size: 11.25rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -4212,6 +4245,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-top: 13rem;
   }
 
+  .lg\:pt-72 {
+    padding-top: 18rem;
+  }
+
   .lg\:pt-s11 {
     padding-top: 5.5rem;
   }
@@ -4246,6 +4283,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s8 {
     padding-top: 4rem;
+  }
+
+  .lg\:pt-60 {
+    padding-top: 15rem;
   }
 
   .lg\:text-b1 {
@@ -4312,7 +4353,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .lg\:text-h8 {
-    font-size: 7.5rem;
+    font-size: 8.75rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
