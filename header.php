@@ -57,10 +57,10 @@
               <?php foreach ($primary_menu_items as $menu_item) : ?>
                 <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
                 <?php
-                  $fields = get_fields($post_id); 
+                  $fields = get_fields($menu_item); 
                 ?>
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
-                  <a class="py-s2" href="#"><?php echo get_the_title($menu_item); ?></a>
+                  <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
                     <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -88,7 +88,7 @@
     <?php foreach ($primary_menu_items as $menu_item) : ?>
       <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
       <?php
-        $fields = get_fields($post_id); 
+        $fields = get_fields($menu_item); 
       ?>
         <section class="fixed w-full bg-white shadow-md pb-s8 pt-s6 mm" style="display: none;" data-identifier="<?php echo $fields["identifier"]; ?>">
           <div class="container mx-auto px-s2">
@@ -119,11 +119,11 @@
         <?php foreach ($primary_menu_items as $menu_item) : ?>
           <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
           <?php
-            $fields = get_fields($post_id); 
+            $fields = get_fields($menu_item); 
           ?>
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
             <div class="flex flex-row items-center justify-between w-full peer">
-              <a class="py-s2" href="#"><?php echo get_the_title($menu_item); ?></a>
+              <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
                 <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
