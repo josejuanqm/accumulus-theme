@@ -20,11 +20,11 @@
       <div class="relative col-span-12 md:col-span-6 ld:col-span-7 flex flex-col justify-between gap-s12 md:gap-s4 lg:gap-s3 lg:pr-9">
 
         <div class="flex flex-col gap-s4">
-          <h4 class="text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">COMPANY</h4>
-          <h1 class="text-h1Mobile md:text-h1Tablet lg:text-h1"><?php the_title(); ?></h1>
+          <h4 class="heading-4 uppercase">COMPANY</h4>
+          <h1 class="heading-1"><?php the_title(); ?></h1>
         </div>
 
-        <p class="text-b2Mobile md:text-b2Tablet lg:text-b2 lg:max-w-[460px]">
+        <p class="body-2 lg:max-w-[460px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. 
         </p>
 
@@ -78,17 +78,13 @@
   
     <div class="grid grid-cols-12 gap-s2">
   
-      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4">
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 flex justify-center w-full flex-wrap gap-s2 md:gap-s4 text-neutral-sgray">
     
         <input type="hidden" id="category" value="0" data-catName="Last Articles">
         
-        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite">All</a>
-        <a href="javascript:void(0)" data-id="1" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link">Past events</a>
-        <a href="javascript:void(0)" data-id="2" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link">Upcoming events</a>
-        
-        <!-- <?php //foreach($categories as $category): ?>
-          <a href="javascript:void(0)" data-id="<?php //echo $category->term_id; ?>" data-name="Latest <?php //echo $category->name; ?>" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase btn-text-link"><?php //$category->name ?></a>
-        <?php //endforeach; ?> -->
+        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s3 heading-4 text-center rounded-button uppercase bg-neutral-dgray active-filter">All</a>
+        <a href="javascript:void(0)" data-id="1" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray">Past events</a>
+        <a href="javascript:void(0)" data-id="2" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray">Upcoming events</a>
           
       </div>
 

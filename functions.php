@@ -861,7 +861,7 @@ function getEvents() {
 
         foreach ($years as $monthKey => $months) {
 
-            $html .= ' <h3 class="col-span-12 text-h3Mobile md:text-h3Tablet lg:text-h3 pt-s8 pb-s4 first-of-type:pt-0">'. $monthKey . ' ' . $yearKey .'</h3>';
+            $html .= ' <h3 class="col-span-12 heading-3 pt-s8 pb-s4 first-of-type:pt-0">'. $monthKey . ' ' . $yearKey .'</h3>';
 
             foreach ($months as $postKey => $posts) {
                 // Get category by post
@@ -889,7 +889,7 @@ function getEvents() {
                 $html .= '</div>';
 
                 $html .= '<div class="relative max-md:w-full md:col-span-6 flex flex-col max-md:order-3 gap-s1 lg:gap-s2 p-s4 md:py-s2 md:px-s2">';
-                $html .= '<span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase text-neutral-dgray '. $categorySlug . '">';
+                $html .= '<span class="flex items-center gap-s1 pt-1 heading-4 uppercase text-neutral-dgray '. $categorySlug . '">';
                 $html .= '<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">';
                 $html .= '<path d="M12 2.83909V10.8388H10.6669V1.1732C10.6669 0.619888 10.2189 0.171875 9.66556 0.171875H1.00132C0.448009 0.171875 0 0.619888 0 1.1732V10.8388C0 11.5749 0.597018 12.1719 1.33311 12.1719H12C12.7361 12.1719 13.3331 11.5749 13.3331 10.8388V2.83909H12ZM1.33311 10.8388V1.50499H9.33278V10.8378H1.33311V10.8388Z" class="fill-current"/>';
                 $html .= '<path d="M7.99946 8.17188H2.66602V9.50499H7.99946V8.17188Z" class="fill-current"/>';
@@ -899,7 +899,7 @@ function getEvents() {
                 $html .= $category;
                 $html .= '</span>';
                 $html .= '<h3 class="text-h10">'. get_the_title() .'</h3>';
-                $html .= '<p class="text-b2Mobile md:text-b2Tablet lg:text-b2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+                $html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
                 $html .= '</div>';
 
                 if (has_post_thumbnail( $posts[0]->ID ) ) {

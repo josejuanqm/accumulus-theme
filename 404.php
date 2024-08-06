@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<section class="section w-full pt-s11 lg:pt-s8 pb-s12 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-no-repeat bg-left-top bg-contain" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/bg-404.png);">
+	<section class="section w-full pt-s11 lg:pt-s8 pb-s12 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-no-repeat bg-left-top bg-contain bg-cover" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/bg-404.png);">
 
 		<div class="container mx-auto">
 
