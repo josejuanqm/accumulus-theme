@@ -29,7 +29,7 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s3">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Company</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Our Team</a></li>
 								<li><a href="">News</a></li>
@@ -39,7 +39,7 @@
 								<li><a href="">Careers</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Platform</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
 								<li><a href="">Accumulus Platform</a></li>
 								<li><a href="">Core Capabilities</a></li>
 							</ul>
@@ -78,13 +78,13 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s16">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Resources</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
 								<li><a href="">eBooks and White Papers</a></li>
 								<li><a href="">Thought Leadership</a></li>
 								<li><a href="">Media</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Legal</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>
 							</ul>
