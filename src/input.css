@@ -273,6 +273,10 @@ div.wpforms-container-full button[type='submit']:hover {
   @apply !bg-white !text-cta-dark !transition-all cursor-pointer;
 }
 
+.wpforms-container select.wpforms-field-medium {
+  @apply !max-w-full !text-b2Mobile md:!text-b2Tablet lg:!text-b2;
+}
+
 div.wpforms-container .wpforms-form .choices {
   @apply !w-full !max-w-full;
 }
