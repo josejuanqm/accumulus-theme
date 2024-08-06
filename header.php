@@ -61,12 +61,10 @@
                 ?>
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
                   <a class="py-s2" href="#"><?php echo get_the_title($menu_item); ?></a>
-                  <?php if (array_in("menu_items", array_keys($menu_item))) : ?>
-                    <?php if ($fields["menu_items"]) : ?>
-                      <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    <?php endif; ?>
+                  <?php if ($fields["menu_items"]) : ?>
+                    <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   <?php endif; ?>
                 </li>
               <?php endforeach; ?>
@@ -95,23 +93,21 @@
         <section class="fixed w-full bg-white shadow-md pb-s8 pt-s6 mm" style="display: none;" data-identifier="<?php echo $fields["identifier"]; ?>">
           <div class="container mx-auto px-s2">
             <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
-              <?php if (array_in("menu_items", array_keys($menu_item))) : ?>
-                <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
-                  <li>
-                    <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
-                      <div class="p-s1 w-4 h-4 box-content rounded-md bg-primary-glaciar col-start-1 col-end-2">
-                        <img class="h-s2 w-s2 aspect-square bg-primary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
-                      </div>
-                      <div class="flex flex-col gap-s1">
-                        <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
-                        <p class="body-4 text-neutral-sgray">
-                          <span><?php echo $menu_subitem["description"]; ?></span>
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-              <?php endif; ?>
+              <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
+                <li>
+                  <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
+                    <div class="p-s1 w-4 h-4 box-content rounded-md bg-primary-glaciar col-start-1 col-end-2">
+                      <img class="h-s2 w-s2 aspect-square bg-primary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
+                    </div>
+                    <div class="flex flex-col gap-s1">
+                      <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
+                      <p class="body-4 text-neutral-sgray">
+                        <span><?php echo $menu_subitem["description"]; ?></span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              <?php endforeach; ?>
             </ul>
           </div>
         </section>
@@ -128,12 +124,10 @@
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
             <div class="flex flex-row items-center justify-between w-full peer">
               <a class="py-s2" href="#"><?php echo get_the_title($menu_item); ?></a>
-              <?php if (array_in("menu_items", array_keys($menu_item))) : ?>
-                <?php if ($fields["menu_items"]) : ?>
-                  <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                <?php endif; ?>
+              <?php if ($fields["menu_items"]) : ?>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               <?php endif; ?>
             </div>
             <section class="w-full bg-white peer-hover:block hover:block hidden" data-identifier="<?php echo $fields["identifier"]; ?>">
