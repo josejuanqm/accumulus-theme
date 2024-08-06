@@ -40,10 +40,10 @@
         <!-- <img class="relative" src="<?php //echo $main_banner['image']; ?>" alt="<?php //echo $main_banner['title']; ?>" /> -->
       </div>
 
-			<div class="col-span-6 md:col-span-6 lg:col-span-4 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
+			<div class="col-span-6 md:col-span-6 lg:col-span-4 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 md:pt-s2 lg:pt-0">
 				<p class="body-2"><?php echo $main_banner['first_resume']; ?></p>
 			</div>
-			<div class="col-span-6 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-5 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
+			<div class="col-span-6 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-5 lg:row-start-3 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 md:pt-s2 lg:pt-0">
 				<p class="body-2"><?php echo $main_banner['second_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
@@ -71,10 +71,10 @@ $value_propositions = get_field('value_propositions');
     <?php if($value_propositions) : ?>
     <div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s16 lg:mb-s2">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 heading-4 uppercase"><?php echo $value_propositions['flag_title']; ?></h4>
-			<h2 class="col-span-12 grid grid-cols-12 heading-1 gap-4 !font-normal">
+			<h2 class="col-span-12 grid grid-cols-12 heading-1 !font-normal">
         <span class="col-span-12 "><?php echo $value_propositions['title_first_line']; ?></span>
         <span class="col-span-12"><?php echo $value_propositions['title_second_line']; ?></span>
-        <span class="col-span-10 lg:col-span-9 col-start-2 lg:col-start-3"><?php echo $value_propositions['title_third_line']; ?></span>
+        <span class="col-span-10 lg:col-span-9 md:col-start-2 lg:col-start-3"><?php echo $value_propositions['title_third_line']; ?></span>
       </h2>
 		</div>
     <?php endif; ?>
@@ -92,7 +92,7 @@ $value_propositions = get_field('value_propositions');
 				if($i % 2 == 1): 	
 			?>
 
-				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12 last-of-type:lg:!pb-0">
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 lg:gap-y-0 pb-s6 md:pb-s12 lg:pb-s12 last-of-type:md:!pb-s12 last-of-type:lg:!pb-0">
 					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s3">
 
 						<?php  foreach($row['card_item'] as $card) : ?>
@@ -141,7 +141,7 @@ $value_propositions = get_field('value_propositions');
 
 				<?php else: ?>
 
-				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12 last-of-type:lg:!pb-0">
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 lg:gap-y-0 pb-s6 md:pb-s12 lg:pb-s12 last-of-type:md:!pb-s12 last-of-type:lg:!pb-0">
 					<div class="col-span-12 md:col-span-6">
 
 						<?php foreach($row['card_item'] as $card) : ?>
@@ -211,7 +211,7 @@ $value_propositions = get_field('value_propositions');
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s7">
 			<h4 class="col-span-12 md:col-span-12 col-start-1 heading-4 uppercase">KEY FEATURES
 			</h4>
-			<p class="col-span-12 md:col-span-9 lg:col-span-5 md:pr-s4 lg:pr-0 body-2">We’re paving the way to a global dossier in the cloud and continuing to build on our core platform. Evolving features include:</p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-5 body-2">We’re paving the way to a global dossier in the cloud and continuing to build on our core platform. Evolving features include:</p>
 		</div>
 
 		<div class="key-features">

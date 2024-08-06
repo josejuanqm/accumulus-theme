@@ -278,7 +278,7 @@ div.wpforms-container .wpforms-form .choices {
 }
 
 .wpforms-container .wpforms-form .choices .choices__inner {
-  @apply !border-t-0 !border-x-0 !border-b-neutral-fnude !w-full !max-w-full !pt-0 !pl-0;
+  @apply !border-t-0 !border-x-0 !border-b-neutral-fnude !w-full !max-w-full !pt-0 !pl-0 !bg-transparent;
 }
 
 div.wpforms-container .wpforms-form .choices__list--single {

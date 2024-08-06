@@ -30,30 +30,30 @@ $contact_email = get_field('contact_email');
         </h1>
 
         <div class="col-span-12 pt-s4 lg:pt-0 lg:col-span-3 hidden lg:flex items-end gap-4">
-          <p class="text-b2 leading-6">
+          <p class="body-2 leading-6">
             <a href="#"><?php echo $contact_phone_number ?></a>
             <br />
             <a href="#"><?php echo $contact_email; ?></a>
           </p>
-          <p class="text-b2 lg:-mb-1">
+          <p class="body-2 lg:-mb-1">
             <a href="#">LinkedIn</a>
           </p>
         </div>
       </div>
 
       
-      <div class="col-span-12 md:col-span-12 lg:col-span-5 pt-s8 lg:pt-0">
+      <div class="col-span-12 md:col-span-12 lg:col-span-5 pt-s2 md:pt-s8 lg:pt-0">
         <h2 class="heading-2 max-lg:pl-[35%] max-md:pl-0">Say Hello</h2>
         <?php echo do_shortcode( $contact_form_shortcut ); ?>
       </div>
       
       <div class="col-span-12 pt-s4 flex lg:hidden items-end gap-4">
-        <p class="text-b2 leading-6">
+        <p class="body-2 leading-6">
           <a href="#"><?php echo $contact_phone_number ?></a>
           <br />
           <a href="#"><?php echo $contact_email; ?></a>
         </p>
-        <p class="text-b2 -mb-1">
+        <p class="body-2 -mb-[1px]">
           <a href="#" class="leading-6">LinkedIn</a>
         </p>
       </div>
