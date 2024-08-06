@@ -90,7 +90,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '0.25rem',
           },
         ],
         h4Tablet: [
@@ -98,7 +98,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '0.25rem',
           },
         ],
         h4Mobile: [
@@ -106,7 +106,7 @@ module.exports = {
           {
             fontWeight: '500',
             lineHeight: '120%',
-            letterSpacing: '0',
+            letterSpacing: '0.25rem',
           },
         ],
 
@@ -186,7 +186,7 @@ module.exports = {
         ],
 
         h8: [
-          '7.5rem',
+          '8.75rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -194,7 +194,7 @@ module.exports = {
           },
         ],
         h8Tablet: [
-          '13.063rem',
+          '11.25rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
@@ -278,7 +278,7 @@ module.exports = {
           },
         ],
         b2Tablet: [
-          '1.625rem',
+          '1.5rem',
           {
             fontWeight: '400',
             lineHeight: '120%',
@@ -479,6 +479,14 @@ module.exports = {
         'what-we-do-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
 
+        // Purple section - resources page
+        'purple-section-desktop':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-desktop.png')",
+        'purple-section-tablet':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-tablet.png')",
+        'purple-section-mobile':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-mobile.png')",
+
         // News
         'news-banner-desktop':
           "url('/wp-content/themes/accumulus-website/images/news/bg-news-desktop.webp')",
@@ -521,11 +529,11 @@ module.exports = {
 
         // Platform -> Benefits
         'benefits-desktop':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-desktop.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-desktop.png')",
         'benefits-tablet':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-tablet.png')",
         'benefits-mobile':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png')",
 
         // Core capabilities
         'core-capabilities-desktop':

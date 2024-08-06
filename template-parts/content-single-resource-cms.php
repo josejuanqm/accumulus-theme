@@ -31,10 +31,10 @@
     <?php //accumulus_website_post_thumbnail(); ?>
   </div>
   <div class="col-span-12 md:col-span-6 flex flex-col justify-between lg:h-full px-s4 lg:px-0 py-s6 md:pt-s14 lg:pt-52 2xl:pt-60 lg:pb-24 lg:pl-20">
-    <h4 class="text-white text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase pt-s1 md:pt-s3"><?php echo $category; ?></h4>
+    <h4 class="text-neutral-nwhite heading-4 uppercase pt-s1 md:pt-s3"><?php echo $category; ?></h4>
     <div class="flex flex-col gap-s3 lg:gap-8 max-w-[465px] pt-s5 lg:pt-s3">
-      <h1 class="text-white text-h2Mobile md:text-h2Tablet lg:text-h2"><?php the_title(); ?></h1>
-      <span class="text-white uppercase text-h4 md:text-h4Tablet lg:text-h4">By <?php echo get_the_author(); ?></span>
+      <h1 class="text-neutral-nwhite text-h2Mobile md:text-h2Tablet lg:text-h2"><?php the_title(); ?></h1>
+      <span class="text-neutral-nwhite uppercase heading-4">By <?php echo get_the_author(); ?></span>
     </div>
   </div>
 </section>
@@ -115,7 +115,7 @@
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
 	<div class="container mx-auto px-s4 lg:px-0">
 		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Related Resources</h2>
+			<h2 class="w-full heading-2">Related Resources</h2>
 			<div class="relative w-full">
 				<div class="related">
 					<?php 

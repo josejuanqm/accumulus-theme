@@ -106,8 +106,8 @@ get_footer();
             $("#category").val($filter);
             $("#title-section").html($cat);
 
-            $(".filters a").removeClass("bg-neutral-dgray text-neutral-nwhite hover:text-neutral-nwhite");
-            $(this).addClass("bg-neutral-dgray text-neutral-nwhite hover:text-neutral-nwhite");
+            $(".filters a").removeClass("bg-neutral-dgray !text-neutral-nwhite hover:text-neutral-nwhite active-filter");
+            $(this).addClass("bg-neutral-dgray !text-neutral-nwhite hover:text-neutral-nwhite active-filter");
             get_list_resources(1, true);
 
         });
