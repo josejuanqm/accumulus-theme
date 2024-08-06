@@ -130,12 +130,12 @@
 
 <section id="cookies-prompt" style="display: none;" class="bottom-0 left-0 right-0 py-s4 shadow-lg bg-white z-[999999]">
   <div class="container mx-auto px-s2">
-    <div class="flex flex-col md:flex-row lg:flex-row items-start md:items-center gap-s4">
-      <h3 class="heading-3">Our Website Uses Cookies</h3>
-      <p class="body-3">
+    <div class="grid grid-cols-12 gap-s4">
+      <h3 class="heading-3 col-span-12 md:col-span-5 lg:col-span-3">Our Website Uses Cookies</h3>
+      <p class="body-3 col-span-12 md:col-span-7 lg:col-span-7">
       Accumulus Synergy uses cookies to give you the best experience when visiting our website. By clicking “Accept,” you’re agreeing to the use of cookies as described in our privacy policy
       </p>
-      <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto">
+      <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto col-span-12 lg:col-span-2">
         <button class="btn btn-secondary" id="cookie-prompt-primary-btn">
           Accept Cookies
         </button>

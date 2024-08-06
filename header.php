@@ -31,7 +31,7 @@
 ?>
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
-  <header class="fixed w-full z-[999999] text-neutral-sgray">
+  <header id="navigation" class="fixed w-full z-[999999] text-neutral-sgray">
     <div class="hidden lg:block section bg-white border-b border-b-neutral-200">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
@@ -225,13 +225,13 @@
 
     // place bottom margin to the body to avoid the content to be hidden by the fixed header
     document.addEventListener('DOMContentLoaded', function() {
-      document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
 
     // Also add a listener to the resize event to update the margin top
     window.addEventListener('resize', function() {
-      document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
   </script>

@@ -3429,6 +3429,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-start: auto;
   }
 
+  .md\:col-start-10 {
+    grid-column-start: 10;
+  }
+
   .md\:row-auto {
     grid-row: auto;
   }
@@ -3967,6 +3971,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-start: 9;
   }
 
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
   .lg\:row-start-1 {
     grid-row-start: 1;
   }
@@ -4085,6 +4093,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:items-center {
+    align-items: center;
   }
 
   .lg\:items-stretch {
