@@ -75,7 +75,7 @@
             </svg>
           </button>
 
-          <span id="slider-prev-label" class="body-3 text-neutral-500 col-span-2 lg:col-span-1 row-start-2 md:row-start-1">
+          <span id="slider-prev-label" class="headline-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-2 md:row-start-1">
             <?php echo $years[0]['year']; ?>
           </span>
 
@@ -141,7 +141,7 @@
             </div>
           </div>
 
-          <span id="slider-next-label" class="text-right body-3 text-neutral-500 col-span-2 lg:col-span-1 row-start-2 md:row-start-1 col-start-9 md:col-start-auto">
+          <span id="slider-next-label" class="text-right headline-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-2 md:row-start-1 col-start-9 md:col-start-auto">
             <?php echo $years[count($years ) - 1]['year']; ?>
           </span>
 

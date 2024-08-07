@@ -1035,6 +1035,10 @@ video {
   grid-column-end: 5;
 }
 
+.col-end-12 {
+  grid-column-end: 12;
+}
+
 .row-start-1 {
   grid-row-start: 1;
 }
@@ -3433,6 +3437,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-start: 10;
   }
 
+  .md\:col-end-12 {
+    grid-column-end: 12;
+  }
+
   .md\:row-auto {
     grid-row: auto;
   }
@@ -3973,6 +3981,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:col-start-1 {
     grid-column-start: 1;
+  }
+
+  .lg\:col-end-12 {
+    grid-column-end: 12;
   }
 
   .lg\:row-start-1 {
