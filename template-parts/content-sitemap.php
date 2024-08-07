@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section bg-secondary-lilac">
   <div class="container mx-auto px-4 lg:px-0">
     <div class="grid grid-cols-12 gap-x-s2 py-s6 md:py-s8">
       <h1 class="heading-1 col-span-12  md:col-span-5 lg:col-span-5 col-start-1 md:col-start-1 lg:col-start-2 pb-s8 lg:pb-0">
