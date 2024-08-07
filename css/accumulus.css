@@ -3026,6 +3026,43 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
 }
 
+.choice-1.depth-1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.choice-1.depth-1 input {
+  margin: 0px !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+
+.choice-1.depth-1 label {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .choice-1.depth-1 label {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .choice-1.depth-1 label {
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
 /* Detail posts */
 
 .detail p {
