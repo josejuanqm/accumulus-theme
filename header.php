@@ -20,21 +20,22 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_user_logged_in() ? '[&>#wpadminbar]:hidden !mb-0' : '!mb-0'); ?>>
+<body <?php body_class(is_user_logged_in() ? '' : ''); ?>>
 <?php wp_body_open(); ?>
 <?php 
   // switch url path
   $url_path = $_SERVER['REQUEST_URI'];
   $url_path = explode('/', $url_path);
   $url_path = $url_path[1];
+  $primary_menu_items = wp_get_nav_menu_items('Primary');
 ?>
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
-  <header class="fixed w-full z-[999999]">
+  <header id="navigation" class="fixed w-full z-[999999] text-neutral-sgray">
     <div class="hidden lg:block section bg-white border-b border-b-neutral-200">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
-          <ul class="flex flex-row items-center justify-end gap-s2 text-sm">
+          <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
             <li><a class="hover:underline" href="">Regulator Forum</a></li>
             <li><a class="hover:underline" href="">Contact Us</a></li>
             <li><a class="hover:underline" href="">Careers</a></li>
@@ -51,29 +52,22 @@
               <img class="h-s8" src="<?php echo get_template_directory_uri(); ?>/images/logo-navigation-light.svg" alt="Accumulus" class="w-32 h-auto">
             </a>
           </div>
-          <div class="flex-row items-center hidden lg:flex">
+          <div class="flex-row items-center hidden lg:flex text-cta-dark">
             <ul class="flex flex-row items-center gap-s4">
-              <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="platform">
-                <a class="py-s2" href="#">Platform</a>
-                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </li>
-              <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1">
-                <a class="py-s2" href="#">Case for Change</a>
-              </li>
-              <li class="menu-item flex flex-row items-center gap-s1" idata-dentifier="resources">
-                <a class="py-s2" href="#">Resources</a>
-                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </li>
-              <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" idata-dentifier="company">
-                <a class="py-s2" href="#">Company</a>
-                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </li>
+              <?php foreach ($primary_menu_items as $menu_item) : ?>
+                <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
+                <?php
+                  $fields = get_fields($menu_item); 
+                ?>
+                <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
+                  <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
+                  <?php if ($fields["menu_items"]) : ?>
+                    <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  <?php endif; ?>
+                </li>
+              <?php endforeach; ?>
             </ul>
           </div>
           <div class="flex flex-row items-center ms-auto">
@@ -91,50 +85,74 @@
         </div>  
       </div>
     </div>
-    <section class="fixed w-full bg-white shadow-md pb-s8 pt-s6 mm" style="display: none;" data-identifier="platform">
-      <div class="container mx-auto px-s2">
-        <ul class="dropdown-menu flex flex-row items-center justify-center mx-auto">
-          <li>
-            <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
-              <div class="p-s1 w-4 h-4 box-content rounded-md bg-primary-glaciar col-start-1 col-end-2">
-                <img class="h-s2 w-s2 aspect-square bg-primary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
-              </div>
-              <div class="flex flex-col gap-s1">
-                <span class="body-3"><b>Platform</b></span>
-                <p class="body-4 text-neutral-sgray">
-                  <span>Accumulus is a cloud-based platform that enables organizations to measure, manage, and report on their social and environmental impact.</span>
-                </p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <?php foreach ($primary_menu_items as $menu_item) : ?>
+      <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
+      <?php
+        $fields = get_fields($menu_item); 
+      ?>
+        <section class="fixed w-full bg-white shadow-md pb-s8 pt-s6 mm" style="display: none;" data-identifier="<?php echo $fields["identifier"]; ?>">
+          <div class="container mx-auto px-s2">
+            <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
+              <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
+                <li>
+                  <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
+                    <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
+                      <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
+                    </div>
+                    <div class="flex flex-col gap-s1">
+                      <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
+                      <p class="body-4 text-neutral-sgray">
+                        <span><?php echo $menu_subitem["description"]; ?></span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        </section>
+    <?php endforeach; ?>
   </header> 
   <section id="mobile-menu" style="display: none;" class="section fixed bg-white lg:!hidden top-0 left-0 w-screen h-screen z-[999] pb-s4">
     <div class="container mx-auto w-full flex-col items-center justify-between h-full flex pt-s6">
       <ul class="w-full flex flex-col items-start gap-s1 md:gap-s2 body-1 px-s2">
-        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="platform">
-          <a class="py-s2" href="#">Platform</a>
-          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </li>
-        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1">
-          <a class="py-s2" href="#">Case for Change</a>
-        </li>
-        <li class="menu-item flex flex-row items-center gap-s1" idata-dentifier="resources">
-          <a class="py-s2" href="#">Resources</a>
-          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </li>
-        <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" idata-dentifier="company">
-          <a class="py-s2" href="#">Company</a>
-          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </li>
+        <?php foreach ($primary_menu_items as $menu_item) : ?>
+          <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
+          <?php
+            $fields = get_fields($menu_item); 
+          ?>
+          <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
+            <div class="flex flex-row items-center justify-between w-full peer">
+              <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
+              <?php if ($fields["menu_items"]) : ?>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <?php endif; ?>
+            </div>
+            <section class="w-full bg-white peer-hover:block hover:block hidden" data-identifier="<?php echo $fields["identifier"]; ?>">
+              <div class="container mx-auto">
+                <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
+                  <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
+                    <li>
+                      <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px]" href="#">
+                        <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
+                          <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
+                        </div>
+                        <div class="flex flex-col gap-s1">
+                          <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
+                          <p class="body-4 text-neutral-sgray">
+                            <span><?php echo $menu_subitem["description"]; ?></span>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+            </section>
+          </li>
+        <?php endforeach; ?>
       </ul>
       <div class="flex flex-col items-center justify-between w-full">
         <div class="btn btn-primary w-full">
@@ -207,13 +225,13 @@
 
     // place bottom margin to the body to avoid the content to be hidden by the fixed header
     document.addEventListener('DOMContentLoaded', function() {
-      document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
 
     // Also add a listener to the resize event to update the margin top
     window.addEventListener('resize', function() {
-      document.body.style.marginBottom = document.querySelector('header').offsetHeight + 'px';
+      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
   </script>

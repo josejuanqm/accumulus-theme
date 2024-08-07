@@ -200,7 +200,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
+// enable svg upload
+function custom_mtypes( $m ){
+    $m['svg'] = 'image/svg+xml';
+    $m['svgz'] = 'image/svg+xml';
+    return $m;
+}
+add_filter( 'upload_mimes', 'custom_mtypes' );
 
 /**
 * 
@@ -922,7 +928,157 @@ function getEvents() {
     ));
 }
 
-
+function add_mega_menu_items() {
+  acf_add_local_field_group( array(
+    'key' => 'mega_menu_items',
+    'title' => 'Mega Menu',
+    'fields' => array(
+      array(
+        "key" => 'idenitifer',
+        "label" => 'Identifier',
+        "name" => 'identifier',
+        "aria-label" => '',
+        "type" => 'text',
+        "instructions" => '',
+        "required" => 0,
+        "conditional_logic" => 0,
+        "wrapper" => array(
+          "width" => '',
+          "class" => '',
+          "id" => '',
+        ),
+      ),
+      array(
+        'key' => 'menu_items',
+        'label' => 'Menu Items',
+        'name' => 'menu_items',
+        'aria-label' => '',
+        'type' => 'repeater',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'layout' => 'table',
+        'pagination' => 0,
+        'min' => 0,
+        'max' => 0,
+        'collapsed' => '',
+        'button_label' => 'Add Row',
+        'rows_per_page' => 20,
+        'sub_fields' => array(
+          array(
+            'key' => 'link',
+            'label' => '',
+            'name' => '',
+            'aria-label' => '',
+            'type' => 'url',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'parent_repeater' => 'menu_items',
+          ),
+          array(
+            'key' => 'title',
+            'label' => 'Title',
+            'name' => 'title',
+            'aria-label' => '',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => 'Title',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'parent_repeater' => 'menu_items',
+          ),
+          array(
+            'key' => 'description',
+            'label' => 'Description',
+            'name' => 'description',
+            'aria-label' => '',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'maxlength' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'parent_repeater' => 'menu_items',
+          ),
+          array(
+            'key' => 'icon',
+            'label' => 'Icon',
+            'name' => 'icon',
+            'aria-label' => '',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'return_format' => 'url',
+            'library' => 'uploadedTo',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+            'preview_size' => 'medium',
+            'parent_repeater' => 'menu_items',
+          ),
+        ),
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'nav_menu_item',
+          'operator' => '==',
+          'value' => 'all',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+    'show_in_rest' => 0,
+  ) );
+}
 
 
 /*
@@ -936,6 +1092,8 @@ add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
 	}
+
+  add_mega_menu_items();
 
 	acf_add_local_field_group( array(
 		'key' => 'group_666baf7791435',
@@ -4404,6 +4562,13 @@ add_action( 'acf/include_fields', function() {
 					'value' => 'page-regulator-forum.php',
 				),
 			),
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-about-us.php',
+				),
+			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
@@ -4628,137 +4793,6 @@ add_action( 'acf/include_fields', function() {
 		'description' => '',
 		'show_in_rest' => 0,
 	) );
-
-	// About 
-	acf_add_local_field_group(
-		array(
-			'key' => 'about_us_page_fields',
-			'title' => 'About Us Page - Fields',
-			'fields' => array(
-				array(
-					'key' => 'banner_section',
-					'label' => 'Banner Section',
-					'name' => 'banner_section',
-					'aria-label' => 'banner_section',
-					'type' => 'group',
-					'instructions' => 'Banner section parameters',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'layout' => 'block',
-					'sub_fields' => array(
-						array(
-							'key' => 'bg_image',
-							'label' => 'Background Image',
-							'name' => 'bg_image',
-							'aria-label' => '',
-							'type' => 'image',
-							'instructions' => '',
-							'required' => 1,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'return_format' => 'url',
-							'library' => 'all',
-							'min_width' => '',
-							'min_height' => '',
-							'min_size' => '',
-							'max_width' => '',
-							'max_height' => '',
-							'max_size' => '',
-							'mime_types' => '',
-							'preview_size' => 'medium',
-						),
-						array(
-							'key' => 'eyebrow_text',
-							'label' => 'Eyebrow text',
-							'name' => 'eyebrow_text',
-							'aria-label' => '',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'COMPANY',
-							'maxlength' => '',
-							'placeholder' => 'COMPANY',
-							'prepend' => '',
-							'append' => '',
-						),
-						array(
-							'key' => 'main_title',
-							'label' => 'Main title',
-							'name' => 'main_title',
-							'aria-label' => 'main title',
-							'type' => 'text',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'Responsible Innovation in the Life Sciences-Regulatory Ecosystem',
-							'maxlength' => '',
-							'placeholder' => '',
-							'prepend' => '',
-							'append' => '',
-						),
-						array(
-							'key' => 'paragraph',
-							'label' => 'Paragraph',
-							'name' => 'paragraph',
-							'aria-label' => 'paragraph',
-							'type' => 'textarea',
-							'instructions' => '',
-							'required' => 0,
-							'conditional_logic' => 0,
-							'wrapper' => array(
-								'width' => '',
-								'class' => '',
-								'id' => '',
-							),
-							'default_value' => 'We’re a nonprofit organization advancing the interaction and information exchange between life sciences organizations and global health authorities',
-							'maxlength' => '',
-							'rows' => 4,
-							'placeholder' => '',
-							'new_lines' => '',
-						)
-					),
-				),
-			),
-			'location' => array(
-				array(
-					array(
-						'param' => 'page_template',
-						'operator' => '==',
-						'value' => 'page-about-us.php',
-					),
-				),
-			),
-			'menu_order' => 0,
-			'position' => 'normal',
-			'style' => 'default',
-			'label_placement' => 'top',
-			'instruction_placement' => 'label',
-			'hide_on_screen' => '',
-			'active' => true,
-			'description' => '',
-			'show_in_rest' => 0,
-		)
-	);
 
 } );
 

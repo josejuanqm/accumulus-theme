@@ -18,7 +18,7 @@
 				<div class="flex flex-col gap-y-s4 md:py-s5 md:gap-y-s8 col-span-12">
 					<div class="flex flex-col md:flex-row items-start justify-between">
 						<div class="flex flex-col items-start justify-between h-full">
-							<p class="flex-1">
+							<p class="flex-1 whitespace-nowrap">
 								Accumulus Synergy <br/>
 								A Nonprofit Industry  <br/>
 								Association
@@ -29,7 +29,7 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s3">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Company</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Our Team</a></li>
 								<li><a href="">News</a></li>
@@ -39,7 +39,7 @@
 								<li><a href="">Careers</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Platform</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
 								<li><a href="">Accumulus Platform</a></li>
 								<li><a href="">Core Capabilities</a></li>
 							</ul>
@@ -78,13 +78,13 @@
 						</div>
 						<div class="flex flex-row items-start justify-end gap-s16">
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Resources</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
 								<li><a href="">eBooks and White Papers</a></li>
 								<li><a href="">Thought Leadership</a></li>
 								<li><a href="">Media</a></li>
 							</ul>
 							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><p class="text-secondary-mpurple heading-6">Legal</p></li>
+								<li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>
 							</ul>
@@ -130,12 +130,12 @@
 
 <section id="cookies-prompt" style="display: none;" class="bottom-0 left-0 right-0 py-s4 shadow-lg bg-white z-[999999]">
   <div class="container mx-auto px-s2">
-    <div class="flex flex-col md:flex-row lg:flex-row items-start md:items-center gap-s4">
-      <h3 class="heading-3">Our Website Uses Cookies</h3>
-      <p class="body-3">
+    <div class="grid grid-cols-12 gap-s4">
+      <h3 class="heading-3 col-span-12 md:col-span-5 lg:col-span-3">Our Website Uses Cookies</h3>
+      <p class="body-3 col-span-12 md:col-span-7 lg:col-span-7">
       Accumulus Synergy uses cookies to give you the best experience when visiting our website. By clicking “Accept,” you’re agreeing to the use of cookies as described in our privacy policy
       </p>
-      <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto">
+      <div class="flex flex-col items-center justify-stretch gap-s2 w-full md:w-auto lg:w-auto col-span-12 lg:col-span-2">
         <button class="btn btn-secondary" id="cookie-prompt-primary-btn">
           Accept Cookies
         </button>

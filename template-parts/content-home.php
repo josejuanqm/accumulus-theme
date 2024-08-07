@@ -104,7 +104,7 @@
 <!-- What we do -->
 
 <!-- BEGIN PARADIGM SHIFT -->
- <section class="section relative w-full py-s6 bg-neutral-lfnude">
+ <section class="section relative w-full py-s6 bg-neutral-nude">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
 				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
@@ -115,7 +115,7 @@
 						Paradigm Shift
 					</span>
 				</h2>
-				<p class="col-start-1 col-span-12 md:col-start-5 md:col-span-7 lg:col-span-6 lg:col-start-6 body-2">
+				<p class="col-start-1 col-span-12 md:col-start-5 md:col-span-7 lg:col-span-7 lg:col-start-6 body-2">
 					Bringing an approved drug to market is inefficient and expensive.
 				</p>
 			</div>
@@ -151,7 +151,7 @@
 	'template-parts/content', 
 	'quote', 
 	array( 
-		'bg_color' => 'bg-neutral-lfnude',
+		'bg_color' => 'bg-neutral-nude',
 		'main_quote' => 'It’s time for more sustainable and scalable collaboration and information exchange between life sciences organizations and global health authorities. It’s time for a moonshot!',
 		'sub_quote' => '“Filing a New Drug Application may have shifted from driving a truckload of paper to the relevant regulatory authority to FedEx-ing a CD-ROM to uploading a set of PDFs through the Electronic Submissions Gateway, but the underlying processes remain little changed. It’s long past time to play catchup.”',
 		'author' => 'Francisco Nogueira',
@@ -180,7 +180,7 @@ $why_values = get_field('why_values');
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s8">
-			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase"><?php echo $why_title_tag; ?></h4>
+			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 heading-4 uppercase"><?php echo $why_title_tag; ?></h4>
 			<h2 class="col-span-12 heading-1 grid grid-cols-12">
 				<span class="col-span-12"><?php echo $why_first_line_title; ?></span>
 				<span class="col-span-10 col-start-2 lg:col-start-3"><?php echo $why_second_line_title; ?></span>

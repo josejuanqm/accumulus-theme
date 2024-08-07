@@ -9,7 +9,7 @@
         class="col-start-3 md:col-start-4 col-span-9 md:col-span-8 pt-s8 pb-s8 lg:pt-s6 lg:pb-s4 <?php echo array_key_exists('inverted', $args) ? 'row-start-3 body-1' : 'body-2' ?>">
         <?php echo $args['sub_quote'] ?>
       </h3>
-      <div class="flex flex-row items-start justify-normal col-start-1 md:col-start-6 col-span-12 md:col-span-6 lg:col-span-5 <?php echo array_key_exists('inverted', $args) ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
+      <div class="flex flex-row items-start justify-normal col-start-1 md:col-start-6 col-start-6 col-end-12 md:col-end-12 lg:col-end-12 <?php echo array_key_exists('inverted', $args) ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
         <div class="relative w-40 md:w-[224px] aspect-square rounded-3xl bg-primary-glaciar overflow-hidden flex-shrink-0">
           <img class="w-full h-full" src="<?php echo $args['image']; ?>" alt="<?php echo $args['author']; ?>" />
           <svg class="absolute bottom-s3 right-s3" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,12 +19,12 @@
           </svg>
         </div>
         <div class="flex flex-col items-start gap-s2">
-        <p class="heading-3 col-start-9 col-span-2 row-start-3">
-          <?php echo $args['author']; ?>
-        </p>
-        <p class="body-3 col-start-9 col-span-2 row-start-3">
-          <?php echo $args['position']; ?>
-        </p>
+          <p class="heading-3">
+            <?php echo $args['author']; ?>
+          </p>
+          <p class="body-3">
+            <?php echo $args['position']; ?>
+          </p>
         </div>
       </div>
       <?php if (array_key_exists('references', $args)) { ?>

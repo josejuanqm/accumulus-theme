@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1035,6 +1035,10 @@ video {
   grid-column-end: 5;
 }
 
+.col-end-12 {
+  grid-column-end: 12;
+}
+
 .row-start-1 {
   grid-row-start: 1;
 }
@@ -1121,6 +1125,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1344,6 +1352,10 @@ video {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-12 {
@@ -1662,6 +1674,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-glaciar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 239 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30 {
@@ -2111,6 +2133,11 @@ video {
 .\!text-neutral-sgray {
   --tw-text-opacity: 1 !important;
   color: rgb(122 122 122 / var(--tw-text-opacity)) !important;
+}
+
+.text-cta-dark {
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
 }
 
 .text-neutral-500 {
@@ -3187,6 +3214,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   padding-top: 0px;
 }
 
+.hover\:block:hover {
+  display: block;
+}
+
 .hover\:border-neutral-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -3199,6 +3230,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.peer:hover ~ .peer-hover\:block {
+  display: block;
 }
 
 @media not all and (min-width: 1280px) {
@@ -3431,12 +3470,24 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-start: auto;
   }
 
+  .md\:col-start-10 {
+    grid-column-start: 10;
+  }
+
+  .md\:col-end-12 {
+    grid-column-end: 12;
+  }
+
   .md\:row-auto {
     grid-row: auto;
   }
 
   .md\:row-start-1 {
     grid-row-start: 1;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:grid {
@@ -3525,6 +3576,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-rows-4 {
@@ -3961,6 +4016,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-start: 9;
   }
 
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .lg\:col-end-12 {
+    grid-column-end: 12;
+  }
+
   .lg\:row-start-1 {
     grid-row-start: 1;
   }
@@ -4061,6 +4124,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -4075,6 +4142,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:items-center {
+    align-items: center;
   }
 
   .lg\:items-stretch {
