@@ -301,6 +301,17 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   @apply !text-neutral-dgray;
 }
 
+.choice-1.depth-1 {
+  @apply flex items-center gap-s2;
+}
+
+.choice-1.depth-1 input {
+  @apply !m-0 !w-6 !h-6;
+}
+.choice-1.depth-1 label {
+  @apply body-2;
+}
+
 /* Detail posts */
 
 .detail p {

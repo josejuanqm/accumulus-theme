@@ -939,6 +939,10 @@ video {
   isolation: isolate;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .-z-\[1\] {
   z-index: -1;
 }
@@ -957,14 +961,6 @@ video {
 
 .z-\[999\] {
   z-index: 999;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
-.order-none {
-  order: 0;
 }
 
 .order-last {
@@ -1291,14 +1287,6 @@ video {
   width: 100vw;
 }
 
-.w-\[200\%\] {
-  width: 200%;
-}
-
-.w-\[300\%\] {
-  width: 300%;
-}
-
 .min-w-s7 {
   min-width: 3.5rem;
 }
@@ -1325,10 +1313,6 @@ video {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-none {
-  max-width: none;
 }
 
 .flex-1 {
@@ -1506,12 +1490,12 @@ video {
   gap: 3rem;
 }
 
-.gap-s8 {
-  gap: 4rem;
-}
-
 .gap-s7 {
   gap: 3.5rem;
+}
+
+.gap-s8 {
+  gap: 4rem;
 }
 
 .gap-x-4 {
@@ -1635,16 +1619,6 @@ video {
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
-.border-b-neutral-400 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(163 163 163 / var(--tw-border-opacity));
-}
-
-.border-b-neutral-300 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(212 212 212 / var(--tw-border-opacity));
-}
-
 .bg-neutral-dgray {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
@@ -1710,17 +1684,13 @@ video {
   background-color: rgb(243 245 254 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
 
-.bg-opacity-30 {
-  --tw-bg-opacity: 0.3;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-benefits-mobile {
@@ -1745,10 +1715,6 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
-.\!bg-\[length\:200\%_auto\] {
-  background-size: 200% auto !important;
 }
 
 .bg-contain {
@@ -2221,16 +2187,8 @@ video {
   opacity: 0.5;
 }
 
-.opacity-30 {
-  opacity: 0.3;
-}
-
 .opacity-70 {
   opacity: 0.7;
-}
-
-.bg-blend-color-dodge {
-  background-blend-mode: color-dodge;
 }
 
 .mix-blend-multiply {
@@ -3097,6 +3055,43 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
 }
 
+.choice-1.depth-1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.choice-1.depth-1 input {
+  margin: 0px !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+
+.choice-1.depth-1 label {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .choice-1.depth-1 label {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .choice-1.depth-1 label {
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
 /* Detail posts */
 
 .detail p {
@@ -3352,6 +3347,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:flex {
     display: flex;
+  }
+
+  .max-md\:h-auto {
+    height: auto;
   }
 
   .max-md\:w-full {
@@ -3630,6 +3629,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     gap: 1rem;
   }
 
+  .md\:gap-s3 {
+    gap: 1.5rem;
+  }
+
   .md\:gap-s4 {
     gap: 2rem;
   }
@@ -3685,14 +3688,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
-  }
-
-  .md\:\!bg-\[length\:75\%_auto\] {
-    background-size: 75% auto !important;
-  }
-
-  .md\:bg-left-top {
-    background-position: left top;
   }
 
   .md\:px-0 {
@@ -3934,10 +3929,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:top-1\/4 {
     top: 25%;
-  }
-
-  .lg\:order-none {
-    order: 0;
   }
 
   .lg\:col-span-1 {
@@ -4224,10 +4215,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
-  .lg\:\!bg-\[length\:75\%_auto\] {
-    background-size: 75% auto !important;
-  }
-
   .lg\:bg-contain {
     background-size: contain;
   }
@@ -4358,6 +4345,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s8 {
     padding-top: 4rem;
+  }
+
+  .lg\:pt-s9 {
+    padding-top: 4.5rem;
   }
 
   .lg\:text-b1 {
