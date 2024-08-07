@@ -93,7 +93,7 @@ $value_propositions = get_field('value_propositions');
 			?>
 
 				<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 lg:gap-y-0 pb-s6 md:pb-s12 lg:pb-s12 last-of-type:md:!pb-s12 last-of-type:lg:!pb-0">
-					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s3">
+					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s2 md:gap-s3">
 
 						<?php  foreach($row['card_item'] as $card) : ?>
 
@@ -153,7 +153,7 @@ $value_propositions = get_field('value_propositions');
 						<?php endforeach; ?>
 
 					</div>
-					<div class="col-span-12 md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-8 flex flex-col items-start gap-s3">
+					<div class="col-span-12 md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-8 flex flex-col items-start gap-s2 md:gap-s3">
 
 						<?php foreach($row['card_item'] as $card) : ?>
 
@@ -229,7 +229,7 @@ $value_propositions = get_field('value_propositions');
 								<?php foreach($row['slide_item'] as $card) : ?>
 	
 									<?php if ($card['acf_fc_layout'] == 'image') : ?>
-										<img src="<?php echo $card['image']; ?>" class="max-lg:h-full"  />
+										<img src="<?php echo $card['image']; ?>" class="max-lg:h-full max-md:h-auto"  />
 									<?php endif; ?>
 	
 								<?php endforeach; ?>

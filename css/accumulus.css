@@ -3337,6 +3337,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     display: flex;
   }
 
+  .max-md\:h-auto {
+    height: auto;
+  }
+
   .max-md\:w-full {
     width: 100%;
   }
@@ -3619,6 +3623,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:gap-s8 {
     gap: 4rem;
+  }
+
+  .md\:gap-s3 {
+    gap: 1.5rem;
   }
 
   .md\:gap-x-s2 {
