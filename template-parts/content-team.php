@@ -1,13 +1,17 @@
 <?php
   $banner = get_field('banner_section');
-  $bg_image = (get_template_directory_uri() . "/images/team-bg.jpg") ??  $banner['bg_image'];
   $title_tag = "OUR TEAM" ?? $banner['eyebrow_text'];
   $main_title = "Passionate Leaders Driven by a Common Purpose" ?? $banner['main_title'];
   $paragraph_text = "Accumulus leaders are a diverse group of domain experts motivated by our company’s mission to dramatically accelerate critical therapies to citizens of the world." ?? $banner['paragraph'];
 ?>
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center" style="background-image: url(<?php echo $bg_image ?>)">
-	<div class="container mx-auto">
+<section class="relative isolate overflow-hidden section w-full">
+	<picture class="absolute top-0 left-0 w-full h-full -z-10">
+		<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() . "/images/team/team-bg.jpg"; ?>">
+		<source media="(min-width:768px)" srcset="<?php echo get_template_directory_uri() . "/images/team/team-bg-tablet.jpg"; ?>">
+		<img src="<?php echo get_template_directory_uri() . "/images/team/team-bg-mobile.jpg"; ?>" alt="Flowers" class="w-full h-full">
+	</picture>
+	<div class="container mx-auto pt-s4 md:pt-s7 pb-s10 md:pb-s13 lg:pb-s12">
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 			<h4 class="col-span-12 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
 			<h1 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
@@ -18,11 +22,11 @@
 	</div>
 </section>
 
-<section class="section py-s10">
+<section class="section py-s10 lg:py-s13">
   <div class="container mx-auto px-s2">
     <div class="grid grid-cols-4 gap-x-s2 gap-y-s6">
       <div class="flex flex-col items-start gap-s2 col-span-2">
-        <h2 class="heading-2">
+        <h2 class="heading-1 font-normal">
         Leadership
         </h2>
         <p class="body-1">
@@ -61,13 +65,13 @@
   </div>
 </section>
 
-<section class="section py-s10">
+<section class="section py-s10 bg-neutral-offwhite">
   <div class="container mx-auto px-s2">
-    <div class="grid grid-cols-4 gap-x-s2 gap-y-s6">
-      <h2 class="heading-2 col-span-4">
+    <div class="grid grid-cols-4 gap-x-s2 gap-y-s2">
+      <h2 class="heading-1 font-normal col-span-4">
         The Board of Directors
       </h2>
-      <p class="body-1 col-span-4 grid grid-cols-4">
+      <p class="body-1 col-span-4 grid grid-cols-4 pb-s4">
         <span class="col-start-3 col-end-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id.
         </span>
@@ -101,3 +105,10 @@
     </div>
   </div>
 </section>
+
+<?php
+  get_template_part(
+    'template-parts/content',
+    'careers-footer'
+  );
+?>

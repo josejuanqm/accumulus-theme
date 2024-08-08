@@ -31,8 +31,8 @@
 ?>
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
-  <header id="navigation" class="fixed w-full z-[999999] text-neutral-sgray">
-    <div class="hidden lg:block section bg-white border-b border-b-neutral-200">
+  <header id="navigation" class="fixed w-full z-[999999] text-neutral-sgray group">
+    <div class="hidden lg:block section border-b border-b-neutral-200 content group-hover:bg-white transition-color duration-150">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
@@ -44,7 +44,7 @@
         </div> 
       </div>
     </div>
-    <div class="section bg-white shadow-md">
+    <div class="section content group-hover:bg-white transition-color duration-150 border-b border-b-neutral-200">
       <div class="container mx-auto px-s2">
         <div class="flex flex-row items-center">
           <div class="flex flex-row items-center me-auto">
@@ -225,13 +225,29 @@
 
     // place bottom margin to the body to avoid the content to be hidden by the fixed header
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
+      document.querySelector("main#primary > *").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
 
     // Also add a listener to the resize event to update the margin top
     window.addEventListener('resize', function() {
-      document.querySelector("main#primary").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
+      document.querySelector("main#primary > *").style.paddingTop = document.querySelector('header#navigation').offsetHeight + 'px';
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
+    });
+
+    // turn white the header when the user scrolls
+    window.addEventListener('scroll', function() {
+      const header = document.querySelectorAll('header#navigation > .content');
+      if (window.scrollY > 0) {
+        header.forEach(function(h) {
+          h.classList.add('bg-white');
+          h.classList.remove('bg-transparent');
+        });
+      } else {
+        header.forEach(function(h) {
+          h.classList.remove('bg-white');
+          h.classList.add('bg-transparent');
+        });
+      }
     });
   </script>

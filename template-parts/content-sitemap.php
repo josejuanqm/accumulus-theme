@@ -1,6 +1,6 @@
-<section class="section">
+<section class="section bg-secondary-lilac">
   <div class="container mx-auto px-4 lg:px-0">
-    <div class="grid grid-cols-12 gap-x-s6 py-s6 md:py-s8">
+    <div class="grid grid-cols-12 gap-x-s2 py-s6 md:py-s8">
       <h1 class="heading-1 col-span-12  md:col-span-5 lg:col-span-5 col-start-1 md:col-start-1 lg:col-start-2 pb-s8 lg:pb-0">
         <?php the_title(); ?>
       </h1>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 gap-x-s6 gap-y-s6 pb-s6 md:py-s8">
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s6 md:py-s8">
       <ul class="flex flex-col items-start gap-s2 list-none row-start-2 md:row-start-1 col-span-6 md:col-span-3 lg:col-span-2 col-start-1 lg:col-start-2">
         <li><a href="" class="text-neutral-dgray text-b3Mobile md:text-b3Tablet lg:text-b3">LinkedIn</a></li>
         <li><a href="" class="text-neutral-dgray text-b3Mobile md:text-b3Tablet lg:text-b3">Contact Us</a></li>

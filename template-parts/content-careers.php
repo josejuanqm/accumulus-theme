@@ -17,11 +17,17 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-cover bg-no-repeat bg-center">
-	<div class="container mx-auto">
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
-			<h1 class="col-span-12 text-neutral-fnude text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
-			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
+<section class="section relative isolate overflow-hidden w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon bg-cover bg-no-repeat bg-center">
+	<picture class="absolute top-0 left-0 w-full h-full -z-10">
+		<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() . "/images/careers/banner-bg.jpg"; ?>">
+		<source media="(min-width:768px)" srcset="<?php echo get_template_directory_uri() . "/images/careers/banner-bg-tablet.jpg"; ?>">
+		<img src="<?php echo get_template_directory_uri() . "/images/careers/banner-bg-mobile.jpg"; ?>" alt="Flowers" class="w-full h-full">
+	</picture>
+	<div class="container mx-auto pt-s5 pb-s8 md:pt-s8 md:pb-s10 lg:pt-s11 lg:pb-s14">
+		<div class="grid grid-cols-12 gap-x-s2 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
+      <h4 class="heading-4 uppercase">Careers</h4>
+			<h1 class="col-span-12 text-neutral-fnude heading-1 mt-s3 md:mt-s4 lg:mt-s6 mb-s8 md:mb-s15 lg:mb-[12rem]"><?php echo $main_title; ?></h1>
+			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 mb-s5 md:mb-s9 lg:mb-s4">
 				<p class="text-b2 text-neutral-nwhite md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
@@ -34,7 +40,7 @@
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
 	<div class="container mx-auto px-s4 lg:px-0">
 		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Open Roles</h2>
+			<h2 class="w-full heading-2 font-medium">Open Roles</h2>
 			<div class="relative w-full">
 				<div class="related">
 					<?php 
@@ -113,13 +119,12 @@
 </section>
 <!-- Events carousel -->
 
-<section>
+<section class="section">
   <div class="container mx-auto px-s2 flex flex-col items-stretch">
-    <div class="flex flex-col items-stretch py-s6 gap-s6">
-    <h2 class="heading-2">Our Culture Pillars</h2>
-    <div class="grid grid-cols-2 gap-x-s6 gap-y-s6 [&>figure>img]:max-h-[330px]">
-      <?php for($i=1;$i<5;$i++): ?>
-      <figure class="flex flex-col items-start justify-normal gap-s2 col-span-2 md:col-span-1 lg:col-span-1">
+    <div class="flex flex-col items-stretch py-s8 md:py-s12 gap-s6">
+    <h2 class="heading-1">Our Culture Pillars</h2>
+    <div class="grid grid-cols-2 gap-x-s6 gap-y-s10 [&>figure>img]:max-h-[330px]">
+      <figure class="flex flex-col items-start justify-normal gap-s3 col-span-2 md:col-span-1 lg:col-span-1">
         <div class="relative flex flex-row items-center justify-center">
           <svg width="153" height="132" viewBox="0 0 153 132" fill="none" xmlns="http://www.w3.org/2000/svg" class="z-10 absolute mix-blend-multiply">
           <g style="mix-blend-mode:multiply" clip-path="url(#clip0_3459_53732)">
@@ -136,10 +141,10 @@
           </clipPath>
           </defs>
           </svg>
-          <img class="block rounded-md top-0 left-0 right-0 bottom-0 z-0" src="<?php bloginfo('template_url'); ?>/images/careers/bg-block.png" />
+          <img class="block rounded-md top-0 left-0 right-0 bottom-0 z-0" src="<?php bloginfo('template_url'); ?>/images/careers/block-bg.jpg" />
         </div>
         <div class="flex flex-col items-start justify-normal gap-s2">
-          <p class="body-1">
+          <p class="heading-3">
             Mission-Driven
           </p>
           <p class="body-2">
@@ -147,48 +152,89 @@
           </p>
         </div>
       </figure> 
-      <?php endfor; ?>
     </div>
   </div>
 </section>
 
 
 <!-- BEGIN PARADIGM SHIFT -->
- <section class="section relative w-full py-s6 bg-neutral-offwhite">
+ <section class="section relative w-full py-s8 md:py-s6 bg-neutral-offwhite">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
-				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
+				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1 text-secondary-carbon">
 					<span class="block col-span-12">
             Why
 					</span>
-					<span class="block col-span-10 col-start-3 row-start-2">
-						Accumulus
+					<span class="block col-span-10 col-start-2 row-start-2">
+						Accumulus?
 					</span>
 				</h2>
 			</div>
 			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
-				<?php
-					for ($i=0; $i < 3; $i++) { 
-						?>
-						<div class="col-span-12 md:col-span-12 lg:col-span-6">
-							<div class="grid grid-cols-[64px, 1fr] gap-x-s2">
-								<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-									<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
-										<path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
-									</svg>
-								</div>
-								<h3 class="heading-3 col-start-2 col-span-1">
-								Meaningful Impact
-								</h3>
-								<p class="body-2 col-start-2 col-span-1 row-start-2">
-                  Be a part of something bigger than yourself. We’re working to transform industries, challenge conventions, and positively impact patient lives. With every project you undertake, you’ll have the satisfaction of knowing that you’re working toward accelerating therapies to patients around the world. Together, we can shape the future.
-								</p>
-							</div>
-						</div>
-						<?php
-					}
-				?>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="grid grid-cols-[64px, 1fr] gap-x-s2">
+            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+              <svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
+                <path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
+              </svg>
+            </div>
+            <h3 class="heading-3 col-start-2 col-span-1 text-secondary-carbon">
+            Meaningful Impact
+            </h3>
+            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+              Be a part of something bigger than yourself. We’re working to transform industries, challenge conventions, and positively impact patient lives. With every project you undertake, you’ll have the satisfaction of knowing that you’re working toward accelerating therapies to patients around the world. Together, we can shape the future.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="grid grid-cols-[64px, 1fr] gap-x-s2">
+            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+              <svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
+                <path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
+              </svg>
+            </div>
+            <h3 class="heading-3 col-start-2 col-span-1 text-secondary-carbon">
+Growth & Development
+            </h3>
+            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+We value your development. At Accumulus, we aim to push the boundaries of what we can achieve together and strive to provide growth opportunities. As a part of our team, you’ll have the chance to collaborate and work on challenging projects. Additionally, we cultivate a culture that promotes leadership at all levels and have a rich pool of accomplished leaders who can mentor you at any stage of your career journey.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="grid grid-cols-[64px, 1fr] gap-x-s2">
+            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+              <svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
+                <path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
+              </svg>
+            </div>
+            <h3 class="heading-3 col-start-2 col-span-1 text-secondary-carbon">
+Diversity & Inclusion
+            </h3>
+            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+We believe people thrive when they’re respected and valued for being themselves. We celebrate diversity as a source of strength and innovation. At Accumulus, you’ll collaborate with talented individuals from various backgrounds, cultures, and experiences, creating a rich tapestry of global perspectives.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6">
+          <div class="grid grid-cols-[64px, 1fr] gap-x-s2">
+            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+              <svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.03125" y="0.172852" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
+                <path d="M32.5312 48.1696C41.0919 48.1696 48.0312 41.2302 48.0312 32.6696C48.0312 31.9178 47.9757 31.1791 47.8711 30.4567H43.2296C43.3767 31.1725 43.4551 31.9113 43.4551 32.6696C43.4551 38.6937 38.5554 43.5935 32.5312 43.5935C26.5071 43.5935 21.6074 38.6937 21.6074 32.6696C21.6074 27.4038 25.35 22.9976 30.3151 21.9712V34.8825H39.1699V30.4534H34.7409V17.1729H32.528C31.7762 17.1729 31.0375 17.2284 30.3151 17.333C22.8037 18.4084 17.0312 24.864 17.0312 32.6729C17.0312 41.2335 23.9706 48.1728 32.5312 48.1728V48.1696Z" fill="#444444"/>
+              </svg>
+            </div>
+            <h3 class="heading-3 col-start-2 col-span-1 text-secondary-carbon">
+Work-Life Balance
+            </h3>
+            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+We understand that a well-balanced life leads to more creativity and productivity. At Accumulus, we’re people first and promote a healthy work-life balance. We also understand that when individuals thrive, Accumulus Synergy thrives, and transformational outcomes follow. Accumulus is a fully remote organization, and we intend to remain so.
+            </p>
+          </div>
+        </div>
 			</div>
 		</div>
  </section>
@@ -238,3 +284,10 @@
     </div>
   </div>
 </section>
+
+<?php
+  get_template_part(
+    'template-parts/content',
+    'careers-footer'
+  );
+?>

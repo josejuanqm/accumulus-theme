@@ -2,14 +2,16 @@
 <section class="section relative py-s6 <?php echo $args['bg_color']; ?>">
   <div class="container mx-auto">
     <div class="grid grid-cols-12">
-      <h2 class="col-start-1 col-span-12 md:col-span-9 <?php echo array_key_exists('inverted', $args) ? 'row-start-2 heading-2' : 'heading-3' ?>">
-        <?php echo $args['main_quote'] ?>
-      </h2>
+      <?php if (array_key_exists('main_quote', $args)) { ?>
+        <h2 class="col-start-1 col-span-12 md:col-span-9 <?php echo array_key_exists('titled', $args) ? 'heading-2 pb-s7' : 'heading-3'; ?> <?php echo array_key_exists('inverted', $args) ? 'row-start-2 heading-2' : ''; ?>">
+          <?php echo $args['main_quote'] ?>
+        </h2>
+      <?php } ?>
       <h3
-        class="col-start-3 md:col-start-4 col-span-9 md:col-span-8 pt-s8 pb-s8 lg:pt-s6 lg:pb-s4 <?php echo array_key_exists('inverted', $args) ? 'row-start-3 body-1' : 'body-2' ?>">
+        class="col-span-9 md:col-span-8 pb-s8 lg:pb-s4 <?php !array_key_exists('main_quote', $args) ? 'col-start-3 md:col-start-4' : 'col-start-1 md:col-start-1 pt-s8 lg:pt-s6' ?> <?php echo array_key_exists('inverted', $args) ? 'row-start-3 body-1' : 'body-2' ?>">
         <?php echo $args['sub_quote'] ?>
       </h3>
-      <div class="flex flex-row items-start justify-normal col-start-1 md:col-start-6 col-start-6 col-end-12 md:col-end-12 lg:col-end-12 <?php echo array_key_exists('inverted', $args) ? 'row-start-1' : 'row-start-3' ?> gap-s2 pb-s6">
+      <div class="flex items-start justify-normal <?php echo array_key_exists('stacked-author', $args) ? 'flex-col col-start-2 md:col-start-7 lg:col-start-7 col-end-11 md:col-end-9 lg:col-end-10' : 'flex-row col-start-1 md:col-start-6 lg:col-start-6 col-end-12 md:col-end-12 lg:col-end-12' ?> <?php echo array_key_exists('inverted', $args) ? 'row-start-1' : 'row-start-3' ?> gap-s2 <?php array_key_exists('references', $args) && 'pb-s6'; ?>">
         <div class="relative w-40 md:w-[224px] aspect-square rounded-3xl bg-primary-glaciar overflow-hidden flex-shrink-0">
           <img class="w-full h-full" src="<?php echo $args['image']; ?>" alt="<?php echo $args['author']; ?>" />
           <svg class="absolute bottom-s3 right-s3" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,10 +21,10 @@
           </svg>
         </div>
         <div class="flex flex-col items-start gap-s2">
-          <p class="heading-3">
+          <p class="<?php echo array_key_exists('stacked-author', $args) ? 'heading-6' : 'heading-3' ?>">
             <?php echo $args['author']; ?>
           </p>
-          <p class="body-3">
+          <p class="<?php echo array_key_exists('stacked-author', $args) ? 'body-4' : 'body-3' ?>">
             <?php echo $args['position']; ?>
           </p>
         </div>
