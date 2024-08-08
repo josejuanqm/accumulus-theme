@@ -1880,6 +1880,11 @@ video {
   padding-bottom: 4.5rem;
 }
 
+.py-s13 {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+}
+
 .pb-\[33\%\] {
   padding-bottom: 33%;
 }
@@ -2010,6 +2015,10 @@ video {
 
 .pt-s9 {
   padding-top: 4.5rem;
+}
+
+.pt-s7 {
+  padding-top: 3.5rem;
 }
 
 .text-center {
@@ -3786,6 +3795,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 6rem;
   }
 
+  .md\:py-s13 {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3872,6 +3886,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:pt-s8 {
     padding-top: 4rem;
+  }
+
+  .md\:pt-s7 {
+    padding-top: 3.5rem;
+  }
+
+  .md\:pb-s13 {
+    padding-bottom: 6.5rem;
   }
 
   .md\:text-b1Tablet {
@@ -4337,6 +4359,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 3rem;
   }
 
+  .lg\:py-s13 {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -4443,6 +4470,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pt-s7 {
+    padding-top: 3.5rem;
   }
 
   .lg\:text-b1 {
