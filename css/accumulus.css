@@ -1215,6 +1215,10 @@ video {
   height: 100vh;
 }
 
+.h-4\/5 {
+  height: 80%;
+}
+
 .max-h-\[144px\] {
   max-height: 144px;
 }
@@ -1975,6 +1979,14 @@ video {
 
 .pb-s16 {
   padding-bottom: 8rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-center {
@@ -3273,6 +3285,18 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     height: 100vh;
   }
 
+  .max-lg\:h-4\/5 {
+    height: 80%;
+  }
+
+  .max-lg\:h-\[90\%\] {
+    height: 90%;
+  }
+
+  .max-lg\:min-h-full {
+    min-height: 100%;
+  }
+
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
   }
@@ -3338,6 +3362,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:h-auto {
     height: auto;
+  }
+
+  .max-md\:h-4\/5 {
+    height: 80%;
+  }
+
+  .max-md\:min-h-full {
+    min-height: 100%;
   }
 
   .max-md\:w-full {
@@ -3802,6 +3834,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:pt-s8 {
     padding-top: 4rem;
+  }
+
+  .md\:pt-48 {
+    padding-top: 12rem;
+  }
+
+  .md\:pt-40 {
+    padding-top: 10rem;
   }
 
   .md\:text-b1Tablet {
@@ -4352,6 +4392,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pt-60 {
+    padding-top: 15rem;
+  }
+
+  .lg\:pt-28 {
+    padding-top: 7rem;
   }
 
   .lg\:text-b1 {
