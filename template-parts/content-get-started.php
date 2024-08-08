@@ -86,11 +86,11 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">
-										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<span class="absolute left-0 top-2 lg:top-[10px] block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
 									<?php endforeach; ?>
@@ -146,11 +146,11 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">
-										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<span class="absolute left-0 top-2 lg:top-[10px] block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
 									<?php endforeach; ?>
