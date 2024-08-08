@@ -2248,6 +2248,13 @@ add_action( 'acf/include_fields', function() {
 					'value' => 'page-regulator-forum.php',
 				),
 			),
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-about-us.php',
+				),
+			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
