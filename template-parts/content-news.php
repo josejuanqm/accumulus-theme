@@ -11,9 +11,9 @@
 
 
 
-<section class="section w-full pt-s14 md:pt-s16 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
+<section class="section w-full pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
 
-	<div class="container mx-auto">
+	<div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
 

@@ -11,9 +11,9 @@
 
 
 
-<section class="section w-full pt-s14 md:pt-s16 lg:pt-52 2xl:pt-60 pb-s16 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
+<section class="section w-full pb-s16 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
 
-  <div class="container mx-auto">
+  <div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
 

@@ -11,9 +11,9 @@
 
 
 
-<section class="w-full pt-s9 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
+<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
 
-	<div class="container mx-auto">
+	<div class="container mx-auto lg:pt-s9">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
       <?php

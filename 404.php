@@ -12,11 +12,11 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<section class="section w-full lg:pt-28 pb-s4 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-no-repeat bg-left-top bg-cover max-lg:h-screen" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/bg-404.png);">
+	<section class="section w-full pb-s4 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-no-repeat bg-left-top bg-cover max-lg:h-screen" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/bg-404.png);">
 
-		<div class="container mx-auto max-lg:h-[90%]">
+		<div class="container mx-auto max-lg:h-[90%] pt-s5 md:pt-s10 lg:pt-s9">
 
-			<div class="grid grid-cols-12 gap-x-4 gap-y-s6 pt-24 md:pt-s6 lg:pt-0 max-lg:content-between max-lg:min-h-full">
+			<div class="grid grid-cols-12 gap-x-4 gap-y-s6 max-lg:content-between max-lg:min-h-full">
 
 				<div class="col-span-12 flex flex-col gap-s1">
 					<h3 class="text-h8Mobile md:text-h8Tablet lg:text-h8 text-neutral-nwhite">404</h3>
