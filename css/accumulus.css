@@ -1131,6 +1131,18 @@ video {
   margin-top: 3rem;
 }
 
+.mb-s8 {
+  margin-bottom: 4rem;
+}
+
+.mt-s3 {
+  margin-top: 1.5rem;
+}
+
+.mb-s5 {
+  margin-bottom: 2.5rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -1564,6 +1576,10 @@ video {
 
 .gap-y-s6 {
   row-gap: 3rem;
+}
+
+.gap-y-s10 {
+  row-gap: 5rem;
 }
 
 .overflow-hidden {
@@ -3574,6 +3590,18 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-row-start: 2;
   }
 
+  .md\:mb-s15 {
+    margin-bottom: 7.5rem;
+  }
+
+  .md\:mt-s4 {
+    margin-top: 2rem;
+  }
+
+  .md\:mb-s9 {
+    margin-bottom: 4.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3818,6 +3846,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .md\:py-s13 {
     padding-top: 6.5rem;
     padding-bottom: 6.5rem;
+  }
+
+  .md\:py-s6 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:pb-0 {
@@ -4160,6 +4193,18 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:mb-s2 {
     margin-bottom: 1rem;
+  }
+
+  .lg\:mb-\[12rem\] {
+    margin-bottom: 12rem;
+  }
+
+  .lg\:mt-s6 {
+    margin-top: 3rem;
+  }
+
+  .lg\:mb-s4 {
+    margin-bottom: 2rem;
   }
 
   .lg\:block {
