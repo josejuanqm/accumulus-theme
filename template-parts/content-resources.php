@@ -162,15 +162,15 @@
 
           <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
             <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
+            <div class="relative flex flex-col md:w-2/3 gap-s2 py-s2 pl-s7 pr-s2">
               <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
-              <span class="flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray <?php echo $categorySlug; ?>">
+              <span class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'thought-leadership'): ?>
-                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                     <path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
                   </svg>
                   <?php elseif ($categorySlug == 'regulatory-insights'): ?>
-                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" class="fill-current" />
                       <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
                       <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
@@ -179,12 +179,12 @@
                       <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
                     </svg>
                   <?php elseif ($categorySlug == 'e-books-white-papers'): ?>
-                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
                       <path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
                     </svg>
                   <?php elseif ($categorySlug == 'new-releases'): ?>
-                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M8.66335 13.5L8.66335 0.505463C9.46052 0.505463 10.1074 1.15237 10.1074 1.94954L10.1074 12.0559C10.1074 12.8531 9.46052 13.5 8.66335 13.5Z" class="fill-current" />
                       <path d="M1.44434 10.6025H0.000261068L0.000261068 1.94875C0.000261068 1.15158 0.647164 0.504676 1.44434 0.504676L1.44434 10.6025Z" class="fill-current" />
                       <path d="M0.000682831 13.5L8.66406 13.5V12.0453L0.000682831 12.0453V13.5Z" class="fill-current" />
@@ -192,13 +192,13 @@
                       <path d="M7.22081 9.15918H2.88965V10.6033H7.22081V9.15918Z" class="fill-current" />
                     </svg>
                   <?php elseif ($categorySlug == 'media-coverage'): ?>
-                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M10.3078 0.5H1.47285C0.659191 0.5 0 1.15919 0 1.97285V9.33491C0 10.1486 0.659191 10.8078 1.47285 10.8078H5.29094L5.90118 11.418L6.94218 12.459L7.98318 13.5L9.02418 12.459L7.98318 11.418L6.94218 10.377L5.90118 9.336L5.8903 9.34688V9.336H1.47285V1.97285H10.3078V9.33491H8.83491V10.8078H10.3078C11.1214 10.8078 11.7806 10.1486 11.7806 9.33491V1.97285C11.7806 1.15919 11.1214 0.5 10.3078 0.5Z" class="fill-current" />
                       <path d="M5.89003 4.91718H7.36179H8.83464V3.44434H7.36179H5.89003H4.41718H2.94434V4.91718H4.41718H5.89003Z" class="fill-current" />
                       <path d="M2.94434 7.86238H4.41718H5.89003H7.36179H8.83464V6.39062H7.36179H5.89003H4.41718H2.94434V7.86238Z" class="fill-current" />
                     </svg>
                   <?php elseif ($categorySlug == 'events'): ?>
-                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M4.87515 4.875H3.25V6.50015H4.87515V4.875Z" class="fill-current" />
                       <path d="M4.87515 8.125H3.25V9.75015H4.87515V8.125Z" class="fill-current" />
                       <path d="M8.12515 8.125H6.5V9.75015H8.12515V8.125Z" class="fill-current" />
@@ -214,7 +214,7 @@
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-              <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              <img class="w-full md:w-1/3 max-h-[144px] md:max-h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>
@@ -304,14 +304,14 @@ if (count($result) > 0 ){
 
 		<div class="grid grid-cols-12 gap-s2">
 
-      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 lg:flex lg:justify-center lg:w-full lg:flex-wrap gap-s2 lg:gap-s4 text-neutral-sgray">
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 flex justify-center w-full flex-wrap gap-s2 md:gap-s4 text-neutral-sgray">
 
         <input type="hidden" id="category" value="0" data-catName="Last Articles">
 
-        <a href="javascript:void(0)" data-id="0" data-name="Latest Resources" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 heading-4 text-center rounded-button uppercase bg-neutral-dgray  active-filter">All</a>
+        <a href="javascript:void(0)" data-id="0" data-name="Latest Resources" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link  bg-neutral-dgray  active-filter">All</a>
 
         <?php foreach($categories as $category): ?>
-        <a href="javascript:void(0)" data-id="<?php echo $category->term_id; ?>" data-name="Latest <?php echo $category->name; ?>" class="col-span-6 lg:w-auto flex items-center justify-center h-[38px] lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link !text-neutral-sgray"><?= $category->name ?></a>
+        <a href="javascript:void(0)" data-id="<?php echo $category->term_id; ?>" data-name="Latest <?php echo $category->name; ?>" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray"><?= $category->name ?></a>
         <?php endforeach; ?>
 
       </div>
