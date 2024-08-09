@@ -1195,10 +1195,6 @@ video {
   height: 320px;
 }
 
-.h-\[350px\] {
-  height: 350px;
-}
-
 .h-\[38px\] {
   height: 38px;
 }
@@ -1734,6 +1730,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png');
 }
 
+.bg-bg-citation {
+  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-case.png');
+}
+
 .bg-events-general {
   background-image: url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png');
 }
@@ -1762,10 +1762,6 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
-.bg-bg-citation {
-  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-case.png');
-}
-
 .bg-contain {
   background-size: contain;
 }
@@ -1790,12 +1786,12 @@ video {
   background-position: left top;
 }
 
-.bg-top {
-  background-position: top;
-}
-
 .bg-right-top {
   background-position: right top;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .bg-no-repeat {
@@ -3237,8 +3233,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 }
 
 .description-wysiwyg p {
-  overflow-wrap: break-word;
-  word-break: break-all;
+  /* @apply body-2 break-words break-all; */
   font-size: 1.125rem;
   line-height: 120%;
   letter-spacing: 0;
@@ -3468,11 +3463,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:flex-col {
     flex-direction: column;
-  }
-
-  .max-md\:px-s4 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .max-md\:\!pr-s2 {
@@ -3715,10 +3705,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 195px;
   }
 
-  .md\:max-w-\[370px\] {
-    max-width: 370px;
-  }
-
   .md\:max-w-full {
     max-width: 100%;
   }
@@ -3879,10 +3865,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .md\:py-s8 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .md\:pb-s10 {

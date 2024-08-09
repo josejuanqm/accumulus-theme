@@ -336,7 +336,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .description-wysiwyg p {
-  @apply body-2 break-words break-all;
+  /* @apply body-2 break-words break-all; */
+  @apply body-2;
 }
 
 .description-wysiwyg a {
