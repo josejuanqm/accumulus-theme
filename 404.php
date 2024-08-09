@@ -20,7 +20,7 @@ get_header();
 
 				<div class="col-span-12 flex flex-col gap-s1">
 					<h3 class="text-h8Mobile md:text-h8Tablet lg:text-h8 text-neutral-nwhite">404</h3>
-					<h1 class="text-h1Mobile md:text-h1Tablet lg:text-h9 text-neutral-nwhite">
+					<h1 class="heading-2 text-neutral-nwhite">
 						Oops!
 						<br />
 						Page not found

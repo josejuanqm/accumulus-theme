@@ -115,7 +115,7 @@
       <?php
           }
         } else {
-          // no posts found
+         echo 'No post found.';
         }
         // Restore original Post Data
         wp_reset_postdata();
@@ -163,7 +163,7 @@
           <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
             <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
             <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-              <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 heading-5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
+              <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
               <span class="flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'thought-leadership'): ?>
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-              <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>
