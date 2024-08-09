@@ -91,9 +91,14 @@
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>
 							</ul>
+							<ul class="flex flex-col items-start gap-s2 list-none hidden md:flex lg:hidden">
+								<li><p class="pb-s1 text-secondary-mpurple heading-6 opacity-0">&#0020</p></li>
+								<li><a href="">LinkedIn</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
 						</div>
 					</div>
-          <div class="lg:hidden flex flex-row items-start justify-between pt-s8"> 
+          <div class="md:hidden flex flex-row items-start justify-between pt-s8"> 
 						<div class="flex flex-col items-start justify-between">
 							<ul class="flex flex-col items-start gap-s2 list-none">
 								<li><a href="">LinkedIn</a></li>
