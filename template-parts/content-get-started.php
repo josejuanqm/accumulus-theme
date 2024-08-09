@@ -82,7 +82,7 @@
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
@@ -142,7 +142,7 @@
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
