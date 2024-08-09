@@ -26,7 +26,7 @@
   <div class="col-span-12 md:col-span-6 lg:h-full">
     <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-      <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+      <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url') //echo $image[0]; ?>/images/resources/bg-main-post.png" alt="<?php the_title(); ?>" />
     <?php endif; ?>
     <?php //accumulus_website_post_thumbnail(); ?>
   </div>
