@@ -1175,6 +1175,10 @@ video {
   height: 1rem;
 }
 
+.h-\[144px\] {
+  height: 144px;
+}
+
 .h-\[150px\] {
   height: 150px;
 }
@@ -1233,10 +1237,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[144px\] {
-  height: 144px;
 }
 
 .max-h-\[144px\] {
@@ -1331,12 +1331,12 @@ video {
   max-width: 465px;
 }
 
-.max-w-full {
-  max-width: 100%;
-}
-
 .max-w-\[70\%\] {
   max-width: 70%;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1730,6 +1730,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png');
 }
 
+.bg-events-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png');
+}
+
 .bg-get-started-section-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
@@ -1750,8 +1754,8 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
-.bg-events-general {
-  background-image: url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png');
+.bg-resources-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png');
 }
 
 .bg-contain {
@@ -3400,11 +3404,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     gap: 1rem;
   }
 
-  .max-lg\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
   .max-lg\:\!pr-0 {
     padding-right: 0px !important;
   }
@@ -3633,10 +3632,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:h-s8 {
     height: 4rem;
-  }
-
-  .md\:h-\[200px\] {
-    height: 200px;
   }
 
   .md\:max-h-\[200px\] {
@@ -4242,16 +4237,16 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     display: none;
   }
 
+  .lg\:h-\[192px\] {
+    height: 192px;
+  }
+
   .lg\:h-\[320px\] {
     height: 320px;
   }
 
   .lg\:h-full {
     height: 100%;
-  }
-
-  .lg\:h-\[192px\] {
-    height: 192px;
   }
 
   .lg\:max-h-\[192px\] {

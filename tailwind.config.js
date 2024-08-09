@@ -563,6 +563,10 @@ module.exports = {
         // Events
         'events-general':
           "url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png')",
+
+        // Resources
+        'resources-general':
+          "url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png')",
       },
     },
   },
