@@ -11,9 +11,9 @@
 
 
 
-<section class="section w-full pt-s14 md:pt-s16 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
+<section class="section w-full pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
 
-	<div class="container mx-auto">
+	<div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
 
@@ -70,14 +70,14 @@
                 $url_new_realice = get_field('url_new_realice');
           ?>
 
-          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepAqua text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
+          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between  text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
             
             <?php if ($categorySlug == 'media-coverage'): ?>
               <a href="<?php echo $url_new_realice; ?>" target="_blank" class="absolute top-0 left-0 w-full h-full z-10"></a>
             <?php elseif ($categorySlug == 'new-releases'): ?>
               <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
             <?php endif; ?>
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
+            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepAqua">
               <span class="absolute top-s2 left-[10px] md:left-s2 flex items-center justify-center w-[30px] h-[30px] md:w-s3 md:h-s3 heading-5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
               <span class="flex items-center gap-s1 pt-1 heading-4 uppercase text-neutral-dgray <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'media-coverage'): ?>
@@ -102,7 +102,9 @@
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-              <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img class="block max-w-[70%]" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              </div>
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>

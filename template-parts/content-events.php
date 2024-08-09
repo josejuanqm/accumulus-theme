@@ -11,9 +11,9 @@
 
 
 
-<section class="section w-full pt-s14 md:pt-s16 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
+<section class="section w-full pb-s16 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
 
-  <div class="container mx-auto">
+  <div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
 
@@ -24,14 +24,15 @@
           <h1 class="heading-1"><?php the_title(); ?></h1>
         </div>
 
-        <p class="body-2 lg:max-w-[460px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. 
-        </p>
+
+        <div class="body-2 hidden md:block lg:max-w-[460px]">
+          <?php the_content(); ?>
+        </div>
 
       </div>
       <!-- Large post -->
 
-      <div class="col-span-12 md:col-span-6 lg:col-span-5 md:col-start-8 flex flex-col gap-s4">
+      <div class="col-span-12 md:col-span-6 lg:col-span-5 md:col-start-8 pt-s2 md:pt-0 flex flex-col gap-s4">
 
         <div class="grid grid-cols-12 gap-s2">
 
@@ -45,6 +46,10 @@
   
       </div>
       <!-- Top stories -->
+
+      <div class="col-span-12 md:hidden body-2">
+        <?php the_content(); ?>
+      </div>
     
     </div>
     

@@ -18,9 +18,9 @@ $contact_email = get_field('contact_email');
 
 ?>
 
-<section class="relative section w-full pt-s4 md:pt-s10 lg:pt-s9 2xl:pt-60 pb-s8 md:pb-s7 lg:pb-s12 min-h-full bg-cover lg:bg-contain bg-left-bottom lg:bg-left-top bg-no-repeat" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/contact/bg-contact.png);">
+<section class="relative section w-full pb-s8 md:pb-s7 lg:pb-s12 min-h-full bg-cover lg:bg-contain bg-left-bottom lg:bg-left-top bg-no-repeat" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/contact/bg-contact.png);">
 
-  <div class="container mx-auto px-s4 lg:px-0 min-h-full">
+  <div class="container mx-auto px-s4 lg:px-0 min-h-full pt-s5 md:pt-s10 lg:pt-s9">
 
     <div class="grid lg:grid-cols-12 lg:items-stretch gap-4">
 

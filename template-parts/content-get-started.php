@@ -21,7 +21,7 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon">
+<section class="relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon">
 
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
@@ -29,9 +29,9 @@
 		<img src="<?php echo $bg_image_for_mobile; ?>" alt="Flowers" class="w-full h-full">
 	</picture>
 
-	<div class="relative container mx-auto">
+	<div class="relative container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end">
 
 			<h4 class="col-span-12 heading-4 uppercase pt-s1 text-neutral-nude"><?php echo $title_tag; ?></h4>
 			<h1 class="col-span-12 heading-1 text-neutral-nude"><?php echo $main_title; ?></h1>
@@ -86,11 +86,11 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">
-										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<span class="absolute left-0 top-2 lg:top-[10px] block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
 									<?php endforeach; ?>
@@ -146,11 +146,11 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">
-										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<span class="absolute left-0 top-2 lg:top-[10px] block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
 									<?php endforeach; ?>

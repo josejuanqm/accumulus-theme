@@ -15,7 +15,7 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="section w-full relative pt-s3 md:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-secondary-green">
+<section class="section w-full relative pb-s12 md:pb-s7 lg:pb-s12 text-neutral-nwhite bg-secondary-green">
 
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $main_banner['bg_image_for_desktop']; ?>">
@@ -23,9 +23,9 @@
 		<img src="<?php echo $main_banner['bg_image_for_mobile']; ?>" alt="<?php echo $main_banner['title']; ?>" class="w-full h-full">
 	</picture>
 
-	<div class="relative container mx-auto">
+	<div class="relative container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
-		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end">
 
       <h4 class="col-span-6 md:col-span-12 lg:row-start-1 heading-4 uppercase"><?php echo $main_banner['flag_title']; ?></h4>
 

@@ -19,11 +19,11 @@
 	$marquee = get_field('marquee_images');
 ?>
 
-<section class="section w-full pt-0 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center bg-neutral-offwhite" style="background-image: url(<?php echo $bg_image_main ?>)">
+<section class="section w-full pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center bg-neutral-offwhite" style="background-image: url(<?php echo $bg_image_main ?>)">
 
-	<div class="container mx-auto">
+	<div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end">
 
 			<h4 class="col-span-12 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
 			<h1 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
@@ -334,7 +334,6 @@ $why_values = get_field('why_values');
             // WP_Query arguments
             $args = array(
               'post_type'              => array( 'event' ),
-              'nopaging'               => true,
               'posts_per_page'         => '9',
             );
 
@@ -349,7 +348,7 @@ $why_values = get_field('why_values');
           ?>
 						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
 
-							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
+							<a href="<?php echo get_home_url() ?>/events" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
 							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
 
@@ -357,7 +356,9 @@ $why_values = get_field('why_values');
 
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-                  <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <?php else: ?>
+                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/events/icon-calendar.png" alt="<?php the_title(); ?>" />
                 <?php endif; ?>
 
 							</div>
