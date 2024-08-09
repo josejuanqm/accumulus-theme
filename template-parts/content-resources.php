@@ -396,7 +396,7 @@ if (count($result) > 0 ){
           ?>
 						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
 
-							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
+							<a href="<?php echo get_home_url() ?>/events" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
 							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
 
