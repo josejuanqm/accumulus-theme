@@ -154,13 +154,14 @@
 
 							<a href="<?php the_permalink(); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
-							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
+							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
 
 								<!-- <img src="<?php //bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
 
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-                  <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <!-- <img class="block w-full h-full object-cover" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" /> -->
+                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
                 <?php endif; ?>
 
 							</div>
