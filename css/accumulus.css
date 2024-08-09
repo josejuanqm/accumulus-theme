@@ -1243,6 +1243,10 @@ video {
   max-height: 144px;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .min-h-full {
   min-height: 100%;
 }
