@@ -334,7 +334,6 @@ $why_values = get_field('why_values');
             // WP_Query arguments
             $args = array(
               'post_type'              => array( 'event' ),
-              'nopaging'               => true,
               'posts_per_page'         => '9',
             );
 
@@ -357,7 +356,9 @@ $why_values = get_field('why_values');
 
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-                  <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <?php else: ?>
+                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/events/icon-calendar.png" alt="<?php the_title(); ?>" />
                 <?php endif; ?>
 
 							</div>
