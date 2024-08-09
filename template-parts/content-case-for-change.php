@@ -214,7 +214,7 @@
 ?>
 
 <?php if($citations) : ?>
-<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-dgray text-neutral-nwhite">
+<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-dgray text-neutral-nwhite bg-bg-citation bg-no-repeat bg-contain bg-right-top">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s4 md:gap-y-s10 lg:gap-y-s6">
 
@@ -238,9 +238,9 @@
 
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
-	<div class="container mx-auto md:px-s4 lg:px-0">
+	<div class="container mx-auto">
 		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Related Resources</h2>
+			<h2 class="w-full heading-2">Related Resources</h2>
 			<div class="relative w-full">
 				<div class="related">
 					<?php 
@@ -249,6 +249,7 @@
             $args = array(
               'post_type'              => array( 'resource-cms' ),
               'posts_per_page'         => '9',
+              'post__not_in' => array( get_the_ID() )
             );
 
             // The Query
@@ -274,24 +275,25 @@
                 
             //for($i=1;$i<7;$i++): 
           ?>
-						<div class="card relative w-full md:max-w-[370px] rounded-card overflow-hidden mx-2">
+						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
 
 							<a href="<?php the_permalink(); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
-							<div class="relative w-full flex items-center justify-center h-[350px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
+							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
 
 								<!-- <img src="<?php //bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
 
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-                  <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <!-- <img class="block w-full h-full object-cover" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" /> -->
+                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
                 <?php endif; ?>
 
 							</div>
 
 							<div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
-								<div class="flex items-center gap-3 text-primary-violet uppercase pb-s1 md:pb-0">
-									<?php if ($categorySlug == 'thought-leadership'): ?>
+								<div class="flex items-center gap-3 text-primary-violet uppercase">
+                <?php if ($categorySlug == 'thought-leadership'): ?>
 										<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
 										</svg>
@@ -333,10 +335,10 @@
 												<path d="M11.3712 4.875H9.74609V6.50015H11.3712V4.875Z" class="fill-current" />
 												<path d="M12.9988 1.62515H11.3737V0H9.7485V1.62515H4.87425V0H3.2491V1.62515H1.62395C0.728019 1.62515 0 2.35197 0 3.2491V11.3737H1.62515V3.2503H12.9988V11.3748H3.2491V13H12.9988C13.8959 13 14.624 12.272 14.624 11.3748V3.2503C14.624 2.35317 13.8959 1.62515 12.9988 1.62515Z" class="fill-current" />
 											</svg>
-									<?php endif; ?>
-									<?php echo $category; ?>
+								<?php endif; ?>
+								<?php echo $category; ?>
 								</div>
-								<h3 class="heading-10 color-neutral-dgray"><?php the_title(); ?></h3>
+								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php the_title(); ?></h3>
 							</div>
 
 						</div>
@@ -360,9 +362,9 @@
 						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
 </section>
+
 <!-- Related resources -->

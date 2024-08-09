@@ -560,6 +560,10 @@ module.exports = {
         'increase-feedback-mobile':
           "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-increase-feedback-mobile.png')",
 
+        // CASE
+        'bg-citation':
+          "url('/wp-content/themes/accumulus-website/images/case-for-change/bg-case.png')",
+
         // Events
         'events-general':
           "url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png')",

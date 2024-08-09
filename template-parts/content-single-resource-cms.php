@@ -113,7 +113,7 @@
 
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
-	<div class="container mx-auto px-s4 lg:px-0">
+	<div class="container mx-auto">
 		<div class="flex flex-col gap-s8">
 			<h2 class="w-full heading-2">Related Resources</h2>
 			<div class="relative w-full">
