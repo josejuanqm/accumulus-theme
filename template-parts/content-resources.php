@@ -160,9 +160,9 @@
                 endif;
           ?>
 
-          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
+          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
             <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
-            <div class="relative flex flex-col md:w-2/3 gap-s2 py-s2 pl-s7 pr-s2">
+            <div class="relative flex flex-col md:w-2/3 gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepLilac">
               <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
               <span class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'thought-leadership'): ?>
@@ -214,7 +214,9 @@
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-              <img class="w-full md:w-1/3 max-h-[144px] md:max-h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img class="block max-w-[70%]" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              </div>
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>
