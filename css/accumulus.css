@@ -2188,6 +2188,10 @@ video {
   line-height: 1;
 }
 
+.tracking-normal {
+  letter-spacing: 0em;
+}
+
 .\!text-neutral-nwhite {
   --tw-text-opacity: 1 !important;
   color: rgb(252 252 252 / var(--tw-text-opacity)) !important;
