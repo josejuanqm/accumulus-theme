@@ -320,7 +320,7 @@ module.exports = {
         ],
 
         b4: [
-          '1.125rem',
+          '1rem',
           {
             fontWeight: '300',
             lineHeight: '120%',
@@ -336,7 +336,7 @@ module.exports = {
           },
         ],
         b4Mobile: [
-          '0.875rem',
+          '0.75rem',
           {
             fontWeight: '400',
             lineHeight: 'auto',

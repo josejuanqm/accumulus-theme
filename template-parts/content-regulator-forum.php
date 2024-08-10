@@ -183,7 +183,7 @@ if($related_topics):
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-aqua">
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-aqua overflow-hidden">
 
 	<picture class="absolute top-0 left-0">
 		<source media="(min-width:1024px)" srcset="<?php echo $related_topics['bg_image_desktop']; ?>">
@@ -220,7 +220,7 @@ $participation_looks = get_field('participation_looks');
 if($participation_looks): 
 
 ?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12">
+<section class="relative section w-full pt-s8 md:pt-s12 lg:pt-s14 pb-s10 md:pb-s12">
 	<div class="container mx-auto px-s2 md:px-0">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-y-s11">
 
@@ -383,9 +383,9 @@ if($join_the_forum):
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
 	<div class="container mx-auto px-s2 md:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s8">
+		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
 
-      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2">
+      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2 lg:pb-s1">
         <span class="col-span-6 md:col-span-12">
           <?php echo $join_the_forum['first_line_title']; ?>
         </span>
@@ -397,7 +397,7 @@ if($join_the_forum):
       <?php foreach($join_the_forum['steps_join'] as $item) : ?>
       <div class="col-span-6 md:col-span-7 lg:col-span-5 col-start-1 md:col-start-5 lg:col-start-6 flex items-start gap-s3">
         <img class="w-[55px] md:w-[64px] aspect-square" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
-        <div class="description-wysiwyg-break  w-auto">
+        <div class="description-wysiwyg  w-auto">
           <h3 class="heading-2 pb-s2"><?php echo $item['title']; ?></h3>
           <?php echo $item['description']; ?>
         </div>
