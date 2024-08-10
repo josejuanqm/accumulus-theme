@@ -31,7 +31,7 @@
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end">
 
-			<h1 class="col-span-12 md:col-span-10 lg:col-span-11 heading-1 text-neutral-nwhite"><?php echo $main_title; ?></h1>
+			<h1 class="col-span-12 md:col-span-10 lg:col-span-8 heading-1 text-neutral-nwhite"><?php echo $main_title; ?></h1>
 
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
 				<p class="body-2 md:max-w-550 lg:max-w-full text-neutral-nwhite"><?php echo $resume_text; ?></p>
@@ -184,11 +184,11 @@
 ?>
 
 <?php if($testimonial_coc) : ?>
-<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12">
+<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s8">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6">
       <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-between">
-        <img class="max-w-[145px] md:max-w-full" src="<?php bloginfo('template_url'); ?>/images/case-for-change/roche.png" />
+        <img class="max-w-[145px] md:max-w-full" src="<?php echo $testimonial_coc['image']; ?>" />
         <div class="flex flex-col pl-s2 gap-s2">
           <h4 class="text-h3Mobile md:text-h3Tablet lg:text-h3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $testimonial_coc['name']; ?></h4>
           <p class="text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $testimonial_coc['position']; ?></p>
@@ -198,6 +198,9 @@
       <?php echo $testimonial_coc['testimonial']; ?>
       </h2>
       <p class="col-span-5 md:col-span-8 md:col-start-3 text-b1Mobile md:text-b1Tablet lg:text-b1"><?php echo $testimonial_coc['resume_text']; ?></p>
+			<div class="col-span-6 md:col-span-12 flex items-center justify-center pt-s2 md:pt-s6 lg:pt-s14">
+				<a class="btn-tertiary" href="<?php echo get_home_url(); ?>/platform">Learn more about our platform</a>
+			</div>
     </div>
   </div>
 </section>

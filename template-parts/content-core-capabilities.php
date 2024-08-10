@@ -39,7 +39,7 @@
 				<p class="body-2"><?php echo $main_banner['first_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Get Started</a>
+				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">More about the platform</a>
 			</div>
 
 		</div>

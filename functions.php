@@ -3282,7 +3282,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_6688c7820a896',
 		'title' => 'Regulator Forum - Page',
 		'fields' => array(
@@ -3491,7 +3491,7 @@ add_action( 'acf/include_fields', function() {
 						'label' => 'Title section',
 						'name' => 'title_section',
 						'aria-label' => '',
-						'type' => 'text',
+						'type' => 'textarea',
 						'instructions' => '',
 						'required' => 0,
 						'conditional_logic' => 0,
@@ -3500,11 +3500,11 @@ add_action( 'acf/include_fields', function() {
 							'class' => '',
 							'id' => '',
 						),
-						'default_value' => 'What Participation Looks Like',
+						'default_value' => '',
 						'maxlength' => '',
+						'rows' => '',
 						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
+						'new_lines' => 'br',
 					),
 					array(
 						'key' => 'field_6688c86c40efb',

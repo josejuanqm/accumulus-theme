@@ -340,6 +340,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   @apply body-2;
 }
 
+.description-wysiwyg-break p {
+  @apply body-2 break-words break-all;
+}
+
 .description-wysiwyg a {
   @apply text-secondary-green no-underline hover:text-secondary-carbon;
 }

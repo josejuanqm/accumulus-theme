@@ -1742,10 +1742,6 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/get-started-section/bg-block-get-started-mobile.png');
 }
 
-.bg-increase-feedback-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-increase-feedback-mobile.png');
-}
-
 .bg-news-banner-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/news/bg-news-mobile.webp');
 }
@@ -3258,6 +3254,33 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 }
 
+.description-wysiwyg-break p {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .description-wysiwyg-break p {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1025px) {
+  .description-wysiwyg-break p {
+    font-size: 1.25rem;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
 .description-wysiwyg a {
   --tw-text-opacity: 1;
   color: rgb(0 130 119 / var(--tw-text-opacity));
@@ -4405,6 +4428,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-position: left top;
   }
 
+  .lg\:\!py-0 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -4428,6 +4456,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .lg\:py-s6 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .lg\:pb-0 {
@@ -4464,6 +4497,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pb-s6 {
     padding-bottom: 3rem;
+  }
+
+  .lg\:pb-s7 {
+    padding-bottom: 3.5rem;
   }
 
   .lg\:pb-s8 {
@@ -4532,6 +4569,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pb-s5 {
+    padding-bottom: 2.5rem;
   }
 
   .lg\:text-b1 {
@@ -4606,6 +4647,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .last-of-type\:lg\:\!pb-0:last-of-type {
     padding-bottom: 0px !important;
+  }
+
+  .last-of-type\:lg\:pb-0:last-of-type {
+    padding-bottom: 0px;
   }
 }
 
