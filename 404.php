@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<section class="section w-full pb-s4 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-no-repeat bg-left-top bg-contain max-lg:h-screen" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/bg-404.png);">
+	<section class="section w-full pb-s4 md:pb-s7 lg:pb-s12 bg-primary-violet min-h-screen bg-404-mobile md:bg-404-tablet lg:bg-404-desktop bg-no-repeat bg-left-top bg-contain max-lg:h-screen">
 
 		<div class="container mx-auto max-lg:h-[90%] pt-s5 md:pt-s10 lg:pt-s9">
 

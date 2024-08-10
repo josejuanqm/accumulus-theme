@@ -77,7 +77,7 @@
             <?php elseif ($categorySlug == 'new-releases'): ?>
               <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
             <?php endif; ?>
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepAqua">
+            <div class="relative md:w-2/3 flex flex-col gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepAqua">
               <span class="absolute top-s2 left-[10px] md:left-s2 flex items-center justify-center w-[30px] h-[30px] md:w-s3 md:h-s3 heading-5 rounded-full aspect-square bg-secondary-lilac"><?php echo $i+1; ?></span>
               <span class="flex items-center gap-s1 pt-1 heading-4 uppercase text-neutral-dgray <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'media-coverage'): ?>

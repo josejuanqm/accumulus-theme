@@ -571,6 +571,14 @@ module.exports = {
         // Resources
         'resources-general':
           "url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png')",
+
+        // 404
+        '404-desktop':
+          "url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.jpg')",
+        '404-tablet':
+          "url('/wp-content/themes/accumulus-website/images/404/bg-404-tablet.jpg')",
+        '404-mobile':
+          "url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.jpg')",
       },
     },
   },

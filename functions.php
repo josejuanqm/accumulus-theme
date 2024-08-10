@@ -601,7 +601,7 @@ function getNews() {
 		if($key == 0){
 			// Large post
 			$html .= '
-			<div class="card col-span-12 md:col-span-6 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden ';
+			<div class="card col-span-12 md:col-span-12 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden ';
 			$html .= '">';
 
 			if ($categorySlug == 'media-coverage'):
