@@ -4709,6 +4709,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   height: 100vh;
 }
 
+.\[\&\>\.wp-block-columns\]\:\!flex-row>.wp-block-columns {
+  flex-direction: row !important;
+}
+
 .\[\&\>figure\>img\]\:max-h-\[330px\]>figure>img {
   max-height: 330px;
 }
@@ -4802,4 +4806,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .\[\&\>svg\]\:max-w-none>svg {
   max-width: none;
+}
+
+.\[\&\>wp-block-columns\]\:\!flex-row>wp-block-columns {
+  flex-direction: row !important;
 }

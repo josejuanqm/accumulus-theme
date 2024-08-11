@@ -11,8 +11,15 @@
 
 <section class="section py-s6">
   <div class="container mx-auto px-4 lg:px-0">
-    <div class="content-wrapper max-w-full col-span-12 flex flex-col gap-s4 [&>h3]:text-h3Mobile md:[&>h3]:text-h3Tablet lg:[&>h3]:text-h3 [&>h4]:text-h4Mobile md:[&>h4]:text-h4Tablet lg:[&>h4]:text-h4 [&>h5]:text-h5Mobile md:[&>h5]:text-h5Tablet lg:[&>h5]:text-h5">
+    <div class="content-wrapper max-w-full col-span-12 flex flex-col gap-s4 [&>h3]:text-h3Mobile md:[&>h3]:text-h3Tablet lg:[&>h3]:text-h3 [&>h4]:text-h4Mobile md:[&>h4]:text-h4Tablet lg:[&>h4]:text-h4 [&>h5]:text-h5Mobile md:[&>h5]:text-h5Tablet lg:[&>h5]:text-h5 [&>.wp-block-columns]:!flex-row">
       <?php the_content(); ?>
     </div>
   </div>
 </section>
+
+<style>
+
+.wp-block-column {
+  flex-basis: 50% !important;
+}
+</style>
