@@ -123,7 +123,7 @@
           ?>
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
             <div class="flex flex-row items-center justify-between w-full group">
-              <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
+              <a class="py-s2 heading-2" href="#"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
                 <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>

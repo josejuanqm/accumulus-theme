@@ -405,3 +405,10 @@ $why_values = get_field('why_values');
 	</div>
 </section>
 <!-- Events carousel -->
+
+<?php
+  get_template_part(
+    'template-parts/content',
+    'careers-footer'
+  );
+?>
