@@ -30,7 +30,7 @@
 								© Accumulus Synergy 2024
 							</p>
 						</div>
-						<div class="flex flex-row items-start justify-end gap-s3">
+						<div class="flex flex-row items-start justify-between lg:justify-end gap-s16 lg:gap-s3">
 							<ul class="flex flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
