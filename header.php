@@ -62,7 +62,7 @@
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
                   <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
-                    <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   <?php endif; ?>
@@ -100,7 +100,7 @@
                       <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
                     </div>
                     <div class="flex flex-col gap-s1">
-                      <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
+                      <span class="body-3 !font-medium text-neutral-dgray"><?php echo $menu_subitem["title"]; ?></span>
                       <p class="body-4 text-neutral-sgray">
                         <span><?php echo $menu_subitem["description"]; ?></span>
                       </p>
@@ -122,25 +122,25 @@
             $fields = get_fields($menu_item); 
           ?>
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
-            <div class="flex flex-row items-center justify-between w-full peer">
-              <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
+            <div class="flex flex-row items-center justify-between w-full group">
+              <a class="py-s2 heading-2" href="#"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
-                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               <?php endif; ?>
             </div>
-            <section class="w-full bg-white peer-hover:block hover:block hidden" data-identifier="<?php echo $fields["identifier"]; ?>">
+            <section class="w-full bg-white hidden" data-identifier="<?php echo $fields["identifier"]; ?>">
               <div class="container mx-auto">
-                <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
+                <ul class="dropdown-menu grid grid-cols-1 lg:grid-cols-3 items-center justify-start mx-auto">
                   <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
                     <li>
-                      <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px]" href="#">
+                      <a class="grid grid-cols-[2rem_auto] gap-s2" href="#">
                         <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
                           <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
                         </div>
                         <div class="flex flex-col gap-s1">
-                          <span class="body-3 text-neutral-dgray"><b><?php echo $menu_subitem["title"]; ?></b></span>
+                          <span class="body-3 !font-medium text-neutral-dgray"><?php echo $menu_subitem["title"]; ?></span>
                           <p class="body-4 text-neutral-sgray">
                             <span><?php echo $menu_subitem["description"]; ?></span>
                           </p>
@@ -215,11 +215,13 @@
       navigationItems.forEach(function(item) {
         item.addEventListener('mouseenter', function(event) {
           setMegaMenuOpened(true, event.target.dataset.identifier);
+	  event.target.querySelector(".dropdown-arrow")?.classList.add('rotate-180');
         });
       });
 
       page.addEventListener('mouseleave', function(event) {
-        setMegaMenuOpened(false, null);
+         setMegaMenuOpened(false, null);
+	 event.target.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
       });
     });
 
@@ -249,5 +251,38 @@
           h.classList.add('bg-transparent');
         });
       }
+    });
+
+    // open close mobile dropdowns
+    document.addEventListener('DOMContentLoaded', function() {
+      let navigationItems = document.querySelectorAll('.menu-item-dropdown-mobile');
+      navigationItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          const opened = item.classList.contains('opened');
+          navigationItems.forEach(function(item) {
+            let dropdownArrow = item.querySelector('.dropdown-arrow');
+            if (dropdownArrow) {
+              dropdownArrow.classList.remove('rotate-180');
+            }
+            item.classList.remove('opened');
+            item.querySelector('section').style.display = 'none';
+          });
+          if (opened) {
+            let dropdownArrow = item.querySelector('.dropdown-arrow');
+            if (dropdownArrow) {
+              dropdownArrow.classList.remove('rotate-180');
+            }
+            item.classList.remove('opened');
+            item.querySelector('section').style.display = 'none';
+          } else {
+            let dropdownArrow = item.querySelector('.dropdown-arrow');
+            if (dropdownArrow) {
+              dropdownArrow.classList.add('rotate-180');
+            }
+            item.classList.add('opened');
+            item.querySelector('section').style.display = 'block';
+          }
+        });
+      });
     });
   </script>
