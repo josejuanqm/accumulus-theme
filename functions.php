@@ -614,7 +614,7 @@ function getNews() {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
 			$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-			$html .= '<img src="'. $image[0] .'" class="block"  />';
+			$html .= '<img src="'. $image[0] .'" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
 			$html .= '</div>';
 
 			endif;
@@ -681,7 +681,7 @@ function getNews() {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
 			$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-			$html .= '<img src="'. $image[0] .'" class="block max-h-full"  />';
+			$html .= '<img src="'. $image[0] .'" class="block w-full max-h-full object-cover"  />';
 			$html .= '</div>';
 
 		endif;
