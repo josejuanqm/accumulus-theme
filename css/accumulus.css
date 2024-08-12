@@ -2132,7 +2132,7 @@ video {
 }
 
 .text-h4Mobile {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 120%;
   letter-spacing: 0.25rem;
   font-weight: 500;
@@ -2457,7 +2457,7 @@ video {
 }
 
 .heading-4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 120%;
   letter-spacing: 0.25rem;
   font-weight: 500;
@@ -4743,7 +4743,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 }
 
 .\[\&\>h4\]\:text-h4Mobile>h4 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 120%;
   letter-spacing: 0.25rem;
   font-weight: 500;
@@ -4806,8 +4806,4 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .\[\&\>svg\]\:max-w-none>svg {
   max-width: none;
-}
-
-.\[\&\>wp-block-columns\]\:\!flex-row>wp-block-columns {
-  flex-direction: row !important;
 }
