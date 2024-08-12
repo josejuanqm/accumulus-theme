@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1731,15 +1731,15 @@ video {
 }
 
 .bg-404-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.jpg');
+  background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.png');
 }
 
 .bg-benefits-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png');
 }
 
-.bg-bg-citation {
-  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-case.png');
+.bg-citation-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-citations-mobile.png');
 }
 
 .bg-events-general {
@@ -3720,16 +3720,16 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: auto;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:w-s3 {
     width: 1.5rem;
   }
 
   .md\:w-s8 {
     width: 4rem;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:max-w-550 {
@@ -3838,11 +3838,15 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .md\:bg-404-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-tablet.jpg');
+    background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-tablet.png');
   }
 
   .md\:bg-benefits-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-tablet.png');
+  }
+
+  .md\:bg-citation-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-citations-tablet.png');
   }
 
   .md\:bg-get-started-section-tablet {
@@ -4235,8 +4239,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-row-start: 4;
   }
 
-  .lg\:-mb-1 {
-    margin-bottom: -0.25rem;
+  .lg\:-mb-\[1px\] {
+    margin-bottom: -1px;
   }
 
   .lg\:-mt-14 {
@@ -4421,11 +4425,15 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 
   .lg\:bg-404-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.jpg');
+    background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png');
   }
 
   .lg\:bg-benefits-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-desktop.png');
+  }
+
+  .lg\:bg-citation-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-citations-desktop.png');
   }
 
   .lg\:bg-get-started-section-desktop {

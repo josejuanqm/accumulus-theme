@@ -66,7 +66,7 @@
 				if($i % 2 == 1): 	
 			?>
 
-				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12 last-of-type:lg:!pb-0">
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap lg:gap-y-0 pb-s8 md:pb-s10 lg:pb-s12 last-of-type:lg:!pb-0">
 					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s3">
 
 						<?php  foreach($row['card_item'] as $card) : ?>
@@ -115,7 +115,7 @@
 
 				<?php else: ?>
 
-				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 lg:pb-s12 last-of-type:lg:!pb-0">
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 md:pb-s10 lg:pb-s12 last-of-type:lg:!pb-0">
 					<div class="col-span-12 md:col-span-6">
 
 						<?php foreach($row['card_item'] as $card) : ?>
@@ -217,7 +217,7 @@
 ?>
 
 <?php if($citations) : ?>
-<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-dgray text-neutral-nwhite bg-bg-citation bg-no-repeat bg-contain bg-right-top">
+<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-dgray text-neutral-nwhite bg-citation-mobile md:bg-citation-tablet lg:bg-citation-desktop bg-no-repeat bg-contain bg-right-top">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s4 md:gap-y-s10 lg:gap-y-s6">
 
