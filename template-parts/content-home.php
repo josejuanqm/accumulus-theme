@@ -81,12 +81,7 @@
 	$what_second_description = get_field('what_second_description');
 	$what_link_about = get_field('what_link_about');
 ?>
-<section class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s16 lg:pt-s20 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-primary-violet" style="
-    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%, 0% 20%);
-    background-color: transparent;
-    z-index: 2;
-    position: relative;
-">
+<section class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s16 lg:pt-s20 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-transparent">
 
 	<div class="container mx-auto md:pt-s14 lg:pt-s14 lg:pb-s14">
 
