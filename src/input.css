@@ -137,6 +137,18 @@ body {
   margin: 0 1vw;
 }
 
+@media screen and (min-width: 1570px) {
+  .what-we-do-home {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-lg-desktop.png') !important;
+  }
+}
+
+@media screen and (min-width: 1850px) {
+  .what-we-do-home {
+    background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-xl-desktop.png') !important;
+  }
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);

@@ -81,7 +81,12 @@
 	$what_second_description = get_field('what_second_description');
 	$what_link_about = get_field('what_link_about');
 ?>
-<section class="relative z-10 section w-full md:pt-s10 lg:pt-s11 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-contain bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-primary-violet">
+<section class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s16 lg:pt-s20 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-primary-violet" style="
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%, 0% 20%);
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+">
 
 	<div class="container mx-auto md:pt-s14 lg:pt-s14 lg:pb-s14">
 
@@ -104,7 +109,7 @@
 <!-- What we do -->
 
 <!-- BEGIN PARADIGM SHIFT -->
- <section class="section relative w-full py-s6 bg-neutral-nude">
+ <section class="section relative w-full pt-s20 md:pt-s10 lg:pt-s18 pb-s6 -mt-s11 md:-mt-s9 lg:-mt-s11 bg-neutral-nude">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
 				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">

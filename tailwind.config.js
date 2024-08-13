@@ -102,7 +102,7 @@ module.exports = {
           },
         ],
         h4Mobile: [
-          '1.125rem',
+          '1rem',
           {
             fontWeight: '500',
             lineHeight: '120%',
