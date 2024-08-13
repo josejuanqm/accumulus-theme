@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					<div class="flex flex-row items-start justify-start order-last md:order-none pt-s13 lg:pt-0">
-<svg width="80%" viewBox="0 0 330 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="md:w-[80%] w-full" viewBox="0 0 330 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M319.624 16.9373H321.073V20.8699H322.299V16.9373H323.744V15.8751H319.624V16.9373Z" fill="#FCFCFC"/>
 <path d="M328.359 15.8751L327.348 19.0306L326.294 15.9337L326.274 15.8751H324.638V20.8699H325.798V17.859L326.829 20.8114L326.848 20.8699H327.789L328.84 17.8277V20.8699H330V15.8751H328.359Z" fill="#FCFCFC"/>
 <g clip-path="url(#clip0_4223_8022)">

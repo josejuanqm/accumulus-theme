@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1734,6 +1734,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
+
 .bg-404-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.png');
 }
@@ -1814,12 +1818,20 @@ video {
   fill: inherit;
 }
 
+.stroke-cta-dark {
+  stroke: #202020;
+}
+
 .stroke-neutral-500 {
   stroke: #737373;
 }
 
 .stroke-neutral-nwhite {
   stroke: #fcfcfc;
+}
+
+.stroke-white {
+  stroke: #fff;
 }
 
 .stroke-1 {
@@ -3744,6 +3756,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 64px;
   }
 
+  .md\:w-\[80\%\] {
+    width: 80%;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -4743,6 +4759,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .\32xl\:pt-60 {
     padding-top: 15rem;
   }
+}
+
+.\[\&\>\*\]\:\!text-white>* {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .\[\&\>\.opened\>section\.mobile-menu\]\:block>.opened>section.mobile-menu {

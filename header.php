@@ -48,11 +48,12 @@
       <div class="container mx-auto px-s2">
         <div class="flex flex-row items-center">
           <div class="flex flex-row items-center me-auto">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="py-s2 flex flex-row items-center">
-              <img class="h-s8" src="<?php echo get_template_directory_uri(); ?>/images/logo-navigation-light.svg" alt="Accumulus" class="w-32 h-auto">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="py-s2 flex flex-row items-center relative isolate overflow-hidden">
+              <img class="h-s8 logo-dark" src="<?php echo get_template_directory_uri(); ?>/images/logo-navigation-light.svg" alt="Accumulus" class="w-32 h-auto">
+              <img class="h-s8 logo-light absolute top-0 left-0 right-0 bottom-0 opacity-0 py-s2" src="<?php echo get_template_directory_uri(); ?>/images/logo-navigation-light.svg" alt="Accumulus" class="w-32 h-auto">
             </a>
           </div>
-          <div class="flex-row items-center hidden lg:flex text-cta-dark">
+          <div class="flex-row items-center hidden lg:flex">
             <ul class="flex flex-row items-center gap-s4">
               <?php foreach ($primary_menu_items as $menu_item) : ?>
                 <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
@@ -63,7 +64,7 @@
                   <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
                     <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   <?php endif; ?>
                 </li>
@@ -115,7 +116,7 @@
   </header> 
   <section id="mobile-menu" style="display: none;" class="section fixed bg-white lg:!hidden top-0 left-0 w-screen h-screen z-[999] pb-s4">
     <div class="container mx-auto w-full flex-col items-center justify-between h-full flex pt-s6">
-      <ul class="w-full flex flex-col items-start gap-s1 md:gap-s2 body-1 px-s2">
+      <ul class="w-full flex flex-col items-start gap-s3 md:gap-s2 body-1 px-s2">
         <?php foreach ($primary_menu_items as $menu_item) : ?>
           <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
           <?php
@@ -126,13 +127,13 @@
               <a class="py-s2 heading-2" href="#"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
                 <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke="#202020" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               <?php endif; ?>
             </div>
             <section class="w-full bg-white hidden" data-identifier="<?php echo $fields["identifier"]; ?>">
               <div class="container mx-auto">
-                <ul class="dropdown-menu grid grid-cols-1 lg:grid-cols-3 items-center justify-start mx-auto">
+                <ul class="dropdown-menu grid grid-cols-1 lg:grid-cols-3 gap-s1 items-center justify-start mx-auto">
                   <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
                     <li>
                       <a class="grid grid-cols-[2rem_auto] gap-s2" href="#">
@@ -140,8 +141,8 @@
                           <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
                         </div>
                         <div class="flex flex-col gap-s1">
-                          <span class="body-3 !font-medium text-neutral-dgray"><?php echo $menu_subitem["title"]; ?></span>
-                          <p class="body-4 text-neutral-sgray">
+                          <span class="heading-3 !font-medium text-neutral-dgray"><?php echo $menu_subitem["title"]; ?></span>
+                          <p class="body-2 text-neutral-sgray">
                             <span><?php echo $menu_subitem["description"]; ?></span>
                           </p>
                         </div>
@@ -237,20 +238,41 @@
       document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
     });
 
+	function modifyNavigationColor() {
+	    const header = document.querySelectorAll('header#navigation > .content');
+	    console.log(window.scrollY)
+	      if (window.scrollY > 0) {
+		header.forEach(function(h) {
+		  h.classList.add('bg-white');
+		  h.classList.remove('bg-opacity-0');
+		  h.classList.remove('[&>*]:!text-white');
+		  h.classList.add('text-cta-dark');
+		  h.classList.add('stroke-cta-dark');
+		  h.classList.remove('stroke-white');
+		  document.querySelector('.logo-dark').classList.remove('opacity-0')
+		  document.querySelector('.logo-light').classList.add('opacity-0')
+		});
+	      } else {
+		header.forEach(function(h) {
+		  h.classList.remove('bg-white');
+		  h.classList.add('bg-opacity-0');
+		  h.classList.add('[&>*]:!text-white');
+		  h.classList.remove('text-cta-dark');
+		  h.classList.remove('stroke-cta-dark');
+		  h.classList.add('stroke-white');
+		  document.querySelector('.logo-dark').classList.add('opacity-0')
+		  document.querySelector('.logo-light').classList.remove('opacity-0')
+		});
+	    }
+	}
+
     // turn white the header when the user scrolls
     window.addEventListener('scroll', function() {
-      const header = document.querySelectorAll('header#navigation > .content');
-      if (window.scrollY > 0) {
-        header.forEach(function(h) {
-          h.classList.add('bg-white');
-          h.classList.remove('bg-transparent');
-        });
-      } else {
-        header.forEach(function(h) {
-          h.classList.remove('bg-white');
-          h.classList.add('bg-transparent');
-        });
-      }
+	modifyNavigationColor()
+    });
+
+    window.addEventListener('DOMContentLoaded', function(){
+	modifyNavigationColor()
     });
 
     // open close mobile dropdowns
