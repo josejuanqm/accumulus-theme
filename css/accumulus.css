@@ -1239,6 +1239,10 @@ video {
   height: 3rem;
 }
 
+.h-s8 {
+  height: 4rem;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -1826,12 +1830,12 @@ video {
   fill: inherit;
 }
 
-.fill-cta-dark {
-  fill: #202020;
-}
-
 .fill-white {
   fill: #fff;
+}
+
+.fill-cta-dark {
+  fill: #202020;
 }
 
 .stroke-cta-dark {
@@ -1846,12 +1850,16 @@ video {
   stroke: #fcfcfc;
 }
 
-.stroke-none {
-  stroke: none;
-}
-
 .stroke-white {
   stroke: #fff;
+}
+
+.\!stroke-cta-dark {
+  stroke: #202020 !important;
+}
+
+.stroke-none {
+  stroke: none;
 }
 
 .stroke-1 {
@@ -2311,6 +2319,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!text-cta-dark {
+  --tw-text-opacity: 1 !important;
+  color: rgb(32 32 32 / var(--tw-text-opacity)) !important;
 }
 
 .opacity-0 {
@@ -3397,6 +3410,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:text-neutral-nwhite:hover {
   --tw-text-opacity: 1;
   color: rgb(252 252 252 / var(--tw-text-opacity));
@@ -3404,6 +3422,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.group:hover .group-hover\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 @media not all and (min-width: 1280px) {
@@ -4486,6 +4509,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     gap: 4rem;
   }
 
+  .lg\:gap-s6 {
+    gap: 3rem;
+  }
+
   .lg\:gap-x-s2 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
@@ -4527,12 +4554,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
-  .lg\:bg-auto {
-    background-size: auto;
-  }
-
   .lg\:bg-contain {
     background-size: contain;
+  }
+
+  .lg\:bg-auto {
+    background-size: auto;
   }
 
   .lg\:bg-left-top {
@@ -4794,6 +4821,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .\32xl\:pt-60 {
     padding-top: 15rem;
   }
+}
+
+.\[\&\>\*\>\*\>\*\]\:stroke-cta-dark>*>*>* {
+  stroke: #202020;
 }
 
 .\[\&\>\*\]\:fill-cta-dark>* {

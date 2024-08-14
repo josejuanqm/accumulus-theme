@@ -30,7 +30,7 @@
             </p>
           </div>
 					<div class="flex flex-col md:flex-row items-start justify-between">
-            <div class="flex flex-col items-start justify-between h-full gap-s7 opacity-100 md:opacity-0 lg:opacity-100">
+            <div class="w-full flex flex-col items-start justify-between h-full gap-s7 opacity-100 md:opacity-0 lg:opacity-100">
 							<p class="flex-1 whitespace-nowrap">
 								Accumulus Synergy <br/>
 								A Nonprofit Industry  <br class="hidden lg:block"/>
@@ -40,8 +40,8 @@
 								© Accumulus Synergy 2024
 							</p>
 						</div>
-						<div class="w-[80%] flex flex-row items-start justify-between lg:justify-end gap-s16 lg:gap-s3">
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
+            <div class="w-full grid grid-cols-12 items-start justify-between lg:justify-end lg:gap-s3">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Our Team</a></li>
@@ -51,7 +51,7 @@
 								<li><a href="">Regulator Forum</a></li>
 								<li><a href="">Careers</a></li>
 							</ul>
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
 								<li><a href="">Accumulus Platform</a></li>
 								<li><a href="">Core Capabilities</a></li>
@@ -83,25 +83,25 @@
 </svg>
 					</div>
 					<div class="flex flex-row items-start justify-between">
-						<div class="hidden lg:flex flex-col items-start justify-between">
+						<div class="hidden lg:flex flex-basis-full flex-col items-start justify-between">
 							<ul class="flex flex-col items-start gap-s2 list-none">
 								<li><a href="">LinkedIn</a></li>
 								<li><a href="">Contact Us</a></li>
 							</ul>
 						</div>
-						<div class="w-[80%] flex flex-row items-start justify-between md:justify-end gap-s16">
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
+            <div class="w-full lg:w-auto grid grid-cols-12 items-start justify-between md:justify-end lg:gap-s6">
+							<ul class="col-span-6 md:col-span-4 lg:col-span-6 flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
 								<li><a href="">eBooks and White Papers</a></li>
 								<li><a href="">Thought Leadership</a></li>
 								<li><a href="">Media</a></li>
 							</ul>
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
+							<ul class="col-span-6 md:col-span-4 lg:col-span-6 flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>
 							</ul>
-							<ul class="flex flex-col items-start gap-s2 list-none hidden md:flex lg:hidden">
+							<ul class="col-span-4 flex flex-col items-start gap-s2 list-none hidden md:flex lg:hidden">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6 opacity-0">&#0020</p></li>
 								<li><a href="">LinkedIn</a></li>
 								<li><a href="">Contact Us</a></li>
