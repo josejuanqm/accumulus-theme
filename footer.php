@@ -19,8 +19,18 @@
 		<div class="container mx-auto px-4 lg:px-0">
 			<div class="grid grid-cols-12 gap-x-s3">
 				<div class="flex flex-col gap-y-s4 md:py-s5 md:gap-y-s8 col-span-12">
+          <div class="flex-col items-start justify-between h-full gap-s7 hidden md:flex lg:hidden -mb-s4">
+            <p class="flex-1 whitespace-nowrap">
+              Accumulus Synergy <br/>
+              A Nonprofit Industry  <br class="hidden lg:block"/>
+              Association
+            </p>
+            <p>
+              © Accumulus Synergy 2024
+            </p>
+          </div>
 					<div class="flex flex-col md:flex-row items-start justify-between">
-            <div class="flex flex-col items-start justify-between h-full gap-s7">
+            <div class="flex flex-col items-start justify-between h-full gap-s7 opacity-100 md:opacity-0 lg:opacity-100">
 							<p class="flex-1 whitespace-nowrap">
 								Accumulus Synergy <br/>
 								A Nonprofit Industry  <br class="hidden lg:block"/>
@@ -30,8 +40,8 @@
 								© Accumulus Synergy 2024
 							</p>
 						</div>
-						<div class="flex flex-row items-start justify-between lg:justify-end gap-s16 lg:gap-s3">
-							<ul class="flex flex-col items-start gap-s2 list-none">
+						<div class="w-[80%] flex flex-row items-start justify-between lg:justify-end gap-s16 lg:gap-s3">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
 								<li><a href="">About Us</a></li>
 								<li><a href="">Our Team</a></li>
@@ -41,7 +51,7 @@
 								<li><a href="">Regulator Forum</a></li>
 								<li><a href="">Careers</a></li>
 							</ul>
-							<ul class="flex flex-col items-start gap-s2 list-none">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
 								<li><a href="">Accumulus Platform</a></li>
 								<li><a href="">Core Capabilities</a></li>
@@ -79,14 +89,14 @@
 								<li><a href="">Contact Us</a></li>
 							</ul>
 						</div>
-						<div class="flex flex-row items-start justify-end gap-s16">
-							<ul class="flex flex-col items-start gap-s2 list-none">
+						<div class="w-[80%] flex flex-row items-start justify-between md:justify-end gap-s16">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
 								<li><a href="">eBooks and White Papers</a></li>
 								<li><a href="">Thought Leadership</a></li>
 								<li><a href="">Media</a></li>
 							</ul>
-							<ul class="flex flex-col items-start gap-s2 list-none">
+							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none">
 								<li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
 								<li><a href="">Privacy Policy</a></li>
 								<li><a href="">Terms & Conditions</a></li>

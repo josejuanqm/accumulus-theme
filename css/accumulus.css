@@ -1135,6 +1135,14 @@ video {
   margin-top: 3rem;
 }
 
+.-mb-s8 {
+  margin-bottom: -4rem;
+}
+
+.-mb-s4 {
+  margin-bottom: -2rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -1231,10 +1239,6 @@ video {
   height: 3rem;
 }
 
-.h-s8 {
-  height: 4rem;
-}
-
 .h-screen {
   height: 100vh;
 }
@@ -1309,6 +1313,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .min-w-s7 {
@@ -1818,6 +1826,14 @@ video {
   fill: inherit;
 }
 
+.fill-cta-dark {
+  fill: #202020;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
 .stroke-cta-dark {
   stroke: #202020;
 }
@@ -1830,12 +1846,20 @@ video {
   stroke: #fcfcfc;
 }
 
+.stroke-none {
+  stroke: none;
+}
+
 .stroke-white {
   stroke: #fff;
 }
 
 .stroke-1 {
   stroke-width: 1;
+}
+
+.stroke-0 {
+  stroke-width: 0;
 }
 
 .object-cover {
@@ -3382,11 +3406,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   text-decoration-line: underline;
 }
 
-.group:hover .group-hover\:bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 @media not all and (min-width: 1280px) {
   .max-xl\:flex {
     display: flex;
@@ -3820,6 +3839,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     justify-content: normal;
   }
 
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:justify-center {
     justify-content: center;
   }
@@ -4131,6 +4154,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
+  }
+
+  .md\:opacity-0 {
+    opacity: 0;
   }
 
   .last-of-type\:md\:\!pb-s12:last-of-type {
@@ -4500,6 +4527,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
+  .lg\:bg-auto {
+    background-size: auto;
+  }
+
   .lg\:bg-contain {
     background-size: contain;
   }
@@ -4724,6 +4755,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     font-weight: 500;
   }
 
+  .lg\:opacity-100 {
+    opacity: 1;
+  }
+
   .last-of-type\:lg\:\!pb-0:last-of-type {
     padding-bottom: 0px !important;
   }
@@ -4759,6 +4794,18 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .\32xl\:pt-60 {
     padding-top: 15rem;
   }
+}
+
+.\[\&\>\*\]\:fill-cta-dark>* {
+  fill: #202020;
+}
+
+.\[\&\>\*\]\:stroke-cta-dark>* {
+  stroke: #202020;
+}
+
+.\[\&\>\*\]\:stroke-white>* {
+  stroke: #fff;
 }
 
 .\[\&\>\*\]\:\!text-white>* {
