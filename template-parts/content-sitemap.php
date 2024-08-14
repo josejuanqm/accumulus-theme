@@ -28,7 +28,7 @@
     </div>
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s6 md:py-s8">
-      <ul class="flex flex-col items-start gap-s2 list-none row-start-2 md:row-start-1 col-span-6 md:col-span-3 lg:col-span-2 col-start-1 lg:col-start-2">
+      <ul class="flex flex-col items-start gap-s2 list-none row-start-2 md:row-start-2 lg:row-start-1 col-span-6 md:col-span-3 lg:col-span-2 col-start-1 md:col-start-6 lg:col-start-2">
         <li><a href="" class="text-neutral-dgray text-b3Mobile md:text-b3Tablet lg:text-b3">LinkedIn</a></li>
         <li><a href="" class="text-neutral-dgray text-b3Mobile md:text-b3Tablet lg:text-b3">Contact Us</a></li>
       </ul>

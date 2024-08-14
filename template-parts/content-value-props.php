@@ -30,7 +30,7 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">
@@ -90,7 +90,7 @@
 							<?php endif; ?>
 							
 							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
-								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+								<ul class="flex flex-col gap-2 body-2">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
 									<li class="relative pl-3">

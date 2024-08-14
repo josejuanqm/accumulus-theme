@@ -13,8 +13,8 @@
 	</picture>
 	<div class="container mx-auto pt-s4 md:pt-s7 pb-s10 md:pb-s13 lg:pb-s12">
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
-			<h4 class="col-span-12 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
-			<h1 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
+			<h4 class="col-span-12 heading-4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
+			<h1 class="col-span-12 heading-1"><?php echo $main_title; ?></h1>
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
 				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $paragraph_text; ?></p>
 			</div>
@@ -29,7 +29,7 @@
         <h2 class="heading-1 font-normal">
         Leadership
         </h2>
-        <p class="body-1">
+        <p class="body-2">
           A first-of-its-kind data and information exchange platform for the drug development lifecycle. Built for the process needs of today and the evolving life sciences–regulatory landscape of the future.
         </p>
       </div>
@@ -39,7 +39,7 @@
       <?php
         foreach(array(1,2,3,4) as $team_member) {
       ?>
-        <figure class="flex flex-col items-start justify-stretch gap-s1 col-span-1">
+        <figure class="flex flex-col items-start justify-stretch gap-s1 col-span-2 md:col-span-1">
           <img class="aspect-square w-full rounded-[40px] bg-primary-glaciar mb-s3" src="https://via.placeholder.com/200x200" alt="">
           <div class="flex flex-row items-center justify-between w-full">
             <h3 class="heading-6">Francisco Nogueira</h3>
@@ -71,7 +71,7 @@
       <h2 class="heading-1 font-normal col-span-4">
         The Board of Directors
       </h2>
-      <p class="body-1 col-span-4 grid grid-cols-4 pb-s4">
+      <p class="body-2 col-span-4 grid grid-cols-4 pb-s4">
         <span class="col-start-3 col-end-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id.
         </span>
@@ -80,7 +80,7 @@
       <?php
         foreach(array(1,2,3,4) as $team_member) {
       ?>
-        <figure class="flex flex-col items-start justify-stretch gap-s1 col-span-1">
+        <figure class="flex flex-col items-start justify-stretch gap-s1 col-span-2 md:col-span-1">
           <img class="aspect-square w-full rounded-[40px] bg-primary-glaciar mb-s3" src="https://via.placeholder.com/200x200" alt="">
           <div class="flex flex-row items-center justify-between w-full">
             <h3 class="heading-6">Francisco Nogueira</h3>
@@ -109,6 +109,9 @@
 <?php
   get_template_part(
     'template-parts/content',
-    'careers-footer'
+    'careers-footer',
+        array( 
+		'cta' => 'Explore Roles',
+	)
   );
 ?>
