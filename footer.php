@@ -13,53 +13,38 @@
 
 <section class="bg-primary-violet">
 <footer id="colophon" class="section body-3 text-neutral-nwhite py-s10 relative isolate overflow-hidden">
-    <img class="block md:hidden mix-blend-color-dodge opacity-70 absolute left-0 right-0 bottom-0 w-full -z-10" src="<?php echo get_template_directory_uri() . '/images/footer-bg-mobile.png'; ?>" alt="">
+    <img class="block md:hidden mix-blend-color-dodge opacity-70 absolute left-0 right-0 top-0 bottom-0 w-full -z-10" src="<?php echo get_template_directory_uri() . '/images/footer-bg-mobile.png'; ?>" alt="">
     <img class="hidden md:block lg:hidden mix-blend-color-dodge opacity-70 absolute left-0 right-0 top-0 w-full -z-10" src="<?php echo get_template_directory_uri() . '/images/footer-bg-tablet.png'; ?>" alt="">
     <img class="hidden lg:block mix-blend-color-dodge opacity-70 absolute left-0 right-0 top-0 w-full -z-10" src="<?php echo get_template_directory_uri() . '/images/footer-bg.png'; ?>" alt="">
 		<div class="container mx-auto px-4 lg:px-0">
-			<div class="grid grid-cols-12 gap-x-s3">
-				<div class="flex flex-col gap-y-s4 md:py-s5 md:gap-y-s8 col-span-12">
-          <div class="flex-col items-start justify-between h-full gap-s7 hidden md:flex lg:hidden -mb-s4">
-            <p class="flex-1 whitespace-nowrap">
-              Accumulus Synergy <br/>
-              A Nonprofit Industry  <br class="hidden lg:block"/>
-              Association
-            </p>
-            <p>
-              © Accumulus Synergy 2024
-            </p>
-          </div>
-					<div class="flex flex-col md:flex-row items-start justify-between">
-            <div class="w-full flex flex-col items-start justify-between h-full gap-s7 opacity-100 md:opacity-0 lg:opacity-100">
-							<p class="flex-1 whitespace-nowrap">
-								Accumulus Synergy <br/>
-								A Nonprofit Industry  <br class="hidden lg:block"/>
-								Association
-							</p>
-							<p class=" pb-[33%]">
-								© Accumulus Synergy 2024
-							</p>
-						</div>
-            <div class="w-full grid grid-cols-12 items-start justify-between lg:justify-end lg:gap-s3">
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6">
-								<li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
-								<li><a href="">About Us</a></li>
-								<li><a href="">Our Team</a></li>
-								<li><a href="">News</a></li>
-								<li><a href="">Events</a></li>
-								<li><a href="">Case For Change</a></li>
-								<li><a href="">Regulator Forum</a></li>
-								<li><a href="">Careers</a></li>
-							</ul>
-							<ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6">
-								<li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
-								<li><a href="">Accumulus Platform</a></li>
-								<li><a href="">Core Capabilities</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="flex flex-row items-start justify-start order-last md:order-none pt-s13 lg:pt-0">
-<svg class="md:w-[80%] w-full" viewBox="0 0 330 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="grid grid-cols-12 gap-x-s3 gap-y-s12">
+        <div class="flex-col items-start justify-between h-full gap-s7 flex col-span-12 col-start-1 row-start-1 md:col-span-5 md:col-start-1 md:row-start-1 lg:col-span-3 lg:col-start-1 lg:row-start-1">
+          <p class="flex-1 whitespace-nowrap">
+            Accumulus Synergy <br/>
+            A Nonprofit Industry  <br class="hidden lg:block"/>
+            Association
+          </p>
+          <p>
+            © Accumulus Synergy 2024
+          </p>
+        </div>
+        <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-1 row-start-2 md:col-span-3 md:col-start-6 md:row-start-2 lg:col-span-2 lg:col-start-9 lg:row-start-1">
+          <li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Our Team</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Case For Change</a></li>
+          <li><a href="">Regulator Forum</a></li>
+          <li><a href="">Careers</a></li>
+        </ul>
+        <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-6 row-start-2 md:col-span-3 md:col-start-10 md:row-start-2 lg:col-span-2 lg:col-start-11 lg:row-start-1">
+          <li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
+          <li><a href="">Accumulus Platform</a></li>
+          <li><a href="">Core Capabilities</a></li>
+        </ul>
+        <div class="flex flex-row items-start justify-start order-last md:order-none pt-s13 lg:pt-0 col-span-12 row-start-5 md:col-span-10 md:row-start-3 lg:row-start-2">
+<svg class="w-full" viewBox="0 0 330 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M319.624 16.9373H321.073V20.8699H322.299V16.9373H323.744V15.8751H319.624V16.9373Z" fill="#FCFCFC"/>
 <path d="M328.359 15.8751L327.348 19.0306L326.294 15.9337L326.274 15.8751H324.638V20.8699H325.798V17.859L326.829 20.8114L326.848 20.8699H327.789L328.84 17.8277V20.8699H330V15.8751H328.359Z" fill="#FCFCFC"/>
 <g clip-path="url(#clip0_4223_8022)">
@@ -81,42 +66,22 @@
 </clipPath>
 </defs>
 </svg>
-					</div>
-					<div class="flex flex-row items-start justify-between">
-						<div class="hidden lg:flex flex-basis-full flex-col items-start justify-between">
-							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><a href="">LinkedIn</a></li>
-								<li><a href="">Contact Us</a></li>
-							</ul>
-						</div>
-            <div class="w-full lg:w-auto grid grid-cols-12 items-start justify-between md:justify-end lg:gap-s6">
-							<ul class="col-span-6 md:col-span-4 lg:col-span-6 flex flex-basis-full flex-col items-start gap-s2 list-none">
-								<li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
-								<li><a href="">eBooks and White Papers</a></li>
-								<li><a href="">Thought Leadership</a></li>
-								<li><a href="">Media</a></li>
-							</ul>
-							<ul class="col-span-6 md:col-span-4 lg:col-span-6 flex flex-basis-full flex-col items-start gap-s2 list-none">
-								<li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
-								<li><a href="">Privacy Policy</a></li>
-								<li><a href="">Terms & Conditions</a></li>
-							</ul>
-							<ul class="col-span-4 flex flex-col items-start gap-s2 list-none hidden md:flex lg:hidden">
-								<li><p class="pb-s1 text-secondary-mpurple heading-6 opacity-0">&#0020</p></li>
-								<li><a href="">LinkedIn</a></li>
-								<li><a href="">Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-          <div class="md:hidden flex flex-row items-start justify-between pt-s8"> 
-						<div class="flex flex-col items-start justify-between">
-							<ul class="flex flex-col items-start gap-s2 list-none">
-								<li><a href="">LinkedIn</a></li>
-								<li><a href="">Contact Us</a></li>
-							</ul>
-						</div>
-          </div>
-				</div>
+        </div>
+        <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 md:col-span-4 md:col-start-1 md:row-start-4 lg:col-span-3 lg:col-start-7 lg:row-start-3">
+          <li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
+          <li><a href="">eBooks and White Papers</a></li>
+          <li><a href="">Thought Leadership</a></li>
+          <li><a href="">Media</a></li>
+        </ul>
+        <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 col-start-7 md:col-span-4 md:col-start-5 md:row-start-4 lg:col-span-2 lg:col-start-11 lg:row-start-3">
+          <li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+        </ul>
+        <ul class="flex flex-col items-start gap-s2 list-none col-span-3 col-start-1 row-start-4 md:col-span-4 md:col-start-9 md:row-start-4 lg:col-span-2 lg:col-start-1 lg:row-start-3">
+          <li><a href="">LinkedIn</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

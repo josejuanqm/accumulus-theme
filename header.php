@@ -309,8 +309,8 @@
       if (!firstSection) {
         darkLogo.style.display = 'block';
         lightLogo.style.display = 'none';
-        menuLightLogo.style.display = 'block';
-        menuDarkLogo.style.display = 'none';
+        menuLightLogo.style.display = 'none';
+        menuDarkLogo.style.display = 'block';
         header.forEach(function(h) {
           h.classList.add('bg-white');
           h.classList.remove('bg-opacity-0');
