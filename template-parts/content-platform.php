@@ -47,8 +47,8 @@
 				<p class="body-2"><?php echo $main_banner['second_resume']; ?></p>
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Why a cloud-based platform</a>
-				<a href="#" class="btn-tertiary">Request a demo</a>
+				<a href="<?php echo $main_banner['link_cta']; ?>" class="btn-secondary">Request a demo</a>
+				<a href="#" class="btn-tertiary">Learn More</a>
 			</div>
 
 		</div>
