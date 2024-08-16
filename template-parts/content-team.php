@@ -24,8 +24,8 @@
 
 <section class="section py-s10 lg:py-s13">
   <div class="container mx-auto px-s2">
-    <div class="grid grid-cols-4 gap-x-s2 gap-y-s6">
-      <div class="flex flex-col items-start gap-s2 col-span-2">
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6">
+      <div class="flex flex-col items-start gap-s2 col-span-12 md:col-span-9 lg:col-span-6">
         <h2 class="heading-1 font-normal">
         Leadership
         </h2>
@@ -34,21 +34,25 @@
         </p>
       </div>
 
-      <div class="col-span-2"></div>
+	<div class="hidden md:block md:col-span-3 lg:col-span-6"></div>		
       
       <?php
         foreach(array(1,2,3,4) as $team_member) {
       ?>
-        <figure class="flex flex-col items-start justify-stretch gap-s1 col-span-2 md:col-span-1">
+	<figure data-post="<?php echo $team_member; ?>" class="select-none member [&>div>.close]:!flex flex flex-col items-start justify-stretch gap-s1 col-span-6 md:col-span-3">
           <img class="aspect-square w-full rounded-[40px] bg-primary-glaciar mb-s3" src="https://via.placeholder.com/200x200" alt="">
           <div class="flex flex-row items-center justify-between w-full">
             <h3 class="heading-6">Francisco Nogueira</h3>
-            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+	    <svg style="display:none;" class="close" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.3467 8.21094H12.7154H11.0853H9.45403H7.82275H6.19147H4.56139H2.93011H1.29883V9.84222H2.93011H4.56139H6.19147H7.82275H9.45403H11.0853H12.7154H14.3467H15.978V8.21094H14.3467Z" fill="#444444"/>
-            </svg>
+            </svg>     	
+		<svg style="display:none;" class="open" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M7.83008 3.32325V4.95453V6.58461V8.21589V9.84717V11.4785V13.1085V14.7398V16.3711H9.46136V14.7398V13.1085V11.4785V9.84717V8.21589V6.58461V4.95453V3.32325V1.69197H7.83008V3.32325Z" fill="#444444"/>
+		<path d="M14.3467 8.21484H12.7154H11.0853H9.45403H7.82275H6.19147H4.56139H2.93011H1.29883V9.84612H2.93011H4.56139H6.19147H7.82275H9.45403H11.0853H12.7154H14.3467H15.978V8.21484H14.3467Z" fill="#444444"/>
+		</svg>
           </div>
           <span class="body-4">CEO</span>
-          <div class="flex flex-col items-start gap-s2 col-span-2">
+	  <div style="display:none;" class="summary flex-col items-start gap-s2 col-span-2">
             <p class="body-4">
               Francisco joined from Genentech, a Roche company, where he was a Vice President focused on applying his 20 years of enterprise, regulatory
             </p>
@@ -64,6 +68,22 @@
     </div>
   </div>
 </section>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		let teamMembers = document.querySelectorAll("figure.member")	
+		teamMembers.forEach(function(teamMember) {
+			let post = teamMember.dataset.post
+			teamMember.addEventListener('click', function(){
+				let toggleClass = teamMember.classList.contains("[&>div>.close]:!flex") ? 'open' : 'close';
+				teamMember.classList.remove('[&>div>.close]:!flex')
+				teamMember.classList.remove('[&>div>.open]:!flex')
+				teamMember.classList.toggle('[&>.summary]:!flex')
+				teamMember.classList.toggle('[&>div>.'+toggleClass+']:!flex')
+			})	
+		})
+	})
+</script>	
 
 <section class="section py-s10 bg-neutral-offwhite">
   <div class="container mx-auto px-s2">
