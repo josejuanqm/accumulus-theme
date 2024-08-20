@@ -1143,6 +1143,10 @@ video {
   margin-top: 1rem;
 }
 
+.mb-s1 {
+  margin-bottom: 0.5rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -1738,6 +1742,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#EBEBEB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 235 235 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-0 {
@@ -4531,6 +4540,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:gap-y-s8 {
     row-gap: 4rem;
+  }
+
+  .lg\:gap-y-s10 {
+    row-gap: 5rem;
   }
 
   .lg\:bg-404-desktop {
