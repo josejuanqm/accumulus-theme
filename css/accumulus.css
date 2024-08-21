@@ -1749,6 +1749,16 @@ video {
   background-color: rgb(235 235 235 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-mgray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 213 213 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-fnude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -4438,6 +4448,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:max-w-full {
     max-width: 100%;
+  }
+
+  .lg\:max-w-\[368px\] {
+    max-width: 368px;
   }
 
   .lg\:grid-cols-10 {
