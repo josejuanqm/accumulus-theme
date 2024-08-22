@@ -371,3 +371,35 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 .active-filter {
   @apply !bg-neutral-dgray !text-neutral-nwhite hover:!text-neutral-nwhite;
 }
+
+/*
+* Legal texts
+*/
+
+.legal-texts h3 {
+  @apply heading-3;
+}
+
+.legal-texts h4 {
+  @apply heading-4;
+}
+
+.legal-texts h5 {
+  @apply heading-5;
+}
+
+.legal-texts p {
+  @apply body-1;
+}
+
+.legal-texts p strong {
+  @apply heading-3;
+}
+
+.legal-texts ul {
+  @apply body-1 ml-s2;
+}
+
+.legal-texts li {
+  @apply relative pl-s3 my-1 before:absolute before:left-0 before:top-3 before:block before:w-2 before:h-2 before:bg-black before:rounded-full;
+}
