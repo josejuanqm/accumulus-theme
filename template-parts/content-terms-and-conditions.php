@@ -11,7 +11,7 @@
 
 <section class="section py-s8 md:py-s12 lg:py-s14">
   <div class="container mx-auto">
-    <div class="legal-texts content-wrapper max-w-full col-span-12 flex flex-col gap-s4 md:gap-s6 [&>h3]:heading-3 [&>h4]:heading-4 [&>h5]:heading-5 [&>.wp-block-columns]:!flex-row [&>.wp-block-columns]:lg:pl-s6 [&>.wp-block-columns]:lg:!mb-0 [&>.wp-block-columns]:!gap-s3 [&>.wp-block-columns]:lg:!gap-s14 [&>.wp-block-separator]:lg:ml-s6">
+    <div class="legal-texts content-wrapper max-w-full col-span-12 flex flex-col gap-s4 md:gap-s6 [&>h3]:heading-3 [&>h4]:heading-4 [&>h5]:heading-5 [&>.wp-block-columns]:!flex-row [&>.wp-block-columns]:lg:pl-s6 [&>.wp-block-columns]:lg:!mb-0 [&>.wp-block-columns]:!gap-s3 [&>.wp-block-columns]:md:!gap-s10 [&>.wp-block-columns]:lg:!gap-s14 [&>.wp-block-separator]:lg:ml-s6">
       <?php the_content(); ?>
     </div>
   </div>

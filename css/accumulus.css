@@ -5047,6 +5047,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   gap: 1.5rem !important;
 }
 
+@media (min-width: 768px) {
+  .\[\&\>\.wp-block-columns\]\:md\:\!gap-s10>.wp-block-columns {
+    gap: 5rem !important;
+  }
+}
+
 @media (min-width: 1025px) {
   .\[\&\>\.wp-block-columns\]\:lg\:\!mb-0>.wp-block-columns {
     margin-bottom: 0px !important;
@@ -5054,6 +5060,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .\[\&\>\.wp-block-columns\]\:lg\:\!gap-s14>.wp-block-columns {
     gap: 7rem !important;
+  }
+
+  .\[\&\>\.wp-block-columns\]\:lg\:\!gap-s10>.wp-block-columns {
+    gap: 5rem !important;
   }
 
   .\[\&\>\.wp-block-columns\]\:lg\:pl-s6>.wp-block-columns {
