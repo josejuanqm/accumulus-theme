@@ -3499,7 +3499,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 }
 
 .legal-texts ul {
-  margin-left: 1rem;
   font-size: 1.25rem;
   line-height: auto;
   letter-spacing: 0;
@@ -3521,6 +3520,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 400;
+  }
+}
+
+@media (min-width: 768px) {
+  .legal-texts ul {
+    margin-left: 1rem;
   }
 }
 
@@ -5036,6 +5041,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .\[\&\>\.wp-block-columns\]\:\!flex-row>.wp-block-columns {
   flex-direction: row !important;
+}
+
+.\[\&\>\.wp-block-columns\]\:\!gap-s3>.wp-block-columns {
+  gap: 1.5rem !important;
 }
 
 @media (min-width: 1025px) {

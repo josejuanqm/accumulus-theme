@@ -397,7 +397,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .legal-texts ul {
-  @apply body-1 ml-s2;
+  @apply body-1 md:ml-s2;
 }
 
 .legal-texts li {
