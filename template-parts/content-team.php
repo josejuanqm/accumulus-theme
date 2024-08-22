@@ -43,7 +43,7 @@
       <?php
         foreach($teamLeadership as $key => $team_member) {
       ?>
-        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.close]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
+        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
           <img class="aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
           <div class="flex flex-row items-center justify-between w-full">
             <h3 class="heading-6"><?php echo $team_member['name']; ?></h3>
@@ -94,7 +94,7 @@
       <?php
         foreach($teamDirectors as $key => $team_member) {
       ?>
-        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.close]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
+        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
           <img class="aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
           <div class="flex flex-row items-center justify-between w-full">
             <h3 class="heading-6"><?php echo $team_member['name']; ?></h3>
