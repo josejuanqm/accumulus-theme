@@ -104,10 +104,10 @@
 <!-- What we do -->
 
 <!-- BEGIN PARADIGM SHIFT -->
-<section class="section relative w-full pt-s20 md:pt-s10 lg:pt-s18 pb-s6 -mt-s11 md:-mt-s9 lg:-mt-s11 bg-neutral-nude">
+<section class="section relative w-full pt-s20 md:pt-s10 lg:pt-s16 -mt-s11 md:-mt-s9 lg:-mt-s11 bg-neutral-nude">
 	<div class="container mx-auto">
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:py-s8 lg:py-s6">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 md:py-s6">
 			<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
 				<span class="block col-span-12">
 					A Needed
@@ -123,24 +123,24 @@
 		<!-- Title -->
 
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s7 md:gap-y-s9 lg:py-s6 pt-s4 md:pt-0">
 			
 			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2">
+				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
 					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
 						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
 							<path d="M32.5312 48.3083C41.0919 48.3083 48.0312 41.3689 48.0312 32.8083C48.0312 32.0565 47.9757 31.3177 47.8711 30.5954H43.2296C43.3767 31.3112 43.4551 32.0499 43.4551 32.8083C43.4551 38.8324 38.5554 43.7321 32.5312 43.7321C26.5071 43.7321 21.6074 38.8324 21.6074 32.8083C21.6074 27.5424 25.35 23.1363 30.3151 22.1099V35.0211H39.1699V30.5921H34.7409V17.3115H32.528C31.7762 17.3115 31.0375 17.3671 30.3151 17.4717C22.8037 18.5471 17.0312 25.0027 17.0312 32.8115C17.0312 41.3722 23.9706 48.3115 32.5312 48.3115V48.3083Z" fill="#444444"/>
 						</svg>
 					</div>
-					<h3 class="heading-2 col-start-2 col-span-1">13 Years</h3>
-					<p class="body-2 col-start-2 col-span-1 row-start-2">It takes 13 years (on average) after the drug’s initial discovery.
+					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">13 Years</h3>
+					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">It takes 13 years (on average) after the drug’s initial discovery.
 					</p>
 				</div>
 			</div>
 
 			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2">
+				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
 					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
 						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
@@ -155,14 +155,14 @@
 							<path d="M44.6875 18.3145C42.6864 18.3145 41.0625 19.9384 41.0625 21.9395V43.6868C41.0625 45.6879 42.6864 47.3118 44.6875 47.3118H51.9375V43.6868H44.6875V21.9395H51.9375V18.3145H44.6875Z" fill="#444444"/>
 						</svg>
 					</div>
-					<h3 class="heading-2 col-start-2 col-span-1">2 Million</h3>
-					<p class="body-2 col-start-2 col-span-1 row-start-2">If you stacked all the paperwork from one new drug application (2 million pages on average), the pile would be 200 meters tall.
+					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">2 Million</h3>
+					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">If you stacked all the paperwork from one new drug application (2 million pages on average), the pile would be 200 meters tall.
 					</p>
 				</div>
 			</div>
 
 			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2">
+				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
 					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
 						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
@@ -174,35 +174,39 @@
 							<path d="M45.4899 26.3125H18.4924C16.8362 26.3125 15.4922 27.6565 15.4922 29.3127V44.3116C15.4922 45.9678 16.8362 47.3118 18.4924 47.3118H48.4901V44.3116H18.4924V29.3127H45.4899V41.3114H48.4901V29.3127C48.4901 27.6565 47.1461 26.3125 45.4899 26.3125Z" fill="#444444"/>
 						</svg>
 					</div>
-					<h3 class="heading-2 col-start-2 col-span-1">$2 Billion</h3>
-					<p class="body-2 col-start-2 col-span-1 row-start-2">It costs $2B.¹</p>
+					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">$2 Billion</h3>
+					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">It costs $2B.¹</p>
 				</div>
 			</div>
-
-
 
 		</div>
 		<!-- Items -->
 	</div>
 </section>
+
+<section class="relative section w-full pt-s7 md:pt-s8 lg:pt-0 pb-s10 md:pb-s10 lg:pb-s14 bg-neutral-nude">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s4 lg:gap-y-s6">
+			<h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
+				It’s time for more sustainable and scalable collaboration and information exchange between life sciences organizations and global health authorities. It’s time for a moonshot!
+			</h3>
+			<p class="col-span-6 md:col-span-8 lg:col-span-8 col-start-2 md:col-start-3 lg:col-start-4 md:pt-s4 lg:pt-0 md:pb-s4 lg:pb-0 body-2">“Filing a New Drug Application may have shifted from driving a truckload of paper to the relevant regulatory authority to FedEx-ing a CD-ROM to uploading a set of PDFs through the Electronic Submissions Gateway, but the underlying processes remain little changed. It’s long past time to play catchup.”</p>
+			<div class="col-span-6 md:col-span-7 lg:col-span-4 md:col-start-6 lg:col-start-6 flex items-center justify-start pt-s3 md:pt-0">
+				<img class="max-w-[145px] md:max-w-full" src="<?php bloginfo('template_url'); ?>/images/home/francisco-nogueira.png" alt="Francisco Nogueira" />
+				<div class="flex flex-col pl-s2 md:pl-s6 lg:pl-s2 md:pr-s3 lg:pr-0 gap-s2">
+					<h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]">Francisco Nogueira</h4>
+					<p class="body-3">Chief Executive Officer, at Accumulus Synergy</p>
+				</div>
+			</div>
+			<div class="col-span-6 md:col-span-10 lg:col-span-11 md:col-start-2 lg:col-start-2 lg:pb-s10">
+				<p class="body-4">1. Nurturing growth: measuring the return from pharmaceutical innovation 2023. Deloitte. Available <a href="https://www2.deloitte.com/us/en/pages/life-sciences-and-health-care/articles/measuring-return-from-pharmaceutical-innovation.html" target="_blank">here</a></p>
+			</div>
+		</div>
+  </div>
+</section>
+
 <!-- END PARADIGM SHIFT -->
 
-<?php get_template_part( 
-	'template-parts/content', 
-	'quote', 
-	array( 
-		'bg_color' => 'bg-neutral-nude',
-		'main_quote' => 'It’s time for more sustainable and scalable collaboration and information exchange between life sciences organizations and global health authorities. It’s time for a moonshot!',
-		'sub_quote' => '“Filing a New Drug Application may have shifted from driving a truckload of paper to the relevant regulatory authority to FedEx-ing a CD-ROM to uploading a set of PDFs through the Electronic Submissions Gateway, but the underlying processes remain little changed. It’s long past time to play catchup.”',
-		'author' => 'Francisco Nogueira',
-		'position' => 'Chief Executive Officer, at Accumulus Synergy',
-		'image' => 'https://via.placeholder.com/224',
-		'references' => array(
-			'1' => 'The Pharmaceutical Industry in Figures, EFPIA, 2022. Available here',
-			'2' => 'Nurturing growth: measuring the return from pharmaceutical innovation 2023. Deloitte. Available here',
-		),
-	)
-); ?>
 
 <?php
 // Fields why accumulus
