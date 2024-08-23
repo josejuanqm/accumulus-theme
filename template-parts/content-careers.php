@@ -268,8 +268,8 @@
             <div class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-start gap-s2">
               <img class="max-w-[145px] md:max-w-full rounded-3xl" src="<?php echo $args['image']; ?>" alt="<?php echo $args['author']; ?>" />
               <div class="flex flex-col gap-s2">
-                <h4 class="text-h3Mobile md:text-h3Tablet lg:text-h3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $args['author']; ?></h4>
-                <p class="text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $args['position']; ?></p>
+                <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $args['author']; ?></h4>
+                <p class="body-3"><?php echo $args['position']; ?></p>
               </div>
             </div>
             <h2 class="col-span-6 md:col-span-10 lg:col-span-10 heading-2 text-neutral-dgray">

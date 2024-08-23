@@ -121,11 +121,11 @@
 						<?php  foreach($row['card_item'] as $card) : ?>
 
 							<?php if($card['acf_fc_layout'] == 'title') : ?>
-								<h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3"><?php echo $card['title']; ?></h3>
+								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 
               <?php if($card['acf_fc_layout'] == 'description_wysiwig'): ?>
@@ -136,7 +136,7 @@
 								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
-									<li class="relative pl-3">
+									<li class="relative pl-3 body-3">
 										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
@@ -185,11 +185,11 @@
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if($card['acf_fc_layout'] == 'title') : ?>
-								<h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3"><?php echo $card['title']; ?></h3>
+								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
-								<p class="text-b2"><?php echo $card['description']; ?></p>
+								<p class="body-2"><?php echo $card['description']; ?></p>
 							<?php endif; ?>
 
               <?php if($card['acf_fc_layout'] == 'description_wysiwig'): ?>
@@ -200,7 +200,7 @@
 								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
 
 									<?php foreach($card['bullet_list'] as $item): ?>
-									<li class="relative pl-3">
+									<li class="relative pl-3 body-3">
 										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
 										<?php echo $item['item']; ?>
 									</li>
@@ -249,7 +249,7 @@
       <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-between">
         <img class="max-w-[145px] md:max-w-full" src="<?php echo $testimonial_coc['image']; ?>" alt="<?php echo $testimonial_coc['name']; ?>" />
         <div class="flex flex-col pl-s2 gap-s2">
-          <h4 class="text-h3Mobile md:text-h3Tablet lg:text-h3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $testimonial_coc['name']; ?></h4>
+          <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $testimonial_coc['name']; ?></h4>
           <p class="text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $testimonial_coc['position']; ?></p>
         </div>
       </div>

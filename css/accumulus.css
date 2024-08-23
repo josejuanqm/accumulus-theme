@@ -5062,10 +5062,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     gap: 7rem !important;
   }
 
-  .\[\&\>\.wp-block-columns\]\:lg\:\!gap-s10>.wp-block-columns {
-    gap: 5rem !important;
-  }
-
   .\[\&\>\.wp-block-columns\]\:lg\:pl-s6>.wp-block-columns {
     padding-left: 3rem;
   }
