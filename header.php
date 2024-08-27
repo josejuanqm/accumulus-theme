@@ -156,7 +156,6 @@
           <div class="container mx-auto px-s2">
             <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
               <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
-              <?php var_dump($menu_subitem); ?>
                 <li>
                   <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
                     <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
