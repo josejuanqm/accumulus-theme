@@ -78,11 +78,13 @@
         </div>
 
         <div class="col-span-12 md:col-span-6 lg:col-span-6 items-start gap-s3">
-          <img src="<?php echo get_template_directory_uri() . "/images/about-us/image-placeholder-animation.png"; ?>" alt=""> 
+          <video id="anim-video" class="mix-blend-screen" width="100%" muted playsinline>
+            <source src="<?php echo get_template_directory_uri() . "/videos/about-us/video-anim.mp4"; ?>" type="video/mp4">
+          </video>
         </div>
         
         <div class="grid grid-cols-12 gap-s2 md:gap-x-s2 lg:gap-x-s2 col-span-12 items-center justify-between">
-          <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4">2005</p>
+          <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4" style="transform: translateX(5px);">2005</p>
           <button onclick="animatePrev()" class="col-span-2 lg:col-span-1 row-start-3 md:row-start-2 min-w-s7 lg:min-w-0">
             <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-neutral-500">
               <path d="M28.8623 55.7519C43.7885 55.7519 55.8886 43.6518 55.8886 28.7256C55.8886 13.7993 43.7885 1.69922 28.8623 1.69922C13.936 1.69922 1.83594 13.7993 1.83594 28.7256C1.83594 43.6518 13.936 55.7519 28.8623 55.7519Z" stroke-width="1.86732" stroke-miterlimit="10"/>
@@ -152,7 +154,7 @@
                     H788.539" class="stroke-neutral-nwhite stroke-1" />
                 </svg>
               </div>
-              <div id="ball" class="absolute top-1 left-0 w-3 h-3 rounded-full bg-white"></div>
+              <div id="ball" class="absolute top-1 left-0 w-3 h-3 rounded-full bg-white" data-title="2005"></div>
             </div>
           </div>
 
@@ -179,6 +181,15 @@
   let ball = document.getElementById('ball');
   let animationDuration = 2;
   let selectedSlide = 0;
+  let video = document.getElementById('anim-video');
+  let videoPulseAnimation = TweenLite.to(video, 2, {currentTime: 2, repeat: -1, yoyo: true});
+
+  function prepareLogo() {
+    video.currentTime = 1;
+    videoPulseAnimation.play();
+  }
+
+  document.addEventListener('DOMContentLoaded', prepareLogo);
 
   resetAnimation();
   updateSlide(selectedSlide, false);
@@ -205,6 +216,8 @@
       duration: 0,
       x: "-100%",
     });
+    videoPulseAnimation.kill();
+    videoPulseAnimation = TweenLite.to(video, 2, {currentTime: 2, repeat: -1, yoyo: true});
   }
 
   function resetBall() {
@@ -257,10 +270,15 @@
     let currentIndex = years.findIndex(year => year.year === document.getElementById('slide-title-' + selectedSlide).innerText);
     let nextIndex = currentIndex + 1;
     if (nextIndex >= years.length) {
-      nextIndex = 0;
-      animatePrev();
       return;
     }
+
+    TweenLite.to(video, duration, {currentTime: video.duration * nextIndex / years.length, 
+      onComplete: () => {
+        videoPulseAnimation.kill();
+        videoPulseAnimation = TweenLite.to(video, 2, {currentTime: (video.duration * nextIndex / years.length) + 2, repeat: -1, yoyo: true});
+      }
+    });
 
     return new Promise(
       (resolve) => {
@@ -324,8 +342,6 @@
     let currentIndex = years.findIndex(year => year.year === document.getElementById('slide-title-' + selectedSlide).innerText);
     let prevIndex = currentIndex - 1;
     if (prevIndex < 0) {
-      prevIndex = years.length - 1;
-      animateNext();
       return;
     }
 
@@ -334,6 +350,13 @@
       onComplete: () => {
         enablePrevNextButtons();
       },
+    });
+
+    TweenLite.to(video, duration, {currentTime: video.duration * prevIndex / years.length,
+      onComplete: () => {
+        videoPulseAnimation.kill();
+        videoPulseAnimation = TweenLite.to(video, 2, {currentTime: (video.duration * prevIndex / years.length) + 2, repeat: -1, yoyo: true});
+      } 
     });
 
     updateSlide(prevIndex, timeline);
