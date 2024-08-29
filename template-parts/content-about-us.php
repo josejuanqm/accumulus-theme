@@ -60,7 +60,7 @@
   let years = <?php echo json_encode($years); ?>;
 </script>
 
-<section id="slider" class="section w-full bg-primary-violet text-neutral-nwhite overflow-hidden py-s12">
+<section id="slider" class="translucent-navigation section w-full bg-primary-violet text-neutral-nwhite overflow-hidden py-s12">
     <div class="container mx-auto px-s2">
       <div class="grid grid-cols-12 gap-x-s2 gap-y-s6">
         <div class="relative flex flex-col col-span-12 md:col-span-6 lg:col-span-6 items-start gap-s3">

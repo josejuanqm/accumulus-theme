@@ -19,7 +19,7 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="relative section w-full pb-s8 md:pb-s10 lg:pb-s12 text-neutral-fnude bg-primary-violet">
+<section class="translucent-navigation relative section w-full pb-s8 md:pb-s10 lg:pb-s12 text-neutral-fnude bg-primary-violet">
 
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">

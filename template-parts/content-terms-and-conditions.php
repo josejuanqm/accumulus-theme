@@ -1,4 +1,4 @@
-<section class="section bg-cover bg-bottom" style="background-image: url(<?php bloginfo('template_url'); ?>/images/legal/hero.jpg);">
+<section class="translucent-navigation section bg-cover bg-bottom" style="background-image: url(<?php bloginfo('template_url'); ?>/images/legal/hero.jpg);">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 lg:gap-x-s6 gap-y-s6 py-s6 md:py-s8">
       <h3 class="heading-4 col-span-12">ACCUMULUS SYNERGY</h3>

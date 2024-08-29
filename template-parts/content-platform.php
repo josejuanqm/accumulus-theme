@@ -15,7 +15,7 @@
 ?>
 
 <?php if($main_banner): ?>
-<section class="relative section w-full pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white md:overflow-hidden">
+<section class="translucent-navigation relative section w-full pb-s10 md:pb-s12 lg:pb-s12 text-neutral-dgray bg-neutral-white md:overflow-hidden">
 
 	<picture class="absolute top-0 left-0 w-full h-full -z-[1]">
 		<source media="(min-width:1024px)" srcset="<?php echo $main_banner['bg_image_desktop']; ?>">

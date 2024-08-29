@@ -11,7 +11,7 @@
 
 
 
-<section class="section w-full pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
+<section class="translucent-navigation section w-full pb-s12 md:pb-s7 lg:pb-s13 bg-secondary-aqua bg-cover bg-top" style="background-image:url(<?php bloginfo('template_url'); ?>/images/news/bg-texture-main-banner.png)">
 
 	<div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 

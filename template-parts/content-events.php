@@ -11,7 +11,7 @@
 
 
 
-<section class="section w-full pb-s16 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
+<section class="translucent-navigation section w-full pb-s16 md:pb-s7 lg:pb-s13 bg-neutral-nwhite bg-news-banner-mobile md:bg-news-banner-tablet lg:bg-news-banner-desktop bg-no-repeat bg-cover bg-center">
 
   <div class="container mx-auto pt-s5 md:pt-s10 lg:pt-s9">
 

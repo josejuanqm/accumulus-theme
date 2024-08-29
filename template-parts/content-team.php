@@ -5,7 +5,7 @@
   $paragraph_text = "A first-of-its-kind data and information exchange platform for the drug development lifecycle. Built for the process needs of today and the evolving life sciences–regulatory landscape of the future." ?? $banner['paragraph'];
 ?>
 
-<section class="relative isolate overflow-hidden section w-full">
+<section class="translucent-navigation relative isolate overflow-hidden section w-full">
 	<picture class="absolute top-0 left-0 w-full h-full -z-10">
 		<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() . "/images/team/team-bg.jpg"; ?>">
 		<source media="(min-width:768px)" srcset="<?php echo get_template_directory_uri() . "/images/team/team-bg-tablet.jpg"; ?>">
