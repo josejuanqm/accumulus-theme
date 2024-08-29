@@ -301,6 +301,8 @@
 
 	function modifyNavigationColor() {
     let firstSection = document.querySelector('.translucent-navigation');
+    let isLight = firstSection.classList.contains('light');
+    let tint = !isLight ? 'cta-dark' : 'white';
     const header = document.querySelectorAll('header#navigation > .content');
     const lightLogo = document.querySelector('svg.logo.fill-white');
     const darkLogo = document.querySelector('svg.logo.fill-cta-dark');
@@ -313,12 +315,12 @@
       menuLightLogo.style.display = 'none';
       menuDarkLogo.style.display = 'block';
       header.forEach(function(h) {
-        h.classList.add('bg-white');
+        h.classList.add('bg-' + tint);
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-white');
-        h.classList.add('text-cta-dark');
-        h.classList.add('[&>*]:stroke-cta-dark');
-        h.classList.add('[&>*]:fill-cta-dark');
+        h.classList.add('text-' + tint);
+        h.classList.add('[&>*]:stroke-' + tint);
+        h.classList.add('[&>*]:fill-' + tint);
         h.classList.remove('[&>*]:stroke-white');
       });
       return;
@@ -330,12 +332,12 @@
       menuDarkLogo.style.display = 'block';
       menuLightLogo.style.display = 'none';
       header.forEach(function(h) {
-        h.classList.add('bg-white');
+        h.classList.add('bg-' + tint);
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-white');
-        h.classList.add('text-cta-dark');
-        h.classList.add('[&>*]:stroke-cta-dark');
-        h.classList.add('[&>*]:fill-cta-dark');
+        h.classList.add('text-' + tint);
+        h.classList.add('[&>*]:stroke-' + tint);
+        h.classList.add('[&>*]:fill-' + tint);
         h.classList.remove('[&>*]:stroke-white');
       });
     } else {
@@ -344,12 +346,12 @@
       menuDarkLogo.style.display = 'none';
       menuLightLogo.style.display = 'block';
       header.forEach(function(h) {
-        h.classList.remove('bg-white');
+        h.classList.remove('bg-' + tint);
         h.classList.add('bg-opacity-0');
         h.classList.add('[&>*]:!text-white');
-        h.classList.remove('text-cta-dark');
-        h.classList.remove('[&>*]:stroke-cta-dark');
-        h.classList.remove('[&>*]:fill-cta-dark');
+        h.classList.remove('text-' + tint);
+        h.classList.remove('[&>*]:stroke-' + tint);
+        h.classList.remove('[&>*]:fill-' + tint);
         h.classList.add('[&>*]:stroke-white');
       });
     }
