@@ -32,7 +32,7 @@
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
   <header id="navigation" class="lg:bg-auto fixed w-full z-[999999] text-neutral-sgray group">
-    <div class="bg-white text-cta-dark stroke-cta-dark hidden lg:block section border-b border-b-neutral-200 content transition-color duration-150">
+    <div class="bg-white text-cta-dark stroke-cta-dark hidden lg:block section border-b-[1px] border-b-neutral-200 content transition-color duration-150">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
@@ -44,7 +44,7 @@
         </div> 
       </div>
     </div>
-    <div class="section bg-white text-cta-dark stroke-cta-dark content transition-color duration-150 border-b border-b-neutral-200">
+    <div class="section bg-white text-cta-dark stroke-cta-dark content transition-color duration-150 border-b-neutral-200">
       <div class="container mx-auto px-s2">
         <div class="flex flex-row items-center">
           <div class="flex flex-row items-center me-auto">

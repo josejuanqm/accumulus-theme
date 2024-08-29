@@ -19,7 +19,7 @@
 
 <!-- Main banner -->
 
-<section class="translucent-navigation section relative isolate overflow-hidden w-full pb-s8 md:pb-s10 lg:pb-s12 text-neutral-fnude bg-primary-violet bg-cover bg-no-repeat bg-center">
+<section class="translucent-navigation light section relative isolate overflow-hidden w-full pb-s8 md:pb-s10 lg:pb-s12 text-neutral-fnude bg-primary-violet bg-cover bg-no-repeat bg-center">
 	<picture class="absolute top-0 left-0 w-full h-full -z-10">
 		<source media="(min-width:1024px)" srcset="<?php echo get_template_directory_uri() . "/images/careers/banner-bg.jpg"; ?>">
 		<source media="(min-width:768px)" srcset="<?php echo get_template_directory_uri() . "/images/careers/banner-bg-tablet.jpg"; ?>">
