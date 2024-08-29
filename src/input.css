@@ -376,6 +376,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 * Legal texts
 */
 
+.spacer-privacy {
+  @apply min-h-[180px] md:min-h-[170px] lg:min-h-[80px];
+}
+
 .legal-texts h3 {
   @apply heading-3;
 }
