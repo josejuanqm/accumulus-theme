@@ -5075,6 +5075,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   fill: #202020;
 }
 
+.\[\&\>\*\]\:fill-white>* {
+  fill: #fff;
+}
+
 .\[\&\>\*\]\:stroke-cta-dark>* {
   stroke: #202020;
 }

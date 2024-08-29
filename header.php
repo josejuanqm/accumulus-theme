@@ -301,7 +301,7 @@
 
 	function modifyNavigationColor() {
     let firstSection = document.querySelector('.translucent-navigation');
-    let isLight = firstSection.classList.contains('light');
+    let isLight = firstSection?.classList.contains('light') || false;
     let tint = !isLight ? 'cta-dark' : 'white';
     const header = document.querySelectorAll('header#navigation > .content');
     const lightLogo = document.querySelector('svg.logo.fill-white');
@@ -310,12 +310,12 @@
     const menuDarkLogo = document.querySelector('svg.hamburger.fill-cta-dark');
 
     if (!firstSection) {
-      darkLogo.style.display = 'block';
-      lightLogo.style.display = 'none';
-      menuLightLogo.style.display = 'none';
-      menuDarkLogo.style.display = 'block';
+      darkLogo.style.display = isLight ? 'block' : 'none';
+      lightLogo.style.display = isLight ? 'none' : 'block';
+      menuLightLogo.style.display = isLight ? 'none' : 'block';
+      menuDarkLogo.style.display = isLight ? 'block' : 'none';
       header.forEach(function(h) {
-        h.classList.add('bg-' + tint);
+        h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-white');
         h.classList.add('text-' + tint);
@@ -332,27 +332,28 @@
       menuDarkLogo.style.display = 'block';
       menuLightLogo.style.display = 'none';
       header.forEach(function(h) {
-        h.classList.add('bg-' + tint);
+        h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
-        h.classList.remove('[&>*]:!text-white');
-        h.classList.add('text-' + tint);
-        h.classList.add('[&>*]:stroke-' + tint);
-        h.classList.add('[&>*]:fill-' + tint);
-        h.classList.remove('[&>*]:stroke-white');
+        h.classList.remove('[&>*]:!text-' + tint);
+        h.classList.add('text-cta-dark');
+        h.classList.add('[&>*]:stroke-cta-dark');
+        h.classList.add('[&>*]:fill-cta-dark');
+        h.classList.remove('[&>*]:stroke-' + tint);
       });
     } else {
-      darkLogo.style.display = 'none';
-      lightLogo.style.display = 'block';
-      menuDarkLogo.style.display = 'none';
-      menuLightLogo.style.display = 'block';
+      darkLogo.style.display = isLight ? 'none' : 'block';
+      lightLogo.style.display = isLight ? 'block' : 'none';
+      menuDarkLogo.style.display = isLight ? 'none' : 'block';
+      menuLightLogo.style.display = isLight ? 'block' : 'none';
       header.forEach(function(h) {
-        h.classList.remove('bg-' + tint);
+        h.classList.remove('bg-white');
+        h.classList.remove('bg-' + tint)
         h.classList.add('bg-opacity-0');
-        h.classList.add('[&>*]:!text-white');
+        h.classList.add('[&>*]:!text-' + tint);
         h.classList.remove('text-' + tint);
-        h.classList.remove('[&>*]:stroke-' + tint);
-        h.classList.remove('[&>*]:fill-' + tint);
-        h.classList.add('[&>*]:stroke-white');
+        h.classList.remove('[&>*]:stroke-white');
+        h.classList.remove('[&>*]:fill-white');
+        h.classList.add('[&>*]:stroke-' + tint);
       });
     }
 	}
