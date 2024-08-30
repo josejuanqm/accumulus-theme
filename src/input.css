@@ -440,7 +440,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .popmake-content {
-  @apply !text-b2Mobile md:!text-b2Tablet lg:!text-b2 flex flex-col gap-s4;
+  @apply !text-b2Mobile md:!text-b2Tablet lg:!text-b2 flex flex-col gap-s4 !text-neutral-dgray;
 }
 
 .popmake-close {
@@ -473,5 +473,5 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   height: 15px;
   background-image: url('../images/close.svg');
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
 }

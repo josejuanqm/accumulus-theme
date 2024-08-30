@@ -3666,6 +3666,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   line-height: 120% !important;
   letter-spacing: 0 !important;
   font-weight: 400 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
 }
 
 @media (min-width: 768px) {
@@ -3744,7 +3746,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   height: 15px;
   background-image: url('../images/close.svg');
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
 }
 
 .first-of-type\:pt-0:first-of-type {
@@ -5232,6 +5234,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .xl\:top-\[280px\] {
     top: 280px;
+  }
+
+  .xl\:top-\[200px\] {
+    top: 200px;
   }
 }
 
