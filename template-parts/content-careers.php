@@ -264,28 +264,27 @@
     <div class="general-slide">
       <?php foreach($slides as $slide): ?>
         <div class="general-slide__item">
-          <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6">
-            <div class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-start gap-s2">
+          <div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-x-s2 md:gap-y-s10">
+            <h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
+              <?php echo $args['main_quote'] ?>
+            </h3>
+            <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-between">
               <img class="max-w-[145px] md:max-w-full rounded-3xl" src="<?php echo $args['image']; ?>" alt="<?php echo $args['author']; ?>" />
               <div class="flex flex-col gap-s2">
                 <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $args['author']; ?></h4>
                 <p class="body-3"><?php echo $args['position']; ?></p>
               </div>
             </div>
-            <h2 class="col-span-6 md:col-span-10 lg:col-span-10 heading-2 text-neutral-dgray">
-            <?php echo $args['main_quote'] ?>
-            </h2>
-            <p class="col-span-5 md:col-span-8 lg:col-span-8 col-start-2 md:col-start-3 lg:col-start-3 body-1"><?php echo $args['sub_quote'] ?></p>
           </div>
         </div>
       <?php endforeach; ?>
     </div>
 
     <div class="flex items-center justify-center gap-4 max-sm:pt-s6 max-xl:pt-s10">
-      <div class="prev xl:absolute xl:-left-20 xl:top-[280px] cursor-pointer">
+      <div class="prev xl:absolute xl:-left-20 xl:top-[200px] cursor-pointer">
         <img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
       </div>
-      <div class="next xl:absolute xl:-right-20 xl:top-[280px] cursor-pointer">
+      <div class="next xl:absolute xl:-right-20 xl:top-[200px] cursor-pointer">
         <img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
       </div>
     </div>
@@ -316,3 +315,13 @@
 </section>
 
 <!-- end Join us -->
+
+
+<!-- Form Module -->
+<?php
+  get_template_part(
+    'template-parts/content',
+    'form-module'
+  );
+?>
+<!-- End form module -->

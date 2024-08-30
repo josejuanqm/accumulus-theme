@@ -202,3 +202,13 @@
 </section>
 <?php //include get_theme_file_path( 'components/get-started-section.php' ); ?>
 <!-- Get statted section -->
+
+
+<!-- Form Module -->
+<?php
+  get_template_part(
+    'template-parts/content',
+    'form-module'
+  );
+?>
+<!-- End form module -->

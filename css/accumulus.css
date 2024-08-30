@@ -1648,10 +1648,6 @@ video {
   border-width: 2px;
 }
 
-.border-b {
-  border-bottom-width: 1px;
-}
-
 .border-b-\[1px\] {
   border-bottom-width: 1px;
 }
@@ -3005,6 +3001,42 @@ div.wpforms-container-full .wpforms-field-label,
   }
 }
 
+.form-module .wpforms-container .wpforms-form input.wpforms-field-medium,
+.form-module .wpforms-required-label {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.form-module .wpforms-container .wpforms-form input.wpforms-field-medium::-moz-placeholder, .form-module .wpforms-required-label::-moz-placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.form-module .wpforms-container .wpforms-form input.wpforms-field-medium::placeholder,
+.form-module .wpforms-required-label::placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.popmake .wpforms-container .wpforms-form input.wpforms-field-medium,
+.popmake .wpforms-field-label,
+.popmake .wpforms-required-label {
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+}
+
+.popmake .wpforms-container .wpforms-form input.wpforms-field-medium::-moz-placeholder, .popmake .wpforms-field-label::-moz-placeholder, .popmake .wpforms-required-label::-moz-placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+}
+
+.popmake .wpforms-container .wpforms-form input.wpforms-field-medium::placeholder,
+.popmake .wpforms-field-label::placeholder,
+.popmake .wpforms-required-label::placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+}
+
 @media not all and (min-width: 1025px) {
   .wpforms-container .wpforms-form .wpforms-field {
     padding-left: 35% !important;
@@ -3040,6 +3072,10 @@ div.wpforms-container-full .wpforms-field-label,
 @media (min-width: 1025px) {
   .wpforms-submit-container {
     padding-top: 4rem !important;
+  }
+
+  .form-module .wpforms-submit-container {
+    padding-top: 2rem !important;
   }
 }
 
@@ -3101,6 +3137,19 @@ div.wpforms-container-full .wpforms-field-label,
     letter-spacing: 0 !important;
     font-weight: 500 !important;
   }
+}
+
+.form-module .wpforms-submit {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+  background-color: transparent !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.popmake .wpforms-submit {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 div.wpforms-container-full button[type='submit']:hover {
@@ -3583,6 +3632,141 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+/* 
+* POPUP MAKER
+*/
+
+.popmake {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .popmake {
+    gap: 2.5rem !important;
+    padding: 4rem !important;
+  }
+}
+
+.popmake-title {
+  margin-bottom: 0px !important;
+  text-align: center !important;
+  font-size: 1.25rem !important;
+  line-height: 28px !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+}
+
+@media (min-width: 768px) {
+  .popmake-title {
+    font-size: 2.25rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .popmake-title {
+    font-size: 1.75rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+  }
+}
+
+.popmake-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.125rem !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+}
+
+@media (min-width: 768px) {
+  .popmake-content {
+    font-size: 1.5rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .popmake-content {
+    font-size: 1.25rem !important;
+    line-height: 28px !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
+  }
+}
+
+.popmake-close {
+  position: absolute;
+  top: 2rem !important;
+  right: 1rem !important;
+  height: 15px !important;
+  width: 15px !important;
+  line-height: 1 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+@media (min-width: 768px) {
+  .popmake-close {
+    right: 4rem !important;
+  }
+}
+
+.popmake .wpforms-field-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.popmake .wpforms-container {
+  padding-top: 0px !important;
+}
+
+.popmake .wpforms-container .wpforms-field-container {
+  gap: 1.5rem !important;
+  padding-top: 0px !important;
+}
+
+@media (min-width: 1025px) {
+  .popmake .wpforms-container .wpforms-field-container {
+    gap: 2rem !important;
+  }
+}
+
+.popmake .wpforms-submit-container {
+  padding-top: 1.5rem !important;
+}
+
+@media (min-width: 1025px) {
+  .popmake .wpforms-submit-container {
+    padding-top: 2rem !important;
+  }
+}
+
+.pum-close.popmake-close::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../images/close.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .first-of-type\:pt-0:first-of-type {
@@ -4645,6 +4829,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 500px;
   }
 
+  .lg\:max-w-\[655px\] {
+    max-width: 655px;
+  }
+
   .lg\:max-w-full {
     max-width: 100%;
   }
@@ -5064,8 +5252,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     top: 25%;
   }
 
-  .xl\:top-\[280px\] {
-    top: 280px;
+  .xl\:top-\[200px\] {
+    top: 200px;
   }
 }
 

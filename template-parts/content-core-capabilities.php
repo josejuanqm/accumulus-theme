@@ -234,36 +234,26 @@
 <!-- Values -->
 
 
-<?php 
+<!-- Testimonials -->
 
-  // Fields from testimonial
 
-  $testimonial_coc = get_field('testimonial_coc');
-
+<?php
+  get_template_part(
+    'template-parts/component/content',
+    'single-testimonial'
+  );
 ?>
 
-<?php if($testimonial_coc) : ?>
-<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6">
-      <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-between">
-        <img class="max-w-[145px] md:max-w-full" src="<?php echo $testimonial_coc['image']; ?>" alt="<?php echo $testimonial_coc['name']; ?>" />
-        <div class="flex flex-col pl-s2 gap-s2">
-          <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $testimonial_coc['name']; ?></h4>
-          <p class="text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $testimonial_coc['position']; ?></p>
-        </div>
-      </div>
-      <h2 class="col-span-6 md:col-span-10 lg:col-span-12 heading-2 text-neutral-dgray">
-        <?php echo $testimonial_coc['testimonial']; ?>
-      </h2>
-      <p class="col-span-5 md:col-span-8 lg:col-span-9 md:col-start-3 lg:col-start-3 body-1"><?php echo $testimonial_coc['resume_text']; ?></p>
-    </div>
-  </div>
-</section>
-<?php endif; ?>
-<!-- Testimonial -->
+<!-- End Testimonials -->
 
 
 
-
+<!-- Form Module -->
+<?php
+  get_template_part(
+    'template-parts/content',
+    'form-module'
+  );
+?>
+<!-- End form module -->
 

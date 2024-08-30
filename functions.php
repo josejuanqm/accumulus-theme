@@ -6102,6 +6102,162 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
+	acf_add_local_field_group( array(
+		'key' => 'group_66d1597ca3988',
+		'title' => 'Form to access free PDF',
+		'fields' => array(
+			array(
+				'key' => 'field_66d22992fb12b',
+				'label' => 'Form Access Content',
+				'name' => 'form_access_content',
+				'aria-label' => '',
+				'type' => 'group',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_66d211f3bb80d',
+						'label' => 'eyebrown',
+						'name' => 'eyebrown_form_access',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'LEARN MORE',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66d211babb80c',
+						'label' => 'Title',
+						'name' => 'title_form_access',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'A New Era of Regulatory Connectivity',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66d211febb80e',
+						'label' => 'Description',
+						'name' => 'description_form_access',
+						'aria-label' => '',
+						'type' => 'textarea',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Discover how the Accumulus platform can transform your regulatory interactions. Our overview highlights key features, benefits, and real-world applications that make the Accumulus platform an essential tool for your organization. Get the insights you need to make an informed decision—download now!​',
+						'maxlength' => '',
+						'rows' => 3,
+						'placeholder' => '',
+						'new_lines' => '',
+					),
+					array(
+						'key' => 'field_66d22976fb12a',
+						'label' => 'Shortcut form',
+						'name' => 'shortcut_form',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+				),
+			),
+			array(
+				'key' => 'field_66d1597d836ce',
+				'label' => 'Pages to show',
+				'name' => 'pages_to_show',
+				'aria-label' => '',
+				'type' => 'relationship',
+				'instructions' => 'Select the pages where you want to show the form to get a free PDF',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'post_status' => array(
+					0 => 'publish',
+				),
+				'taxonomy' => '',
+				'filters' => array(
+					0 => 'search',
+					1 => 'post_type',
+				),
+				'return_format' => 'id',
+				'min' => '',
+				'max' => '',
+				'elements' => '',
+				'bidirectional' => 0,
+				'bidirectional_target' => array(
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'configure-form-to-access-free-pdf',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+
 } );
 
 add_action( 'init', function() {
@@ -6168,9 +6324,9 @@ add_action( 'init', function() {
 	'show_admin_column' => true,
 ) );
 
-	register_taxonomy( 'resources-taxonomies', array(
+register_taxonomy( 'resources-taxonomies', array(
 	0 => 'resource-cms',
-), array(
+	), array(
 	'labels' => array(
 		'name' => 'Resources Taxonomies',
 		'singular_name' => 'Resource Taxonomy',
@@ -6189,16 +6345,16 @@ add_action( 'init', function() {
 		'back_to_items' => '← Go to resources taxonomies',
 		'item_link' => 'Resource Taxonomy Link',
 		'item_link_description' => 'A link to a resource taxonomy',
-	),
-	'public' => true,
-	'hierarchical' => true,
-	'show_in_menu' => true,
-	'show_in_rest' => true,
-	'show_tagcloud' => false,
-	'show_admin_column' => true,
-	'meta_box_cb' => false,
-	'sort' => true,
-) );
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_menu' => true,
+		'show_in_rest' => true,
+		'show_tagcloud' => false,
+		'show_admin_column' => true,
+		'meta_box_cb' => false,
+		'sort' => true,
+	) );
 } );
 
 add_action( 'init', function() {
@@ -6350,6 +6506,13 @@ add_action( 'acf/init', function() {
 		'menu_slug' => 'team-members',
 		'icon_url' => 'dashicons-admin-users',
 		'menu_title' => 'Team Members',
+		'position' => '',
+		'redirect' => false,
+	) );
+	acf_add_options_page( array(
+		'page_title' => 'Configure Form to access free PDF',
+		'menu_slug' => 'configure-form-to-access-free-pdf',
+		'icon_url' => 'dashicons-media-spreadsheet',
 		'position' => '',
 		'redirect' => false,
 	) );
