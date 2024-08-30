@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1663,11 +1663,6 @@ video {
 .border-b-neutral-200 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity));
-}
-
-.border-b-neutral-100 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(245 245 245 / var(--tw-border-opacity));
 }
 
 .bg-\[\#EBEBEB\] {
