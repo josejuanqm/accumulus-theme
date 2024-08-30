@@ -22,7 +22,7 @@ if( $show_form_free_pdf ):
       </picture>
     </div>
 
-    <div class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 px-s2 lg:px-0 pt-s4 md:pt-s8 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 text-neutral-nwhite">
+    <div class="form-module col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 px-s2 lg:px-0 pt-s4 md:pt-s8 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 text-neutral-nwhite">
       <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:max-w-[655px]">
         <h4 class="heading-4 col-span-6 md:col-span-12"><?php echo $form_access_content['eyebrown_form_access']; ?></h4>
         <h2 class="heading-2 col-span-6 md:col-span-12"><?php echo $form_access_content['title_form_access']; ?></h2>

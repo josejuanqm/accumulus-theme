@@ -241,14 +241,22 @@ a {
 
 /* Form */
 
-.wpforms-container {
+.wpforms-container,
+.gform_wrapper {
   @apply !pt-s6 lg:!pt-s4 !mb-0;
+}
+
+.form-module .gform_wrapper {
+  @apply !p-0;
 }
 
 div.wpforms-container-full .wpforms-field-label,
 .wp-core-ui div.wpforms-container-full .wpforms-field-label,
-.wpforms-field-label {
-  @apply heading-6 !uppercase !font-semibold;
+.wpforms-field-label,
+.gfield_label,
+.gform-field-label,
+.gfield_required {
+  @apply heading-6 !uppercase !font-semibold !text-neutral-dgray;
 }
 
 .wpforms-field.wpforms-field-text,
@@ -257,18 +265,24 @@ div.wpforms-container-full .wpforms-field-label,
   @apply flex flex-col gap-s1;
 }
 
-.wpforms-container .wpforms-form input.wpforms-field-medium {
-  @apply !max-w-full !px-0 !pt-0 !pb-s1 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray !shadow-none;
+.wpforms-container .wpforms-form input.wpforms-field-medium,
+.ginput_container input {
+  @apply !max-w-full !px-0 !pt-0 !pb-s1 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray !shadow-none !rounded-none;
 }
 
 .form-module .wpforms-container .wpforms-form input.wpforms-field-medium,
-.form-module .wpforms-required-label {
+.form-module .wpforms-required-label,
+.form-module .ginput_container input,
+.form-module .gfield_label,
+.form-module .gfield_required,
+.form-module .gform-field-label {
   @apply !text-white placeholder:!text-white;
 }
 
 .popmake .wpforms-container .wpforms-form input.wpforms-field-medium,
 .popmake .wpforms-field-label,
-.popmake .wpforms-required-label {
+.popmake .wpforms-required-label,
+.popmake .gfield_required {
   @apply !text-neutral-dgray placeholder:!text-neutral-dgray;
 }
 
@@ -284,19 +298,23 @@ div.wpforms-container-full .wpforms-field-label,
   @apply !p-0;
 }
 
-.wpforms-submit-container {
-  @apply !pt-s8 md:!pt-s16 lg:!pt-s8;
+.wpforms-submit-container,
+.gform_footer {
+  @apply !pt-s8 md:!pt-s16 lg:!pt-s8 !m-0;
 }
 
-.form-module .wpforms-submit-container {
+.form-module .wpforms-submit-container,
+.form-module .gform_footer {
   @apply lg:!pt-s4;
 }
 
-.wpforms-submit {
+.wpforms-submit,
+.gform_button {
   @apply !flex !items-center !justify-center !h-[48px] lg:!h-[45px] !px-10 !py-3 !rounded-full !text-center !text-white !text-ctaMobile md:!text-ctaTablet lg:!text-cta !border !border-cta-dark !bg-cta-dark hover:!bg-white hover:!text-cta-dark !transition-all cursor-pointer max-lg:!w-full;
 }
 
-.form-module .wpforms-submit {
+.form-module .wpforms-submit,
+.form-module .gform_button {
   @apply !bg-transparent !text-white !border-white;
 }
 
@@ -341,10 +359,63 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .choice-1.depth-1 input {
-  @apply !m-0 !w-6 !h-6;
+  @apply !m-0 !w-6 !h-6 !p-0 !border !border-neutral-dgray;
 }
 .choice-1.depth-1 label {
-  @apply body-2;
+  @apply !text-b2Mobile md:!text-b2Tablet lg:!text-b2 !font-normal !capitalize cursor-pointer;
+}
+
+.form-module .gchoice .gfield-choice-input {
+  @apply !border-white;
+}
+
+.gform-theme--framework
+  input[type='checkbox']:where(
+    :not(.gform-theme__disable):not(.gform-theme__disable *):not(
+        .gform-theme__disable-framework
+      ):not(.gform-theme__disable-framework *)
+  )::before {
+  @apply !text-neutral-dgray;
+}
+
+.form-module
+  .gform-theme--framework
+  input[type='checkbox']:where(
+    :not(.gform-theme__disable):not(.gform-theme__disable *):not(
+        .gform-theme__disable-framework
+      ):not(.gform-theme__disable-framework *)
+  )::before {
+  @apply !text-white;
+}
+
+/* Gravity */
+
+.gform_wrapper .gfield_label {
+  @apply !text-h6Mobile md:!text-h6Tablet lg:!text-h6 !uppercase;
+}
+
+.gform_wrapper form .gform_body .gfield_label {
+  @apply !font-bold;
+}
+
+.gform_heading {
+  @apply !hidden;
+}
+
+.gfield_select {
+  @apply !max-w-full !px-0 !pt-0 !pb-s1 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray !shadow-none !rounded-none;
+}
+
+.gchoice .gfield-choice-input {
+  @apply !m-0 !w-6 !h-6 !p-0 !border !border-neutral-dgray;
+}
+
+.gchoice .gform-field-label {
+  @apply !text-b2Mobile md:!text-b2Tablet lg:!text-b2 !font-normal !capitalize cursor-pointer;
+}
+
+.form-module .gchoice .gfield-choice-input {
+  @apply !border-white;
 }
 
 /* Detail posts */
