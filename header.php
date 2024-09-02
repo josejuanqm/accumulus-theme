@@ -36,10 +36,10 @@
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
-            <li><a class="hover:underline" href="">Regulator Forum</a></li>
-            <li><a class="hover:underline" href="">Contact Us</a></li>
-            <li><a class="hover:underline" href="">Careers</a></li>
-            <li><a class="hover:underline" href="">LinkedIn</a></li>
+            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/regulator-forum">Regulator Forum</a></li>
+            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/contact-us">Contact Us</a></li>
+            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/careers">Careers</a></li>
+            <li><a class="hover:underline" href="#">LinkedIn</a></li>
           </ul>
         </div> 
       </div>
@@ -117,7 +117,7 @@
                   $fields = get_fields($menu_item); 
                 ?>
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
-                  <a class="py-s2" href="#"><?php echo $menu_item->title; ?></a>
+                  <a class="py-s2" href="<?php echo $menu_item->link; ?>"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
                     <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,7 +157,7 @@
             <ul class="dropdown-menu grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 items-center justify-start mx-auto">
               <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
                 <li>
-                  <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="#">
+                  <a class="grid grid-cols-[auto_auto] gap-s2 max-w-[300px] p-s2 border-2 border-transparent hover:border-neutral-200 rounded-xl" href="<?php echo $menu_subitem["link"]; ?>">
                     <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
                       <img class="h-s2 w-s2 aspect-square <?php echo $menu_subitem["menu_class"]; ?>" src="<?php echo $menu_subitem['icon'] ?? (get_template_directory_uri() . '/images/icons/platform.svg') ?>" alt="platform icon" class="w-32 h-auto">
                     </div>
