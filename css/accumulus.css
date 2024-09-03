@@ -3501,6 +3501,61 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
 }
 
+.form-module .gform_confirmation_message a {
+  display: flex !important;
+  height: 48px !important;
+  width: 100%;
+  max-width: 210px;
+  cursor: pointer;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9999px !important;
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  text-align: center !important;
+  font-size: 1.125rem !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(68 68 68 / var(--tw-text-opacity)) !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
+.form-module .gform_confirmation_message a:hover {
+  background-color: transparent !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+@media (min-width: 768px) {
+  .form-module .gform_confirmation_message a {
+    font-size: 1.625rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form-module .gform_confirmation_message a {
+    height: 45px !important;
+    font-size: 1.125rem !important;
+    line-height: 120% !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+  }
+}
+
 /* Detail posts */
 
 .detail p {
