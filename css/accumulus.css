@@ -3934,10 +3934,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 }
 
-.popmake .wpforms-field-container {
+.popmake .wpforms-field-container,
+.popmake .gform_wrapper {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   max-width: 400px;
+  padding-top: 0px !important;
 }
 
 .popmake .wpforms-container {
@@ -3955,14 +3958,20 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 }
 
-.popmake .wpforms-submit-container {
+.popmake .wpforms-submit-container,
+.popmake .gform_footer {
   padding-top: 1.5rem !important;
 }
 
 @media (min-width: 1025px) {
-  .popmake .wpforms-submit-container {
+  .popmake .wpforms-submit-container,
+.popmake .gform_footer {
     padding-top: 2rem !important;
   }
+}
+
+.popmake .gform_footer {
+  justify-content: center;
 }
 
 .pum-close.popmake-close::after {

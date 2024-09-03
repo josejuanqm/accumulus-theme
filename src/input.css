@@ -522,8 +522,9 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   @apply absolute !top-s4 !right-s2 md:!right-s8 !leading-none !text-white !w-[15px] !h-[15px];
 }
 
-.popmake .wpforms-field-container {
-  @apply max-w-[400px] mx-auto;
+.popmake .wpforms-field-container,
+.popmake .gform_wrapper {
+  @apply w-full max-w-[400px] mx-auto !pt-0;
 }
 
 .popmake .wpforms-container {
@@ -534,8 +535,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
   @apply !pt-0 !gap-s3 lg:!gap-s4;
 }
 
-.popmake .wpforms-submit-container {
+.popmake .wpforms-submit-container,
+.popmake .gform_footer {
   @apply !pt-s3 lg:!pt-s4;
+}
+
+.popmake .gform_footer {
+  @apply justify-center;
 }
 
 .pum-close.popmake-close::after {
