@@ -1142,6 +1142,156 @@ add_action( 'acf/include_fields', function() {
 
   add_mega_menu_items();
 
+	// Home page
+	acf_add_local_field_group( array(
+		'key' => 'group_66c7feea89181',
+		'title' => 'Home - Page',
+		'fields' => array(
+			array(
+				'key' => 'field_66c7ff23ca705',
+				'label' => 'Testimonial',
+				'name' => 'testimonial_coc',
+				'aria-label' => '',
+				'type' => 'group',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_66c7ff23ca706',
+						'label' => 'Image',
+						'name' => 'image',
+						'aria-label' => '',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+						'preview_size' => 'medium',
+					),
+					array(
+						'key' => 'field_66c7ff23ca707',
+						'label' => 'Name',
+						'name' => 'name',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Ralf	Altenburger',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66c7ff23ca708',
+						'label' => 'Position',
+						'name' => 'position',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Senior Vice President, Cell and Gene Therapy and Global Head of Pharma Technical Regulatory at Roche',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66c7ff23ca709',
+						'label' => 'Testimonial',
+						'name' => 'testimonial',
+						'aria-label' => '',
+						'type' => 'textarea',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '“The prospect of streamlining the regulatory approval process across 48 countries holds immense promise”',
+						'maxlength' => '',
+						'rows' => 3,
+						'placeholder' => '',
+						'new_lines' => '',
+					),
+					array(
+						'key' => 'field_66c7ff23ca70a',
+						'label' => 'Resume text',
+						'name' => 'resume_text',
+						'aria-label' => '',
+						'type' => 'textarea',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '“This advancement could potentially expedite access to cutting-edge medicines by nearly two years…”',
+						'maxlength' => '',
+						'rows' => 2,
+						'placeholder' => '',
+						'new_lines' => '',
+					),
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-home.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+
+	// Case of change page
 	acf_add_local_field_group( array(
 		'key' => 'group_666baf7791435',
 		'title' => 'Case of change Page - Fields',
@@ -1353,6 +1503,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Contact page
 		acf_add_local_field_group( array(
 		'key' => 'group_6625c9e3f2b2c',
 		'title' => 'Contact Page - Fields',
@@ -1437,6 +1588,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Core capabilities
 		acf_add_local_field_group( array(
 		'key' => 'group_667e28ffbfb48',
 		'title' => 'Core Capabilities - Page',
@@ -1872,6 +2024,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Event fields
 		acf_add_local_field_group( array(
 		'key' => 'group_666200ea823a4',
 		'title' => 'Events Post type - Fields',
@@ -1915,6 +2068,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Main banner home
 		acf_add_local_field_group( array(
 		'key' => 'group_66175352040c8',
 		'title' => 'Main banner - Home',
@@ -2113,6 +2267,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Main banner several pages
 		acf_add_local_field_group( array(
 		'key' => 'group_666785a13b672',
 		'title' => 'Main banner - Several Pages',
@@ -2311,6 +2466,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// News fields
 		acf_add_local_field_group( array(
 		'key' => 'group_665d32031bdca',
 		'title' => 'News Post type - Fields',
@@ -2361,6 +2517,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Platform page
 		acf_add_local_field_group( array(
 		'key' => 'group_66732b5ce235b',
 		'title' => 'Platform Page - Fields',
@@ -3305,6 +3462,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Regulator forum page
 	acf_add_local_field_group( array(
 		'key' => 'group_6688c7820a896',
 		'title' => 'Regulator Forum - Page',
@@ -4000,6 +4158,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Resources fields
 	acf_add_local_field_group( array(
 		'key' => 'group_6642e1ea9e53a',
 		'title' => 'Resources Page - Fields',
@@ -4298,6 +4457,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Values component several pages
 	acf_add_local_field_group( array(
 		'key' => 'group_66564927d29db',
 		'title' => 'Values Component - Several pages',
@@ -4635,6 +4795,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// What we do home
 	acf_add_local_field_group( array(
 		'key' => 'group_661b23ef6a60f',
 		'title' => 'What we do - Home',
@@ -4763,6 +4924,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Why accumulus home
 	acf_add_local_field_group( array(
 		'key' => 'group_661f406de42bf',
 		'title' => 'Why Accumulus - Home',
@@ -4848,6 +5010,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
+	// Team directors
 	acf_add_local_field_group( array(
 		'key' => 'group_66c50e18ef8cd',
 		'title' => 'Team - Directors',
@@ -5004,6 +5167,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Team leadership
 	acf_add_local_field_group( array(
 		'key' => 'group_66c50d2fbf4fc',
 		'title' => 'Team - Leadership',
@@ -5160,6 +5324,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
+	// Careers page
 	acf_add_local_field_group( array(
 		'key' => 'group_66c7b521f1c0c',
 		'title' => 'Careers - Page',
@@ -5807,6 +5972,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
+	// Team page
 	acf_add_local_field_group( array(
 		'key' => 'group_66c7ba68d3d89',
 		'title' => 'Team - Page',
@@ -6102,6 +6268,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
+	// Form get free pdf
 	acf_add_local_field_group( array(
 		'key' => 'group_66d1597ca3988',
 		'title' => 'Form to access free PDF',
