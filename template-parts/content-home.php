@@ -15,6 +15,9 @@
 	$title_tag = get_field('title_tag');
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
+	$text_cta_request_a_demo = get_field('text_cta_request_a_demo');
+	$link_request_a_demo = get_field('link_request_a_demo');
+	$text_cta_learn_more = get_field('text_cta_learn_more');
 	$link_learn_more = get_field('link_learn_more');
 	$marquee = get_field('marquee_images');
 ?>
@@ -32,14 +35,8 @@
 				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary">Get started</a>
-				<a href="#" class="btn-tertiary">
-					<svg width="16" height="16" viewBox="0 0 16 16" class="fill-inherit mr-2">
-						<path d="M13.6407 0.393555H1.73275C0.79347 0.393555 0.03125 1.15578 0.03125 2.09505V15.7045H1.73275V2.09505H13.6407V14.003H3.433V15.7045H13.6407C14.58 15.7045 15.3422 14.9423 15.3422 14.003V2.09505C15.3422 1.15578 14.58 0.393555 13.6407 0.393555Z" class="fill-inherit" />
-						<path d="M6.72573 5.04395V5.05525H5.4248V11.1091H6.64411L10.3548 8.6353V7.46372L6.72573 5.04395ZM7.05724 7.22638L8.29161 8.04888L7.05724 8.87138V7.22513V7.22638Z" class="fill-inherit" />
-					</svg>
-					About Accumulus
-				</a>
+				<a href="<?php echo $link_request_a_demo; ?>" class="btn-secondary"><?php echo $text_cta_request_a_demo; ?></a>
+				<a href="<?php echo $link_learn_more; ?>" class="btn-tertiary"><?php echo $text_cta_learn_more; ?></a>
 			</div>
 
 		</div>
@@ -72,6 +69,78 @@
 
 <!-- Main banner -->
 
+<!-- BEGIN PARADIGM SHIFT -->
+
+
+<?php 
+
+$statistics = get_field('statistics');
+
+if($statistics):
+?>
+
+<section class="section relative w-full pt-s10 lg:pt-s12 bg-neutral-nude">
+	<div class="container mx-auto">
+
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 md:pb-s6">
+			<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
+				<span class="block col-span-12">
+					<?php echo $statistics['title_first_line']; ?>
+				</span>
+				<span class="block col-span-10 col-start-3 row-start-2">
+					<?php echo $statistics['title_second_line']; ?>
+				</span>
+			</h2>
+			<p class="col-start-1 col-span-12 md:col-start-5 md:col-span-7 lg:col-span-7 lg:col-start-6 body-2">
+			<?php echo $statistics['resume']; ?>
+		</div>
+		<!-- Title -->
+
+
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s7 md:gap-y-s9 lg:py-s6 pt-s4 md:pt-0">
+			
+			<?php 
+				foreach($statistics['data_list'] as $item): 
+			?>
+			<div class="col-span-12 md:col-span-6 lg:col-span-4">
+				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
+					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+						<img class="w-s5 md:min-w-s8 h-s4 md:h-s8 aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
+					</div>
+					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5"><?php echo $item['title'] ?></h3>
+					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2"><?php echo $item['resume'] ?></p>
+				</div>
+			</div>
+			<?php endforeach; ?>
+
+		</div>
+		<!-- Items -->
+
+</section>
+
+<section class="relative section w-full pt-s7 md:pt-s8 lg:pt-0 pb-s10 md:pb-s10 lg:pb-s12 bg-neutral-nude">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s4 lg:gap-y-s6">
+			<p class="col-span-6 md:col-span-8 lg:col-span-8 col-start-2 md:col-start-3 lg:col-start-4 md:pt-s4 lg:pt-0 md:pb-s4 lg:pb-0 body-2"><?php echo $statistics['resume_testimonial']; ?></p>
+			<div class="col-span-6 md:col-span-7 lg:col-span-4 md:col-start-6 lg:col-start-6 flex items-center justify-start pt-s3 md:pt-0">
+				<img class="max-w-[145px] md:max-w-full" src="<?php echo $statistics['photo_testimonial']; ?>" alt="<?php echo $statistics['name_testimonial']; ?>" />
+				<div class="flex flex-col pl-s2 md:pl-s6 lg:pl-s2 md:pr-s3 lg:pr-0 gap-s2">
+					<h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $statistics['name_testimonial']; ?></h4>
+					<p class="body-3"><?php echo $statistics['position_testimonial']; ?></p>
+				</div>
+			</div>
+			<div class="col-span-6 md:col-span-10 lg:col-span-11 md:col-start-2 lg:col-start-2 lg:pb-s10">
+				<?php foreach($statistics['relation_items'] as $key => $item): ?>
+				<div class="body-4 flex items-center justify-start gap-2"><?php echo $key+1; ?>. <?php echo $item['list_relations'] ?></div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- END PARADIGM SHIFT -->
+
 <?php
 	// Fields what we do
 
@@ -79,7 +148,10 @@
 	$what_main_title = get_field('what_main_title');
 	$what_first_description = get_field('what_first_description');
 	$what_second_description = get_field('what_second_description');
-	$what_link_about = get_field('what_link_about');
+	$text_cta_request_a_demo = get_field('text_cta_request_a_demo');
+	$link_request_a_demo = get_field('link_request_a_demo');
+	$text_cta_learn_more = get_field('text_cta_learn_more');
+	$link_learn_more = get_field('link_learn_more');
 ?>
 <section class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s16 lg:pt-s20 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-transparent">
 
@@ -91,8 +163,9 @@
 			<h2 class="col-span-12 md:col-span-11 lg:col-span-11 col-start-1 text-h2Mobile md:text-h2Tablet lg:text-h2 text-neutral-nwhite"><?php echo $what_main_title; ?></h2>
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_first_description; ?></p>
 			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_second_description; ?></p>
-			<div class="col-span-12 lg:col-span-3 lg:col-start-4">
-				<a href="<?php echo $what_link_about; ?>" class="btn-tertiary-white">A Case for Change</a>
+			<div class="col-span-12 lg:col-span-3 lg:col-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
+				<a href="<?php echo $link_request_a_demo; ?>" class="btn-secondary-inverted"><?php echo $text_cta_request_a_demo; ?></a>
+				<a href="<?php echo $link_learn_more; ?>" class="btn-tertiary-white"><?php echo $text_cta_learn_more; ?></a>
 			</div>
 
 		</div>
@@ -102,110 +175,6 @@
 </section>
 
 <!-- What we do -->
-
-<!-- BEGIN PARADIGM SHIFT -->
-<section class="section relative w-full pt-s20 md:pt-s10 lg:pt-s16 -mt-s11 md:-mt-s9 lg:-mt-s11 bg-neutral-nude">
-	<div class="container mx-auto">
-
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 md:py-s6">
-			<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
-				<span class="block col-span-12">
-					A Needed
-				</span>
-				<span class="block col-span-10 col-start-3 row-start-2">
-					Paradigm Shift
-				</span>
-			</h2>
-			<p class="col-start-1 col-span-12 md:col-start-5 md:col-span-7 lg:col-span-7 lg:col-start-6 body-2">
-				Bringing an approved drug to market is inefficient and expensive.
-			</p>
-		</div>
-		<!-- Title -->
-
-
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s7 md:gap-y-s9 lg:py-s6 pt-s4 md:pt-0">
-			
-			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
-					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
-							<path d="M32.5312 48.3083C41.0919 48.3083 48.0312 41.3689 48.0312 32.8083C48.0312 32.0565 47.9757 31.3177 47.8711 30.5954H43.2296C43.3767 31.3112 43.4551 32.0499 43.4551 32.8083C43.4551 38.8324 38.5554 43.7321 32.5312 43.7321C26.5071 43.7321 21.6074 38.8324 21.6074 32.8083C21.6074 27.5424 25.35 23.1363 30.3151 22.1099V35.0211H39.1699V30.5921H34.7409V17.3115H32.528C31.7762 17.3115 31.0375 17.3671 30.3151 17.4717C22.8037 18.5471 17.0312 25.0027 17.0312 32.8115C17.0312 41.3722 23.9706 48.3115 32.5312 48.3115V48.3083Z" fill="#444444"/>
-						</svg>
-					</div>
-					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">13 Years</h3>
-					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">It takes 13 years (on average) after the drug’s initial discovery.
-					</p>
-				</div>
-			</div>
-
-			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
-					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
-							<path d="M22.9362 25.5645H17.5V29.1895H22.9362V25.5645Z" fill="#444444"/>
-							<path d="M17.5 38.2477C17.5 39.2482 18.3106 40.0589 19.3112 40.0589C20.3117 40.0589 21.1223 39.2482 21.1223 38.2477C21.1223 37.2471 20.3117 36.4365 19.3112 36.4365C18.3106 36.4365 17.5 37.2471 17.5 38.2477Z" fill="#444444"/>
-							<path d="M33.8112 40.0589C34.8114 40.0589 35.6223 39.248 35.6223 38.2477C35.6223 37.2474 34.8114 36.4365 33.8112 36.4365C32.8109 36.4365 32 37.2474 32 38.2477C32 39.248 32.8109 40.0589 33.8112 40.0589Z" fill="#444444"/>
-							<path d="M48.3112 40.0589C49.3114 40.0589 50.1223 39.248 50.1223 38.2477C50.1223 37.2474 49.3114 36.4365 48.3112 36.4365C47.3109 36.4365 46.5 37.2474 46.5 38.2477C46.5 39.248 47.3109 40.0589 48.3112 40.0589Z" fill="#444444"/>
-							<path d="M37.4362 25.5645H32V29.1895H37.4362V25.5645Z" fill="#444444"/>
-							<path d="M51.9284 25.5645H46.4922V29.1895H51.9284V25.5645Z" fill="#444444"/>
-							<path d="M15.6875 47.3089H22.9348V43.6839H15.6875V21.9365H22.9348V18.3115H15.6875C13.6864 18.3115 12.0625 19.9354 12.0625 21.9365V43.6839C12.0625 45.685 13.6864 47.3089 15.6875 47.3089Z" fill="#444444"/>
-							<path d="M37.4349 18.3145H30.1875C28.1864 18.3145 26.5625 19.9384 26.5625 21.9395V43.6868C26.5625 45.6879 28.1864 47.3118 30.1875 47.3118H37.4349V43.6868H30.1875V21.9395H37.4349V18.3145Z" fill="#444444"/>
-							<path d="M44.6875 18.3145C42.6864 18.3145 41.0625 19.9384 41.0625 21.9395V43.6868C41.0625 45.6879 42.6864 47.3118 44.6875 47.3118H51.9375V43.6868H44.6875V21.9395H51.9375V18.3145H44.6875Z" fill="#444444"/>
-						</svg>
-					</div>
-					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">2 Million</h3>
-					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">If you stacked all the paperwork from one new drug application (2 million pages on average), the pile would be 200 meters tall.
-					</p>
-				</div>
-			</div>
-
-			<div class="col-span-12 md:col-span-6 lg:col-span-4">
-				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
-					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-						<svg class="w-s4 md:w-s8 h-s4 md:h-s8 aspect-square" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.03125" y="0.311523" width="64" height="64" rx="10.9714" fill="#E5E5E5"/>
-							<path d="M24.4846 32.3096H21.4844V41.308H24.4846V32.3096Z" fill="#444444"/>
-							<path d="M42.5002 32.3096H39.5V41.308H42.5002V32.3096Z" fill="#444444"/>
-							<path d="M30.4924 32.3096C28.8362 32.3096 27.4922 33.6536 27.4922 35.3098V38.31C27.4922 39.9662 28.8362 41.3102 30.4924 41.3102H33.4926C35.1488 41.3102 36.4928 39.9662 36.4928 38.31V35.3098C36.4928 33.6536 35.1488 32.3096 33.4926 32.3096H30.4924ZM33.4926 38.3078H30.4924V35.3076H33.4926V38.3078Z" fill="#444444"/>
-							<path d="M45.4897 21.8105H18.4922V24.8108H45.4897V21.8105Z" fill="#444444"/>
-							<path d="M40.989 17.3115H22.9922V20.3117H40.989V17.3115Z" fill="#444444"/>
-							<path d="M45.4899 26.3125H18.4924C16.8362 26.3125 15.4922 27.6565 15.4922 29.3127V44.3116C15.4922 45.9678 16.8362 47.3118 18.4924 47.3118H48.4901V44.3116H18.4924V29.3127H45.4899V41.3114H48.4901V29.3127C48.4901 27.6565 47.1461 26.3125 45.4899 26.3125Z" fill="#444444"/>
-						</svg>
-					</div>
-					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5">$2 Billion</h3>
-					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2">It costs $2B.¹</p>
-				</div>
-			</div>
-
-		</div>
-		<!-- Items -->
-	</div>
-</section>
-
-<section class="relative section w-full pt-s7 md:pt-s8 lg:pt-0 pb-s10 md:pb-s10 lg:pb-s14 bg-neutral-nude">
-	<div class="container mx-auto">
-		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s4 lg:gap-y-s6">
-			<h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
-				It’s time for more sustainable and scalable collaboration and information exchange between life sciences organizations and global health authorities. It’s time for a moonshot!
-			</h3>
-			<p class="col-span-6 md:col-span-8 lg:col-span-8 col-start-2 md:col-start-3 lg:col-start-4 md:pt-s4 lg:pt-0 md:pb-s4 lg:pb-0 body-2">“Filing a New Drug Application may have shifted from driving a truckload of paper to the relevant regulatory authority to FedEx-ing a CD-ROM to uploading a set of PDFs through the Electronic Submissions Gateway, but the underlying processes remain little changed. It’s long past time to play catchup.”</p>
-			<div class="col-span-6 md:col-span-7 lg:col-span-4 md:col-start-6 lg:col-start-6 flex items-center justify-start pt-s3 md:pt-0">
-				<img class="max-w-[145px] md:max-w-full" src="<?php bloginfo('template_url'); ?>/images/home/francisco-nogueira.png" alt="Francisco Nogueira" />
-				<div class="flex flex-col pl-s2 md:pl-s6 lg:pl-s2 md:pr-s3 lg:pr-0 gap-s2">
-					<h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]">Francisco Nogueira</h4>
-					<p class="body-3">Chief Executive Officer, at Accumulus Synergy</p>
-				</div>
-			</div>
-			<div class="col-span-6 md:col-span-10 lg:col-span-11 md:col-start-2 lg:col-start-2 lg:pb-s10">
-				<p class="body-4">1. Nurturing growth: measuring the return from pharmaceutical innovation 2023. Deloitte. Available <a href="https://www2.deloitte.com/us/en/pages/life-sciences-and-health-care/articles/measuring-return-from-pharmaceutical-innovation.html" target="_blank">here</a></p>
-			</div>
-		</div>
-  </div>
-</section>
-
-<!-- END PARADIGM SHIFT -->
 
 
 <?php
@@ -353,6 +322,77 @@ $why_values = get_field('why_values');
 <!-- Why accumulus -->
 
 
+<!-- Quote -->
+<?php 
+$quote_home = get_field('quote_home');
+if($quote_home):
+?>
+<section class="relative section py-s10 lg:py-s20 bg-quote-home-mobile md:bg-quote-home-tablet lg:bg-quote-home-desktop bg-no-repeat bg-cover bg-center">
+	<div class="container max-w-[1170px] mx-auto">
+			<h2 class="heading-2"><?php echo $quote_home['resume'] ?></h2>
+	</div>
+</section>
+<?php 
+	endif;
+?>
+<!-- End quote -->
+
+
+<!-- How it works -->
+
+<?php 
+$how_it_works = get_field('how_it_works');
+
+if($how_it_works):
+?>
+<section class="relative section py-s8 md:py-s12 lg:py-s10 bg-secondary-carbon ">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
+			<h2 class="col-span-6 md:col-span-12 heading-2"><?php echo $how_it_works['title']; ?></h2>
+
+			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s4">
+
+				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 flex flex-col">
+						<?php foreach($how_it_works['steps'] as $key => $value): ?>
+						<h3 class="heading-3"><?php echo $key+1; ?>. <?php echo $value['title']; ?></h3>
+						<?php endforeach; ?>
+				</div>
+
+				<p class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2"><?php echo $how_it_works['resume']; ?></p>
+
+				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 grid grid-cols-12 gap-x-s2 lg:gap-x-s10 gap-y-s7">
+
+					<?php 
+						foreach($how_it_works['how_it_works_list'] as $value): 
+					?>
+					<div class="col-span-12 md:col-span-6">
+						<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
+							<div class="col-span-1 col-start-1 flex flex-col items-start">
+								<img class="min-w-[55px] md:min-w-[64px] aspect-square" src="<?php echo $value['icon'] ?>" alt="Icon" />
+							</div>
+							<p class="col-span-5 lg:col-span-5 col-start-2 body-2 pl-s2 md:pl-0"><?php echo $value['description']; ?></p>
+						</div>
+					</div>
+					<?php endforeach; ?>	
+				</div>
+
+				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 pt-s5 md:pt-s8 lg:pt-s3 flex flex-col lg:flex-row items-center justify-center gap-s3 md:gap-s4 lg:gap-s2">
+					<a href="<?php echo $how_it_works['link_cta_request_a_demo']; ?>" class="btn-secondary-inverted"><?php echo $how_it_works['text_cta_request_a_demo']; ?></a>
+					<a href="<?php echo $how_it_works['link_cta_learn_more']; ?>" class="btn-tertiary-white"><?php echo $how_it_works['text_cta_learn_more']; ?></a>
+				</div>
+
+				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 pt-s4 md:pt-s1 lg:pt-s6">
+					<p class="body-4"><?php echo $how_it_works['note']; ?></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- End How it works -->
+
+
 <!-- Testimonials -->
 
 
@@ -446,6 +486,7 @@ $why_values = get_field('why_values');
 		</div>
 	</div>
 </section>
+
 <!-- Events carousel -->
 
 <?php

@@ -13,10 +13,12 @@
       <h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
         <?php echo $testimonial_coc['testimonial']; ?>
       </h3>
-      <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-between">
+      <div class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-start">
         <img class="max-w-[145px] md:max-w-full" src="<?php echo $testimonial_coc['image']; ?>" alt="<?php echo $testimonial_coc['name']; ?>" />
         <div class="flex flex-col pl-s2 gap-s2">
+          <?php if($testimonial_coc['name'] !== ''): ?>
           <h4 class="text-h3Mobile md:text-h3Tablet lg:text-h3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $testimonial_coc['name']; ?></h4>
+          <?php endif; ?>
           <p class="text-b3Mobile md:text-b3Tablet lg:text-b3"><?php echo $testimonial_coc['position']; ?></p>
         </div>
       </div>

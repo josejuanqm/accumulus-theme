@@ -473,6 +473,7 @@ module.exports = {
       },
 
       backgroundImage: {
+        // home
         'what-we-do-desktop':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png')",
         'what-we-do-tablet':
@@ -480,6 +481,12 @@ module.exports = {
         'what-we-do-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
 
+        'quote-home-desktop':
+          "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-desktop.png')",
+        'quote-home-tablet':
+          "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-tablet.png')",
+        'quote-home-mobile':
+          "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-mobile.png')",
         // Purple section - resources page
         'purple-section-desktop':
           "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-desktop.png')",
