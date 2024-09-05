@@ -13,10 +13,11 @@
 	$title_tag = get_field('title_tag');
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
+	$text_cta = get_field('text_cta');
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s7 lg:pb-s12 bg-neutral-nwhite">
+<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
 		<source media="(min-width:768px)" srcset="<?php echo $bg_image_for_tablet; ?>">
@@ -26,20 +27,127 @@
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 			<h4 class="col-span-12 heading-4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
 			<h1 class="col-span-12 heading-1"><?php echo $main_title; ?></h1>
-			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
+			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
 				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
-        <a href="<?php echo $link_learn_more ?>" class="btn-secondary">Learn Why</a>
+        <a href="<?php echo $link_learn_more ?>" class="btn-secondary"><?php echo 	$text_cta; ?></a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<?php
-  get_template_part(
-    'template-parts/content',
-    'value-props'
-  );
 
+
+<?php
+	// Fields what we do
+
+  $what_we_do = get_field('what_we_do_about');
+  
+  if($what_we_do):
+?>
+<section class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s20 lg:pt-s20 pb-s14 md:pb-s20 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-about-tablet lg:bg-what-we-do-desktop bg-transparent">
+
+	<div class="container mx-auto md:pt-s1 lg:pt-s18 pb-s1 lg:pb-s18">
+
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6">
+
+			<h4 class="col-span-12 md:col-span-12 col-start-1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-nwhite uppercase"><?php echo $what_we_do['what_title_tag']; ?></h4>
+			<h2 class="col-span-12 md:col-span-11 lg:col-span-11 col-start-1 text-h2Mobile md:text-h2Tablet lg:text-h2 text-neutral-nwhite"><?php echo $what_we_do['what_main_title']; ?></h2>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_we_do['what_first_description']; ?></p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_we_do['what_second_description']; ?></p>
+
+		</div>
+
+	</div>
+
+</section>
+<?php endif; ?>
+<!-- What we do -->
+
+
+<!-- Envision -->
+
+<?php
+  $envision_section = get_field('envision_section');
+  
+  if($envision_section):
+?>
+
+<section class="relative section w-full pt-s5 md:pt-s10 pb-s8 md:pb-s12 -mt-[2.3rem] md:-mt-s10 lg:-mt-s10  bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
+  <div class="container mx-auto flex flex-col gap-s8 md:gap-s10 lg:gap-s8">
+    <div class="grid grid-cols-6 md:grid-cols-12 gap-s6">
+
+      <h2 class="col-span-6 md:col-span-12 lg:col-span-12 heading-2 pt-s8 md:pt-s12 lg:pt-s10"><?php echo $envision_section['title']; ?></h2>
+			
+			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pb-s1 lg:pb-0">
+        <ul class="flex flex-col gap-s4 pb-s5">
+          <?php foreach($envision_section['bullets_description'] as $item): ?>
+          <li class="relative pl-3 body-2">
+            <span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+              <?php echo $item['description']; ?>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+				<h3 class="heading-3"><?php echo $envision_section['message']; ?></h3>
+			</div>
+
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- End envision -->
+
+
+<!-- Case study -->
+
+<?php
+  $case_study = get_field('case_study');
+  
+  if($case_study):
+?>
+
+<section class="relative section pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s10">
+  <div class="container mx-auto">
+
+    <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2">
+      <h4 class="col-span-6 heading-4 pb-s1 md:pb-0 lg:pb-s4"><?php echo $case_study['eyebrown']; ?></h4>
+      <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12">
+        <h2 class="col-span-6 md:col-span-8 lg:col-span-8 heading-2 pb-s3 md:pb-s6"><?php echo $case_study['title']; ?></h2>
+      </div>
+      <div class="col-span-6 md:col-span-12 lg:col-span-4 pb-s5 lg:pb-0">
+        <picture class="">
+          <source media="(min-width:1025px)" srcset="<?php echo $case_study['image_desktop']; ?>">
+          <source media="(min-width:768px)" srcset="<?php echo $case_study['image_tablet']; ?>">
+          <img src="<?php echo $case_study['image_mobile']; ?>" alt="<?php echo $case_study['title']; ?>" class="h-full">
+        </picture>
+      </div>
+      <div class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6">
+        <p class="body-2"><?php echo $case_study['resume']; ?></p>
+      </div>
+      <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
+        <a class="btn-secondary" href="<?php echo $case_study['link_cta']; ?>"><?php echo $case_study['text_cta']; ?></a>
+      </div>
+      <div class="col-span-6 md:col-span-12 lg:col-span-9 lg:col-start-2 pt-s5 md:pt-s6 lg:pt-s6">
+        <ul>
+          <?php foreach($case_study['credits'] as $key => $value): ?>
+          <li class="relative body-4 pl-s4">
+            <span class="absolute left-0 top-0"><?php echo $key+1; ?>.</span>
+            <?php echo $value['data'] ?>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<?php endif; ?>
+
+<!-- End Case study -->
+
+
+<?php
   $years = [
     [
       'year' => '2005',
@@ -405,124 +513,156 @@
   }
 </script>
 
+
 <!-- End timeline -->
 
-<div class="py-s9 relative isolate overflow-hidden">
-  <img class="absolute bottom-0 right-0" src="<?php bloginfo('template_url'); ?>/images/about-us/vector-testimonials.png" />
-  <?php get_template_part( 
-    'template-parts/content', 
-    'quote', 
-    array( 
-      'bg_color' => 'bg-transparent',
-      'titled' => true,
-      'main_quote' => 'Expert Excerpts',
-      'sub_quote' => '“Whether you’re developing drugs or approving them, the regulatory industry has so much to offer. Connecting the ecosystem will only amplify our impact for both patients and users.”',
-      'author' => 'Francisco Nogueira',
-      'position' => 'Chief Executive Officer, at Accumulus Synergy',
-      'description' => 'Lorem ipsum dolor sit amet consectetur. Porta eu duis faucibus amet adipiscing adipiscing at nunc.',
-      'linkedin' => 'https://linkedin.com',
-      'image' => 'https://via.placeholder.com/224',
-      'stacked-author' => true,
-    )
-  ); ?>
-</div>
 
-<!-- End expert excerpts -->
-
-
-<section class="section relative w-full py-s10 bg-secondary-aqua flex flex-col gap-s9">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
-      <h4 class="col-span-12 heading-4 uppercase">STATISTICS</h4>
-      <h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
-        <span class="block col-span-12">
-          Let's Talk
-        </span>
-        <span class="block col-span-12">
-          Numbers
-        </span>
-      </h2>
-    </div>
-    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
-      <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-1">
-        <div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
-          <div class="flex flex-col items-center justify-center col-start-1 col-span-1">                
-            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.390625" y="0.625" width="64" height="64" rx="10.9714" fill="#F5F5F5"/>
-              <path d="M43.6444 21.7384C39.4931 17.5872 32.7359 17.5872 28.5847 21.7384L25.9914 24.3317L23.4645 26.8586L20.8712 29.4519C16.72 33.6031 16.72 40.3603 20.8712 44.5116C25.0225 48.6628 31.7797 48.6628 35.9309 44.5116L38.5242 41.9183L41.0511 39.3914L43.6444 36.7981C47.7956 32.6469 47.7956 25.8897 43.6444 21.7384ZM38.4859 36.8262L35.959 39.3531L33.3657 41.9464C30.6272 44.685 26.1725 44.685 23.4364 41.9464C20.7004 39.2078 20.6978 34.7531 23.4364 32.0171L26.0297 29.4238L28.4699 31.8641L30.9969 34.391L33.5238 36.918L36.0508 34.391L33.5238 31.8641L30.9969 29.3371L28.5566 26.8969L31.1499 24.3036C33.8885 21.565 38.3431 21.565 41.0792 24.3036C43.8178 27.0422 43.8178 31.4969 41.0792 34.2329L38.4859 36.8262Z" fill="#444444"/>
-            </svg>
-          </div>
-          <h3 class="heading-2 col-start-2 col-span-1">
-            140 NRAs
-          </h3>
-          <div class="col-start-2 col-span-1 row-start-2">
-            <p class="body-2 lg:max-w-[368px]">
-              There are more than 140 national regulatory authority (NRA) jurisdictions that review and approve each drug application.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-12 md:col-span-10 lg:col-span-7 md:col-start-2 lg:col-start-7">
-        <div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
-          <div class="flex flex-col items-center justify-center col-start-1 col-span-1">                
-            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.890625" y="0.625" width="64" height="64" rx="10.9714" fill="#F5F5F5"/>
-              <path d="M23.7955 25.8789H18.3594V29.5039H23.7955V25.8789Z" fill="#444444"/>
-              <path d="M18.3594 38.5612C18.3594 39.5617 19.17 40.3723 20.1705 40.3723C21.1711 40.3723 21.9817 39.5617 21.9817 38.5612C21.9817 37.5606 21.1711 36.75 20.1705 36.75C19.17 36.75 18.3594 37.5606 18.3594 38.5612Z" fill="#444444"/>
-              <path d="M34.6705 40.3723C35.6708 40.3723 36.4817 39.5614 36.4817 38.5612C36.4817 37.5609 35.6708 36.75 34.6705 36.75C33.6703 36.75 32.8594 37.5609 32.8594 38.5612C32.8594 39.5614 33.6703 40.3723 34.6705 40.3723Z" fill="#444444"/>
-              <path d="M49.1705 40.3723C50.1708 40.3723 50.9817 39.5614 50.9817 38.5612C50.9817 37.5609 50.1708 36.75 49.1705 36.75C48.1703 36.75 47.3594 37.5609 47.3594 38.5612C47.3594 39.5614 48.1703 40.3723 49.1705 40.3723Z" fill="#444444"/>
-              <path d="M38.2955 25.8789H32.8594V29.5039H38.2955V25.8789Z" fill="#444444"/>
-              <path d="M52.7877 25.8789H47.3516V29.5039H52.7877V25.8789Z" fill="#444444"/>
-              <path d="M16.5469 47.6224H23.7942V43.9974H16.5469V22.25H23.7942V18.625H16.5469C14.5458 18.625 12.9219 20.2489 12.9219 22.25V43.9974C12.9219 45.9985 14.5458 47.6224 16.5469 47.6224Z" fill="#444444"/>
-              <path d="M38.2942 18.6289H31.0469C29.0458 18.6289 27.4219 20.2528 27.4219 22.2539V44.0013C27.4219 46.0024 29.0458 47.6263 31.0469 47.6263H38.2942V44.0013H31.0469V22.2539H38.2942V18.6289Z" fill="#444444"/>
-              <path d="M45.5391 18.6289C43.538 18.6289 41.9141 20.2528 41.9141 22.2539V44.0013C41.9141 46.0024 43.538 47.6263 45.5391 47.6263H52.7891V44.0013H45.5391V22.2539H52.7891V18.6289H45.5391Z" fill="#444444"/>
-            </svg>
-          </div>
-          <h3 class="heading-2 col-start-2 col-span-1">
-            Over 25% of NRAs
-          </h3>
-          <div class="col-start-2 col-span-1 row-start-2">
-            <p class="body-2 lg:max-w-[368px]">
-              Over 25% of NRAs across the globe have used the Accumulus platform.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-1">
-        <div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
-          <div class="flex flex-col items-center justify-center col-start-1 col-span-1">                
-            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.890625" y="0.625" width="64" height="64" rx="10.9714" fill="#F5F5F5"/>
-              <path d="M33.3906 48.6217C41.9513 48.6217 48.8906 41.6824 48.8906 33.1217C48.8906 32.3699 48.8351 31.6312 48.7305 30.9088H44.089C44.236 31.6247 44.3145 32.3634 44.3145 33.1217C44.3145 39.1459 39.4148 44.0456 33.3906 44.0456C27.3665 44.0456 22.4668 39.1459 22.4668 33.1217C22.4668 27.8559 26.2094 23.4498 31.1745 22.4234V35.3346H40.0293V30.9056H35.6002V17.625H33.3874C32.6356 17.625 31.8968 17.6806 31.1745 17.7852C23.6631 18.8606 17.8906 25.3162 17.8906 33.125C17.8906 41.6856 24.83 48.625 33.3906 48.625V48.6217Z" fill="#444444"/>
-            </svg>
-          </div>
-          <h3 class="heading-2 col-start-2 col-span-1">
-            2.5 YEARS to 6.5 MONTHS
-          </h3>
-          <div class="col-start-2 col-span-1 row-start-2">
-            <p class="body-2 lg:max-w-[368px]">
-            ​ The first CMC PAC Reliance pilot supported by the Accumulus platform reduced the global approval and implementation timelines for a major drug substance process change from 2.5 YEARS to 6.5 MONTHS.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col items-center text-center justify-stretch md:justify-normal gap-s4">
-    <h3 class="heading-3">Learn more about why a digital transformation is needed</h3>
-    <a href="#" class="btn btn-tertiary">Read More</a>
-  </div>
-</section>
-
-<!-- End statics -->
 
 <?php
-  get_template_part(
-    'template-parts/content',
-    'careers-footer'
-  );
+// Fields why accumulus
+
+$why_title_tag = get_field('why_title_tag');
+$why_first_line_title = get_field('why_first_line_title');
+$why_second_line_title = get_field('why_second_line_title');
+$why_values = get_field('why_values');
+
 ?>
+
+
+<section class="relative section w-full pt-s12 md:pt-s10 lg:pb-s12">
+
+	<div class="container mx-auto">
+
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-0 pb-s10 lg:pb-s8">
+			<h4 class="col-span-12 md:col-span-12 col-start-1 pb-s6 heading-4 uppercase"><?php echo $why_title_tag; ?></h4>
+			<h2 class="col-span-12 heading-1 grid grid-cols-12">
+				<span class="col-span-12"><?php echo $why_first_line_title; ?></span>
+				<span class="col-span-10 col-start-2 lg:col-start-3"><?php echo $why_second_line_title; ?></span>
+			</h2>
+		</div>
+		
+		<?php
+			// Values view
+
+			$values_row = get_field('values_row');
+
+			$i = 0;		
+			
+			foreach($values_row as $row) :
+				$i++;
+
+				if($i % 2 == 1): 	
+			?>
+
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap lg:gap-y-0 pb-s6 md:pb-s10 lg:pb-s12 last-of-type:max-md:pb-s8 last-of-type:lg:!pb-0">
+					<div class="row-start-2 md:row-start-1 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col items-start gap-s3">
+
+						<?php  foreach($row['card_item'] as $card) : ?>
+
+							<?php if($card['acf_fc_layout'] == 'title') : ?>
+								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
+							<?php endif; ?>
+
+							<?php if($card['acf_fc_layout'] == 'description'): ?>
+								<p class="body-2"><?php echo $card['description']; ?></p>
+							<?php endif; ?>
+							
+							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
+								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+
+									<?php foreach($card['bullet_list'] as $item): ?>
+									<li class="relative pl-3 body-3">
+										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<?php echo $item['item']; ?>
+									</li>
+									<?php endforeach; ?>
+
+								</ul>
+							<?php endif; ?>
+
+							<?php if($card['acf_fc_layout'] == 'cta'): ?>
+								<a class="btn-tertiary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+							<?php endif; ?>
+
+						<?php endforeach; ?>
+
+					</div>
+					<div class="row-start-1 col-span-12 md:col-span-6 md:col-start-7">
+
+						<?php foreach($row['card_item'] as $card) : ?>
+
+							<?php if ($card['acf_fc_layout'] == 'image') : ?>
+								<img src="<?php echo $card['image']; ?>"  />
+							<?php endif; ?>
+
+						<?php endforeach; ?>
+
+					</div>
+				</div>
+				<!-- text left - img right -->
+
+				<?php else: ?>
+
+				<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:gap-y-0 pb-s6 md:pb-s10 lg:pb-s12 last-of-type:max-md:pb-s8 last-of-type:lg:!pb-0">
+					<div class="col-span-12 md:col-span-6">
+
+						<?php foreach($row['card_item'] as $card) : ?>
+
+							<?php if ($card['acf_fc_layout'] == 'image') : ?>
+								<img src="<?php echo $card['image']; ?>"  />
+							<?php endif; ?>
+
+						<?php endforeach; ?>
+
+					</div>
+					<div class="col-span-12 md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-8 flex flex-col items-start gap-s3">
+
+						<?php foreach($row['card_item'] as $card) : ?>
+
+							<?php if($card['acf_fc_layout'] == 'title') : ?>
+								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
+							<?php endif; ?>
+
+							<?php if($card['acf_fc_layout'] == 'description'): ?>
+								<p class="body-2"><?php echo $card['description']; ?></p>
+							<?php endif; ?>
+							
+							<?php if($card['acf_fc_layout'] == 'bullet_list'): ?>
+								<ul class="flex flex-col gap-2 text-b3Mobile md:text-b3Tablet lg:text-b3">
+
+									<?php foreach($card['bullet_list'] as $item): ?>
+									<li class="relative pl-3 body-3">
+										<span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+										<?php echo $item['item']; ?>
+									</li>
+									<?php endforeach; ?>
+
+								</ul>
+							<?php endif; ?>
+
+							<?php if($card['acf_fc_layout'] == 'cta'): ?>
+								<a class="btn-tertiary" href="<?php echo $card['link']; ?>"><?php echo $card['text_link']; ?></a>
+							<?php endif; ?>
+
+						<?php endforeach; ?>
+
+					</div>
+				</div>
+				<!-- img left - text right -->
+
+				<?php endif; ?>
+
+		<?php
+			endforeach;
+		?>
+
+	</div>
+
+</section>
+
+
+<!-- Why accumulus -->
+
 
 <!-- Form Module -->
 <?php

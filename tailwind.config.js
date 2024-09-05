@@ -480,6 +480,9 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png')",
         'what-we-do-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
+        // about
+        'what-we-do-about-tablet':
+          "url('/wp-content/themes/accumulus-website/images/about-us/what-we-do-tablet.png')",
 
         'quote-home-desktop':
           "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-desktop.png')",
