@@ -74,9 +74,9 @@ foreach($platform_row as $row) :
 
 <!-- Mission challenges and Better way -->
 
-<?php if($row['acf_fc_layout'] == 'mission_challenges_layout' || $row['acf_fc_layout'] == 'better_way_layout'): ?>
+<?php if($row['acf_fc_layout'] == 'mission_challenges_layout'): ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nude">
+<section class="relative section w-full pt-s12 md:pt-s10 lg:pb-s6 bg-neutral-nude">
 	<div class="container mx-auto">
 		
 		<?php if($row['acf_fc_layout'] == 'mission_challenges_layout') : ?>
@@ -93,13 +93,13 @@ foreach($platform_row as $row) :
 
 				<p class="col-span-6 md:col-span-7 md:col-start-5 lg:col-span-6 lg:col-start-6 pb-s2 lg:pb-s6"><?php echo $row['mission_challenges']['resume']; ?></p>
 
-				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8 lg:pb-s6">
+				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8">
 
 					<?php foreach($row['mission_challenges']['list_items'] as $item) : ?>
-					<div class="col-span-6 md:col-span-7 lg:col-span-5 col-start-1 md:col-start-5 lg:col-start-6 flex items-start gap-s3">
-						<img class="w-[55px] md:w-[64px] aspect-square" src="<?php echo esc_url($item['icon']); ?>" alt="<?php echo $item['title']; ?>" />
+					<div class="col-span-6 md:col-span-7 lg:col-span-5 col-start-1 md:col-start-5 lg:col-start-6 flex items-start gap-s2">
+						<img class="w-[39px] md:w-[64px] aspect-square" src="<?php echo esc_url($item['icon']); ?>" alt="<?php echo $item['title']; ?>" />
 						<div class="description-wysiwyg  w-auto">
-							<h3 class="heading-3"><?php echo $item['title']; ?></h3>
+							<h3 class="heading-7"><?php echo $item['title']; ?></h3>
 						</div>
 					</div>
 					<?php endforeach; ?>
@@ -108,9 +108,19 @@ foreach($platform_row as $row) :
 
 			</div>
 		<?php endif; ?>
+		
+		</div>
+</section>
+
+<?php endif; ?>
+
+<?php if( $row['acf_fc_layout'] == 'better_way_layout'): ?>
+
+<section class="relative section w-full pt-s10 md:pt-s12 pb-s10 bg-neutral-nude">
+	<div class="container mx-auto">
 
 		<?php if($row['acf_fc_layout'] == 'better_way_layout') : ?>
-			<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s4 md:gap-y-s6 pt-s10 lg:pt-s12">
+			<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s4">
 
 				<h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2 lg:pb-s1">
 					<span class="col-span-6 md:col-span-12">
@@ -125,7 +135,7 @@ foreach($platform_row as $row) :
 					<?php echo $row['better_way']['resume']; ?>
 				</p>
 
-				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8 lg:pb-s6">
+				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8">
 					<?php foreach($row['better_way']['list_items'] as $item) : ?>
 					<div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start gap-s2">
 						<img class="w-[39px] md:w-[64px] aspect-square" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
@@ -238,13 +248,13 @@ foreach($platform_row as $row) :
 					<?php 
 						foreach($row['key_features']['key_features_list'] as $value): 
 					?>
-					<div class="col-span-12 md:col-span-6">
-						<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s4 gap-x-s2">
-							<div class="col-span-1 col-start-1 flex flex-col items-start">
-								<img class="min-w-[55px] md:min-w-[64px] aspect-square" src="<?php echo $value['icon'] ?>" alt="Icon" />
+					<div class="col-span-12 md:col-span-6 md:pr-s2">
+						<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s4 md:gap-x-s2">
+							<div class="col-span-1 col-start-1">
+								<img class="w-[55px] md:w-[64px] aspect-square" src="<?php echo $value['icon'] ?>" alt="Icon" />
 							</div>
-							<h3 class="heading-3 col-start-2 col-span-5 lg:col-span-5"><?php echo $value['title']; ?></h3>
-							<p class="body-2 col-span-5 lg:col-span-5 col-start-2 lg:col-start-2 row-start-2"><?php echo $value['description']; ?></p>
+							<h3 class="heading-3 col-start-2 col-span-5 lg:col-span-5 max-md:pl-s2"><?php echo $value['title']; ?></h3>
+							<p class="body-2 col-span-5 lg:col-span-5 col-start-2 lg:col-start-2 row-start-2 max-md:pl-s2"><?php echo $value['description']; ?></p>
 						</div>
 					</div>
 					<?php endforeach; ?>	
