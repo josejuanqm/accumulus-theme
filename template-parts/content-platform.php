@@ -13,12 +13,9 @@
 
 $platform_row = get_field('platform');
 
-// var_dump($platform_row);
-
 foreach($platform_row as $row) :
 
 ?>
-<?php //echo $row['']['']; ?>
 
 <!-- Main banner -->
 
@@ -113,6 +110,7 @@ foreach($platform_row as $row) :
 </section>
 
 <?php endif; ?>
+
 
 <?php if( $row['acf_fc_layout'] == 'better_way_layout'): ?>
 
@@ -303,7 +301,7 @@ foreach($platform_row as $row) :
 
 <?php if($row['acf_fc_layout'] == 'value_proposition_layout') : ?>
 
-<section class="relative section w-full pt-s13 md:pt-s12 lg:pt-12 pb-s4 md:pb-s6 lg:pb-s12">
+<section class="relative section w-full pt-s13 md:pt-s12 lg:pt-s8 pb-s4 md:pb-s6 lg:pb-s12">
 
 	<div class="container mx-auto">
     <?php if($row['value_propositions']) : ?>
@@ -329,6 +327,15 @@ foreach($platform_row as $row) :
 <?php if($row['acf_fc_layout'] == 'values_lists_layout') : ?>
 
 <section class="relative section w-full pt-s10 lg:pb-s10">
+
+	
+	<?php if($row['eyebrown'] !== ''): ?>
+	<div class="container mx-auto">
+		<h4 class="heading-4 pb-s2 md:pb-s4 lg:pb-s6">
+			<?php echo $row['eyebrown'] ?>
+		</h4>
+	</div>
+	<?php endif; ?>
 
 	<div class="container mx-auto">
 		

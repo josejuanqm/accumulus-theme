@@ -537,11 +537,11 @@ module.exports = {
 
         // Platform -> Benefits
         'benefits-desktop':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-desktop.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-desktop.png')",
         'benefits-tablet':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-tablet.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png')",
         'benefits-mobile':
-          "url('/wp-content/themes/accumulus-website/images/platform/bg-new-benefits-mobile.png')",
+          "url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png')",
 
         // Core capabilities
         'core-capabilities-desktop':

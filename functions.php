@@ -5302,6 +5302,26 @@ At Accumulus',
 					'display' => 'block',
 					'sub_fields' => array(
 						array(
+							'key' => 'field_66d9e64344988',
+							'label' => 'Eyebrown',
+							'name' => 'eyebrown',
+							'aria-label' => '',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'maxlength' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+						),
+						array(
 							'key' => 'field_66d93a31f8a75',
 							'label' => 'Values row',
 							'name' => 'values_row',
@@ -7804,7 +7824,6 @@ Accelerate outcomes.',
 	'show_in_rest' => 0,
 ) );
 } );
-
 
 
 add_action( 'init', function() {
