@@ -879,6 +879,10 @@ video {
   visibility: visible;
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1301,6 +1305,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[39px\] {
+  width: 39px;
 }
 
 .min-w-\[55px\] {
@@ -1743,6 +1751,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-fnude {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-0 {
@@ -4756,6 +4769,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-top: 4rem;
   }
 
+  .md\:pb-s16 {
+    padding-bottom: 8rem;
+  }
+
   .md\:text-b1Tablet {
     font-size: 1.875rem;
     line-height: 120%;
@@ -5081,6 +5098,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 100%;
   }
 
+  .lg\:w-\[64px\] {
+    width: 64px;
+  }
+
   .lg\:min-w-0 {
     min-width: 0px;
   }
@@ -5115,6 +5136,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -5218,6 +5243,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:gap-y-s8 {
     row-gap: 4rem;
+  }
+
+  .lg\:gap-y-s4 {
+    row-gap: 2rem;
   }
 
   .lg\:bg-404-desktop {
@@ -5436,6 +5465,22 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pb-s18 {
+    padding-bottom: 9rem;
+  }
+
+  .lg\:pt-s18 {
+    padding-top: 9rem;
+  }
+
+  .lg\:pb-s20 {
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pt-12 {
+    padding-top: 3rem;
   }
 
   .lg\:text-b1 {
