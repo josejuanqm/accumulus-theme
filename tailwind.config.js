@@ -561,6 +561,13 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-tablet.png')",
         'regulator-forum-mobile':
           "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-regulator-forum-mobile.png')",
+        //Quote
+        'regulator-quote-desktop':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-desktop.png')",
+        'regulator-quote-tablet':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-tablet.png')",
+        'regulator-quote-mobile':
+          "url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-mobile.png')",
 
         // Regulator form - related
         'increase-feedback-desktop':

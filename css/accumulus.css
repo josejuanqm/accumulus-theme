@@ -879,10 +879,6 @@ video {
   visibility: visible;
 }
 
-.static {
-  position: static;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1600,6 +1596,11 @@ video {
   row-gap: 3.5rem;
 }
 
+.gap-x-s7 {
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1709,6 +1710,11 @@ video {
   background-color: rgb(65 22 147 / var(--tw-bg-opacity));
 }
 
+.bg-purple-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 180 254 / var(--tw-bg-opacity));
+}
+
 .bg-secondary-aqua {
   --tw-bg-opacity: 1;
   background-color: rgb(210 233 234 / var(--tw-bg-opacity));
@@ -1753,6 +1759,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-current {
+  background-color: currentColor;
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1795,6 +1805,10 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
+}
+
+.bg-regulator-quote-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-mobile.png');
 }
 
 .bg-contain {
@@ -1934,11 +1948,6 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-s3 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-s4 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1957,6 +1966,11 @@ video {
 .py-s8 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-s3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-s1 {
@@ -1981,6 +1995,10 @@ video {
 
 .pb-s2 {
   padding-bottom: 1rem;
+}
+
+.pb-s3 {
+  padding-bottom: 1.5rem;
 }
 
 .pb-s4 {
@@ -2013,6 +2031,10 @@ video {
 
 .pl-s2 {
   padding-left: 1rem;
+}
+
+.pl-s4 {
+  padding-left: 2rem;
 }
 
 .pl-s6 {
@@ -2093,14 +2115,6 @@ video {
 
 .pt-s9 {
   padding-top: 4.5rem;
-}
-
-.pl-s4 {
-  padding-left: 2rem;
-}
-
-.pb-s3 {
-  padding-bottom: 1.5rem;
 }
 
 .text-center {
@@ -2214,10 +2228,6 @@ video {
 
 .\!font-normal {
   font-weight: 400 !important;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-normal {
@@ -4050,10 +4060,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   padding-top: 0px;
 }
 
-.last-of-type\:pb-s4:last-of-type {
-  padding-bottom: 2rem;
-}
-
 .hover\:border-neutral-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -4195,6 +4201,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:flex-col {
     flex-direction: column;
+  }
+
+  .max-md\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .max-md\:\!pr-s2 {
@@ -4361,12 +4371,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     margin-top: 0px;
   }
 
-  .md\:mt-s4 {
-    margin-top: 2rem;
-  }
-
   .md\:mt-s12 {
     margin-top: 6rem;
+  }
+
+  .md\:mt-s4 {
+    margin-top: 2rem;
   }
 
   .md\:block {
@@ -4465,16 +4475,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 195px;
   }
 
-  .md\:max-w-full {
-    max-width: 100%;
-  }
-
-  .md\:max-w-\[229px\] {
-    max-width: 229px;
-  }
-
   .md\:max-w-\[220px\] {
     max-width: 220px;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
   }
 
   .md\:grid-flow-col {
@@ -4583,8 +4589,9 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     row-gap: 4.5rem;
   }
 
-  .md\:gap-y-10 {
-    row-gap: 2.5rem;
+  .md\:gap-x-s6 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .md\:overflow-hidden {
@@ -4627,6 +4634,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
 
+  .md\:bg-regulator-quote-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-tablet.png');
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -4662,14 +4673,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 1rem;
   }
 
-  .md\:py-s5 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .md\:py-s8 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:py-s3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .md\:pb-0 {
@@ -4690,6 +4701,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:pb-s2 {
     padding-bottom: 1rem;
+  }
+
+  .md\:pb-s20 {
+    padding-bottom: 10rem;
   }
 
   .md\:pb-s4 {
@@ -4790,18 +4805,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:pt-s8 {
     padding-top: 4rem;
-  }
-
-  .md\:pb-s15 {
-    padding-bottom: 7.5rem;
-  }
-
-  .md\:pb-s19 {
-    padding-bottom: 9.5rem;
-  }
-
-  .md\:pb-s20 {
-    padding-bottom: 10rem;
   }
 
   .md\:text-b2Tablet {
@@ -4916,10 +4919,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:top-1\/4 {
     top: 25%;
-  }
-
-  .lg\:top-\[10px\] {
-    top: 10px;
   }
 
   .lg\:col-auto {
@@ -5066,10 +5065,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     margin-top: 3rem;
   }
 
-  .lg\:mr-s20 {
-    margin-right: 10rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -5122,6 +5117,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     min-width: 0px;
   }
 
+  .lg\:max-w-\[272px\] {
+    max-width: 272px;
+  }
+
   .lg\:max-w-\[368px\] {
     max-width: 368px;
   }
@@ -5140,14 +5139,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:max-w-full {
     max-width: 100%;
-  }
-
-  .lg\:max-w-\[272px\] {
-    max-width: 272px;
-  }
-
-  .lg\:grid-cols-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-12 {
@@ -5265,6 +5256,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     row-gap: 4rem;
   }
 
+  .lg\:gap-x-s7 {
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .lg\:bg-404-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png');
   }
@@ -5297,6 +5293,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
+  .lg\:bg-regulator-quote-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-desktop.png');
+  }
+
   .lg\:bg-auto {
     background-size: auto;
   }
@@ -5317,11 +5317,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .lg\:px-s3 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .lg\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .lg\:py-s10 {
@@ -5391,12 +5386,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 7rem;
   }
 
-  .lg\:pb-s4 {
-    padding-bottom: 2rem;
+  .lg\:pb-s18 {
+    padding-bottom: 9rem;
   }
 
-  .lg\:pb-s5 {
-    padding-bottom: 2.5rem;
+  .lg\:pb-s4 {
+    padding-bottom: 2rem;
   }
 
   .lg\:pb-s6 {
@@ -5459,6 +5454,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-top: 8rem;
   }
 
+  .lg\:pt-s18 {
+    padding-top: 9rem;
+  }
+
   .lg\:pt-s20 {
     padding-top: 10rem;
   }
@@ -5481,18 +5480,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
-  }
-
-  .lg\:pb-s16 {
-    padding-bottom: 8rem;
-  }
-
-  .lg\:pb-s18 {
-    padding-bottom: 9rem;
-  }
-
-  .lg\:pt-s18 {
-    padding-top: 9rem;
   }
 
   .lg\:text-b2 {
@@ -5560,18 +5547,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .last-of-type\:lg\:\!pb-0:last-of-type {
     padding-bottom: 0px !important;
-  }
-
-  .last-of-type\:lg\:pb-0:last-of-type {
-    padding-bottom: 0px;
-  }
-
-  .last-of-type\:lg\:pb-s12:last-of-type {
-    padding-bottom: 6rem;
-  }
-
-  .lg\:last-of-type\:pb-s12:last-of-type {
-    padding-bottom: 6rem;
   }
 }
 

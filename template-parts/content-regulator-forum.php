@@ -19,6 +19,7 @@
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
 	$link_learn_more = get_field('link_learn_more');
+	$text_cta = get_field('text_cta');
 ?>
 
 <section class="translucent-navigation relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-neutral-nude">
@@ -38,6 +39,7 @@
 
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
 				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+				<a class="btn-secondary" href="<?php echo $link_learn_more; ?>"><?php echo $text_cta; ?></a>
 			</div>
 
 		</div>
@@ -46,6 +48,104 @@
 </section>
 
 <!-- Main banner -->
+
+
+
+<!-- Quote -->
+
+<?php 
+
+$quote = get_field('quote');
+if($quote):
+?>
+
+<section class="relative section py-s8 md:py-s12 lg:py-s10 bg-purple-300 bg-regulator-quote-mobile md:bg-regulator-quote-tablet lg:bg-regulator-quote-desktop bg-cover bg-current bg-no-repeat">
+	<div class="container mx-auto px-s2 lg:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-s2">
+			<h2 class="col-span-6 md:col-span-10 lg:col-span-11 heading-2"><?php echo $quote['text'] ?></h2>
+		</div>
+	</div>
+</section>
+
+<?php endif; ?>
+
+<!-- end Quote -->
+
+
+
+<?php 
+
+$regulatory_authorities = get_field('regulatory_authorities');
+
+$observers = get_field('observers');
+
+if($regulatory_authorities): 
+
+$repeater = $regulatory_authorities['list_authorities'];
+$order = array();
+
+?>
+<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite">
+	<div class="container mx-auto px-s2 lg:px-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 gap-s2 md:gap-s6">
+
+      <h4 class="heading-4 col-span-6 md:col-span-12 uppercase"><?php echo $regulatory_authorities['flag_title_regulatory_authorities']; ?></h4>
+
+			<h2 class="col-span-6 md:col-span-10 lg:col-span-12 col-start-1 md:col-start-1 heading-1"><?php echo $regulatory_authorities['title_regulatory_authorities']; ?></h2>
+
+			<div class="col-span-6 md:col-span-12 flex flex-wrap items-center justify-start gap-y-s2 gap-s4 md:gap-x-s6 lg:gap-x-s7 py-s6 md:py-s3">
+				<?php foreach($regulatory_authorities['flags'] as $flag): ?>
+				<img src="<?php echo $flag['flag'] ?>" alt="<?php echo $flag['name'] ?>" />
+				<?php endforeach; ?>
+			</div>
+
+			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 md:grid-rows-4 md:grid-flow-col gap-s5">
+        
+        <?php 
+					foreach($repeater as $item => $row) {
+						$order[$item] = $row['title'];
+					}
+
+					array_multisort($order, SORT_STRING, $repeater);
+
+					foreach($repeater as $item => $row) : 
+					
+				?>
+
+        <div class="relative col-span-3 md:col-span-4 lg:col-span-4">
+          <div class="flex flex-col gap-s4">
+            <h4 class="heading-7 color-neutral-dgray"><?php echo $row['title']; ?></h4>
+            <p class="body-2"><?php echo $row['description']; ?></p>
+          </div>
+        </div>
+
+        <?php endforeach; ?>
+            
+			</div>
+
+      
+      <?php if($observers): ?>
+        
+        <h2 class="heading-1 col-span-6 md:col-span-12 pt-s8"><?php echo $observers['title']; ?></h2>
+
+        <ul class="col-span-6 md:col-span-7 md:col-start-6 lg:col-start-6 flex flex-col gap-s3">
+          <?php foreach($observers['observers'] as $item): ?>
+            <li class="heading-7"><?php echo $item['title'] ?></li>
+          <?php endforeach; ?>
+        </ul>
+
+        <p class="col-span-6 md:col-span-6 md:col-start-6 lg:col-start-6 body-4">
+          <?php echo $observers['description']; ?>
+        </p>
+
+      <?php endif; ?>
+
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<!-- Regulator forum -->
 
 
 <section class="relative section w-full pt-s12 md:pt-s10 lg:pb-s12">
@@ -174,42 +274,52 @@
 <!-- Values -->
 
 
+<!-- Testimonials -->
 
-<?php 
+<?php
 
-$related_topics = get_field('related_topics');
-
-if($related_topics):
+	$testimonials = get_field('testimonials');
+	if($testimonials):
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-aqua overflow-hidden">
+<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
+  <div class="relative container mx-auto">
 
-	<picture class="absolute top-0 left-0">
-		<source media="(min-width:1024px)" srcset="<?php echo $related_topics['bg_image_desktop']; ?>">
-		<source media="(min-width:768px)" srcset="<?php echo $related_topics['bg_image_tablet']; ?>">
-		<img src="<?php echo $related_topics['bg_image_mobile']; ?>" alt="<?php echo $related_topics['title_section']; ?>" class="w-full h-full">
-	</picture>
-
-	<div class="relative container mx-auto px-s2 md:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-10 gap-s2">
-      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 pb-s14 md:pb-s10"><?php echo $related_topics['title_section']; ?></h2>
-
-      <?php foreach($related_topics['list_items'] as $item) : ?>
-      <div class="col-span-5 md:col-span-7 lg:col-span-6 col-start-2 md:col-start-6 lg:col-start-7 flex items-center gap-s3 py-s3 md:py-s5 lg:py-0 lg:pt-0 lg:pb-s5 first-of-type:pt-0 last-of-type:lg:pb-0">
-        <img src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
-        <h3 class="heading-3 font-medium"><?php echo $item['title']; ?></h3>
-      </div>
+    <div class="general-slide">
+      <?php foreach($testimonials['list_testimonials'] as $slide): ?>
+        <div class="general-slide__item">
+          <div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-x-s2 md:gap-y-s10">
+            <h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
+							“<?php echo $slide['text_testimonial'] ?>”
+            </h3>
+            <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 flex items-start justify-between gap-s2">
+              <img class="max-w-[145px] md:max-w-full rounded-3xl" src="<?php echo $slide['photo_user']; ?>" alt="<?php echo $slide['name_user']; ?>" />
+              <div class="flex flex-col gap-s2">
+                <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $slide['name_user']; ?></h4>
+                <p class="body-3"><?php echo $slide['position_user']; ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
       <?php endforeach; ?>
-
     </div>
-  </div>
 
+    <div class="flex items-center justify-center gap-4 max-sm:pt-s6 max-xl:pt-s10">
+      <div class="prev xl:absolute xl:-left-20 xl:top-[200px] cursor-pointer">
+        <img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+      </div>
+      <div class="next xl:absolute xl:-right-20 xl:top-[200px] cursor-pointer">
+        <img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <?php endif; ?>
 
-<!-- Related topics -->
+<!-- end Testimonials -->
 
 
 
@@ -248,76 +358,6 @@ if($participation_looks):
 <?php endif; ?>
 
 <!-- Participation looks like -->
-
-
-
-<?php 
-
-$regulatory_authorities = get_field('regulatory_authorities');
-
-$observers = get_field('observers');
-
-if($regulatory_authorities): 
-
-$repeater = $regulatory_authorities['list_authorities'];
-$order = array();
-
-?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite">
-	<div class="container mx-auto px-s2 lg:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 gap-s2 md:gap-s6">
-
-      <h4 class="heading-4 col-span-6 md:col-span-12 uppercase"><?php echo $regulatory_authorities['flag_title_regulatory_authorities']; ?></h4>
-
-			<h2 class="col-span-6 md:col-span-10 col-start-1 md:col-start-1 heading-1"><?php echo $regulatory_authorities['title_regulatory_authorities']; ?></h2>
-
-			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 md:grid-rows-4 md:grid-flow-col gap-s5 pt-s6">
-        
-        <?php 
-					foreach($repeater as $item => $row) {
-						$order[$item] = $row['title'];
-					}
-
-					array_multisort($order, SORT_STRING, $repeater);
-
-					foreach($repeater as $item => $row) : 
-					
-				?>
-
-        <div class="relative col-span-3 md:col-span-4 lg:col-span-4">
-          <div class="flex flex-col gap-s4">
-            <h4 class="heading-7 color-neutral-dgray"><?php echo $row['title']; ?></h4>
-            <p class="body-2"><?php echo $row['description']; ?></p>
-          </div>
-        </div>
-
-        <?php endforeach; ?>
-            
-			</div>
-
-      
-      <?php if($observers): ?>
-        
-        <h2 class="heading-1 col-span-6 md:col-span-12 pt-s8"><?php echo $observers['title']; ?></h2>
-
-        <ul class="col-span-6 md:col-span-7 md:col-start-6 lg:col-start-6 flex flex-col gap-s3">
-          <?php foreach($observers['observers'] as $item): ?>
-            <li class="heading-7"><?php echo $item['title'] ?></li>
-          <?php endforeach; ?>
-        </ul>
-
-        <p class="col-span-6 md:col-span-6 md:col-start-6 lg:col-start-6 body-4">
-          <?php echo $observers['description']; ?>
-        </p>
-
-      <?php endif; ?>
-
-		</div>
-	</div>
-</section>
-<?php endif; ?>
-
-<!-- Regulator forum -->
 
 
 
