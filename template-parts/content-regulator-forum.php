@@ -22,7 +22,7 @@
 	$text_cta = get_field('text_cta');
 ?>
 
-<section class="translucent-navigation relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-neutral-nude">
+<section class="translucent-navigation relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-primary-violet">
 
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
@@ -293,7 +293,7 @@ $order = array();
             <h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
 							“<?php echo $slide['text_testimonial'] ?>”
             </h3>
-            <div class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 flex items-start justify-between gap-s2">
+            <div class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-6 lg:col-start-6 flex items-start justify-between gap-s2">
               <img class="max-w-[145px] md:max-w-full rounded-3xl" src="<?php echo $slide['photo_user']; ?>" alt="<?php echo $slide['name_user']; ?>" />
               <div class="flex flex-col gap-s2">
                 <h4 class="heading-3 text-neutral-dgray w-full md:max-w-[195px]"><?php echo $slide['name_user']; ?></h4>
