@@ -1135,6 +1135,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-s8 {
+  margin-top: 4rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -4046,6 +4050,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   padding-top: 0px;
 }
 
+.last-of-type\:pb-s4:last-of-type {
+  padding-bottom: 2rem;
+}
+
 .hover\:border-neutral-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -4357,6 +4365,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     margin-top: 2rem;
   }
 
+  .md\:mt-s12 {
+    margin-top: 6rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -4457,6 +4469,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 100%;
   }
 
+  .md\:max-w-\[229px\] {
+    max-width: 229px;
+  }
+
+  .md\:max-w-\[220px\] {
+    max-width: 220px;
+  }
+
   .md\:grid-flow-col {
     grid-auto-flow: column;
   }
@@ -4467,6 +4487,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:grid-rows-4 {
@@ -4557,6 +4581,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:gap-y-s9 {
     row-gap: 4.5rem;
+  }
+
+  .md\:gap-y-10 {
+    row-gap: 2.5rem;
   }
 
   .md\:overflow-hidden {
@@ -5114,6 +5142,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 100%;
   }
 
+  .lg\:max-w-\[272px\] {
+    max-width: 272px;
+  }
+
   .lg\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
@@ -5124,6 +5156,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -5528,6 +5564,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .last-of-type\:lg\:pb-0:last-of-type {
     padding-bottom: 0px;
+  }
+
+  .last-of-type\:lg\:pb-s12:last-of-type {
+    padding-bottom: 6rem;
+  }
+
+  .lg\:last-of-type\:pb-s12:last-of-type {
+    padding-bottom: 6rem;
   }
 }
 
