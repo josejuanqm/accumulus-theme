@@ -2234,6 +2234,10 @@ video {
   font-weight: 400;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -4807,6 +4811,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-top: 4rem;
   }
 
+  .md\:pt-s13 {
+    padding-top: 6.5rem;
+  }
+
   .md\:text-b2Tablet {
     font-size: 1.5rem;
     line-height: 120%;
@@ -5480,6 +5488,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pb-s20 {
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pb-s15 {
+    padding-bottom: 7.5rem;
   }
 
   .lg\:text-b2 {
