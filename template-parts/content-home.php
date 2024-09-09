@@ -15,11 +15,14 @@
 	$title_tag = get_field('title_tag');
 	$main_title = get_field('main_title');
 	$resume_text = get_field('resume_text');
-	$text_cta_request_a_demo = get_field('text_cta_request_a_demo');
-	$link_request_a_demo = get_field('link_request_a_demo');
-	$text_cta_learn_more = get_field('text_cta_learn_more');
-	$link_learn_more = get_field('link_learn_more');
+	$text_cta_request_a_demo_home = get_field('text_cta_request_a_demo_home');
+	$link_request_a_demo_home = get_field('link_request_a_demo_home');
+	$text_cta_learn_more_home = get_field('text_cta_learn_more_home');
+	$link_learn_more_home = get_field('link_learn_more_home');
 	$marquee = get_field('marquee_images');
+
+	echo $link_learn_more;
+	echo $link_request_a_demo;
 ?>
 
 <section class="translucent-navigation section w-full pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center bg-neutral-offwhite" style="background-image: url(<?php echo $bg_image_main ?>)">
@@ -35,8 +38,8 @@
 				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $link_request_a_demo; ?>" class="btn-secondary"><?php echo $text_cta_request_a_demo; ?></a>
-				<a href="<?php echo $link_learn_more; ?>" class="btn-tertiary"><?php echo $text_cta_learn_more; ?></a>
+				<a href="<?php echo $link_request_a_demo_home; ?>" class="btn-secondary"><?php echo $text_cta_request_a_demo_home; ?></a>
+				<a href="<?php echo $link_learn_more_home; ?>" class="btn-tertiary"><?php echo $text_cta_learn_more_home; ?></a>
 			</div>
 
 		</div>

@@ -4477,7 +4477,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66175352040c8',
 		'title' => 'Main banner - Home',
 		'fields' => array(
@@ -4571,7 +4571,7 @@ add_action( 'acf/include_fields', function() {
 			array(
 				'key' => 'field_66d7cf179f365',
 				'label' => 'Text cta request a demo',
-				'name' => 'text_cta_request_a_demo',
+				'name' => 'text_cta_request_a_demo_home',
 				'aria-label' => '',
 				'type' => 'text',
 				'instructions' => '',
@@ -4591,7 +4591,7 @@ add_action( 'acf/include_fields', function() {
 			array(
 				'key' => 'field_66d7cee39f363',
 				'label' => 'Link request a demo',
-				'name' => 'link_request_a_demo',
+				'name' => 'link_request_a_demo_home',
 				'aria-label' => '',
 				'type' => 'url',
 				'instructions' => '',
@@ -4602,13 +4602,13 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => 'https://google.com/',
+				'default_value' => 'https://googles.com/',
 				'placeholder' => '',
 			),
 			array(
 				'key' => 'field_66d7cef69f364',
 				'label' => 'Text cta Learn more',
-				'name' => 'text_cta_learn_more',
+				'name' => 'text_cta_learn_more_home',
 				'aria-label' => '',
 				'type' => 'text',
 				'instructions' => '',
@@ -4628,7 +4628,7 @@ add_action( 'acf/include_fields', function() {
 			array(
 				'key' => 'field_6617546f1328c',
 				'label' => 'Link learn more',
-				'name' => 'link_learn_more',
+				'name' => 'link_learn_more_home',
 				'aria-label' => '',
 				'type' => 'url',
 				'instructions' => '',
