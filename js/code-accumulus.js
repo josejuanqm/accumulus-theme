@@ -25,6 +25,32 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $('.roles').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.prevs'),
+    nextArrow: $('.nexts'),
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 675,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
   $('.key-features').slick({
     dots: false,
     infinite: false,

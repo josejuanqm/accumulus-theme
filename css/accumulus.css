@@ -1315,12 +1315,28 @@ video {
   width: 100vw;
 }
 
+.\!w-auto {
+  width: auto !important;
+}
+
+.\!w-\[190px\] {
+  width: 190px !important;
+}
+
 .min-w-\[55px\] {
   min-width: 55px;
 }
 
 .min-w-s7 {
   min-width: 3.5rem;
+}
+
+.\!min-w-\[100px\] {
+  min-width: 100px !important;
+}
+
+.\!min-w-\[190px\] {
+  min-width: 190px !important;
 }
 
 .max-w-\[1135px\] {

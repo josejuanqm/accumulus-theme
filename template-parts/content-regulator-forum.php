@@ -450,7 +450,7 @@ if($join_the_forum):
 
 <?php endif; ?>
 
-<!-- Related topics -->
+<!-- Join the forum -->
 
 
 <!-- Form Module -->

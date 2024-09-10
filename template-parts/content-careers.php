@@ -41,6 +41,55 @@
 <!-- end Main banner -->
 
 
+<!-- Roles -->
+
+<section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
+	<div class="container mx-auto px-s4 lg:px-0">
+		<div class="flex flex-col gap-s8">
+			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Open Roles</h2>
+			<div class="relative w-full">
+				<div class="roles">
+					<?php 
+
+            $roles = [1,2,3,4,5];
+            foreach($roles as $role): 
+          ?>
+						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
+
+							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
+
+							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
+							</div>
+
+							<div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">
+								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor</h3>
+                <p class="body-2 pb-s3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus. </p>
+                <a href="#" target="_blank" class="btn-primary !w-[190px] !min-w-[190px]">CTA</a>
+							</div>
+
+						</div>
+						<?php 
+              endforeach; 
+            ?>
+				</div>
+					
+				<div class="max-xl:flex max-xl:items-center max-xl:justify-center max-xl:gap-4 max-sm:pt-s6 max-xl:pt-s10">
+					<div class="prevs xl:absolute xl:-left-20 xl:top-1/4 cursor-pointer">
+						<img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+					</div>
+					<div class="nexts xl:absolute xl:-right-20 xl:top-1/4 cursor-pointer">
+						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- End Roles -->
+
+
 <!-- Our culture pillars -->
 
 
