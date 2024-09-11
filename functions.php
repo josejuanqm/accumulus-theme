@@ -9467,3 +9467,6 @@ add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax
 
 	return $confirmation;
 }, 10, 4 );
+
+update_oiption('siteurl', 'https://accumulus.alt-black.nyc');
+update_oiption('home', 'https://accumulus.alt-black.nyc');
