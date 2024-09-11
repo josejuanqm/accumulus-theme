@@ -51,15 +51,6 @@
 }
 .roles .content-intro + h2 + p { display: block; }
 .roles .content-intro > p + p { display:block; }
-.slick-track
-{
-    display: flex !important;
-}
-
-.slick-slide
-{
-    height: inherit !important;
-}
 </style>
 
 <section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
