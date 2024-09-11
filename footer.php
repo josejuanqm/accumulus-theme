@@ -29,18 +29,18 @@
           </p>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-1 row-start-2 md:col-span-3 md:col-start-6 md:row-start-2 lg:col-span-2 lg:col-start-9 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Company</p></li>
-          <li><a class="font-normal" href="">About Us</a></li>
-          <li><a class="font-normal" href="">Our Team</a></li>
-          <li><a class="font-normal" href="">News</a></li>
-          <li><a class="font-normal" href="">Events</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Company</p></li>
+          <li><a href="/about-us/" class="font-normal" href="">About Us</a></li>
+          <li><a href="/team/" class="font-normal" href="">Our Team</a></li>
+          <li><a href="/news/" class="font-normal" href="">News</a></li>
+          <li><a href="/events/" class="font-normal" href="">Events</a></li>
           <!-- <li><a href="">Case For Change</a></li> -->
-          <li><a class="font-normal" href="">Regulator Forum</a></li>
-          <li><a class="font-normal" href="">Careers</a></li>
+          <li><a href="/regulator-forum/" class="font-normal" href="">Regulator Forum</a></li>
+          <li><a href="/platform/" class="font-normal" href="">Careers</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-6 row-start-2 md:col-span-3 md:col-start-10 md:row-start-2 lg:col-span-2 lg:col-start-11 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Platform</p></li>
-          <li><a class="font-normal" href="">Accumulus Platform</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Platform</p></li>
+          <li><a href="/platform/" class="font-normal" href="">Accumulus Platform</a></li>
           <!-- <li><a href="">Core Capabilities</a></li> -->
         </ul>
         <div class="flex flex-row items-start justify-start order-last md:order-none pt-s13 lg:pt-0 col-span-12 row-start-5 md:col-span-10 md:row-start-3 lg:row-start-2">
@@ -68,18 +68,18 @@
 </svg>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 md:col-span-4 md:col-start-1 md:row-start-4 lg:col-span-3 lg:col-start-7 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Resources</p></li>
-          <li><a class="font-normal" href="">Resources</a></li>
-          <li><a class="font-normal" href="">News and Media</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Resources</p></li>
+          <li><a href="/resources/" class="font-normal" href="">Resources</a></li>
+          <li><a href="/news/" class="font-normal" href="">News and Media</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 col-start-7 md:col-span-4 md:col-start-5 md:row-start-4 lg:col-span-2 lg:col-start-11 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Legal</p></li>
-          <li><a class="font-normal" href="">Privacy Policy</a></li>
-          <li><a class="font-normal" href="">Terms & Conditions</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Legal</p></li>
+          <li><a href="/privacy-policy/" class="font-normal" href="">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/" class="font-normal" href="">Terms & Conditions</a></li>
         </ul>
         <ul class="flex flex-col items-start gap-s2 list-none col-span-3 col-start-1 row-start-4 md:col-span-4 md:col-start-9 md:row-start-4 lg:col-span-2 lg:col-start-1 lg:row-start-3">
-          <li><a class="font-normal" href="">LinkedIn</a></li>
-          <li><a class="font-normal" href="">Contact Us</a></li>
+          <li><a href="#" class="font-normal" href="">LinkedIn</a></li>
+          <li><a href="/contact-us/" class="font-normal" href="">Contact Us</a></li>
         </ul>
 			</div>
 		</div>
