@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1367,6 +1367,10 @@ video {
   flex-shrink: 0;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .basis-full {
   flex-basis: 100%;
 }
@@ -1846,20 +1850,16 @@ video {
   background-repeat: no-repeat;
 }
 
-.fill-cta-dark {
-  fill: #202020;
-}
-
 .fill-current {
   fill: currentColor;
 }
 
-.fill-white {
-  fill: #fff;
-}
-
 .fill-neutral-sgray {
   fill: #7a7a7a;
+}
+
+.fill-white {
+  fill: #fff;
 }
 
 .stroke-cta-dark {
@@ -1874,16 +1874,16 @@ video {
   stroke: #fcfcfc;
 }
 
+.stroke-neutral-sgray {
+  stroke: #7a7a7a;
+}
+
 .stroke-none {
   stroke: none;
 }
 
 .stroke-white {
   stroke: #fff;
-}
-
-.stroke-neutral-sgray {
-  stroke: #7a7a7a;
 }
 
 .stroke-0 {
@@ -2232,12 +2232,12 @@ video {
   font-weight: 400 !important;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .uppercase {
@@ -2267,11 +2267,6 @@ video {
 .\!text-neutral-nwhite {
   --tw-text-opacity: 1 !important;
   color: rgb(252 252 252 / var(--tw-text-opacity)) !important;
-}
-
-.text-cta-dark {
-  --tw-text-opacity: 1;
-  color: rgb(32 32 32 / var(--tw-text-opacity));
 }
 
 .text-neutral-100 {
@@ -4148,12 +4143,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     height: 100vh;
   }
 
-  .max-lg\:min-h-full {
-    min-height: 100%;
-  }
-
   .max-lg\:min-h-\[445px\] {
     min-height: 445px;
+  }
+
+  .max-lg\:min-h-full {
+    min-height: 100%;
   }
 
   .max-lg\:max-w-\[380px\] {
@@ -4225,10 +4220,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:flex {
     display: flex;
-  }
-
-  .max-md\:min-h-\[\] {
-    min-height: ;
   }
 
   .max-md\:min-h-\[290px\] {
@@ -5630,28 +5621,20 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 }
 
-.\[\&\>\*\]\:fill-cta-dark>* {
-  fill: #202020;
+.\[\&\>\*\]\:fill-neutral-sgray>* {
+  fill: #7a7a7a;
 }
 
 .\[\&\>\*\]\:fill-white>* {
   fill: #fff;
 }
 
-.\[\&\>\*\]\:fill-neutral-sgray>* {
-  fill: #7a7a7a;
-}
-
-.\[\&\>\*\]\:stroke-cta-dark>* {
-  stroke: #202020;
+.\[\&\>\*\]\:stroke-neutral-sgray>* {
+  stroke: #7a7a7a;
 }
 
 .\[\&\>\*\]\:stroke-white>* {
   stroke: #fff;
-}
-
-.\[\&\>\*\]\:stroke-neutral-sgray>* {
-  stroke: #7a7a7a;
 }
 
 .\[\&\>\*\]\:\!text-white>* {
