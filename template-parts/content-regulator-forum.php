@@ -356,6 +356,7 @@ if($participation_looks):
         <?php endforeach; ?>
             
 			</div>
+			
 		</div>
 	</div>
 </section>
@@ -447,7 +448,10 @@ if($join_the_forum):
         </div>
       </div>
       <?php endforeach; ?>
-
+			
+			<div class="col-span-6 md:col-span-12">
+				<a href="#" target="_blank" download class="btn-secondary max-w-[360px] mx-auto">Download Regulator Forum Flyer</a>
+			</div>
     </div>
   </div>
 </section>

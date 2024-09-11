@@ -53,9 +53,13 @@ foreach($platform_row as $row) :
 			</div>
 			<div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 
+				<?php if($row['main_banner']['text_first_cta'] !== ''): ?>
 				<a href="<?php echo  $row['main_banner']['link_first_cta']; ?>" class="btn-secondary"><?php echo  $row['main_banner']['text_first_cta']; ?></a>
+				<?php endif; ?>
 
+				<?php if($row['main_banner']['text_second_cta'] !== ''): ?>
 				<a href="<?php echo  $row['main_banner']['link_second_cta']; ?>" class="btn-tertiary"><?php echo  $row['main_banner']['text_second_cta']; ?></a>
+				<?php endif; ?>
 
 			</div>
 
@@ -88,7 +92,7 @@ foreach($platform_row as $row) :
 					</span>
 				</h2>
 
-				<p class="col-span-6 md:col-span-7 md:col-start-5 lg:col-span-6 lg:col-start-6 pb-s2 lg:pb-s6"><?php echo $row['mission_challenges']['resume']; ?></p>
+				<p class="body-2 col-span-6 md:col-span-7 md:col-start-5 lg:col-span-6 lg:col-start-6 pb-s2 lg:pb-s6"><?php echo $row['mission_challenges']['resume']; ?></p>
 
 				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8">
 
@@ -96,7 +100,7 @@ foreach($platform_row as $row) :
 					<div class="col-span-6 md:col-span-7 lg:col-span-5 col-start-1 md:col-start-5 lg:col-start-6 flex items-start gap-s2">
 						<img class="w-[39px] md:w-[64px] aspect-square" src="<?php echo esc_url($item['icon']); ?>" alt="<?php echo $item['title']; ?>" />
 						<div class="description-wysiwyg  w-auto">
-							<h3 class="heading-7"><?php echo $item['title']; ?></h3>
+							<h3 class="heading-3"><?php echo $item['title']; ?></h3>
 						</div>
 					</div>
 					<?php endforeach; ?>
@@ -129,7 +133,7 @@ foreach($platform_row as $row) :
 					</span>
 				</h2>
 
-				<p class="col-span-6 md:col-span-7 md:col-start-5 lg:col-span-6 lg:col-start-6 pb-s2 md:pb-s2 lg:pb-s6">
+				<p class="body-2 col-span-6 md:col-span-7 md:col-start-5 lg:col-span-6 lg:col-start-6 pb-s2 md:pb-s2 lg:pb-s6">
 					<?php echo $row['better_way']['resume']; ?>
 				</p>
 

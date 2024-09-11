@@ -32,7 +32,9 @@
 				<p class="body-2 text-neutral-nwhite md:max-w-550 lg:max-w-full"><?php echo $main_banner['resume']; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
+        <?php if($main_banner['cta_text'] !== ''): ?>
 				<a href="<?php echo $main_banner['cta_link']; ?>" class="btn-secondary-inverted"><?php echo $main_banner['cta_text']; ?></a>
+        <?php endif; ?>
       </div>
 		</div>
 	</div>
@@ -77,9 +79,11 @@
 							</div>
 
 							<div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">
-							<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php echo $role->title; ?></h3>
-                <?php echo html_entity_decode($role->content); ?>
-		<a href="<?php echo $role->absolute_url; ?>" target="_blank" class="btn-primary !w-[190px] !min-w-[190px]">Apply Now</a>
+                <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray lg:pr-s4"><?php echo $role->title; ?></h3>
+                <div class="body-2 pb-s1">
+                  <?php echo html_entity_decode($role->content); ?>
+                </div>
+                <a href="<?php echo $role->absolute_url; ?>" target="_blank" class="btn-primary !w-[190px] !min-w-[190px] mx-auto">Apply Now</a>
 							</div>
 
 						</div>
@@ -148,64 +152,64 @@
   if($why_accumulus):
 ?>
 
- <section class="section relative w-full py-s8 md:py-s10 lg:py-s12 bg-neutral-offwhite">
-		<div class="container mx-auto">
-			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s8 md:pb-s6">
-				<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1 text-neutral-dgray">
-					<span class="block col-span-12">
-            <?php echo $why_accumulus['title_first_line']; ?>
-					</span>
-					<span class="block col-span-10 col-start-2 row-start-2">
-            <?php echo $why_accumulus['title_second_line']; ?>
-					</span>
-				</h2>
-			</div>
-			<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s10 lg:gap-y-s8">
+<section class="section relative w-full py-s8 md:py-s10 lg:py-s12 bg-neutral-offwhite">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s8 md:pb-s6">
+      <h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1 text-neutral-dgray">
+        <span class="block col-span-12">
+          <?php echo $why_accumulus['title_first_line']; ?>
+        </span>
+        <span class="block col-span-10 col-start-2 row-start-2">
+          <?php echo $why_accumulus['title_second_line']; ?>
+        </span>
+      </h2>
+    </div>
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s10 lg:gap-y-s8">
 
-        <?php 
-          $i = 0;
-          foreach($why_accumulus['list_items'] as $item): 
-          $i++;
-        ?>
-        <?php if($i % 2 == 1): ?>
-        <div class="col-span-12 md:col-span-6 lg:col-span-5">
-          <div class="grid grid-cols-[64px, 1fr] gap-x-s2 gap-y-s3">
-            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-              <img src="<?php echo $item['icon']; ?>" alt="<?php echo strip_tags($item['title']); ?>" class="w-[39px] md:w-[64px]" />
-            </div>
-            <h3 class="heading-3 col-start-2 col-span-1 text-neutral-dgray">
-              <?php echo $item['title'] ?>
-            </h3>
-            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
-              <?php echo $item['description'] ?>
-            </p>
+      <?php 
+        $i = 0;
+        foreach($why_accumulus['list_items'] as $item): 
+        $i++;
+      ?>
+      <?php if($i % 2 == 1): ?>
+      <div class="col-span-12 md:col-span-6 lg:col-span-5">
+        <div class="grid grid-cols-[64px, 1fr] gap-x-s2 gap-y-s3">
+          <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+            <img src="<?php echo $item['icon']; ?>" alt="<?php echo strip_tags($item['title']); ?>" class="w-[39px] md:w-[64px]" />
           </div>
+          <h3 class="heading-3 col-start-2 col-span-1 text-neutral-dgray">
+            <?php echo $item['title'] ?>
+          </h3>
+          <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+            <?php echo $item['description'] ?>
+          </p>
         </div>
-        <?php else : ?>
-        <div class="col-span-12 md:col-span-6 lg:col-span-5 lg:col-start-7">
-          <div class="grid grid-cols-[64px, 1fr] gap-x-s2 gap-y-s3">
-            <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-              <img src="<?php echo $item['icon']; ?>" alt="<?php echo strip_tags($item['title']); ?>" class="w-[39px] md:w-[64px]" />
-            </div>
-            <h3 class="heading-3 col-start-2 col-span-1 text-neutral-dgray">
-              <?php echo $item['title'] ?>
-            </h3>
-            <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
-              <?php echo $item['description'] ?>
-            </p>
-          </div>
-        </div>
-        <?php endif; ?>
-        <?php endforeach; ?>
-
-			</div>
-      <div class="flex items-center justify-center pt-s5 md:pt-s6 lg:pt-s10">
-        <a href="<?php echo $why_accumulus['link_cta']; ?>" class="btn-tertiary"><?php echo $why_accumulus['text_cta']; ?></a>
       </div>
-		</div>
- </section>
+      <?php else : ?>
+      <div class="col-span-12 md:col-span-6 lg:col-span-5 lg:col-start-7">
+        <div class="grid grid-cols-[64px, 1fr] gap-x-s2 gap-y-s3">
+          <div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+            <img src="<?php echo $item['icon']; ?>" alt="<?php echo strip_tags($item['title']); ?>" class="w-[39px] md:w-[64px]" />
+          </div>
+          <h3 class="heading-3 col-start-2 col-span-1 text-neutral-dgray">
+            <?php echo $item['title'] ?>
+          </h3>
+          <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-dgray">
+            <?php echo $item['description'] ?>
+          </p>
+        </div>
+      </div>
+      <?php endif; ?>
+      <?php endforeach; ?>
 
- <?php endif; ?>
+    </div>
+    <div class="flex items-center justify-center pt-s5 md:pt-s6 lg:pt-s10">
+      <a href="<?php echo $why_accumulus['link_cta']; ?>" class="btn-tertiary"><?php echo $why_accumulus['text_cta']; ?></a>
+    </div>
+  </div>
+</section>
+
+<?php endif; ?>
 
 <!-- END Why Accumulus -->
 

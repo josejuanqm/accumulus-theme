@@ -395,7 +395,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .gform_wrapper form .gform_body .gfield_label {
-  @apply !font-medium;
+  @apply !font-medium !text-cta-dark;
 }
 
 .gform_heading {
@@ -521,7 +521,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .popmake-title {
-  @apply !text-h3Mobile md:!text-h3Tablet lg:!text-h3 !text-center !mb-0;
+  @apply !text-h3Mobile md:!text-h3Tablet lg:!text-h3 !text-center !mb-0 !text-neutral-dgray;
 }
 
 .popmake-content {
