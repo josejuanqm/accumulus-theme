@@ -935,6 +935,14 @@ video {
   top: 1rem;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1339,6 +1347,10 @@ video {
   max-width: 300px;
 }
 
+.max-w-\[360px\] {
+  max-width: 360px;
+}
+
 .max-w-\[370px\] {
   max-width: 370px;
 }
@@ -1353,10 +1365,6 @@ video {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[360px\] {
-  max-width: 360px;
 }
 
 .flex-1 {
@@ -1816,6 +1824,10 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
+}
+
+.bg-about-envision-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-mobile.png');
 }
 
 .bg-contain {
@@ -4682,6 +4694,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
   }
 
+  .md\:bg-about-envision-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-tablet.png');
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -5357,6 +5373,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
   }
 
+  .lg\:bg-about-envision-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-desktop.png');
+  }
+
   .lg\:bg-auto {
     background-size: auto;
   }
@@ -5494,6 +5514,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-right: 1rem;
   }
 
+  .lg\:pr-s4 {
+    padding-right: 2rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
@@ -5548,10 +5572,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
-  }
-
-  .lg\:pr-s4 {
-    padding-right: 2rem;
   }
 
   .lg\:text-b2 {

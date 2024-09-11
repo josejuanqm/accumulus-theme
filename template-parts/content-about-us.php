@@ -52,8 +52,8 @@
 
 			<h4 class="col-span-12 md:col-span-12 col-start-1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-nwhite uppercase"><?php echo $what_we_do['what_title_tag']; ?></h4>
 			<h2 class="col-span-12 md:col-span-11 lg:col-span-11 col-start-1 text-h2Mobile md:text-h2Tablet lg:text-h2 text-neutral-nwhite"><?php echo $what_we_do['what_main_title']; ?></h2>
-			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_we_do['what_first_description']; ?></p>
-			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_we_do['what_second_description']; ?></p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite body-2"><?php echo $what_we_do['what_first_description']; ?></p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite body-2"><?php echo $what_we_do['what_second_description']; ?></p>
 
 		</div>
 
@@ -72,7 +72,7 @@
   if($envision_section):
 ?>
 
-<section class="relative section w-full pt-s5 md:pt-s10 pb-s8 md:pb-s12 -mt-[2.3rem] md:-mt-s10 lg:-mt-s10  bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
+<section class="relative section w-full pt-s5 md:pt-s10 pb-s8 md:pb-s12 -mt-[2.3rem] md:-mt-s10 lg:-mt-s10  bg-primary-glaciar bg-about-envision-mobile md:bg-about-envision-tablet lg:bg-about-envision-desktop bg-cover bg-no-repeat bg-left-bottom">
   <div class="container mx-auto flex flex-col gap-s8 md:gap-s10 lg:gap-s8">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s6">
 
@@ -82,7 +82,7 @@
         <ul class="flex flex-col gap-s4 pb-s5">
           <?php foreach($envision_section['bullets_description'] as $item): ?>
           <li class="relative pl-3 body-2">
-            <span class="absolute left-0 top-2 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
+            <span class="absolute left-0 top-3 block w-1 h-1 aspect-square bg-neutral-dgray rounded-full"></span>
               <?php echo $item['description']; ?>
           </li>
           <?php endforeach; ?>
@@ -110,15 +110,15 @@
   <div class="container mx-auto">
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2">
-      <h4 class="col-span-6 heading-4 pb-s1 md:pb-0 lg:pb-s4"><?php echo $case_study['eyebrown']; ?></h4>
+      <h4 class="col-span-6 heading-4 pb-s3 md:pb-s2 lg:pb-s4"><?php echo $case_study['eyebrown']; ?></h4>
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12">
         <h2 class="col-span-6 md:col-span-8 lg:col-span-8 heading-2 pb-s3 md:pb-s6"><?php echo $case_study['title']; ?></h2>
       </div>
       <div class="col-span-6 md:col-span-12 lg:col-span-4 pb-s5 lg:pb-0">
-        <picture class="">
+        <picture class="w-full">
           <source media="(min-width:1025px)" srcset="<?php echo $case_study['image_desktop']; ?>">
           <source media="(min-width:768px)" srcset="<?php echo $case_study['image_tablet']; ?>">
-          <img src="<?php echo $case_study['image_mobile']; ?>" alt="<?php echo $case_study['title']; ?>" class="h-full">
+          <img src="<?php echo $case_study['image_mobile']; ?>" alt="<?php echo $case_study['title']; ?>" class="h-full w-full">
         </picture>
       </div>
       <div class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6">
@@ -192,7 +192,7 @@
         </div>
         
         <div class="grid grid-cols-12 gap-s2 md:gap-x-s2 lg:gap-x-s2 col-span-12 items-center justify-between">
-          <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4" style="transform: translateX(5px);">2005</p>
+          <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4 uppercase" style="transform: translateX(5px);">2005</p>
           <button onclick="animatePrev()" class="col-span-2 lg:col-span-1 row-start-3 md:row-start-2 min-w-s7 lg:min-w-0">
             <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-neutral-500">
               <path d="M28.8623 55.7519C43.7885 55.7519 55.8886 43.6518 55.8886 28.7256C55.8886 13.7993 43.7885 1.69922 28.8623 1.69922C13.936 1.69922 1.83594 13.7993 1.83594 28.7256C1.83594 43.6518 13.936 55.7519 28.8623 55.7519Z" stroke-width="1.86732" stroke-miterlimit="10"/>
@@ -200,7 +200,7 @@
             </svg>
           </button>
 
-          <span id="slider-prev-label" class="heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2">
+          <span id="slider-prev-label" class="heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2 uppercase">
             <?php echo $years[0]['year']; ?>
           </span>
 
@@ -266,7 +266,7 @@
             </div>
           </div>
 
-          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-9 md:col-start-auto">
+          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-9 md:col-start-auto uppercase">
             <?php echo $years[count($years ) - 1]['year']; ?>
           </span>
 

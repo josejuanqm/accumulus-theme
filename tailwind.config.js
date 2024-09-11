@@ -498,6 +498,13 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-tablet.png')",
         'quote-home-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-quote-home-mobile.png')",
+        // Envision about
+        'about-envision-desktop':
+          "url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-desktop.png')",
+        'about-envision-tablet':
+          "url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-tablet.png')",
+        'about-envision-mobile':
+          "url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-mobile.png')",
         // Purple section - resources page
         'purple-section-desktop':
           "url('/wp-content/themes/accumulus-website/images/resources/bg-purple-desktop.png')",
