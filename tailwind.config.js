@@ -480,6 +480,14 @@ module.exports = {
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png')",
         'what-we-do-mobile':
           "url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png')",
+        // how it works - home
+        'how-works-home-desktop':
+          "url('/wp-content/themes/accumulus-website/images/home/how-it-works-home-desktop.png')",
+        'how-works-home-tablet':
+          "url('/wp-content/themes/accumulus-website/images/home/how-it-works-home-tablet.png')",
+        'how-works-home-mobile':
+          "url('/wp-content/themes/accumulus-website/images/home/how-it-works-home-mobile.png')",
+
         // about
         'what-we-do-about-tablet':
           "url('/wp-content/themes/accumulus-website/images/about-us/what-we-do-tablet.png')",

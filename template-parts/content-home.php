@@ -348,7 +348,7 @@ $how_it_works = get_field('how_it_works');
 
 if($how_it_works):
 ?>
-<section class="relative section py-s8 md:py-s12 lg:py-s10 bg-secondary-carbon ">
+<section class="relative section py-s8 md:py-s12 lg:py-s10 bg-secondary-carbon bg-how-works-home-mobile md:bg-how-works-home-tablet lg:bg-how-works-home-desktop bg-no-repeat bg-center bg-cover">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
 			<h2 class="col-span-6 md:col-span-12 heading-1"><?php echo $how_it_works['title']; ?></h2>

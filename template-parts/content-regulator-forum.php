@@ -39,6 +39,8 @@
 
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
 				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+			</div>
+			<div class="col-span-12 md:col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col md:items-end lg:items-start">
 				<a class="btn-secondary" href="<?php echo $link_learn_more; ?>"><?php echo $text_cta; ?></a>
 			</div>
 
@@ -62,7 +64,7 @@ if($quote):
 <section class="relative section py-s8 md:py-s12 lg:py-s10 bg-purple-300 bg-regulator-quote-mobile md:bg-regulator-quote-tablet lg:bg-regulator-quote-desktop bg-cover bg-current bg-no-repeat">
 	<div class="container mx-auto px-s2 lg:px-0">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-s2">
-			<h2 class="col-span-6 md:col-span-10 lg:col-span-11 heading-2"><?php echo $quote['text'] ?></h2>
+			<h2 class="col-span-6 md:col-span-10 lg:col-span-11 heading-2 text-cta-dark"><?php echo $quote['text'] ?></h2>
 		</div>
 	</div>
 </section>
@@ -99,7 +101,7 @@ $order = array();
 				<?php endforeach; ?>
 			</div>
 
-			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 md:grid-rows-4 md:grid-flow-col gap-s5">
+			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 md:grid-rows-5 md:grid-flow-col gap-s5">
         
         <?php 
 					foreach($repeater as $item => $row) {
@@ -203,7 +205,8 @@ $order = array();
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<!-- <img src="<?php //echo $card['image']; ?>"  /> -->
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -220,7 +223,8 @@ $order = array();
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<!-- <img src="<?php //echo $card['image']; ?>"  /> -->
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>

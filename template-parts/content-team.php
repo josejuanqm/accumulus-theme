@@ -35,9 +35,9 @@
 
       <div class="flex flex-col items-start gap-s4 lg:gap-s3 col-span-12 md:col-span-9 lg:col-span-6">
         <h2 class="heading-1 font-normal">Leadership</h2>
-        <p class="body-2 pb-s2 lg:pb-0">
+        <!-- <p class="body-2 pb-s2 lg:pb-0">
           A first-of-its-kind data and information exchange platform for the drug development lifecycle. Built for the process needs of today and the evolving life sciences–regulatory landscape of the future.
-        </p>
+        </p> -->
       </div>
       <div class="hidden md:block md:col-span-3 lg:col-span-6"></div>
       <?php
@@ -87,9 +87,9 @@
       <h2 class="heading-1 font-normal col-span-12">
         The Board of<br />Directors
       </h2>
-      <p class="body-2 col-span-12 lg:col-span-6 lg:col-start-6 pb-s2 lg:pb-0">
+      <!-- <p class="body-2 col-span-12 lg:col-span-6 lg:col-start-6 pb-s2 lg:pb-0">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id.
-      </p> 
+      </p>  -->
       
       <?php
         foreach($teamDirectors as $key => $team_member) {
