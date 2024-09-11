@@ -338,7 +338,7 @@ if($participation_looks):
 	<div class="container mx-auto px-s2 md:px-0">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-y-s11">
 
-			<h2 class="col-span-6 md:col-span-12 lg:col-span-12 heading-1"><?php echo $participation_looks['title_section']; ?></h2>
+			<h2 class="col-span-6 md:col-span-12 lg:col-span-12 heading-1 max-md:pr-s4"><?php echo $participation_looks['title_section']; ?></h2>
 
 			<div class="col-span-6 md:col-span-12 grid grid-cols-12 gap-s2 gap-y-s4 md:gap-y-s11">
         

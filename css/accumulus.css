@@ -4255,6 +4255,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-left: 1rem;
   }
 
+  .max-md\:pr-s4 {
+    padding-right: 2rem;
+  }
+
   .last-of-type\:max-md\:pb-s8:last-of-type {
     padding-bottom: 4rem;
   }
