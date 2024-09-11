@@ -5133,6 +5133,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-height: 192px;
   }
 
+  .lg\:min-h-\[152px\] {
+    min-height: 152px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
