@@ -1858,6 +1858,10 @@ video {
   fill: #fff;
 }
 
+.fill-neutral-sgray {
+  fill: #7a7a7a;
+}
+
 .stroke-cta-dark {
   stroke: #202020;
 }
@@ -1876,6 +1880,10 @@ video {
 
 .stroke-white {
   stroke: #fff;
+}
+
+.stroke-neutral-sgray {
+  stroke: #7a7a7a;
 }
 
 .stroke-0 {
@@ -2226,6 +2234,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -5626,12 +5638,20 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   fill: #fff;
 }
 
+.\[\&\>\*\]\:fill-neutral-sgray>* {
+  fill: #7a7a7a;
+}
+
 .\[\&\>\*\]\:stroke-cta-dark>* {
   stroke: #202020;
 }
 
 .\[\&\>\*\]\:stroke-white>* {
   stroke: #fff;
+}
+
+.\[\&\>\*\]\:stroke-neutral-sgray>* {
+  stroke: #7a7a7a;
 }
 
 .\[\&\>\*\]\:\!text-white>* {
