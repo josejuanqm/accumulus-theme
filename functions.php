@@ -955,16 +955,23 @@ function getEvents() {
                 $html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
                 $html .= '</div>';
 
-                if (has_post_thumbnail( $posts[0]->ID ) ) {
+                // if (has_post_thumbnail( $posts[0]->ID ) ) {
+                if ($categorySlug === 'conference' || $categorySlug === 'presentation' ) {
+
                     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $posts[0]->ID ), 'full' );
                     $html .= '<div class="max-md:w-full max-md:order-1 md:col-span-4 flex items-center justify-center bg-events-general bg-cover bg-no-repeat bg-center h-[144px] md:h-full lg:h-[192px]">';
-                    $html .= '<img class="block" src="'. $image[0] .'" alt="'. get_the_title($posts[0]->ID) .'" />';
+                    // $html .= '<img class="block" src="'. $image[0] .'" alt="'. get_the_title($posts[0]->ID) .'" />';
+                    $html .= '<img class="block" src="'. get_bloginfo('stylesheet_directory') .'/images/events/icon-calendar.png" alt="'. get_the_title($posts[0]->ID) .'" />';
                     $html .= '</div>';
+
 									} else {
+
 									$html .= '<div class="max-md:w-full max-md:order-1 md:col-span-4 flex items-center justify-center bg-events-general h-[144px] md:h-full lg:h-[192px]">';
-									$html .= '<img class="block" src="'. get_template_directory_uri() .'/images/events/icon-calendar.png" />';
+									$html .= '<img class="block max-w-[80px]" src="'. get_bloginfo('stylesheet_directory') .'/images/events/icon-accumulus.png" />';
 									$html .= '</div>';
+
 								}
+
                 $html .= '</div>';
             }
         }
