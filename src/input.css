@@ -275,7 +275,8 @@ div.wpforms-container-full .wpforms-field-label,
 .form-module .ginput_container input,
 .form-module .gfield_label,
 .form-module .gfield_required,
-.form-module .gform-field-label {
+.form-module .gform-field-label,
+.form-module .gform_wrapper form .gform_body .gfield_label {
   @apply !text-white placeholder:!text-white;
 }
 
