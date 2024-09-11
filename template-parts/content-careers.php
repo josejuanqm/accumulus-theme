@@ -12,6 +12,8 @@
 <!-- Main banner -->
 
 <?php
+  $json = file_get_contents('https://boards-api.greenhouse.io/v1/boards/accumulussynergyinc/jobs?content=true');
+  $obj = json_decode($json);
   $main_banner = get_field('main_banner');
   if($main_banner):
 ?>
@@ -42,6 +44,21 @@
 
 
 <!-- Roles -->
+<style>
+.roles h2, .roles p, .roles h3:not(.text-h3Mobile), .roles ul { display: none; }
+.roles .content-intro {
+	display:none;	
+}
+.roles .content-intro + h2 + p {
+	display: block;
+	overflow: hidden;
+	   display: -webkit-box;
+	   -webkit-line-clamp: 4; /* number of lines to show */
+		   line-clamp: 4; 
+	   -webkit-box-orient: vertical;
+ }
+.roles .content-intro > p + p { display:none; }
+</style>
 
 <section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
 	<div class="container mx-auto px-s4 lg:px-0">
@@ -50,22 +67,19 @@
 			<div class="relative w-full">
 				<div class="roles">
 					<?php 
-
-            $roles = [1,2,3,4,5];
-            foreach($roles as $role): 
+            foreach($obj->jobs  as $role): 
           ?>
-						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
+						<div class="card relative flex flex-col w-full max-w-[370px] rounded-card overflow-hidden mx-2">
 
-							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
 							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
                     <img class="block" src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
 							</div>
 
 							<div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">
-								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor</h3>
-                <p class="body-2 pb-s3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus. </p>
-                <a href="#" target="_blank" class="btn-primary !w-[190px] !min-w-[190px]">CTA</a>
+							<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php echo $role->title; ?></h3>
+                <?php echo html_entity_decode($role->content); ?>
+		<a href="<?php echo $role->absolute_url; ?>" target="_blank" class="btn-primary !w-[190px] !min-w-[190px]">Apply Now</a>
 							</div>
 
 						</div>
