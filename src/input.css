@@ -424,8 +424,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 
 /* Detail posts */
 
-.detail p {
-  @apply body-2 text-neutral-dgray lg:max-w-[750px];
+.detail p,
+.detail ul,
+.detail blockquote {
+  @apply body-2 text-neutral-dgray lg:max-w-[750px] w-full;
 }
 
 .detail figure {
