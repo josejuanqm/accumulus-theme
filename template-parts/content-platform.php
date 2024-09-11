@@ -241,7 +241,7 @@ foreach($platform_row as $row) :
 <section class="relative section py-s8 md:py-s12 lg:py-s10 bg-primary-violet ">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
-			<h2 class="col-span-6 md:col-span-12 heading-2"><?php echo $row['key_features']['title']; ?></h2>
+			<h2 class="col-span-6 md:col-span-12 heading-1"><?php echo $row['key_features']['title']; ?></h2>
 
 			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s4">
 
@@ -263,8 +263,12 @@ foreach($platform_row as $row) :
 				</div>
 
 				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 pt-s5 md:pt-s8 lg:pt-s3 flex flex-col lg:flex-row items-center justify-center gap-s3 md:gap-s4 lg:gap-s2">
+					<?php if($row['key_features']['text_cta_request_a_demo'] !== ''): ?>
 					<a href="<?php echo $row['key_features']['link_cta_request_a_demo']; ?>" class="btn-secondary-inverted"><?php echo $row['key_features']['text_cta_request_a_demo']; ?></a>
-					<a href="<?php echo $row['key_features']['link_cta_learn_more']; ?>" class="btn-tertiary-white"><?php echo $row['key_features']['text_cta_learn_more']; ?></a>
+					<?php endif; ?>
+					<?php if($row['key_features']['text_cta_learn_more'] !== ''): ?>
+						<a href="<?php echo $row['key_features']['link_cta_learn_more']; ?>" class="btn-tertiary-white"><?php echo $row['key_features']['text_cta_learn_more']; ?></a>
+					<?php endif; ?>
 				</div>
 
 			</div>
@@ -362,7 +366,7 @@ foreach($platform_row as $row) :
 						<?php  foreach($row['card_item'] as $card) : ?>
 
 							<?php if($card['acf_fc_layout'] == 'title') : ?>
-								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
+								<h3 class="heading-10"><?php echo $card['title']; ?></h3>
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
@@ -394,7 +398,8 @@ foreach($platform_row as $row) :
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<!-- <img src="<?php //echo $card['image']; ?>"  /> -->
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -411,7 +416,8 @@ foreach($platform_row as $row) :
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<!-- <img src="<?php //echo $card['image']; ?>"  /> -->
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -422,7 +428,7 @@ foreach($platform_row as $row) :
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if($card['acf_fc_layout'] == 'title') : ?>
-								<h3 class="heading-3"><?php echo $card['title']; ?></h3>
+								<h3 class="heading-10"><?php echo $card['title']; ?></h3>
 							<?php endif; ?>
 
 							<?php if($card['acf_fc_layout'] == 'description'): ?>
