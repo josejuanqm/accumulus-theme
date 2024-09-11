@@ -424,6 +424,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 
 /* Detail posts */
 
+.detail .pdfp_wrapper {
+  @apply w-full lg:max-w-[750px];
+}
+
 .detail p,
 .detail ul,
 .detail blockquote {

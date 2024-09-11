@@ -3574,6 +3574,16 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 /* Detail posts */
 
+.detail .pdfp_wrapper {
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .detail .pdfp_wrapper {
+    max-width: 750px;
+  }
+}
+
 .detail p,
 .detail ul,
 .detail blockquote {
