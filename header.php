@@ -276,7 +276,11 @@
       let navigationItems = document.querySelectorAll('.menu-item-dropdown');
       navigationItems.forEach(function(item) {
         item.addEventListener('mouseenter', function(event) {
-          setMegaMenuOpened(true, event.target.dataset.identifier);
+	  setMegaMenuOpened(false, null);
+  	  page.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
+  	  	item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
+  	  });
+          setMegaMenuOpened(true, event.target.dataset.identifier);  
           event.target.querySelector(".dropdown-arrow")?.classList.add('rotate-180');
         });
       });

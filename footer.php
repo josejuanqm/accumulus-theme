@@ -29,7 +29,7 @@
           </p>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-1 row-start-2 md:col-span-3 md:col-start-6 md:row-start-2 lg:col-span-2 lg:col-start-9 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Company</p></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Company</p></li>
           <li><a class="font-normal" href="">About Us</a></li>
           <li><a class="font-normal" href="">Our Team</a></li>
           <li><a class="font-normal" href="">News</a></li>
@@ -39,7 +39,7 @@
           <li><a class="font-normal" href="">Careers</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-6 row-start-2 md:col-span-3 md:col-start-10 md:row-start-2 lg:col-span-2 lg:col-start-11 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Platform</p></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Platform</p></li>
           <li><a class="font-normal" href="">Accumulus Platform</a></li>
           <!-- <li><a href="">Core Capabilities</a></li> -->
         </ul>
@@ -68,12 +68,12 @@
 </svg>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 md:col-span-4 md:col-start-1 md:row-start-4 lg:col-span-3 lg:col-start-7 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Resources</p></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Resources</p></li>
           <li><a class="font-normal" href="">Resources</a></li>
           <li><a class="font-normal" href="">News and Media</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 col-start-7 md:col-span-4 md:col-start-5 md:row-start-4 lg:col-span-2 lg:col-start-11 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Legal</p></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Legal</p></li>
           <li><a class="font-normal" href="">Privacy Policy</a></li>
           <li><a class="font-normal" href="">Terms & Conditions</a></li>
         </ul>
