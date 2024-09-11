@@ -280,7 +280,8 @@ function getResources() {
 		if(!empty($taxonomy_names)) :
 			foreach($taxonomy_names as $tax_name) : 
 				$category = $tax_name; 
-				$categorySlug = str_replace(' ', '-', strtolower($tax_name)); 
+				$categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+				$categorySlug = str_replace('&amp;', '', strtolower($categorySlugs)); 
 			endforeach;
 		endif;
 
@@ -301,7 +302,7 @@ function getResources() {
 
 			else:
 
-				if ($categorySlug == 'e-books-white-papers'):
+				if ($categorySlug == 'e-books--white-papers'):
 
 					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
 					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
@@ -329,7 +330,7 @@ function getResources() {
 				$html .= 'bg-secondary-green text-neutral-nwhite';
 				elseif ($categorySlug == 'regulatory-insights'): 
 				$html .= 'bg-primary-glaciar text-neutral-dgray';
-				elseif ($categorySlug == 'e-books-white-papers'): 
+				elseif ($categorySlug == 'e-books--white-papers'): 
 				$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
 				else:
 				$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
@@ -353,37 +354,12 @@ function getResources() {
 			<path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
 			</svg>
 			';
-			elseif ($categorySlug == 'e-books-white-papers'): 
+			elseif ($categorySlug == 'e-books--white-papers'): 
 			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
 			<path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
 			<path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
 			</svg>
 			';
-			elseif($categorySlug == 'new-releases'):
-			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
-			<path d="M8.66335 13.5L8.66335 0.505463C9.46052 0.505463 10.1074 1.15237 10.1074 1.94954L10.1074 12.0559C10.1074 12.8531 9.46052 13.5 8.66335 13.5Z" class="fill-current" />
-			<path d="M1.44434 10.6025H0.000261068L0.000261068 1.94875C0.000261068 1.15158 0.647164 0.504676 1.44434 0.504676L1.44434 10.6025Z" class="fill-current" />
-			<path d="M0.000682831 13.5L8.66406 13.5V12.0453L0.000682831 12.0453V13.5Z" class="fill-current" />
-			<path d="M1.4428 1.95508L8.66211 1.95508V0.500347L1.4428 0.500347V1.95508Z" class="fill-current" />
-			<path d="M7.22081 9.15918H2.88965V10.6033H7.22081V9.15918Z" class="fill-current" />
-			</svg>
-			';
-			elseif($categorySlug == 'media-coverage'):
-			$html.= '<svg width="12" height="14" viewBox="0 0 12 14" fill="none"">
-			<path d="M10.3078 0.5H1.47285C0.659191 0.5 0 1.15919 0 1.97285V9.33491C0 10.1486 0.659191 10.8078 1.47285 10.8078H5.29094L5.90118 11.418L6.94218 12.459L7.98318 13.5L9.02418 12.459L7.98318 11.418L6.94218 10.377L5.90118 9.336L5.8903 9.34688V9.336H1.47285V1.97285H10.3078V9.33491H8.83491V10.8078H10.3078C11.1214 10.8078 11.7806 10.1486 11.7806 9.33491V1.97285C11.7806 1.15919 11.1214 0.5 10.3078 0.5Z" class="fill-current" />
-			<path d="M5.89003 4.91718H7.36179H8.83464V3.44434H7.36179H5.89003H4.41718H2.94434V4.91718H4.41718H5.89003Z" class="fill-current" />
-			<path d="M2.94434 7.86238H4.41718H5.89003H7.36179H8.83464V6.39062H7.36179H5.89003H4.41718H2.94434V7.86238Z" class="fill-current" />
-			</svg>';
-			elseif($categorySlug == 'events'):
-			$html.= '<svg width="15" height="13" viewBox="0 0 15 13" fill="none"">
-			<path d="M4.87515 4.875H3.25V6.50015H4.87515V4.875Z" class="fill-current" />
-			<path d="M4.87515 8.125H3.25V9.75015H4.87515V8.125Z" class="fill-current" />
-			<path d="M8.12515 8.125H6.5V9.75015H8.12515V8.125Z" class="fill-current" />
-			<path d="M11.3712 8.125H9.74609V9.75015H11.3712V8.125Z" class="fill-current" />
-			<path d="M8.12515 4.875H6.5V6.50015H8.12515V4.875Z" class="fill-current" />
-			<path d="M11.3712 4.875H9.74609V6.50015H11.3712V4.875Z" class="fill-current" />
-			<path d="M12.9988 1.62515H11.3737V0H9.7485V1.62515H4.87425V0H3.2491V1.62515H1.62395C0.728019 1.62515 0 2.35197 0 3.2491V11.3737H1.62515V3.2503H12.9988V11.3748H3.2491V13H12.9988C13.8959 13 14.624 12.272 14.624 11.3748V3.2503C14.624 2.35317 13.8959 1.62515 12.9988 1.62515Z" class="fill-current" />
-			</svg>';
 			endif;
 			// Show icons
 			$html .= '<span class="heading-4">'. $category .'</span>';
@@ -407,7 +383,8 @@ function getResources() {
 		if(!empty($taxonomy_names)) :
 			foreach($taxonomy_names as $tax_name) : 
 				$category = $tax_name; 
-				$categorySlug = str_replace(' ', '-', strtolower($tax_name)); 
+				$categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+				$categorySlug = str_replace('&amp;', '', strtolower($categorySlugs));
 			endforeach;
 		endif;
 
@@ -426,7 +403,7 @@ function getResources() {
 
 		else:
 
-			if ($categorySlug == 'e-books-white-papers'):
+			if ($categorySlug == 'e-books--white-papers'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
 				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
@@ -454,7 +431,7 @@ function getResources() {
 			$html .= 'bg-secondary-green text-neutral-nwhite';
 			elseif ($categorySlug == 'regulatory-insights'): 
 			$html .= 'bg-primary-glaciar text-neutral-dgray';
-			elseif ($categorySlug == 'e-books-white-papers'): 
+			elseif ($categorySlug == 'e-books--white-papers'): 
 			$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
 			else:
 			$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
@@ -479,37 +456,12 @@ function getResources() {
 			<path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
 			</svg>
 			';
-			elseif ($categorySlug == 'e-books-white-papers'): 
+			elseif ($categorySlug == 'e-books--white-papers'): 
 			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
 			<path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
 			<path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
 			</svg>
 			';
-			elseif($categorySlug == 'new-releases'):
-			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
-			<path d="M8.66335 13.5L8.66335 0.505463C9.46052 0.505463 10.1074 1.15237 10.1074 1.94954L10.1074 12.0559C10.1074 12.8531 9.46052 13.5 8.66335 13.5Z" class="fill-current" />
-			<path d="M1.44434 10.6025H0.000261068L0.000261068 1.94875C0.000261068 1.15158 0.647164 0.504676 1.44434 0.504676L1.44434 10.6025Z" class="fill-current" />
-			<path d="M0.000682831 13.5L8.66406 13.5V12.0453L0.000682831 12.0453V13.5Z" class="fill-current" />
-			<path d="M1.4428 1.95508L8.66211 1.95508V0.500347L1.4428 0.500347V1.95508Z" class="fill-current" />
-			<path d="M7.22081 9.15918H2.88965V10.6033H7.22081V9.15918Z" class="fill-current" />
-			</svg>
-			';
-			elseif($categorySlug == 'media-coverage'):
-			$html.= '<svg width="12" height="14" viewBox="0 0 12 14" fill="none"">
-			<path d="M10.3078 0.5H1.47285C0.659191 0.5 0 1.15919 0 1.97285V9.33491C0 10.1486 0.659191 10.8078 1.47285 10.8078H5.29094L5.90118 11.418L6.94218 12.459L7.98318 13.5L9.02418 12.459L7.98318 11.418L6.94218 10.377L5.90118 9.336L5.8903 9.34688V9.336H1.47285V1.97285H10.3078V9.33491H8.83491V10.8078H10.3078C11.1214 10.8078 11.7806 10.1486 11.7806 9.33491V1.97285C11.7806 1.15919 11.1214 0.5 10.3078 0.5Z" class="fill-current" />
-			<path d="M5.89003 4.91718H7.36179H8.83464V3.44434H7.36179H5.89003H4.41718H2.94434V4.91718H4.41718H5.89003Z" class="fill-current" />
-			<path d="M2.94434 7.86238H4.41718H5.89003H7.36179H8.83464V6.39062H7.36179H5.89003H4.41718H2.94434V7.86238Z" class="fill-current" />
-			</svg>';
-			elseif($categorySlug == 'events'):
-			$html.= '<svg width="15" height="13" viewBox="0 0 15 13" fill="none"">
-			<path d="M4.87515 4.875H3.25V6.50015H4.87515V4.875Z" class="fill-current" />
-			<path d="M4.87515 8.125H3.25V9.75015H4.87515V8.125Z" class="fill-current" />
-			<path d="M8.12515 8.125H6.5V9.75015H8.12515V8.125Z" class="fill-current" />
-			<path d="M11.3712 8.125H9.74609V9.75015H11.3712V8.125Z" class="fill-current" />
-			<path d="M8.12515 4.875H6.5V6.50015H8.12515V4.875Z" class="fill-current" />
-			<path d="M11.3712 4.875H9.74609V6.50015H11.3712V4.875Z" class="fill-current" />
-			<path d="M12.9988 1.62515H11.3737V0H9.7485V1.62515H4.87425V0H3.2491V1.62515H1.62395C0.728019 1.62515 0 2.35197 0 3.2491V11.3737H1.62515V3.2503H12.9988V11.3748H3.2491V13H12.9988C13.8959 13 14.624 12.272 14.624 11.3748V3.2503C14.624 2.35317 13.8959 1.62515 12.9988 1.62515Z" class="fill-current" />
-			</svg>';
 			endif;
 			// Show icons
 		$html .= '<span class="heading-4">'. $category .'</span>';
