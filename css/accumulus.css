@@ -931,16 +931,12 @@ video {
   top: 0.5rem;
 }
 
-.top-s2 {
-  top: 1rem;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
 .top-3 {
   top: 0.75rem;
+}
+
+.top-s2 {
+  top: 1rem;
 }
 
 .isolate {
@@ -1782,6 +1778,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.png');
 }
 
+.bg-about-envision-mobile {
+  background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-mobile.png');
+}
+
 .bg-benefits-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-mobile.png');
 }
@@ -1824,10 +1824,6 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
-.bg-about-envision-mobile {
-  background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-mobile.png');
 }
 
 .bg-contain {
@@ -3064,12 +3060,13 @@ div.wpforms-container-full .wpforms-field-label,
 .form-module .ginput_container input,
 .form-module .gfield_label,
 .form-module .gfield_required,
-.form-module .gform-field-label {
+.form-module .gform-field-label,
+.form-module .gform_wrapper form .gform_body .gfield_label {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
-.form-module .wpforms-container .wpforms-form input.wpforms-field-medium::-moz-placeholder, .form-module .wpforms-required-label::-moz-placeholder, .form-module .ginput_container input::-moz-placeholder, .form-module .gfield_label::-moz-placeholder, .form-module .gfield_required::-moz-placeholder, .form-module .gform-field-label::-moz-placeholder {
+.form-module .wpforms-container .wpforms-form input.wpforms-field-medium::-moz-placeholder, .form-module .wpforms-required-label::-moz-placeholder, .form-module .ginput_container input::-moz-placeholder, .form-module .gfield_label::-moz-placeholder, .form-module .gfield_required::-moz-placeholder, .form-module .gform-field-label::-moz-placeholder, .form-module .gform_wrapper form .gform_body .gfield_label::-moz-placeholder {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
@@ -3079,7 +3076,8 @@ div.wpforms-container-full .wpforms-field-label,
 .form-module .ginput_container input::placeholder,
 .form-module .gfield_label::placeholder,
 .form-module .gfield_required::placeholder,
-.form-module .gform-field-label::placeholder {
+.form-module .gform-field-label::placeholder,
+.form-module .gform_wrapper form .gform_body .gfield_label::placeholder {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
@@ -4654,6 +4652,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-tablet.png');
   }
 
+  .md\:bg-about-envision-tablet {
+    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-tablet.png');
+  }
+
   .md\:bg-benefits-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-tablet.png');
   }
@@ -4692,10 +4694,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:bg-what-we-do-tablet {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-tablet.png');
-  }
-
-  .md\:bg-about-envision-tablet {
-    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-tablet.png');
   }
 
   .md\:px-0 {
@@ -5337,6 +5335,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png');
   }
 
+  .lg\:bg-about-envision-desktop {
+    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-desktop.png');
+  }
+
   .lg\:bg-benefits-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/platform/bg-benefit-desktop.png');
   }
@@ -5371,10 +5373,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:bg-what-we-do-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-desktop.png');
-  }
-
-  .lg\:bg-about-envision-desktop {
-    background-image: url('/wp-content/themes/accumulus-website/images/about-us/bg-envision-desktop.png');
   }
 
   .lg\:bg-auto {
