@@ -117,7 +117,7 @@
                   $fields = get_fields($menu_item); 
                 ?>
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
-                  <a class="py-s2 body-3" href="<?php echo $menu_item->link; ?>"><?php echo $menu_item->title; ?></a>
+                  <a class="py-s2 body-3" href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
                     <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
