@@ -52,7 +52,7 @@
               <?php //$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
               <img class="block" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" />
             <?php //endif; ?> -->
-            <h1 class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-1 text-neutral-nwhite md:w-[570px] lg:w-full"><?php the_title(); ?></h1>
+            <h1 class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-nwhite md:w-[570px] lg:w-full"><?php the_title(); ?></h1>
           </div>
           <div class="flex flex-col gap-s3 px-s2 md:px-s4 lg:px-0">
             <div class="body-2"><?php the_excerpt(); ?></div>
@@ -159,7 +159,7 @@
                       <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
                       <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
                     </svg>
-                  <?php elseif ($categorySlug == 'e-books-&-white-papers'): ?>
+                  <?php elseif ($categorySlug == 'e-books--white-papers'): ?>
                     <svg width="11" height="14" viewBox="0 0 11 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
                       <path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
                       <path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
@@ -167,7 +167,7 @@
 								<?php endif; ?>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
-              <h3 class="heading-3"><?php the_title(); ?></h3>
+              <h3 class="heading-5"><?php the_title(); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
 
