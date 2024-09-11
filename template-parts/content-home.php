@@ -35,7 +35,7 @@
 			<h1 class="col-span-12 text-h1Mobile md:text-h1Tablet lg:text-h1"><?php echo $main_title; ?></h1>
 
 			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="text-b2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 				<a href="<?php echo $link_request_a_demo_home; ?>" class="btn-secondary"><?php echo $text_cta_request_a_demo_home; ?></a>
@@ -107,11 +107,11 @@ if($statistics):
 			?>
 			<div class="col-span-12 md:col-span-6 lg:col-span-4">
 				<div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
-					<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-						<img class="w-s5 md:min-w-s8 h-s4 md:h-s8 aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
+					<div class="flex flex-col items-center justify-center col-start-1 col-span-1 lg:min-w-[64px]">
+						<img class="w-[39px] md:w-[64px] lg:min-2-[64px] lg:-ml-s2 aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
 					</div>
 					<h3 class="heading-2 col-start-2 col-span-5 lg:col-span-5"><?php echo $item['title'] ?></h3>
-					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 row-start-2"><?php echo $item['resume'] ?></p>
+					<p class="body-2 col-span-5 lg:col-span-5 col-start-2 lg:col-start-2 row-start-2"><?php echo $item['resume'] ?></p>
 				</div>
 			</div>
 			<?php endforeach; ?>
@@ -164,8 +164,8 @@ if($statistics):
 
 			<h4 class="col-span-12 md:col-span-12 col-start-1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-nwhite uppercase"><?php echo $what_title_tag; ?></h4>
 			<h2 class="col-span-12 md:col-span-11 lg:col-span-11 col-start-1 text-h2Mobile md:text-h2Tablet lg:text-h2 text-neutral-nwhite"><?php echo $what_main_title; ?></h2>
-			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite text-b2"><?php echo $what_first_description; ?></p>
-			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite text-b2"><?php echo $what_second_description; ?></p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-4 text-neutral-nwhite body-2"><?php echo $what_first_description; ?></p>
+			<p class="col-span-12 md:col-span-6 lg:col-span-4 md:col-start-7 lg:col-start-8 text-neutral-nwhite body-2"><?php echo $what_second_description; ?></p>
 			<div class="col-span-12 lg:col-span-3 lg:col-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
 				<a href="<?php echo $link_request_a_demo; ?>" class="btn-secondary-inverted"><?php echo $text_cta_request_a_demo; ?></a>
 				<a href="<?php echo $link_learn_more; ?>" class="btn-tertiary-white"><?php echo $text_cta_learn_more; ?></a>
@@ -254,7 +254,7 @@ $why_values = get_field('why_values');
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -271,7 +271,7 @@ $why_values = get_field('why_values');
 						<?php foreach($row['card_item'] as $card) : ?>
 
 							<?php if ($card['acf_fc_layout'] == 'image') : ?>
-								<img src="<?php echo $card['image']; ?>"  />
+								<img src="<?php echo $card['image']; ?>" class="max-lg:min-h-[445px] max-md:min-h-[290px] max-lg:object-cover max-lg:rounded-card"  />
 							<?php endif; ?>
 
 						<?php endforeach; ?>
@@ -351,7 +351,7 @@ if($how_it_works):
 <section class="relative section py-s8 md:py-s12 lg:py-s10 bg-secondary-carbon ">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
-			<h2 class="col-span-6 md:col-span-12 heading-2"><?php echo $how_it_works['title']; ?></h2>
+			<h2 class="col-span-6 md:col-span-12 heading-1"><?php echo $how_it_works['title']; ?></h2>
 
 			<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s4">
 
@@ -361,7 +361,7 @@ if($how_it_works):
 						<?php endforeach; ?>
 				</div>
 
-				<p class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2"><?php echo $how_it_works['resume']; ?></p>
+				<p class="body-2 col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2"><?php echo $how_it_works['resume']; ?></p>
 
 				<div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 grid grid-cols-12 gap-x-s2 lg:gap-x-s10 gap-y-s7">
 
@@ -409,17 +409,18 @@ if($how_it_works):
 <!-- End Testimonials -->
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
-	<div class="container mx-auto px-s4 lg:px-0">
+	<div class="container mx-auto">
 		<div class="flex flex-col gap-s8">
-			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Events</h2>
+			<h2 class="w-full heading-2">Related Resources</h2>
 			<div class="relative w-full">
 				<div class="related">
 					<?php 
 
             // WP_Query arguments
             $args = array(
-              'post_type'              => array( 'event' ),
+              'post_type'              => array( 'resource-cms' ),
               'posts_per_page'         => '9',
+              'post__not_in' => array( get_the_ID() )
             );
 
             // The Query
@@ -428,38 +429,82 @@ if($how_it_works):
             if ( $query->have_posts() ) {
               while ( $query->have_posts() ) {
                 $query->the_post();
+
+								$category = '';
+								$categorySlug = '';
+								$post_type = get_post_type(get_the_ID());   
+								$taxonomies = get_object_taxonomies($post_type);   
+								$taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names")); 
+								if(!empty($taxonomy_names)) :
+									foreach($taxonomy_names as $tax_name) : ?>              
+											<?php 
+												$category = $tax_name; 
+												$categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+												$categorySlug = str_replace('&amp;', '', strtolower($categorySlugs));
+											?>
+									<?php endforeach;
+								endif;
                 
             //for($i=1;$i<7;$i++): 
           ?>
 						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
 
-							<a href="<?php echo get_home_url() ?>/events" class="absolute top-0 left-0 w-full h-full z-10"></a>
+							<a href="<?php the_permalink(); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
 
-							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
-
-								<!-- <img src="<?php //bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
+							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
 
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
-                  <?php else: ?>
-                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/events/icon-calendar.png" alt="<?php the_title(); ?>" />
+										<img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+
+										<?php 
+								else :
+									if ($categorySlug === 'e-books--white-papers'): 
+								?>
+
+									<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+										<img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png" class="w-full md:w-full h-full object-cover"   />
+									</div>
+
+									<?php elseif ($categorySlug == 'regulatory-insights'): ?>
+
+									<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+										<img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png" class="w-full md:w-full h-full object-cover"   />
+									</div>
+
+									<?php elseif ($categorySlug == 'thought-leadership'): ?>
+
+									<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+										<img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png" class="w-full md:w-full h-full object-cover"   />
+									</div>
+									<?php endif; ?>
                 <?php endif; ?>
 
 							</div>
 
 							<div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
 								<div class="flex items-center gap-3 text-primary-violet uppercase">
-									<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M5.2189 4.95996H3.59375V6.58511H5.2189V4.95996Z" fill="#411693"/>
-										<path d="M5.2189 8.20996H3.59375V9.83511H5.2189V8.20996Z" fill="#411693"/>
-										<path d="M8.4689 8.20996H6.84375V9.83511H8.4689V8.20996Z" fill="#411693"/>
-										<path d="M11.7169 8.20996H10.0918V9.83511H11.7169V8.20996Z" fill="#411693"/>
-										<path d="M8.4689 4.95996H6.84375V6.58511H8.4689V4.95996Z" fill="#411693"/>
-										<path d="M11.7169 4.95996H10.0918V6.58511H11.7169V4.95996Z" fill="#411693"/>
-										<path d="M13.3425 1.71011H11.7174V0.0849609H10.0923V1.71011H5.218V0.0849609H3.59285V1.71011H1.9677C1.07177 1.71011 0.34375 2.43693 0.34375 3.33406V11.4586H1.9689V3.33526H13.3425V11.4598H3.59285V13.085H13.3425C14.2397 13.085 14.9677 12.3569 14.9677 11.4598V3.33526C14.9677 2.43813 14.2397 1.71011 13.3425 1.71011Z" fill="#411693"/>
-									</svg>
-									<span>Events</span>
+                <?php if ($categorySlug == 'thought-leadership'): ?>
+										<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
+										</svg>
+										<?php elseif ($categorySlug == 'regulatory-insights'): ?>
+											<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" class="fill-current" />
+												<path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+												<path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+												<path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+												<path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+												<path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+											</svg>
+										<?php elseif ($categorySlug == 'e-books--white-papers'): ?>
+											<svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
+												<path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
+											</svg>
+								<?php endif; ?>
+								<?php echo $category; ?>
 								</div>
 								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php the_title(); ?></h3>
 							</div>

@@ -297,7 +297,7 @@ module.exports = {
         b3: [
           '1.125rem',
           {
-            fontWeight: '300',
+            fontWeight: '400',
             lineHeight: '120%',
             letterSpacing: '0',
           },
@@ -322,7 +322,7 @@ module.exports = {
         b4: [
           '1rem',
           {
-            fontWeight: '300',
+            fontWeight: '400',
             lineHeight: '120%',
             letterSpacing: '0',
           },

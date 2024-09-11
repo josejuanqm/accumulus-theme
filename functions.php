@@ -365,7 +365,7 @@ function getResources() {
 			$html .= '<span class="heading-4">'. $category .'</span>';
 
 			$html.= '</div>';
-			$html.= '<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"> '.$post->post_title.'</h3>';
+			$html.= '<h3 class="heading-6 color-neutral-dgray"> '.$post->post_title.'</h3>';
 			$html.= '</div>';
 
 			$html.= '</div>';
@@ -467,7 +467,7 @@ function getResources() {
 		$html .= '<span class="heading-4">'. $category .'</span>';
 
 		$html.= '</div>';
-		$html.= '<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"> '.$post->post_title.'</h3>';
+		$html.= '<h3 class="heading-6 color-neutral-dgray"> '.$post->post_title.'</h3>';
 		$html.= '</div>';
 
 		$html.= '</div>';
@@ -655,7 +655,7 @@ function getNews() {
 			$html .= '<span class="heading-4">'. $category .'</span>';
 
 			$html.= '</div>';
-			$html.= '<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"> '.$post->post_title.'</h3>';
+			$html.= '<h3 class="heading-6 color-neutral-dgray"> '.$post->post_title.'</h3>';
 			$html.= '</div>';
 
 			$html.= '</div>';
@@ -737,7 +737,7 @@ function getNews() {
 		$html .= '<span class="heading-4">'. $category .'</span>';
 
 		$html.= '</div>';
-		$html.= '<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"> '.$post->post_title.'</h3>';
+		$html.= '<h3 class="heading-6 color-neutral-dgray"> '.$post->post_title.'</h3>';
 		$html.= '</div>';
 
 		$html.= '</div>';

@@ -24,9 +24,7 @@
             <h1 class="heading-1">Latest<br />News</h1>
           </div>
 
-          <p class="body-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet. 
-          </p>
+          <div class="body-2"><?php the_content(); ?></div>
 
         </div>
         <!-- Large post -->
@@ -102,7 +100,7 @@
                 $string = substr(get_the_title(), 0, 22);
                 $string = substr($string, 0, strrpos($string, ' ')) . " ...";
               ?>
-              <h3 class="heading-3"><?php the_title(); ?></h3>
+              <h3 class="heading-6"><?php the_title(); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>

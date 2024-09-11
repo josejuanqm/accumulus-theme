@@ -310,7 +310,7 @@ div.wpforms-container-full .wpforms-field-label,
 
 .wpforms-submit,
 .gform_button {
-  @apply !flex !items-center !justify-center !h-[48px] lg:!h-[45px] !px-10 !py-3 !rounded-full !text-center !text-white !text-ctaMobile md:!text-ctaTablet lg:!text-cta !border !border-cta-dark !bg-cta-dark hover:!bg-white hover:!text-cta-dark !transition-all cursor-pointer max-lg:!w-full;
+  @apply !flex !items-center !justify-center !h-[48px] lg:!h-[45px] !px-s2 !py-3 !rounded-full !text-center !text-white !text-ctaMobile md:!text-ctaTablet lg:!text-cta !border !border-cta-dark !bg-cta-dark hover:!bg-white hover:!text-cta-dark !transition-all cursor-pointer max-lg:!w-full;
 }
 
 .form-module .wpforms-submit,
@@ -395,7 +395,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 }
 
 .gform_wrapper form .gform_body .gfield_label {
-  @apply !font-bold;
+  @apply !font-medium;
 }
 
 .gform_heading {
