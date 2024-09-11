@@ -49,8 +49,15 @@
 .roles .content-intro {
 	display:none;	
 }
-.roles .content-intro + h2 + p { display: block; }
-.roles .content-intro > p + p { display:block; }
+.roles .content-intro + h2 + p {
+	display: block;
+	overflow: hidden;
+	   display: -webkit-box;
+	   -webkit-line-clamp: 4; /* number of lines to show */
+		   line-clamp: 4; 
+	   -webkit-box-orient: vertical;
+ }
+.roles .content-intro > p + p { display:none; }
 </style>
 
 <section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
