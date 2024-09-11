@@ -36,7 +36,7 @@
           <li><a href="/events/" class="font-normal" href="">Events</a></li>
           <!-- <li><a href="">Case For Change</a></li> -->
           <li><a href="/regulator-forum/" class="font-normal" href="">Regulator Forum</a></li>
-          <li><a href="/platform/" class="font-normal" href="">Careers</a></li>
+          <li><a href="/careers/" class="font-normal" href="">Careers</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-6 row-start-2 md:col-span-3 md:col-start-10 md:row-start-2 lg:col-span-2 lg:col-start-11 lg:row-start-1">
           <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Platform</p></li>
@@ -78,7 +78,7 @@
           <li><a href="/terms-and-conditions/" class="font-normal" href="">Terms & Conditions</a></li>
         </ul>
         <ul class="flex flex-col items-start gap-s2 list-none col-span-3 col-start-1 row-start-4 md:col-span-4 md:col-start-9 md:row-start-4 lg:col-span-2 lg:col-start-1 lg:row-start-3">
-          <li><a href="#" class="font-normal" href="">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/company/accumulus-synergy/" class="font-normal" href="">LinkedIn</a></li>
           <li><a href="/contact-us/" class="font-normal" href="">Contact Us</a></li>
         </ul>
 			</div>
