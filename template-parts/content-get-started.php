@@ -20,6 +20,7 @@
 	$resume_text = get_field('resume_text');
 	$text_cta = get_field('text_cta');
 	$link_learn_more = get_field('link_learn_more');
+	$text_cta = get_field('text_cta');
 ?>
 
 <section class="translucent-navigation light relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon">
@@ -41,7 +42,7 @@
 				<p class="body-2 md:max-w-550 lg:max-w-full text-neutral-nwhite"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary-inverted">Our mission</a>
+				<a href="<?php echo $link_learn_more; ?>" class="btn-secondary-inverted"><?php echo $text_cta; ?></a>
 			</div>
 
 		</div>
@@ -75,11 +76,11 @@ if($join_the_forum):
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
+<section class="relative section w-full pt-s8 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
 	<div class="container mx-auto px-s2 md:px-0">
-		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
+		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-y-s5 gap-x-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
 
-      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2 lg:pb-s1">
+      <h2 class="heading-1 font-normal col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-s2 pb-s3 md:pb-0 lg:pb-s1">
         <span class="col-span-6 md:col-span-12">
           <?php echo $join_the_forum['first_line_title']; ?>
         </span>
@@ -98,7 +99,7 @@ if($join_the_forum):
       </div>
       <?php endforeach; ?>
 
-			<div class="col-span-6 md:col-span-7 lg:col-span-2 col-start-1 md:col-start-5 lg:col-start-6">
+			<div class="col-span-6 md:col-span-12 lg:col-span-2 col-start-1 lg:col-start-6 pt-s3 md:pt-0">
 				<a class="btn-secondary" href="<?php echo $join_the_forum['link_cta']; ?>"><?php echo $join_the_forum['text_cta']; ?></a>
 			</div>
 
@@ -128,11 +129,11 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 pt-s10 md:pt-s12 md:pb-s6">
-			<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 gap-s2 heading-1 justify-start items-start">
+			<h2 class="flex flex-col md:grid md:grid-cols-12 md:grid-rows-2 col-span-12 gap-s2 heading-1 justify-start items-start">
 				<span class="col-span-12">
 					<?php echo $benefits['title_first_line']; ?>
 				</span>
-				<span class="col-span-10 col-start-2 md:col-start-3">
+				<span class="col-span-10 col-start-2 md:col-start-3 max-md:pl-s6">
 					<?php echo $benefits['title_second_line']; ?>
 				</span>
 			</h2>
@@ -147,7 +148,7 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 			?>
 			<div class="col-span-12 md:col-span-4">
 
-				<div class="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
+				<div class="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s3 md:gap-x-s2">
 
 					<div class="col-start-1 col-span-1 flex flex-col">
 						<img class="w-[39px] md:w-[64px] aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />

@@ -4277,6 +4277,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-right: 2rem;
   }
 
+  .max-md\:pl-s6 {
+    padding-left: 3rem;
+  }
+
   .last-of-type\:max-md\:pb-s8:last-of-type {
     padding-bottom: 4rem;
   }
@@ -4551,6 +4555,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:grid-rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
