@@ -14,10 +14,10 @@
  $taxonomies = get_object_taxonomies($post_type);   
  $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names")); 
  if(!empty($taxonomy_names)) :
-   foreach($taxonomy_names as $tax_name) : 
-         $category = $tax_name; 
-         $categorySlug = str_replace(' ', '-', strtolower($tax_name)); 
-   endforeach;
+  foreach($taxonomy_names as $tax_name) : 
+  $category = $tax_name; 
+  $categorySlug = str_replace(' ', '-', strtolower($tax_name)); 
+  endforeach;
  endif;
 
 ?>
@@ -26,8 +26,10 @@
   <div class="col-span-12 md:col-span-6 lg:h-full">
     <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-      <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url') //echo $image[0]; ?>/images/resources/bg-main-post.png" alt="<?php the_title(); ?>" />
-    <?php endif; ?>
+      <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+      <?php else : ?>
+        <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url') //echo $image[0]; ?>/images/resources/bg-main-post.png" alt="<?php the_title(); ?>" />
+      <?php endif; ?>
     <?php //accumulus_website_post_thumbnail(); ?>
   </div>
   <div class="col-span-12 md:col-span-6 flex flex-col justify-between lg:h-full px-s4 lg:px-0 py-s6 md:pt-s14 lg:pt-52 2xl:pt-60 lg:pb-24 lg:pl-20">

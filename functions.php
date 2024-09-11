@@ -617,6 +617,22 @@ function getNews() {
 			$html .= '<img src="'. $image[0] .'" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
 			$html .= '</div>';
 
+			else:
+
+				if ($categorySlug == 'media-coverage'):
+
+					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
+					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+					$html .= '</div>';
+
+				elseif ($categorySlug == 'new-releases'):
+
+					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
+					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+					$html .= '</div>';
+
+				endif;
+
 			endif;
 
 
@@ -683,6 +699,22 @@ function getNews() {
 			$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
 			$html .= '<img src="'. $image[0] .'" class="block w-full max-h-full object-cover"  />';
 			$html .= '</div>';
+
+		else:
+
+			if ($categorySlug == 'media-coverage'):
+
+				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full max-h-full object-cover" />';
+				$html .= '</div>';
+
+			elseif ($categorySlug == 'new-releases'):
+
+				$html .= '<div class="<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full max-h-full object-cover" />';
+				$html .= '</div>';
+
+			endif;
 
 		endif;
 

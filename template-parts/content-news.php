@@ -98,6 +98,10 @@
                 <?php endif; ?>
                 <?php echo $category; ?>
               </span>
+              <?php 
+                $string = substr(get_the_title(), 0, 22);
+                $string = substr($string, 0, strrpos($string, ' ')) . " ...";
+              ?>
               <h3 class="heading-3"><?php the_title(); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
@@ -105,6 +109,23 @@
               <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
                 <img class="w-full md:w-full h-[144px] md:h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
               </div>
+
+            <?php else: ?>
+
+              <?php if ($categorySlug == 'media-coverage'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                  <img src="<?php bloginfo('template_url'); ?>/images/tumb-media-coverage.png" class="w-full md:w-full h-[144px] md:h-full object-cover" />
+                </div>
+
+              <?php elseif ($categorySlug == 'new-releases'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                  <img src="<?php bloginfo('template_url'); ?>/images/tumb-new-releases.png" class="w-full md:w-full h-[144px] md:h-full object-cover" />
+                </div>
+
+              <?php endif; ?>
+
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>
