@@ -9467,3 +9467,4 @@ add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax
 
 	return $confirmation;
 }, 10, 4 );
+
