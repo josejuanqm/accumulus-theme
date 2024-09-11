@@ -19,29 +19,29 @@
 		<div class="container mx-auto px-4 lg:px-0">
       <div class="grid grid-cols-12 gap-x-s3 gap-y-s12">
         <div class="flex-col items-start justify-between h-full gap-s7 flex col-span-12 col-start-1 row-start-1 md:col-span-5 md:col-start-1 md:row-start-1 lg:col-span-3 lg:col-start-1 lg:row-start-1">
-          <p class="flex-1 whitespace-nowrap">
+          <p class="flex-1 whitespace-nowrap font-normal">
             Accumulus Synergy <br/>
             A Nonprofit Industry  <br class="hidden lg:block"/>
             Association
           </p>
-          <p>
+          <p class="font-normal">
             © Accumulus Synergy 2024
           </p>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-1 row-start-2 md:col-span-3 md:col-start-6 md:row-start-2 lg:col-span-2 lg:col-start-9 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6">Company</p></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Our Team</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Case For Change</a></li>
-          <li><a href="">Regulator Forum</a></li>
-          <li><a href="">Careers</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Company</p></li>
+          <li><a class="font-normal" href="">About Us</a></li>
+          <li><a class="font-normal" href="">Our Team</a></li>
+          <li><a class="font-normal" href="">News</a></li>
+          <li><a class="font-normal" href="">Events</a></li>
+          <!-- <li><a href="">Case For Change</a></li> -->
+          <li><a class="font-normal" href="">Regulator Forum</a></li>
+          <li><a class="font-normal" href="">Careers</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 col-start-6 row-start-2 md:col-span-3 md:col-start-10 md:row-start-2 lg:col-span-2 lg:col-start-11 lg:row-start-1">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6">Platform</p></li>
-          <li><a href="">Accumulus Platform</a></li>
-          <li><a href="">Core Capabilities</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Platform</p></li>
+          <li><a class="font-normal" href="">Accumulus Platform</a></li>
+          <!-- <li><a href="">Core Capabilities</a></li> -->
         </ul>
         <div class="flex flex-row items-start justify-start order-last md:order-none pt-s13 lg:pt-0 col-span-12 row-start-5 md:col-span-10 md:row-start-3 lg:row-start-2">
 <svg class="w-full" viewBox="0 0 330 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,19 +68,18 @@
 </svg>
         </div>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 md:col-span-4 md:col-start-1 md:row-start-4 lg:col-span-3 lg:col-start-7 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6">Resources</p></li>
-          <li><a href="">eBooks and White Papers</a></li>
-          <li><a href="">Thought Leadership</a></li>
-          <li><a href="">Media</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Resources</p></li>
+          <li><a class="font-normal" href="">Resources</a></li>
+          <li><a class="font-normal" href="">News and Media</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 col-start-7 md:col-span-4 md:col-start-5 md:row-start-4 lg:col-span-2 lg:col-start-11 lg:row-start-3">
-          <li><p class="pb-s1 text-secondary-mpurple heading-6">Legal</p></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms & Conditions</a></li>
+          <li><p class="pb-s1 text-secondary-mpurple heading-6 font-medium">Legal</p></li>
+          <li><a class="font-normal" href="">Privacy Policy</a></li>
+          <li><a class="font-normal" href="">Terms & Conditions</a></li>
         </ul>
         <ul class="flex flex-col items-start gap-s2 list-none col-span-3 col-start-1 row-start-4 md:col-span-4 md:col-start-9 md:row-start-4 lg:col-span-2 lg:col-start-1 lg:row-start-3">
-          <li><a href="">LinkedIn</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a class="font-normal" href="">LinkedIn</a></li>
+          <li><a class="font-normal" href="">Contact Us</a></li>
         </ul>
 			</div>
 		</div>

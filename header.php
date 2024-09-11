@@ -32,7 +32,7 @@
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
   <header id="navigation" class="lg:bg-auto fixed w-full z-[999999] text-neutral-sgray group">
-    <div class="bg-white text-cta-dark stroke-cta-dark hidden lg:block section border-b-[1px] border-b-neutral-200 content transition-color duration-150">
+    <div class="bg-white text-neutral-sgray stroke-cta-dark hidden lg:block section border-b-[1px] border-b-neutral-200 content transition-color duration-150">
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
@@ -44,7 +44,7 @@
         </div> 
       </div>
     </div>
-    <div class="section bg-white text-cta-dark stroke-cta-dark content transition-color duration-150 border-b-neutral-200">
+    <div class="section bg-white text-neutral-sgray stroke-cta-dark content transition-color duration-150 border-b-neutral-200">
       <div class="container mx-auto px-s2">
         <div class="flex flex-row items-center">
           <div class="flex flex-row items-center me-auto">
@@ -78,7 +78,7 @@
               </clipPath>
               </defs>
               </svg>
-              <svg width="241" height="61" viewBox="0 0 241 61" class="logo fill-cta-dark stroke-none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="241" height="61" viewBox="0 0 241 61" class="logo fill-neutral-sgray stroke-none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_4005_31882)">
               <path d="M61.5264 12.7661L53.8125 35.0301H58.2829L59.7781 30.5726H68.6115L70.1067 35.0301H74.5771L66.8632 12.7661H61.534H61.5264ZM61.0816 26.6242L64.1718 17.478L67.2619 26.6242H61.074H61.0816Z" />
               <path d="M84.6012 31.1276C81.9788 31.1276 79.8624 28.7061 79.8624 25.7833C79.8624 22.8605 81.9788 20.3311 84.6012 20.3311C86.3264 20.3311 87.7987 21.4107 88.4428 22.6755H93.5036C92.4301 18.488 89.0562 15.9585 84.6012 15.9585C79.0343 15.9585 75.0547 20.3619 75.0547 25.7448C75.0547 31.1276 79.0343 35.4539 84.6012 35.4539C89.0869 35.4539 92.4607 32.963 93.5342 28.7369H88.4734C87.8677 30.0325 86.3571 31.1199 84.6012 31.1199V31.1276Z"/>
@@ -117,7 +117,7 @@
                   $fields = get_fields($menu_item); 
                 ?>
                 <li class="menu-item menu-item-dropdown flex flex-row items-center gap-s1" data-identifier="<?php echo $fields["identifier"]; ?>">
-                  <a class="py-s2" href="<?php echo $menu_item->link; ?>"><?php echo $menu_item->title; ?></a>
+                  <a class="py-s2 body-3" href="<?php echo $menu_item->link; ?>"><?php echo $menu_item->title; ?></a>
                   <?php if ($fields["menu_items"]) : ?>
                     <svg class="dropdown-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -134,7 +134,7 @@
                 <path d="M30.6082 7.87109H26.7815H22.9576H19.1308H15.3041H11.4774H7.65347H3.82673H0V11.8094H3.82673H7.65347H11.4774H15.3041H19.1308H22.9576H26.7815H30.6082H34.4349V7.87109H30.6082Z" />
                 <path d="M22.9551 15.7412H19.1283H15.3016H11.4749H7.65095H3.82422V19.6766H7.65095H11.4749H15.3016H19.1283H22.9551H26.779H30.6057V15.7412H26.779H22.9551Z" />
               </svg>
-              <svg class="fill-cta-dark stroke-cta-dark stroke-0 hamburger" width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="fill-neutral-sgray stroke-cta-dark stroke-0 hamburger" width="35" height="20" viewBox="0 0 35 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.4749 3.93832H15.3016H19.1283H22.9551H26.779H30.6057V0H26.779H22.9551H19.1283H15.3016H11.4749H7.65095H3.82422V3.93832H7.65095H11.4749Z" />
                 <path d="M30.6082 7.87109H26.7815H22.9576H19.1308H15.3041H11.4774H7.65347H3.82673H0V11.8094H3.82673H7.65347H11.4774H15.3041H19.1308H22.9576H26.7815H30.6082H34.4349V7.87109H30.6082Z" />
                 <path d="M22.9551 15.7412H19.1283H15.3016H11.4749H7.65095H3.82422V19.6766H7.65095H11.4749H15.3016H19.1283H22.9551H26.779H30.6057V15.7412H26.779H22.9551Z" />
@@ -187,7 +187,7 @@
             <div class="flex flex-row items-center justify-between w-full group">
               <a class="py-s2 heading-2" href="#"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
-                <svg class="dropdown-arrow stroke-cta-dark" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="dropdown-arrow stroke-neutral-sgray" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               <?php endif; ?>
@@ -283,7 +283,9 @@
 
       page.addEventListener('mouseleave', function(event) {
         setMegaMenuOpened(false, null);
-        event.target.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
+	event.target.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
+	  item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
+	});
       });
     });
 
@@ -302,12 +304,12 @@
 	function modifyNavigationColor() {
     let firstSection = document.querySelector('.translucent-navigation');
     let isLight = firstSection?.classList.contains('light') || false;
-    let tint = !isLight ? 'cta-dark' : 'white';
+    let tint = !isLight ? 'neutral-sgray' : 'white';
     const header = document.querySelectorAll('header#navigation > .content');
     const lightLogo = document.querySelector('svg.logo.fill-white');
-    const darkLogo = document.querySelector('svg.logo.fill-cta-dark');
+    const darkLogo = document.querySelector('svg.logo.fill-neutral-sgray');
     const menuLightLogo = document.querySelector('svg.hamburger.fill-white');
-    const menuDarkLogo = document.querySelector('svg.hamburger.fill-cta-dark');
+    const menuDarkLogo = document.querySelector('svg.hamburger.fill-neutral-sgray');
 
     if (!firstSection) {
       darkLogo.style.display = isLight ? 'block' : 'none';
@@ -335,9 +337,9 @@
         h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-' + tint);
-        h.classList.add('text-cta-dark');
-        h.classList.add('[&>*]:stroke-cta-dark');
-        h.classList.add('[&>*]:fill-cta-dark');
+        h.classList.add('text-neutral-sgray');
+        h.classList.add('[&>*]:stroke-neutral-sgray');
+        h.classList.add('[&>*]:fill-neutral-sgray');
         h.classList.remove('[&>*]:stroke-' + tint);
       });
     } else {
