@@ -450,7 +450,7 @@ if($join_the_forum):
       <?php endforeach; ?>
 			
 			<div class="col-span-6 md:col-span-12">
-				<a href="#" target="_blank" download class="btn-secondary max-w-[360px] mx-auto">Download Regulator Forum Flyer</a>
+				<a href="/wp-content/uploads/2024/09/Accumulus-Synergy-Regulator-Forum.pdf" target="_blank" download class="btn-secondary max-w-[360px] mx-auto">Download Regulator Forum Flyer</a>
 			</div>
     </div>
   </div>
