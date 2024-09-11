@@ -69,7 +69,7 @@
                     <img class="block" src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
 							</div>
 
-							<div class="flex flex-col flex-grow py-s4 px-s3 gap-2 bg-neutral-nwhite">
+							<div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">
 							<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php echo $role->title; ?></h3>
                 <?php echo html_entity_decode($role->content); ?>
 		<a href="<?php echo $role->absolute_url; ?>" target="_blank" class="btn-primary !w-[190px] !min-w-[190px]">Apply Now</a>
