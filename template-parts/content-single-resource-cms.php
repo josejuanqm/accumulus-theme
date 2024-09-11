@@ -189,7 +189,7 @@
 
               </div>
 
-              <div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
+              <div class="flex flex-col p-7 gap-2 bg-neutral-nwhite lg:min-h-[152px]">
                 <div class="flex items-center gap-3 text-primary-violet uppercase">
                 <?php if ($categorySlug == 'thought-leadership'): ?>
                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,7 +212,7 @@
                 <?php endif; ?>
                 <?php echo $category; ?>
                 </div>
-                <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php the_title(); ?></h3>
+                <h3 class="heading-6 color-neutral-dgray"><?php the_title(); ?></h3>
               </div>
 
             </div>
