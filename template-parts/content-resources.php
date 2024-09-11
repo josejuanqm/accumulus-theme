@@ -216,10 +216,34 @@
               <h3 class="heading-3"><?php the_title(); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
               <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-                <img class="block max-w-[70%]" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                <img class="w-full md:w-full h-[144px] md:h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
               </div>
+
+              <?php 
+              else :
+                if ($categorySlug == 'e-books-white-papers'): 
+              ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+
+                <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+
+                <?php elseif ($categorySlug == 'thought-leadership'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+                <?php endif; ?>
+
             <?php endif; ?>
             <!-- Thumbnail -->
           </div>
