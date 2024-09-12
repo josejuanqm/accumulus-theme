@@ -268,7 +268,7 @@
             </div>
           </div>
 
-          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-9 md:col-start-auto uppercase">
+          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-9 col-end-11 md:col-start-auto uppercase">
             <?php echo $years[count($years ) - 1]['year']; ?>
           </span>
 
