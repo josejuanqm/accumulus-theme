@@ -8542,7 +8542,7 @@ add_action( 'acf/include_fields', function() {
 							'id' => '',
 						),
 						'default_value' => 'The Board of
-	Directors',
+						Directors',
 						'maxlength' => '',
 						'rows' => 2,
 						'placeholder' => '',
@@ -9201,6 +9201,125 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
+	acf_add_local_field_group( array(
+		'key' => 'group_66e35c048b42c',
+		'title' => 'Careers section - Multi page',
+		'fields' => array(
+			array(
+				'key' => 'field_66e35c0564fb7',
+				'label' => 'Carreers',
+				'name' => 'carreers_footer',
+				'aria-label' => '',
+				'type' => 'group',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_66e35dc71a336',
+						'label' => 'Title flag',
+						'name' => 'title_flag',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Careers',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66e35c3c64fb8',
+						'label' => 'Title',
+						'name' => 'title',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Great achievements require great team members.',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_66e35c5064fb9',
+						'label' => 'Content',
+						'name' => 'content',
+						'aria-label' => '',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'We’re a group of passionate individuals driven by a common purpose — to bring medicines to patients around the globe faster. We’re excited to learn how you can help us!',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 0,
+						'delay' => 0,
+					),
+					array(
+						'key' => 'field_66e35c6164fba',
+						'label' => 'Cta',
+						'name' => 'cta',
+						'aria-label' => '',
+						'type' => 'link',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'array',
+					),
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'careers-section',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+
 } );
 
 
@@ -9209,7 +9328,7 @@ add_action( 'init', function() {
 	register_taxonomy( 'events-categories', array(
 			0 => 'event',
 		), array(
-		'labels' => array(
+			'labels' => array(
 			'name' => 'Events Categories',
 			'singular_name' => 'Event Category',
 			'menu_name' => 'Events Categories',
@@ -9459,6 +9578,12 @@ add_action( 'acf/init', function() {
 		'icon_url' => 'dashicons-admin-users',
 		'menu_title' => 'Team Members',
 		'position' => '',
+		'redirect' => false,
+	) );
+
+	acf_add_options_page( array(
+		'page_title' => 'Careers section - Multi page',
+		'menu_slug' => 'careers-section',
 		'redirect' => false,
 	) );
 } );
