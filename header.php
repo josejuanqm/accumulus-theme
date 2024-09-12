@@ -217,9 +217,9 @@
         <?php endforeach; ?>
       </ul>
       <div class="flex flex-col items-center justify-between w-full">
-        <div class="btn btn-primary w-full">
+        <a href="/get-started/" class="btn btn-primary w-full">
           Get Started
-        </div>
+        </a>
       </div>
     </div>
   </section>
