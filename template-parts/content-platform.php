@@ -291,7 +291,7 @@ foreach($platform_row as $row) :
 
       <h4 class="col-span-6 md:col-span-12 heading-4 uppercase"><?php echo $row['benefits']['title_flag']; ?></h4>
 
-      <h2 class="col-span-6 md:col-span-12 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $row['benefits']['title']; ?></h2>
+      <h2 class="col-span-6 md:col-span-4 lg:col-span-4 heading-2 pt-s2 lg:pt-0"><?php echo $row['benefits']['title']; ?></h2>
 			
 			<div class="col-span-6 md:col-span-12 lg:col-span-6 lg:col-start-7 pt-s2 md:pt-s6 lg:pt-s20 pb-s1 lg:pb-0">
 				<p class="body-2"><?php echo $row['benefits']['resume']; ?></p>
