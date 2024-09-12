@@ -185,7 +185,7 @@
           ?>
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
             <div class="flex flex-row items-center justify-between w-full group">
-              <a class="py-s2 heading-2" href="#"><?php echo $menu_item->title; ?></a>
+              <a class="py-s2 heading-2" href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
                 <svg class="dropdown-arrow stroke-neutral-sgray" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -197,7 +197,7 @@
                 <ul class="dropdown-menu grid grid-cols-1 lg:grid-cols-3 gap-s1 items-center justify-start mx-auto">
                   <?php foreach ($fields["menu_items"] as $menu_subitem) : ?>
                     <li>
-                      <a class="grid grid-cols-[2rem_auto] gap-s2" href="#">
+		    <a class="grid grid-cols-[2rem_auto] gap-s2" href="<?php echo $menu_subitem["link"]; ?>">
                         <div class="p-s1 w-4 h-4 box-content rounded-md bg-secondary-glaciar col-start-1 col-end-2">
                           <img class="h-s2 w-s2 aspect-square bg-secondary-glaciar" src="<?php echo get_template_directory_uri(); ?>/images/icons/platform.svg" alt="platform icon" class="w-32 h-auto">
                         </div>
@@ -217,9 +217,9 @@
         <?php endforeach; ?>
       </ul>
       <div class="flex flex-col items-center justify-between w-full">
-        <div class="btn btn-primary w-full">
+        <a href="/get-started/" class="btn btn-primary w-full">
           Get Started
-        </div>
+        </a>
       </div>
     </div>
   </section>
