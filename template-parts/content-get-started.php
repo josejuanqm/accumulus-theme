@@ -76,7 +76,7 @@ if($join_the_forum):
 
 ?>
 
-<section class="relative section w-full pt-s8 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
+<section class="relative section w-full pt-s8 md:pt-s10 pb-s8 md:pb-s12 bg-neutral-nwhite">
 	<div class="container mx-auto px-s2 md:px-0">
 		<div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-y-s5 gap-x-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
 
