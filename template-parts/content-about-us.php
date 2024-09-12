@@ -272,7 +272,7 @@
             <?php echo $years[count($years ) - 1]['year']; ?>
           </span>
 
-          <button onclick="animateNext()" class="col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-11 md:col-start-auto min-w-s7 lg:min-w-0">
+          <button onclick="animateNext()" class="flex flex-row items-end justify-end col-span-2 lg:col-span-1 row-start-3 md:row-start-2 col-start-11 md:col-start-auto min-w-s7 lg:min-w-0">
             <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-neutral-500">
               <path d="M28.917 55.7519C43.8432 55.7519 55.9433 43.6518 55.9433 28.7256C55.9433 13.7993 43.8432 1.69922 28.917 1.69922C13.9907 1.69922 1.89062 13.7993 1.89062 28.7256C1.89062 43.6518 13.9907 55.7519 28.917 55.7519Z" stroke-width="1.86732" stroke-miterlimit="10"/>
               <path d="M24.6328 17.6602L35.6998 28.7271L24.6328 39.7941" stroke-width="3" stroke-miterlimit="10"/>
