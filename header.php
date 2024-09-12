@@ -316,10 +316,10 @@
     const menuDarkLogo = document.querySelector('svg.hamburger.fill-neutral-sgray');
 
     if (!firstSection) {
-      darkLogo.style.display = isLight ? 'block' : 'none';
-      lightLogo.style.display = isLight ? 'none' : 'block';
-      menuLightLogo.style.display = isLight ? 'none' : 'block';
-      menuDarkLogo.style.display = isLight ? 'block' : 'none';
+      darkLogo.style.display = 'block';
+      lightLogo.style.display = 'none';
+      menuLightLogo.style.display = 'none';
+      menuDarkLogo.style.display = 'block';
       header.forEach(function(h) {
         h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
