@@ -544,8 +544,6 @@ function getNews() {
     $category = (int)$_REQUEST["c"];
     $taxonomy = $_REQUEST["t"];
     $offset = ($page - 1) * $per_page;
-//	$category = (int)$_REQUEST["c"];
-//	$offset = $_REQUEST["page"]-1;
 
     $args = array(
         'post_type' => 'news',
@@ -3191,7 +3189,7 @@ add_action( 'acf/include_fields', function() {
 						'label' => 'Description',
 						'name' => 'description_form_access',
 						'aria-label' => '',
-						'type' => 'textarea',
+						'type' => 'wysiwyg',
 						'instructions' => '',
 						'required' => 0,
 						'conditional_logic' => 0,
@@ -3200,11 +3198,11 @@ add_action( 'acf/include_fields', function() {
 							'class' => '',
 							'id' => '',
 						),
-						'default_value' => 'Discover how the Accumulus platform can transform your regulatory interactions. Our overview highlights key features, benefits, and real-world applications that make the Accumulus platform an essential tool for your organization. Get the insights you need to make an informed decision—download now!​',
-						'maxlength' => '',
-						'rows' => 3,
-						'placeholder' => '',
-						'new_lines' => '',
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 0,
+						'delay' => 0,
 					),
 					array(
 						'key' => 'field_66d22976fb12a',

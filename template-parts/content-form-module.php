@@ -26,7 +26,7 @@ if( $show_form_free_pdf ):
       <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 lg:max-w-[655px]">
         <h4 class="heading-4 col-span-6 md:col-span-12"><?php echo $form_access_content['eyebrown_form_access']; ?></h4>
         <h2 class="heading-2 col-span-6 md:col-span-12"><?php echo $form_access_content['title_form_access']; ?></h2>
-        <p class="body-3 col-span-6 md:col-span-12"><?php echo $form_access_content['description_form_access']; ?></p>
+        <div class="body-3 col-span-6 md:col-span-12"><?php echo $form_access_content['description_form_access']; ?></div>
         <div class="form-module col-span-6 md:col-span-12 lg:col-span-8">
           <?php echo do_shortcode($form_access_content['shortcut_form']); ?>
         </div>
