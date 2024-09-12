@@ -154,7 +154,7 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 						<img class="w-full md:w-[64px] lg:min-w-[64px] aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
 					</div>
 
-					<div class="col-start-2 col-span-5 md:col-span-3 lg:col-span-5">
+					<div class="col-start-2 col-span-5 md:col-span-3 lg:col-span-5 lg:pl-s2">
 						<h3 class="heading-7 md:max-w-[220px] lg:max-w-[272px]"><?php echo $item['title'] ?></h3>
 					</div>
 
