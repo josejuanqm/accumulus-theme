@@ -390,6 +390,15 @@ function getResources() {
 
 		$html .= '
 		<div class="card col-span-12 md:col-span-6 lg:col-span-4 relative w-full rounded-card overflow-hidden ';
+		if ($categorySlug == 'thought-leadership'): 
+			$html .= 'bg-secondary-green text-neutral-nwhite';
+			elseif ($categorySlug == 'regulatory-insights'): 
+			$html .= 'bg-primary-glaciar text-neutral-dgray';
+			elseif ($categorySlug == 'e-books--white-papers'): 
+			$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
+			else:
+			$html .= 'bg-neutral-offwhite text-neutral-dgray'; 
+		endif;
 		$html .= '">
 
 		<a href="'.get_permalink( $post->ID ).'" class="absolute top-0 left-0 w-full h-full z-10"></a>';
@@ -515,7 +524,7 @@ function getResources() {
         "morePagesAvailable" => $more_pages_available,
         "pages" => $pages
 	));
-}																		
+}
 																		
 																		
 																		

@@ -2244,10 +2244,6 @@ video {
   font-weight: 400 !important;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .font-normal {
   font-weight: 400;
 }
@@ -2289,11 +2285,6 @@ video {
 .text-neutral-100 {
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
-}
-
-.text-neutral-600 {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
 .text-neutral-dgray {
@@ -2842,7 +2833,7 @@ body {
 .marquee {
   display: flex;
   align-items: center;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee-item {
@@ -4273,12 +4264,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-left: 1rem;
   }
 
-  .max-md\:pr-s4 {
-    padding-right: 2rem;
-  }
-
   .max-md\:pl-s6 {
     padding-left: 3rem;
+  }
+
+  .max-md\:pr-s4 {
+    padding-right: 2rem;
   }
 
   .last-of-type\:max-md\:pb-s8:last-of-type {
@@ -4553,12 +4544,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-rows-5 {
-    grid-template-rows: repeat(5, minmax(0, 1fr));
-  }
-
   .md\:grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
   .md\:flex-row {
