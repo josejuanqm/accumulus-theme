@@ -15,6 +15,7 @@
 $contact_form_shortcut = get_field('contact_form_shortcut');
 $contact_phone_number = get_field('contact_phone_number');
 $contact_email = get_field('contact_email');
+$linkedin = get_field('linkedin');
 
 ?>
 
@@ -31,13 +32,21 @@ $contact_email = get_field('contact_email');
 
         <div class="col-span-12 pt-s4 lg:pt-0 lg:col-span-3 hidden lg:flex items-end gap-4">
           <p class="body-2 leading-6">
-            <a href="#"><?php echo $contact_phone_number ?></a>
+            <?php if($contact_phone_number !== ''): ?>
+            <a href="tel:<?php echo $contact_phone_number ?>"><?php echo $contact_phone_number ?></a>
+            <?php endif; ?>
             <br />
-            <a href="#"><?php echo $contact_email; ?></a>
+            <?php if($contact_email !== ''): ?>
+            <a href="mailto: <?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+            <?php endif; ?>
           </p>
-          <p class="body-2 lg:-mb-[1px]">
-            <a href="#">LinkedIn</a>
+          <?php 
+          if($linkedin !== ''): 
+          ?>
+          <p class="body-2 -mb-[1px]">
+            <a href="<?php echo $linkedin; ?>" class="leading-6">LinkedIn</a>
           </p>
+          <?php endif; ?>
         </div>
       </div>
 
@@ -49,13 +58,21 @@ $contact_email = get_field('contact_email');
       
       <div class="col-span-12 pt-s4 flex lg:hidden items-end gap-4">
         <p class="body-2 leading-6">
-          <a href="#"><?php echo $contact_phone_number ?></a>
+          <?php if($contact_phone_number !== ''): ?>
+          <a href="tel:<?php echo $contact_phone_number ?>"><?php echo $contact_phone_number ?></a>
+          <?php endif; ?>
           <br />
-          <a href="#"><?php echo $contact_email; ?></a>
+          <?php if($contact_email !== ''): ?>
+          <a href="mailto: <?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+          <?php endif; ?>
         </p>
+        <?php 
+        if($linkedin !== ''): 
+        ?>
         <p class="body-2 -mb-[1px]">
-          <a href="#" class="leading-6">LinkedIn</a>
+          <a href="<?php echo $linkedin; ?>" class="leading-6">LinkedIn</a>
         </p>
+        <?php endif; ?>
       </div>
 
     </div>

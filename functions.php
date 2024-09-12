@@ -1235,7 +1235,7 @@ add_action( 'acf/include_fields', function() {
 							'id' => '',
 						),
 						'default_value' => 'Envision a
-	future where:',
+						future where:',
 						'maxlength' => '',
 						'rows' => 2,
 						'placeholder' => '',
@@ -2573,7 +2573,7 @@ add_action( 'acf/include_fields', function() {
 				'aria-label' => '',
 				'type' => 'text',
 				'instructions' => '',
-				'required' => 1,
+				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
 					'width' => '',
@@ -2604,6 +2604,23 @@ add_action( 'acf/include_fields', function() {
 				'placeholder' => '',
 				'prepend' => '',
 				'append' => '',
+			),
+			array(
+				'key' => 'field_66e3627d0e083',
+				'label' => 'linkedIn',
+				'name' => 'linkedin',
+				'aria-label' => '',
+				'type' => 'url',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
 			),
 		),
 		'location' => array(
