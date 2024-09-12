@@ -78,8 +78,8 @@
           <li><a href="/terms-and-conditions/" class="font-normal">Terms & Conditions</a></li>
         </ul>
         <ul class="flex flex-col items-start gap-s2 list-none col-span-3 col-start-1 row-start-4 md:col-span-4 md:col-start-9 md:row-start-4 lg:col-span-2 lg:col-start-1 lg:row-start-3">
-          <li><a href="https://www.linkedin.com/company/accumulus-synergy/" class="font-normal" href="">LinkedIn</a></li>
-          <li><a href="/contact-us/" class="font-normal">Contact Us</a></li>
+          <li><a href="https://www.linkedin.com/company/accumulus-synergy/" class="font-normal" target="_blank">LinkedIn</a></li>
+          <li><a href="/contact-us/" class="font-normal" href="">Contact Us</a></li>
           <li><a href="/site-map/" class="font-normal">Site map</a></li>
         </ul>
 			</div>
