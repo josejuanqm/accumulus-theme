@@ -108,7 +108,7 @@
   if($case_study):
 ?>
 
-<section class="relative section pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s10">
+<section id="case-study" class="relative section pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s10">
   <div class="container mx-auto">
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2">

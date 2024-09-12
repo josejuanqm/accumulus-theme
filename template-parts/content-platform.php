@@ -164,69 +164,73 @@ foreach($platform_row as $row) :
 <?php if($row['acf_fc_layout'] == 'case_study_layout') : ?>
 
 <section class="section relative w-full py-s10 bg-secondary-aqua flex flex-col gap-s9">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
-      <h4 class="col-span-12 heading-4 uppercase"><?php echo $row['case_study']['eyebrown']; ?></h4>
-      <h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
-        <span class="block col-span-12">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
+			<h4 class="col-span-12 heading-4 uppercase"><?php echo $row['case_study']['eyebrown']; ?></h4>
+			<h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1">
+				<span class="block col-span-12">
 					<?php echo $row['case_study']['title_first_row']; ?>
-        </span>
-        <span class="block col-span-12">
+				</span>
+				<span class="block col-span-12">
 					<?php echo $row['case_study']['title_second_row']; ?>
-        </span>
-      </h2>
-    </div>
-    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
-
+				</span>
+			</h2>
+		</div>
+		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s8 lg:py-s6 pt-s4 md:pt-0">
+		
 			<?php 
-				$i = 0;
-				foreach($row['case_study']['list_items'] as $row): 
+			$i = 0;
+			foreach($row['case_study']['list_items'] as $item): 
 				$i++;
 			?>
-				<?php if($i % 2 == 1): ?>
-					<div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-1">
-						
-						<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
-							<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
-								<img class="w-[55px] lg:w-[64px]" src="<?php echo $row['icon']; ?>" alt="<?php echo $row['title']; ?>" />
-							</div>
-							<h3 class="heading-2 col-start-2 col-span-1">
-								<?php echo $row['title']; ?>
-							</h3>
-							<div class="col-start-2 col-span-1 row-start-2">
-								<p class="body-2 lg:max-w-[368px]">
-									<?php echo $row['resume']; ?>
-								</p>
-							</div>
-						</div>
 
-					</div>
-				<?php else : ?>
-					<div class="col-span-12 md:col-span-10 lg:col-span-7 md:col-start-2 lg:col-start-7">
-						<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
-							<div class="flex flex-col items-center justify-center col-start-1 col-span-1">                
-								<img class="w-[55px] lg:w-[64px]" src="<?php echo $row['icon']; ?>" alt="<?php echo $row['title']; ?>" />
-							</div>
-							<h3 class="heading-2 col-start-2 col-span-1">
-								<?php echo $row['title']; ?>
-							</h3>
-							<div class="col-start-2 col-span-1 row-start-2">
-								<p class="body-2 lg:max-w-[368px]">
-									<?php echo $row['resume']; ?>
-								</p>
-							</div>
+			<?php if($i % 2 == 1): ?>
+				<div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-1">
+					
+					<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
+						<div class="flex flex-col items-center justify-center col-start-1 col-span-1">
+							<img class="w-[55px] lg:w-[64px]" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
+						</div>
+						<h3 class="heading-2 col-start-2 col-span-1">
+							<?php echo $item['title']; ?>
+						</h3>
+						<div class="col-start-2 col-span-1 row-start-2">
+							<p class="body-2 lg:max-w-[368px]">
+								<?php echo $item['resume']; ?>
+							</p>
 						</div>
 					</div>
+					
+				</div>
+			<?php else : ?>
+				<div class="col-span-12 md:col-span-10 lg:col-span-7 md:col-start-2 lg:col-start-7">
+
+					<div class="grid grid-cols-[64px, 1fr] gap-y-s2 lg:gap-y-s6 gap-x-s2 items-start">
+						<div class="flex flex-col items-center justify-center col-start-1 col-span-1">                
+							<img class="w-[55px] lg:w-[64px]" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
+						</div>
+						<h3 class="heading-2 col-start-2 col-span-1">
+							<?php echo $item['title']; ?>
+						</h3>
+						<div class="col-start-2 col-span-1 row-start-2">
+							<p class="body-2 lg:max-w-[368px]">
+								<?php echo $item['resume']; ?>
+							</p>
+						</div>
+					</div>
+					
+				</div>
 			<?php endif; ?>
+				
 			<?php 
-				endforeach; 
+			endforeach; 
 			?>
-    </div>
-  </div>
-
-  <div class="flex flex-col items-center text-center justify-stretch md:justify-normal gap-s4">
-    <a href="#" class="btn btn-tertiary">Learn more</a>
-  </div>
+			
+		</div>
+	</div>
+	<div class="flex flex-col items-center text-center justify-stretch md:justify-normal gap-s4">
+		<a href="<?php echo $row['case_study']['cta_text']['url']; ?>" class="btn btn-tertiary"><?php echo $row['case_study']['cta_text']['title']; ?></a>
+	</div>
 </section>
 
 <?php endif; ?>

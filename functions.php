@@ -897,7 +897,7 @@ function getEvents() {
 
     foreach ($posts as $post) {
         $date = get_field('date_event', $post->ID, false);
-        $file = get_field('file', $post->ID, false);
+        $file = get_field('metting_summary_2', $post->ID, false);
         $dateEvent = new DateTime($date);
         $year = $dateEvent->format('Y');
         $month = $dateEvent->format('F');
@@ -912,10 +912,10 @@ function getEvents() {
         // Verificar si el evento está vencido y limitar a 3 por mes
         if ($isExpired) {
             if (!isset($group_posts[$year][$month]) || count($group_posts[$year][$month]) < 3) {
-                $group_posts[$year][$month][] = array($post, $dateEvent, $file);
+                $group_posts[$year][$month][] = array($post, $dateEvent);
             }
         } else {
-            $group_posts[$year][$month][] = array($post, $dateEvent, $file);
+            $group_posts[$year][$month][] = array($post, $dateEvent);
         }
     }
 
@@ -944,7 +944,8 @@ function getEvents() {
                 $today = date( 'Ymd' );
 
                 $date = get_field( 'date_event', $posts[0]->ID );
-		$field = $posts[0]->ID;
+                $file = get_field( 'metting_summary_2', $posts[0]->ID );
+									$field = $posts[0]->ID;
                 $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
 
                 $html .= '<div class="relative col-span-12 max-md:flex max-md:flex-col md:grid md:grid-cols-12 md:gap-s2 items-center bg-neutral-offwhite text-neutral-dgray rounded-miniCard overflow-hidden '. $categorySlug . ' ' . (($today <= $date) ? ' opacity-100' : ' opacity-50') . '">';
@@ -964,11 +965,14 @@ function getEvents() {
                 $html .= $category;
                 $html .= '</span>';
                 $html .= '<h3 class="text-h10">'. get_the_title() .'</h3>';
-		$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
-		if ($file) {
-			$url = wp_get_attachment_url( $file );
-			$html .= '<a class="uppercase heading-4 text-neutral-dgray" href="'.$url.'"><span>Download Meeting Summary</span></a>';
-		}
+								$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+								if ($file) {
+									$html .= '<a class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2" href="'.$file['url'].'" target="_blank" download><span>Download Meeting Summary</span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.7009 8.01855V11.0175H2.20313V8.01855H0.703125V11.0175V12.5175H14.2009V11.0175V8.01855H12.7009Z" fill="#444444"/>
+											<path d="M6.70167 7.39582V0.51795H8.20057V7.3925L10.3172 5.27589L11.3766 6.33531L8.20057 9.51243V9.51465H6.70167L3.52344 6.33531L4.58285 5.27589L6.70167 7.39582Z" fill="#444444"/>
+											</svg>
+											</a>';
+								}
                 $html .= '</div>';
 
                 // if (has_post_thumbnail( $posts[0]->ID ) ) {
@@ -1452,11 +1456,11 @@ add_action( 'acf/include_fields', function() {
 							'id' => '',
 						),
 						'default_value' => 'With the launch of the first-in-kind Accumulus platform in February 2024, what was once considered simply visionary is now a reality.
-	Using the then newly launched Accumulus platform, a leading biopharmaceutical company led a Post Approval Change (PAC) Reliance project involving 48 regulators across six continents.  The pilot consisted of submitting questions and responses on a PAC submission, and to date, is the largest PAC Reliance Pilot ever conducted. 
+	Using the then newly launched Accumulus platform, a leading biopharmaceutical company led a Post Approval Change (PAC) Reliance project involving 48 regulators across six continents.The pilot consisted of submitting questions and responses on a PAC submission, and to date, is the largest PAC Reliance Pilot ever conducted. 
 	
 	The overarching objective of the pilot was to increase predictability for the implementation of changes and reduce the complexity of global life-cycle management through Reliance1.
 	
-	The Accumulus platform supported this objective by enabling user-initiated projects, NRA invitations, content upload, quality control, and health authority questions (HAQs) and answers.  
+	The Accumulus platform supported this objective by enabling user-initiated projects, NRA invitations, content upload, quality control, and health authority questions (HAQs) and answers.
 	
 	Using the Accumulus platform, the pilot successfully achieved its goal of reducing the global approval time from approximately 2.5 years to 6.5 months.',
 						'maxlength' => '',
@@ -1667,7 +1671,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66c7b521f1c0c',
 		'title' => 'Careers - Page',
 		'fields' => array(
@@ -2329,7 +2333,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_666baf7791435',
 		'title' => 'Case of change Page - Fields',
 		'fields' => array(
@@ -2540,7 +2544,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_6625c9e3f2b2c',
 		'title' => 'Contact Page - Fields',
 		'fields' => array(
@@ -2624,7 +2628,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_667e28ffbfb48',
 		'title' => 'Core Capabilities - Page',
 		'fields' => array(
@@ -3059,38 +3063,10 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_666200ea823a4',
 		'title' => 'Events Post type - Fields',
 		'fields' => array(
-			array(
-				'key' => 'key_event_file',
-				'label' => 'File',
-				'name' => 'file',
-				'type' => 'file',
-				'aria-label' => '',
-				/* (string) Specify the type of value returned by get_field(). Defaults to 'array'.
-				 Choices of 'array' (File Array), 'url' (File URL) or 'id' (File ID) */
-				 'return_format' => 'url',
-				    
-				 /* (string) Specify the file size shown when editing. Defaults to 'thumbnail'. */
-				 'preview_size' => 'thumbnail',
-				    
-				 /* (string) Restrict the file library. Defaults to 'all'.
-				 Choices of 'all' (All Files) or 'uploadedTo' (Uploaded to post) */
-				 'library' => 'all',
-			
-				 /* (int) Specify the minimum filesize in MB required when uploading. Defaults to 0 
-				 The unit may also be included. eg. '256KB' */
-				 'min_size' => 0,
-					
-				 /* (int) Specify the maximum filesize in MB in px allowed when uploading. Defaults to 0
-				 The unit may also be included. eg. '256KB' */
-				 'max_size' => 0,
-				    
-				 /* (string) Comma separated list of file type extensions allowed when uploading. Defaults to '' */
-				 'mime_types' => '',
-			),
 			array(
 				'key' => 'field_666200ea1d3b7',
 				'label' => 'Date event',
@@ -3108,6 +3084,26 @@ add_action( 'acf/include_fields', function() {
 				'display_format' => 'm/d/Y',
 				'return_format' => 'Ymd',
 				'first_day' => 1,
+			),
+			array(
+				'key' => 'field_66e3018716109',
+				'label' => 'Metting Summary',
+				'name' => 'metting_summary_2',
+				'aria-label' => '',
+				'type' => 'file',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'library' => 'all',
+				'min_size' => '',
+				'max_size' => '',
+				'mime_types' => '',
 			),
 		),
 		'location' => array(
@@ -3130,7 +3126,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66d1597ca3988',
 		'title' => 'Form to access free PDF',
 		'fields' => array(
@@ -3286,7 +3282,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66da76d37651a',
 		'title' => 'Get started - Page',
 		'fields' => array(
@@ -3804,7 +3800,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66c7feea89181',
 		'title' => 'Informative sections - Home',
 		'fields' => array(
@@ -4558,7 +4554,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66175352040c8',
 		'title' => 'Main banner - Home',
 		'fields' => array(
@@ -4815,7 +4811,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_666785a13b672',
 		'title' => 'Main banner - Several Pages',
 		'fields' => array(
@@ -5033,7 +5029,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_665d32031bdca',
 		'title' => 'News Post type - Fields',
 		'fields' => array(
@@ -5083,7 +5079,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66732b5ce235b',
 		'title' => 'Platform Page - Fields',
 		'fields' => array(
@@ -5934,11 +5930,11 @@ add_action( 'acf/include_fields', function() {
 										),
 									),
 									array(
-										'key' => 'field_66d92fed0bef1',
-										'label' => 'Text cta',
-										'name' => 'text_cta',
+										'key' => 'field_66e300762e762',
+										'label' => 'Cta',
+										'name' => 'cta_text',
 										'aria-label' => '',
-										'type' => 'text',
+										'type' => 'link',
 										'instructions' => '',
 										'required' => 0,
 										'conditional_logic' => 0,
@@ -5947,28 +5943,7 @@ add_action( 'acf/include_fields', function() {
 											'class' => '',
 											'id' => '',
 										),
-										'default_value' => 'Read more',
-										'maxlength' => '',
-										'placeholder' => '',
-										'prepend' => '',
-										'append' => '',
-									),
-									array(
-										'key' => 'field_66d92ffd0bef2',
-										'label' => 'Link cta',
-										'name' => 'link_cta',
-										'aria-label' => '',
-										'type' => 'url',
-										'instructions' => '',
-										'required' => 0,
-										'conditional_logic' => 0,
-										'wrapper' => array(
-											'width' => '',
-											'class' => '',
-											'id' => '',
-										),
-										'default_value' => 'https://google.com',
-										'placeholder' => '',
+										'return_format' => 'array',
 									),
 								),
 							),
@@ -6732,7 +6707,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_6688c7820a896',
 		'title' => 'Regulator Forum - Page',
 		'fields' => array(
@@ -7483,7 +7458,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_6642e1ea9e53a',
 		'title' => 'Resources Page - Fields',
 		'fields' => array(
@@ -7781,7 +7756,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66db7abda780b',
 		'title' => 'Site map - Page',
 		'fields' => array(
@@ -8011,7 +7986,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66c50e18ef8cd',
 		'title' => 'Team - Directors',
 		'fields' => array(
@@ -8167,7 +8142,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66c50d2fbf4fc',
 		'title' => 'Team - Leadership',
 		'fields' => array(
@@ -8323,7 +8298,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66c7ba68d3d89',
 		'title' => 'Team - Page',
 		'fields' => array(
@@ -8618,7 +8593,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_66564927d29db',
 		'title' => 'Values Component - Several pages',
 		'fields' => array(
@@ -8955,7 +8930,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_661b23ef6a60f',
 		'title' => 'What we do - Home',
 		'fields' => array(
@@ -8993,8 +8968,8 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => 'Reduce complexity.  
-	Increase security.  
+				'default_value' => 'Reduce complexity. 
+	Increase security. 
 	Accelerate outcomes.',
 				'maxlength' => '',
 				'rows' => 3,
@@ -9136,7 +9111,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 	
-		acf_add_local_field_group( array(
+	acf_add_local_field_group( array(
 		'key' => 'group_661f406de42bf',
 		'title' => 'Why Accumulus - Home',
 		'fields' => array(
