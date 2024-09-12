@@ -892,6 +892,7 @@ function getEvents() {
 
     foreach ($posts as $post) {
         $date = get_field('date_event', $post->ID, false);
+        $file = get_field('file', $post->ID, false);
         $dateEvent = new DateTime($date);
         $year = $dateEvent->format('Y');
         $month = $dateEvent->format('F');
@@ -906,10 +907,10 @@ function getEvents() {
         // Verificar si el evento está vencido y limitar a 3 por mes
         if ($isExpired) {
             if (!isset($group_posts[$year][$month]) || count($group_posts[$year][$month]) < 3) {
-                $group_posts[$year][$month][] = array($post, $dateEvent);
+                $group_posts[$year][$month][] = array($post, $dateEvent, $file);
             }
         } else {
-            $group_posts[$year][$month][] = array($post, $dateEvent);
+            $group_posts[$year][$month][] = array($post, $dateEvent, $file);
         }
     }
 
@@ -938,6 +939,7 @@ function getEvents() {
                 $today = date( 'Ymd' );
 
                 $date = get_field( 'date_event', $posts[0]->ID );
+		$field = $posts[0]->ID;
                 $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
 
                 $html .= '<div class="relative col-span-12 max-md:flex max-md:flex-col md:grid md:grid-cols-12 md:gap-s2 items-center bg-neutral-offwhite text-neutral-dgray rounded-miniCard overflow-hidden '. $categorySlug . ' ' . (($today <= $date) ? ' opacity-100' : ' opacity-50') . '">';
@@ -957,7 +959,11 @@ function getEvents() {
                 $html .= $category;
                 $html .= '</span>';
                 $html .= '<h3 class="text-h10">'. get_the_title() .'</h3>';
-                $html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+		$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+		if ($file) {
+			$url = wp_get_attachment_url( $file );
+			$html .= '<a class="uppercase heading-4 text-neutral-dgray" href="'.$url.'"><span>Download Meeting Summary</span></a>';
+		}
                 $html .= '</div>';
 
                 // if (has_post_thumbnail( $posts[0]->ID ) ) {
@@ -3052,6 +3058,34 @@ add_action( 'acf/include_fields', function() {
 		'key' => 'group_666200ea823a4',
 		'title' => 'Events Post type - Fields',
 		'fields' => array(
+			array(
+				'key' => 'key_event_file',
+				'label' => 'File',
+				'name' => 'file',
+				'type' => 'file',
+				'aria-label' => '',
+				/* (string) Specify the type of value returned by get_field(). Defaults to 'array'.
+				 Choices of 'array' (File Array), 'url' (File URL) or 'id' (File ID) */
+				 'return_format' => 'url',
+				    
+				 /* (string) Specify the file size shown when editing. Defaults to 'thumbnail'. */
+				 'preview_size' => 'thumbnail',
+				    
+				 /* (string) Restrict the file library. Defaults to 'all'.
+				 Choices of 'all' (All Files) or 'uploadedTo' (Uploaded to post) */
+				 'library' => 'all',
+			
+				 /* (int) Specify the minimum filesize in MB required when uploading. Defaults to 0 
+				 The unit may also be included. eg. '256KB' */
+				 'min_size' => 0,
+					
+				 /* (int) Specify the maximum filesize in MB in px allowed when uploading. Defaults to 0
+				 The unit may also be included. eg. '256KB' */
+				 'max_size' => 0,
+				    
+				 /* (string) Comma separated list of file type extensions allowed when uploading. Defaults to '' */
+				 'mime_types' => '',
+			),
 			array(
 				'key' => 'field_666200ea1d3b7',
 				'label' => 'Date event',
