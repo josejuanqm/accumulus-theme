@@ -406,19 +406,19 @@ function getResources() {
 			if ($categorySlug == 'e-books--white-papers'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full max-h-full object-cover"   />';
 				$html .= '</div>';
 
 			elseif ($categorySlug == 'regulatory-insights'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full max-h-full object-cover"   />';
 				$html .= '</div>';
 			
 				elseif ($categorySlug == 'thought-leadership'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full max-h-full object-cover"   />';
 				$html .= '</div>';
 
 			endif;

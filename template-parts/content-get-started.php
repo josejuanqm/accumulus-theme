@@ -129,7 +129,7 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s4 pt-s10 md:pt-s12 md:pb-s6">
-			<h2 class="flex flex-col md:grid md:grid-cols-12 md:grid-rows-2 col-span-12 gap-s2 heading-1 justify-start items-start">
+			<h2 class="flex flex-col md:grid md:grid-cols-12 md:grid-rows-2 col-span-12 md:gap-s2 heading-1 justify-start items-start">
 				<span class="col-span-12">
 					<?php echo $benefits['title_first_line']; ?>
 				</span>
