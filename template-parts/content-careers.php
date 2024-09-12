@@ -180,7 +180,7 @@
           <h3 class="heading-3 col-start-2 col-span-1 text-neutral-dgray">
             <?php echo $item['title'] ?>
           </h3>
-          <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-600">
+          <p class="body-2 col-start-2 col-span-1 row-start-2 text-neutral-dgray">
             <?php echo $item['description'] ?>
           </p>
         </div>
