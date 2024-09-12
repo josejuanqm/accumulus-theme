@@ -27,8 +27,10 @@
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
 			<h4 class="col-span-12 heading-4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
 			<h1 class="col-span-12 heading-1"><?php echo $main_title; ?></h1>
-			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
+			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
 				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+			</div>
+			<div class="col-span-12 md:col-span-12 lg:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
         <a href="<?php echo $link_learn_more ?>" class="btn-secondary"><?php echo 	$text_cta; ?></a>
 			</div>
 		</div>

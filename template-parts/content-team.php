@@ -2,7 +2,7 @@
   $banner = get_field('banner_section');
   $title_tag = "OUR TEAM" ?? $banner['eyebrow_text'];
   $main_title = "Passionate Leaders Driven by a Common Purpose" ?? $banner['main_title'];
-  $paragraph_text = "A first-of-its-kind data and information exchange platform for the drug development lifecycle. Built for the process needs of today and the evolving life sciences–regulatory landscape of the future." ?? $banner['paragraph'];
+  $paragraph_text = "Accumulus leaders are a diverse group of industry experts motivated by the Accumulus mission to dramatically accelerate critical therapies to citizens of the world." ?? $banner['paragraph'];
 ?>
 
 <section class="translucent-navigation relative isolate overflow-hidden section w-full">
