@@ -205,9 +205,9 @@ add_filter( 'show_admin_bar', '__return_false' );
 
 // enable svg upload
 function custom_mtypes( $m ){
-    $m['svg'] = 'image/svg+xml';
-    $m['svgz'] = 'image/svg+xml';
-    return $m;
+	$m['svg'] = 'image/svg+xml';
+	$m['svgz'] = 'image/svg+xml';
+	return $m;
 }
 add_filter( 'upload_mimes', 'custom_mtypes' );
 
@@ -407,7 +407,7 @@ function getResources() {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
 			$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-			$html .= '<img src="'. $image[0] .'" class="block max-h-full"  />';
+			$html .= '<img src="'. $image[0] .'" class="block h-full"  />';
 			$html .= '</div>';
 
 		else:
@@ -415,19 +415,19 @@ function getResources() {
 			if ($categorySlug == 'e-books--white-papers'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full max-h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-full object-cover"   />';
 				$html .= '</div>';
 
 			elseif ($categorySlug == 'regulatory-insights'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full max-h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full h-full object-cover"   />';
 				$html .= '</div>';
 			
 				elseif ($categorySlug == 'thought-leadership'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full max-h-full object-cover"   />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full h-full object-cover"   />';
 				$html .= '</div>';
 
 			endif;
@@ -525,17 +525,17 @@ function getResources() {
         "pages" => $pages
 	));
 }
-																		
-																		
-																		
+
+
+
 /**
 * 
 * GET NEWS CMS
 * 
 */
-																		
-																		
-																		
+
+
+
 add_action('wp_ajax_nopriv_get_news', 'getNews');
 add_action('wp_ajax_get_news', 'getNews');
 function getNews() {
@@ -689,6 +689,11 @@ function getNews() {
 
 		$html .= '
 		<div class="card col-span-12 md:col-span-6 lg:col-span-4 relative w-full rounded-card overflow-hidden ';
+		if ($categorySlug == 'media-coverage'): 
+			$html .= 'bg-secondary-carbon text-neutral-nwhite';
+		elseif ($categorySlug == 'new-releases'): 
+			$html .= 'bg-secondary-aqua text-neutral-dgray';
+		endif;
 		$html .= '">';
 
 		if ($categorySlug == 'media-coverage'):
@@ -710,13 +715,13 @@ function getNews() {
 			if ($categorySlug == 'media-coverage'):
 
 				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full max-h-full object-cover" />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full h-full object-cover" />';
 				$html .= '</div>';
 
 			elseif ($categorySlug == 'new-releases'):
 
 				$html .= '<div class="<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full max-h-full object-cover" />';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full h-full object-cover" />';
 				$html .= '</div>';
 
 			endif;

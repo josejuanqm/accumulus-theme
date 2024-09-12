@@ -151,7 +151,7 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 				<div class="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2 md:gap-x-s2">
 
 					<div class="col-start-1 col-span-1 flex flex-col">
-						<img class="w-full md:w-[64px] aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
+						<img class="w-full md:w-[64px] lg:min-w-[64px] aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
 					</div>
 
 					<div class="col-start-2 col-span-5 md:col-span-3 lg:col-span-5">
