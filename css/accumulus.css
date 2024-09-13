@@ -1706,6 +1706,11 @@ video {
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-mgray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 213 213 / var(--tw-bg-opacity));
+}
+
 .bg-neutral-nude {
   --tw-bg-opacity: 1;
   background-color: rgb(255 248 241 / var(--tw-bg-opacity));
@@ -1778,11 +1783,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-mgray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(213 213 213 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-0 {
