@@ -127,7 +127,7 @@
         <p class="body-2"><?php echo $case_study['resume']; ?></p>
       </div>
       <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
-        <a class="btn-secondary" href="<?php echo $case_study['link_cta']; ?>"><?php echo $case_study['text_cta']; ?></a>
+        <a class="btn-secondary" href="<?php echo $case_study['link_cta']; ?>" target="_blank"><?php echo $case_study['text_cta']; ?></a>
       </div>
       <div class="col-span-6 md:col-span-12 lg:col-span-9 lg:col-start-2 pt-s5 md:pt-s6 lg:pt-s6">
         <ul>
