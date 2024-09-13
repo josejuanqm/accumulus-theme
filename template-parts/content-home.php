@@ -537,19 +537,24 @@ if($how_it_works):
 
 <!-- Events carousel -->
 
+<!-- Form Module -->
+<?php
+	get_template_part(
+		'template-parts/content',
+		'form-module'
+	);
+?>
+<!-- End form module -->
+
+
+<!-- Careers banner -->
+
 <?php
   get_template_part(
-    'template-parts/content',
+		'template-parts/content',
     'careers-footer'
   );
 ?>
 
+<!-- End Careers banner -->
 
-<!-- Form Module -->
-<?php
-  get_template_part(
-    'template-parts/content',
-    'form-module'
-  );
-?>
-<!-- End form module -->
