@@ -266,7 +266,8 @@ div.wpforms-container-full .wpforms-field-label,
 }
 
 .wpforms-container .wpforms-form input.wpforms-field-medium,
-.ginput_container input {
+.ginput_container input,
+.ginput_container textarea {
   @apply !max-w-full !px-0 !pt-0 !pb-s1 !border-x-0 !border-t-0 !bg-transparent !border-b !border-neutral-fnude !p-3 !outline-none !text-neutral-dgray !text-b2Mobile md:!text-b2Tablet lg:!text-b2 placeholder:!text-neutral-sgray !shadow-none !rounded-none;
 }
 
