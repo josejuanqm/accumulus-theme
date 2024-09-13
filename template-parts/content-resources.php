@@ -350,7 +350,7 @@ if (count($result) > 0 ){
       <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 body-3"><?php echo $eventSection['second_paragraph']; ?></p>
       
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-6 pt-s5 lg:pb-s8 md:pt-s5">
-				<a href="<?php echo $eventSection['link_cta']; ?>" class="btn-tertiary-white" target="_blank">Read More</a>
+				<a href="<?php echo $eventSection['link_cta']['url']; ?>" class="btn-tertiary-white" target="<?php echo $eventSection['link_cta']['target'] ? $eventSection['link_cta']['target'] : '_self' ?>"><?php echo $eventSection['link_cta']['title']; ?></a>
 			</div>
 
     </div>
