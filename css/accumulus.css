@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -5096,10 +5096,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:row-start-4 {
     grid-row-start: 4;
-  }
-
-  .lg\:-mb-\[1px\] {
-    margin-bottom: -1px;
   }
 
   .lg\:-ml-s2 {
