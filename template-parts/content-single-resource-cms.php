@@ -43,8 +43,12 @@
 <section class="relative section max-w-[1135px] pb-s8 md:pb-s12 lg:py-s16 flex flex-col mx-auto">
   <div class="relative z-10 pt-s8 pb-s10 md:pb-s7 md:pt-s10 lg:pt-s16 lg:absolute lg:top-0 lg:left-0">
     <ul class="flex items-center lg:items-start lg:flex-col justify-start gap-s6 md:gap-s14 lg:gap-s4">
+      <?php 
+        $file_to_download = get_field('file_to_download');
+        if($file_to_download):
+      ?>
       <li>
-        <a href="#" class="flex items-center gap-4 text-h6Mobile md:text-h6Tablet lg:text-h6">
+        <a href="<?php echo $file_to_download['url'] ?>" target="_blank" download class="flex items-center gap-4 text-h6Mobile md:text-h6Tablet lg:text-h6">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="38.75" height="38.75" rx="7.26563" fill="#ACEFFF"/>
             <path d="M28.7843 22.4199V27.4002H11.3505V22.4199H8.85938V27.4002V29.8913H31.2754V27.4002V22.4199H28.7843Z" fill="#444444"/>
@@ -53,7 +57,8 @@
           Download Asset
         </a>
       </li>
-      <li>
+      <?php endif; ?>
+      <!-- <li>
         <a href="#" class="flex items-center gap-4 text-h6Mobile md:text-h6Tablet lg:text-h6">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="38.75" height="38.75" rx="7.26562" fill="#ACEFFF"/>
@@ -62,7 +67,7 @@
           </svg>
           Play
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
   <div class="relative detail flex flex-col items-end gap-s4 md:gap-s10">
@@ -86,7 +91,7 @@
   <div class="relative pt-s8 md:pt-s10">
     <ul class="flex items-center lg:items-start lg:flex-col justify-start gap-s6 md:gap-s14 lg:gap-s4">
       <li>
-        <a href="#" class="flex items-center gap-4 text-h6Mobile md:text-h6Tablet lg:text-h6">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="flex items-center gap-4 text-h6Mobile md:text-h6Tablet lg:text-h6">
           <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.78125" width="48" height="48" rx="6" fill="#411693"/>
             <path d="M33.3512 18.027L28.3565 13.0323C27.4372 12.1129 25.9461 12.1129 25.0268 13.0323L18.3672 19.6919L20.0321 21.3567L26.6917 14.6972L31.6863 19.6919L23.6052 27.773L25.2701 29.4379L33.3512 21.3567C34.2706 20.4374 34.2706 18.9463 33.3512 18.027Z" fill="#FCFCFC"/>

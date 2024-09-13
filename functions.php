@@ -9015,8 +9015,8 @@ add_action( 'acf/include_fields', function() {
 					'id' => '',
 				),
 				'default_value' => 'Reduce complexity. 
-	Increase security. 
-	Accelerate outcomes.',
+				Increase security. 
+				Accelerate outcomes.',
 				'maxlength' => '',
 				'rows' => 3,
 				'placeholder' => '',
@@ -9359,6 +9359,51 @@ add_action( 'acf/include_fields', function() {
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+
+	acf_add_local_field_group( array(
+		'key' => 'group_66e4ab682617f',
+		'title' => 'Detail Resoruces - Post type',
+		'fields' => array(
+			array(
+				'key' => 'field_66e4ab68c9db8',
+				'label' => 'File to download',
+				'name' => 'file_to_download',
+				'aria-label' => '',
+				'type' => 'file',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'library' => 'all',
+				'min_size' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'resource-cms',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'side',
 		'style' => 'default',
 		'label_placement' => 'top',
 		'instruction_placement' => 'label',
