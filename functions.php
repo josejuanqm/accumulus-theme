@@ -609,7 +609,7 @@ function getNews() {
 
 			if ($categorySlug == 'media-coverage'):
 				$html .= '<a href="'. $url_new_realice .'" target="_blank" class="absolute top-0 left-0 w-full h-full z-10"></a>';
-			elseif ($categorySlug == 'new-releases'):
+			elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 				$html .= '<a href="'.get_permalink( $post->ID ).'" class="absolute top-0 left-0 w-full h-full z-10"></a>';
 			endif;
 
@@ -716,7 +716,7 @@ function getNews() {
 				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full h-full object-cover" />';
 				$html .= '</div>';
 
-			elseif ($categorySlug == 'new-releases'):
+			elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 
 				$html .= '<div class="<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
 				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full h-full object-cover" />';
