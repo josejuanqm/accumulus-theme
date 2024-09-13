@@ -75,7 +75,7 @@
 
 
 							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
-                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
+                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
 							</div>
 
 							<div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">

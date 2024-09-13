@@ -109,7 +109,7 @@
 
       <div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-s4 px-s2 md:px-s4 lg:px-0">
 
-        <h2 class="heading-2">Top Stories</h2>
+        <h2 class="heading-2">Recent Stories</h2>
 
         <div class="grid grid-cols-12 gap-s2">
 

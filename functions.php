@@ -1014,7 +1014,7 @@ function getEvents() {
     wp_send_json(array(
         "html" => $html,
         "posts" => $posts_query,
-	"query" => $args,
+				"query" => $args,
         "totalPosts" => $total_posts
     ));
 }
