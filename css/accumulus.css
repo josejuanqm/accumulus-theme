@@ -1440,6 +1440,10 @@ video {
   grid-template-columns: auto auto;
 }
 
+.grid-cols-\[64px_1fr\] {
+  grid-template-columns: 64px 1fr;
+}
+
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
