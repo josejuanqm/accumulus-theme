@@ -7,7 +7,7 @@
  * @package accumulus-website
  */
 
-  function truncate($string, $length, $dots = "...", $display = false) {
+  function truncate($string, $length, $dots = "...", $display = true) {
     $result = (strlen($string) > $length) ? substr($string, 0, $length - strlen($dots)) . $dots : $string;
     if ($display) {
       echo $result;
