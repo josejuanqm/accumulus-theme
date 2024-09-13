@@ -962,8 +962,8 @@ function getEvents() {
                 $html .= '</svg>';
                 $html .= $category;
                 $html .= '</span>';
-                $html .= '<h3 class="text-h10">'. get_the_title() .'</h3>';
-								$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt() .'</p>';
+                $html .= '<h3 class="text-h10">'. get_the_title($posts[0]->ID) .'</h3>';
+								$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt($posts[0]->ID) .'</p>';
 								if ($file) {
 									$html .= '<a class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2" href="'.$file['url'].'" target="_blank" download><span>Download Meeting Summary</span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.7009 8.01855V11.0175H2.20313V8.01855H0.703125V11.0175V12.5175H14.2009V11.0175V8.01855H12.7009Z" fill="#444444"/>
