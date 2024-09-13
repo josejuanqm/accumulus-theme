@@ -141,30 +141,18 @@ if($row['acf_fc_layout'] == 'benefits_layout') :
 		<!-- Title -->
 
 
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 md:pt-0">
+		<div class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 md:pt-0">
 			
 			<?php 
 				foreach($benefits['benefit_list'] as $item): 
 			?>
-			<div class="col-span-12 md:col-span-4">
-
-				<div class="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2 md:gap-x-s2">
-
-					<div class="col-start-1 col-span-1 flex flex-col">
-						<img class="w-full md:w-[64px] lg:min-w-[64px] aspect-square" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
-					</div>
-
-					<div class="col-start-2 col-span-5 md:col-span-3 lg:col-span-5 lg:pl-s2">
-						<h3 class="heading-7 md:max-w-[220px] lg:max-w-[272px]"><?php echo $item['title'] ?></h3>
-					</div>
-
-				</div>
-
-			</div>
+				<img class="w-full md:w-[64px] lg:min-w-[64px] aspect-square self-end col-span-1" src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
+				<h3 class="heading-7 col-span-5 md:col-span-3"><?php echo $item['title'] ?></h3>
 			<?php endforeach; ?>
 
-			<p class="col-span-12 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 body-2">
+			<p class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 body-2">
 				<?php echo $benefits['resume']; ?>
+			</p>
 		</div>
 		<!-- Items -->
 

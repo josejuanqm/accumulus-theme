@@ -78,7 +78,7 @@
               </clipPath>
               </defs>
               </svg>
-              <svg width="241" height="61" viewBox="0 0 241 61" class="logo fill-neutral-sgray stroke-none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="241" height="61" viewBox="0 0 241 61" class="logo fill-cta-dark stroke-none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_4005_31882)">
               <path d="M61.5264 12.7661L53.8125 35.0301H58.2829L59.7781 30.5726H68.6115L70.1067 35.0301H74.5771L66.8632 12.7661H61.534H61.5264ZM61.0816 26.6242L64.1718 17.478L67.2619 26.6242H61.074H61.0816Z" />
               <path d="M84.6012 31.1276C81.9788 31.1276 79.8624 28.7061 79.8624 25.7833C79.8624 22.8605 81.9788 20.3311 84.6012 20.3311C86.3264 20.3311 87.7987 21.4107 88.4428 22.6755H93.5036C92.4301 18.488 89.0562 15.9585 84.6012 15.9585C79.0343 15.9585 75.0547 20.3619 75.0547 25.7448C75.0547 31.1276 79.0343 35.4539 84.6012 35.4539C89.0869 35.4539 92.4607 32.963 93.5342 28.7369H88.4734C87.8677 30.0325 86.3571 31.1199 84.6012 31.1199V31.1276Z"/>
@@ -311,7 +311,7 @@
     let tint = !isLight ? 'neutral-sgray' : 'white';
     const header = document.querySelectorAll('header#navigation > .content');
     const lightLogo = document.querySelector('svg.logo.fill-white');
-    const darkLogo = document.querySelector('svg.logo.fill-neutral-sgray');
+    const darkLogo = document.querySelector('svg.logo.fill-cta-dark');
     const menuLightLogo = document.querySelector('svg.hamburger.fill-white');
     const menuDarkLogo = document.querySelector('svg.hamburger.fill-neutral-sgray');
 

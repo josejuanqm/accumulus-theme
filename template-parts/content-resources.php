@@ -7,6 +7,14 @@
  * @package accumulus-website
  */
 
+  function truncate($string, $length, $dots = "...", $display = true) {
+    $result = (strlen($string) > $length) ? substr($string, 0, $length - strlen($dots)) . $dots : $string;
+    if ($display) {
+      echo $result;
+    } else {
+      return $result;
+    }
+  }
 ?>
 
 
@@ -52,7 +60,7 @@
               <?php //$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
               <img class="block" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" />
             <?php //endif; ?> -->
-            <h1 class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-nwhite md:w-[570px] lg:w-full"><?php the_title(); ?></h1>
+            <h1 class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-nwhite md:w-[570px] lg:w-full"><?php truncate(get_the_title(), 140); ?></h1>
           </div>
           <div class="flex flex-col gap-s3 px-s2 md:px-s4 lg:px-0">
             <div class="body-2"><?php the_excerpt(); ?></div>
@@ -167,7 +175,7 @@
 								<?php endif; ?>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
-              <h3 class="heading-5"><?php the_title(); ?></h3>
+              <h3 class="heading-5"><?php truncate(get_the_title(), 140); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
 
@@ -407,7 +415,7 @@ if (count($result) > 0 ){
 									</svg>
 									<span>Events</span>
 								</div>
-								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php the_title(); ?></h3>
+								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php truncate(get_the_title(), 140); ?></h3>
 							</div>
 
 						</div>
