@@ -808,6 +808,7 @@ add_action('wp_ajax_get_events', 'getEvents');
 function getEvents() {
     $page = isset($_REQUEST["page"]) ? (int)$_REQUEST["page"] : 1;
     $category = isset($_REQUEST["c"]) ? (int)$_REQUEST["c"] : 0;
+    $post_type = isset($_REQUEST["pt"]) ? $_REQUEST["pt"] : 0;
 
     $future_event_query = new WP_Query(array(
         'post_type' => 'event',
@@ -859,7 +860,7 @@ function getEvents() {
                     'value' => $future_date,
                     'compare' => '>',
                     'type' => 'NUMERIC'
-                ),
+		),
             );
             break;
         case 1:
@@ -874,12 +875,24 @@ function getEvents() {
             break;
         case 2:
             $args['meta_query'] = array(
+		    array(
                 'key' => 'date_event',
                 'value' => array($months_ago, $future_date),
                 'compare' => 'BETWEEN',
                 'type' => 'NUMERIC'
-            );
+            )
+	    );
             break;
+    }
+
+    if (isset($_REQUEST["pt"])) {
+	    $args["tax_query"] = array(
+		array(
+			'taxonomy' => 'events-categories',
+			'field' => 'slug',
+			'terms' => $post_type,
+		),
+	    );
     }
 
     // var_dump($args);
@@ -946,6 +959,7 @@ function getEvents() {
 									$field = $posts[0]->ID;
                 $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
 
+		//$html .= implode(wp_get_object_terms($posts[0]->ID, $taxonomies, array("fields" => 'slugs')));
                 $html .= '<div class="relative col-span-12 max-md:flex max-md:flex-col md:grid md:grid-cols-12 md:gap-s2 items-center bg-neutral-offwhite text-neutral-dgray rounded-miniCard overflow-hidden '. $categorySlug . ' ' . (($today <= $date) ? ' opacity-100' : ' opacity-50') . '">';
                 $html .= '<div class="max-md:w-full md:col-span-2 flex md:flex-col max-md:order-2 items-center justify-start md:justify-center gap-s2 text-center pt-s4 md:py-0 px-s4 md:px-0 md:pl-s2">';
                 $html .= '<h5 class="text-h2Mobile md:text-h2Tablet lg:text-h2">'. $dateEvent->format( 'j' ) .'</h5>';
@@ -999,7 +1013,8 @@ function getEvents() {
 
     wp_send_json(array(
         "html" => $html,
-        "posts" => $posts,
+        "posts" => $posts_query,
+	"query" => $args,
         "totalPosts" => $total_posts
     ));
 }
