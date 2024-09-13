@@ -22,7 +22,7 @@
 	$text_cta = get_field('text_cta');
 ?>
 
-<section class="translucent-navigation relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-primary-violet">
+<section class="translucent-navigation relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-dgray bg-neutral-mgray">
 
 	<picture class="absolute top-0 left-0 w-full h-full">
 		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
@@ -450,7 +450,7 @@ if($join_the_forum):
       <?php endforeach; ?>
 			
 			<div class="col-span-6 md:col-span-12">
-				<a href="/wp-content/uploads/2024/09/Accumulus-Synergy-Regulator-Forum.pdf" target="_blank" download class="btn-secondary max-w-[360px] mx-auto">Download Regulator Forum Flyer</a>
+				<a href="<?php echo $join_the_forum['cta']['url']; ?>" target="<?php echo $join_the_forum['cta']['target'] ? $join_the_forum['cta']['target'] : '_self' ?>" download class="btn-secondary max-w-[360px] mx-auto"><?php echo $join_the_forum['cta']['title']; ?></a>
 			</div>
     </div>
   </div>
