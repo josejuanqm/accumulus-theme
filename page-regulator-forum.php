@@ -46,12 +46,14 @@ get_footer();
 	function get_list_events(page, isCategory = false) {
 			$s = $("#s").val();
 			$c = $("#category").val();
+			$pt = 'accumulus-hosted-forum';
 			$.ajax({
 					url: "/wp-admin/admin-ajax.php?action=get_events",
 					method: 'POST',
 					data: {
 							'page': page,
-							'c': $c
+							'c': $c,
+							'pt': $pt
 					}
 			}).done(function (response) {
 					console.log('response', response);
