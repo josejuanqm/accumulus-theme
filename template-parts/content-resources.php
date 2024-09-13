@@ -251,8 +251,8 @@
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
         <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 grid grid-cols-12 heading-2 capitalize gap-s2">
-            <span class="col-span-12 md:col-span-12 lg:col-span-10 lg:col-start-2"><?php echo $purpleSection['first_line_title']; ?></span>
-            <span class="col-span-6 md:col-span-5 lg:col-span-6 col-start-6 md:col-start-6 lg:col-start-7"><?php echo $purpleSection['second_line_title']; ?></span>
+            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['first_line_title']; ?></span>
+            <!-- <span class="col-span-6 md:col-span-5 lg:col-span-6 col-start-6 md:col-start-6 lg:col-start-7"><?php //echo $purpleSection['second_line_title']; ?></span> -->
         </h2>
       </div>
 
