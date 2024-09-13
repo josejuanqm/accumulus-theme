@@ -395,6 +395,9 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 .gform_wrapper .gfield_label {
   @apply !text-h6Mobile md:!text-h6Tablet lg:!text-h6 !uppercase;
 }
+.gchoice .gform-field-label a {
+  @apply text-textlink text-neutral-dgray hover:text-primary-violet !underline;
+}
 
 .gform_wrapper form .gform_body .gfield_label {
   @apply !font-medium !text-cta-dark;
@@ -422,6 +425,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item {
 
 .form-module .gform_confirmation_message a {
   @apply !flex !items-center !justify-center w-full max-w-[210px] !h-[48px] lg:!h-[45px] !px-10 !py-3 !rounded-full !text-center !text-neutral-dgray !text-ctaMobile md:!text-ctaTablet lg:!text-cta !border !border-white !bg-white hover:!bg-transparent hover:!text-white !transition-all cursor-pointer;
+}
+
+.form-module .gchoice .gform-field-label a {
+  @apply text-textlink text-white hover:text-white !underline;
 }
 
 /* Detail posts */

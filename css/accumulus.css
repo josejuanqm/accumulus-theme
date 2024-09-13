@@ -1706,6 +1706,11 @@ video {
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-mgray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 213 213 / var(--tw-bg-opacity));
+}
+
 .bg-neutral-nude {
   --tw-bg-opacity: 1;
   background-color: rgb(255 248 241 / var(--tw-bg-opacity));
@@ -1778,11 +1783,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-mgray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(213 213 213 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-0 {
@@ -3443,6 +3443,21 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   }
 }
 
+.gchoice .gform-field-label a {
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+  text-decoration-line: underline !important;
+}
+
+.gchoice .gform-field-label a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(65 22 147 / var(--tw-text-opacity));
+}
+
 .gform_wrapper form .gform_body .gfield_label {
   font-weight: 500 !important;
   --tw-text-opacity: 1 !important;
@@ -3604,6 +3619,21 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     letter-spacing: 0 !important;
     font-weight: 500 !important;
   }
+}
+
+.form-module .gchoice .gform-field-label a {
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: underline !important;
+}
+
+.form-module .gchoice .gform-field-label a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* Detail posts */
