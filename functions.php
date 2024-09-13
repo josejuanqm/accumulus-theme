@@ -628,7 +628,7 @@ function getNews() {
 					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-media-coverage.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
 					$html .= '</div>';
 
-				elseif ($categorySlug == 'new-releases'):
+				elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 
 					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
 					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/tumb-new-releases.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
@@ -642,7 +642,7 @@ function getNews() {
 			$html .= '<div class="flex flex-col lg:w-1/2 lg:justify-end p-7 gap-2 ';
 			if ($categorySlug == 'media-coverage'): 
 				$html .= 'bg-secondary-carbon text-neutral-nwhite';
-				elseif ($categorySlug == 'new-releases'): 
+				elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): 
 				$html .= 'bg-secondary-aqua text-neutral-dgray';
 				endif;
 			$html .= '">';
@@ -654,7 +654,7 @@ function getNews() {
 			<path d="M8.88997 10.7377H2.22319V1.40386H3.55674V0.0703125H2.17005C1.46341 0.0703125 0.890625 0.6431 0.890625 1.34974V10.7013C0.890625 11.4572 1.50376 12.0703 2.2596 12.0703H8.85552C9.61137 12.0703 10.2245 11.4572 10.2245 10.7013V5.40354H8.89095V10.7368L8.88997 10.7377Z" class="fill-current"/>
 			<path d="M9.98744 3.28757L6.77117 0.0703125H4.8855H4.88648V5.40354H10.2197V3.51885L9.98744 3.28757ZM6.21905 4.06998V1.40386L7.57031 2.75612L8.88517 4.06998H6.21905Z" class="fill-current"/>
 			</svg>';
-			elseif ($categorySlug == 'new-releases'):
+			elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 			$html.= '<svg width="15" height="13" viewBox="0 0 15 13" fill="none">
 			<path d="M12.8906 2.83909V10.8388H11.5575V1.1732C11.5575 0.619888 11.1095 0.171875 10.5562 0.171875H1.89195C1.33863 0.171875 0.890625 0.619888 0.890625 1.1732V10.8388C0.890625 11.5749 1.48764 12.1719 2.22374 12.1719H12.8906C13.6267 12.1719 14.2237 11.5749 14.2237 10.8388V2.83909H12.8906ZM2.22374 10.8388V1.50499H10.2234V10.8378H2.22374V10.8388Z" class="fill-current"/>
 			</svg>';
@@ -689,14 +689,14 @@ function getNews() {
 		<div class="card col-span-12 md:col-span-6 lg:col-span-4 relative w-full rounded-card overflow-hidden ';
 		if ($categorySlug == 'media-coverage'): 
 			$html .= 'bg-secondary-carbon text-neutral-nwhite';
-		elseif ($categorySlug == 'new-releases'): 
+		elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): 
 			$html .= 'bg-secondary-aqua text-neutral-dgray';
 		endif;
 		$html .= '">';
 
 		if ($categorySlug == 'media-coverage'):
 			$html .= '<a href="'. $url_new_realice .'" target="_blank" class="absolute top-0 left-0 w-full h-full z-10"></a>';
-		elseif ($categorySlug == 'new-releases'):
+		elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 			$html .= '<a href="'.get_permalink( $post->ID ).'" class="absolute top-0 left-0 w-full h-full z-10"></a>';
 		endif;
 
@@ -730,7 +730,7 @@ function getNews() {
 		$html .= '<div class="flex flex-col p-7 gap-2 ';
 		if ($categorySlug == 'media-coverage'): 
 			$html .= 'bg-secondary-carbon text-neutral-nwhite';
-		elseif ($categorySlug == 'new-releases'): 
+		elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): 
 			$html .= 'bg-secondary-aqua text-neutral-dgray';
 		endif;
 		$html .= '">';
@@ -741,7 +741,7 @@ function getNews() {
 		<path d="M8.88997 10.7377H2.22319V1.40386H3.55674V0.0703125H2.17005C1.46341 0.0703125 0.890625 0.6431 0.890625 1.34974V10.7013C0.890625 11.4572 1.50376 12.0703 2.2596 12.0703H8.85552C9.61137 12.0703 10.2245 11.4572 10.2245 10.7013V5.40354H8.89095V10.7368L8.88997 10.7377Z" class="fill-current"/>
 		<path d="M9.98744 3.28757L6.77117 0.0703125H4.8855H4.88648V5.40354H10.2197V3.51885L9.98744 3.28757ZM6.21905 4.06998V1.40386L7.57031 2.75612L8.88517 4.06998H6.21905Z" class="fill-current"/>
 		</svg>';
-		elseif ($categorySlug == 'new-releases'):
+		elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'):
 		$html.= '<svg width="15" height="13" viewBox="0 0 15 13" fill="none">
 		<path d="M12.8906 2.83909V10.8388H11.5575V1.1732C11.5575 0.619888 11.1095 0.171875 10.5562 0.171875H1.89195C1.33863 0.171875 0.890625 0.619888 0.890625 1.1732V10.8388C0.890625 11.5749 1.48764 12.1719 2.22374 12.1719H12.8906C13.6267 12.1719 14.2237 11.5749 14.2237 10.8388V2.83909H12.8906ZM2.22374 10.8388V1.50499H10.2234V10.8378H2.22374V10.8388Z" class="fill-current"/>
 		</svg>';

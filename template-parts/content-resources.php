@@ -247,12 +247,11 @@
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-0">
 
-      <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 heading-4 uppercase"><?php echo $purpleSection['eye_text']; ?></h4>
-
+      <!-- <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 heading-4 uppercase"><?php //echo $purpleSection['eye_text']; ?></h4> -->
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 grid grid-cols-12 heading-2 capitalize gap-s2">
-            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['first_line_title']; ?></span>
-            <!-- <span class="col-span-6 md:col-span-5 lg:col-span-6 col-start-6 md:col-start-6 lg:col-start-7"><?php //echo $purpleSection['second_line_title']; ?></span> -->
+        <h2 class="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-12 heading-2 capitalize gap-s2">
+            <!-- <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php //echo $purpleSection['first_line_title']; ?></span> -->
+            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['second_line_title']; ?></span>
         </h2>
       </div>
 
@@ -260,7 +259,7 @@
       <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 body-3 text-neutral-nwhite"><?php echo $purpleSection['second_paragraph']; ?></p>
 
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-5 pt-s5 md:pt-s6 md:pb-s10 lg:pb-s8">
-				<a href="<?php echo $purpleSection['url_cta']; ?>" class="btn-tertiary-white">Read More</a>
+				<a href="<?php echo $purpleSection['url_cta']; ?>" target="_blank" class="btn-tertiary-white">Read More</a>
 			</div>
 
     </div>
@@ -351,7 +350,7 @@ if (count($result) > 0 ){
       <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 body-3"><?php echo $eventSection['second_paragraph']; ?></p>
       
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-6 pt-s5 lg:pb-s8 md:pt-s5">
-				<a href="<?php echo $eventSection['link_cta']; ?>" class="btn-tertiary-white">Read More</a>
+				<a href="<?php echo $eventSection['link_cta']; ?>" class="btn-tertiary-white" target="_blank">Read More</a>
 			</div>
 
     </div>
