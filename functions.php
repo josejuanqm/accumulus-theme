@@ -898,7 +898,7 @@ function getEvents() {
     // var_dump($args);
     $posts_query = new WP_Query($args);
     $pages = $posts_query->max_num_pages;
-    $posts = $posts_query->posts;
+    $posts = array_reverse($posts_query->posts);
     $total_posts = $posts_query->found_posts;
 
 // Inicialización de la estructura para agrupar eventos
