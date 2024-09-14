@@ -54,7 +54,7 @@
 			<div id="logoMarqueeSection">
 				<div class="relative overflow-hidden w-full">
 					<div class="marquee">
-							<?php for( $i=1;$i<3;$i++ ): ?>
+							<?php for( $i=1;$i<20;$i++ ): ?>
 								<?php foreach( $marquee as $logo ): ?>
 									<div class="marquee-item inline-block align-middle px-7">
 										<img src="<?php echo $logo['logo']; ?>" alt="<?php echo $logo['name']; ?>" />
