@@ -2,3 +2,11 @@ node_modules
 
 .vscode
 
+plugins/**
+!plugins/*.zip
+
+**/*/.DS_Store
+**/.DS_Store
+.DS_Store
+
+**/*.swp

@@ -15,33 +15,64 @@
 $contact_form_shortcut = get_field('contact_form_shortcut');
 $contact_phone_number = get_field('contact_phone_number');
 $contact_email = get_field('contact_email');
+$linkedin = get_field('linkedin');
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 min-h-full bg-cover lg:bg-contain bg-left-bottom lg:bg-left-top bg-no-repeat" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/contact/bg-contact.png);">
+<section class="translucent-navigation relative section w-full pb-s8 md:pb-s7 lg:pb-s12 min-h-full bg-cover lg:bg-contain bg-left-bottom lg:bg-left-top bg-no-repeat" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/contact/bg-contact.png);">
 
-  <div class="container mx-auto px-s4 lg:px-0 min-h-full">
+  <div class="container mx-auto px-s4 lg:px-0 min-h-full pt-s5 md:pt-s10 lg:pt-s9">
 
-    <div class="grid lg:grid-rows-3 lg:grid-cols-5 gap-4 min-h-screen">
+    <div class="grid lg:grid-cols-12 lg:items-stretch gap-4">
 
-      <h1 class="col-span-12 lg:col-span-3 lg:row-start-1 lg:row-span-2 text-h1Mobile md:text-h1Tablet lg:text-h1">
-        <?php the_title(); ?>
-      </h1>
+      <div class="col-span-12 md:col-span-12 lg:col-span-7 lg:flex lg:flex-col lg:justify-between">
+        <h1 class="heading-1">
+          <?php the_title(); ?>
+        </h1>
 
-      <div class="col-span-12 md:max-lg:col-start-6 lg:col-span-2 lg:row-span-3 pt-s8 lg:pt-0">
-        <h2 class="text-h2Mobile md:text-h2Tablet lg:text-h2">Say Hello</h2>
+        <div class="col-span-12 pt-s4 lg:pt-0 lg:col-span-3 hidden lg:flex items-end gap-4">
+          <p class="body-2 leading-6">
+            <?php if($contact_phone_number !== ''): ?>
+            <a href="tel:<?php echo $contact_phone_number ?>"><?php echo $contact_phone_number ?></a>
+            <?php endif; ?>
+            <br />
+            <?php if($contact_email !== ''): ?>
+            <a href="mailto: <?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+            <?php endif; ?>
+          </p>
+          <?php 
+          if($linkedin !== ''): 
+          ?>
+          <p class="body-2 -mb-[1px]">
+            <a href="<?php echo $linkedin; ?>" class="leading-6">LinkedIn</a>
+          </p>
+          <?php endif; ?>
+        </div>
+      </div>
+
+      
+      <div class="col-span-12 md:col-span-12 lg:col-span-5 pt-s2 md:pt-s8 lg:pt-0">
+        <h2 class="heading-2 max-lg:pl-[35%] max-md:pl-0">Say Hello</h2>
         <?php echo do_shortcode( $contact_form_shortcut ); ?>
       </div>
       
-      <div class="col-span-12 pt-s4 lg:pt-0 lg:col-span-3 lg:row-start-3 flex items-end gap-4">
-        <p class="text-b2 leading-6">
-          <a href="#"><?php echo $contact_phone_number ?></a>
+      <div class="col-span-12 pt-s4 flex lg:hidden items-end gap-4">
+        <p class="body-2 leading-6">
+          <?php if($contact_phone_number !== ''): ?>
+          <a href="tel:<?php echo $contact_phone_number ?>"><?php echo $contact_phone_number ?></a>
+          <?php endif; ?>
           <br />
-          <a href="#"><?php echo $contact_email; ?></a>
+          <?php if($contact_email !== ''): ?>
+          <a href="mailto: <?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>
+          <?php endif; ?>
         </p>
-        <p class="text-b2">
-          <a href="#">LinkdIn</a>
+        <?php 
+        if($linkedin !== ''): 
+        ?>
+        <p class="body-2 -mb-[1px]">
+          <a href="<?php echo $linkedin; ?>" class="leading-6">LinkedIn</a>
         </p>
+        <?php endif; ?>
       </div>
 
     </div>

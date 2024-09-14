@@ -7,150 +7,263 @@
  * @package accumulus-website
  */
 
+  function truncate($string, $length, $dots = "...", $display = true) {
+    $result = (strlen($string) > $length) ? substr($string, 0, $length - strlen($dots)) . $dots : $string;
+    if ($display) {
+      echo $result;
+    } else {
+      return $result;
+    }
+  }
 ?>
 
 
 
-<section class="section w-full pt-0 lg:pt-s14 pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
+<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
 
-	<div class="container mx-auto">
+	<div class="container mx-auto lg:pt-s9">
 
 		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-0">
+      <?php
+        // WP_Query arguments
+        $args = array(
+          'post_type'              => array( 'resource-cms' ),
+          'posts_per_page'         => '1',
+        );
 
-      <div class="col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
+        // The Query
+        $query = new WP_Query( $args );
 
-        <div class="relative">
-          <img class="block" src="<?php bloginfo('template_url'); ?>/images/resources/thumb-main-resources.png" alt="title" />
-          <h1 class="absolute bottom-s3 left-0  pl-s6 text-h1Mobile md:text-h1Tablet lg:text-h1 text-neutral-nwhite">Lorem Ipsum Dolor</h1>
-        </div>
+        // The Loop
+        if ( $query->have_posts() ) {
+          while ($query->have_posts()) {
+            $query->the_post();
+          
+            $category = '';
+            $categorySlug = '';
+            $post_type = get_post_type(get_the_ID());   
+            $taxonomies = get_object_taxonomies($post_type);   
+            $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names")); 
+            if(!empty($taxonomy_names)) :
+              foreach($taxonomy_names as $tax_name) : 
+                    $category = $tax_name; 
+                    $categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+                    $categorySlug = str_replace('&amp;', '', strtolower($categorySlugs));
+              endforeach;
+            endif;
+      ?>
 
-        <div class="flex flex-col gap-s3">
-          <p class="text-b2Mobile md:text-b2Tablet lg:text-b2">We’re a global, nonprofit industry association developing a groundbreaking SaaS platform to accelerate the exchange of information between those who develop medicines and those who review and approve them.</p>
-          <div class="flex gap-s2">
-            <a href="#" class="flex items-center gap-s1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-dgray uppercase">
-              <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.41033 15.9983H6.40921V7.99902H2.41033C1.30618 7.99902 0.410156 8.89504 0.410156 9.9992V13.9996C0.410156 15.1037 1.30618 15.9997 2.41033 15.9997V15.9983ZM2.41033 11.9994V9.9992H4.41051V13.9996H2.41033V11.9994Z" fill="#444444"/>
-                <path d="M14.4103 7.99855H12.4102V15.9978H16.409C17.5132 15.9978 18.4092 15.1018 18.4092 13.9976V9.99725C18.4092 8.89309 17.5132 7.99707 16.409 7.99707H14.4089L14.4103 7.99855ZM16.4105 11.9989V13.9991H14.4103V9.99872H16.4105V11.9989Z" fill="#444444"/>
-                <path d="M6.4027 0H4.40252C3.29836 0 2.40234 0.896021 2.40234 2.00018V6.00054H4.40252V2.00018H14.4019V6.00054H16.4021V2.00018C16.4021 0.896021 15.5061 0 14.4019 0H6.4027Z" fill="#444444"/>
-              </svg>
-              PODCAST
-            </a>
-            <span class="text-b2 text-neutral-dgray">|</span>
-            <a href="#" class="flex items-center gap-s1 text-h4Mobile md:text-h4Tablet lg:text-h4 text-neutral-dgray uppercase">
-              By Lorem Ipsum
-            </a>
+        <div class="relative col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
+          <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
+          <div class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-resources-general bg-cover bg-no-repeat bg-center">
+            <!-- <?php //if (has_post_thumbnail( get_the_ID() ) ): ?>
+              <?php //$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+              <img class="block" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" />
+            <?php //endif; ?> -->
+            <h1 class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-nwhite md:w-[570px] lg:w-full"><?php truncate(get_the_title(), 140); ?></h1>
           </div>
-        </div>
+          <div class="flex flex-col gap-s3 px-s2 md:px-s4 lg:px-0">
+            <div class="body-2"><?php the_excerpt(); ?></div>
+            <div class="flex items-center max-lg:flex-wrap gap-s2">
+              <span class="flex items-center gap-s1 heading-4 text-neutral-dgray uppercase">
+                <?php if ($categorySlug == 'thought-leadership'): ?>
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
+                  </svg>
+                  <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" class="fill-current" />
+                      <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+                      <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+                      <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+                      <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+                      <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+                    </svg>
+                  <?php elseif ($categorySlug == 'e-books--white-papers'): ?>
+                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
+                      <path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
+                    </svg>
+								<?php endif; ?>
+                <?php echo $category; ?>
+              </span>
+              <span class="body-2 text-neutral-dgray !leading-none">|</span>
+              <span class="flex items-center gap-s1 heading-4 text-neutral-dgray uppercase">
+                By <?php echo get_the_author(); ?>
+              </span>
+            </div>
+          </div>
 
-      </div>
+        </div>
+        <!-- Large post -->
+
+      <?php
+          }
+        } else {
+         echo 'No post found.';
+        }
+        // Restore original Post Data
+        wp_reset_postdata();
+      ?>
       <!-- Main post -->
 
-      <div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-s4">
+      <div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-s4 px-s2 md:px-s4 lg:px-0">
 
-        <h2 class="text-h2Mobile md:text-h2Tablet lg:text-h2">Top Stories</h2>
+        <h2 class="heading-2">Recent Stories</h2>
 
         <div class="grid grid-cols-12 gap-s2">
 
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">1</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.8867 2.66722V10.6669H11.5536V1.00132C11.5536 0.448013 11.1056 0 10.5523 0H1.88804C1.33473 0 0.886719 0.448013 0.886719 1.00132V10.6669C0.886719 11.403 1.48374 12 2.21983 12H12.8867C13.6228 12 14.2198 11.403 14.2198 10.6669V2.66722H12.8867ZM2.21983 10.6669V1.33311H10.2195V10.6659H2.21983V10.6669Z" fill="#444444"/>
-                    <path d="M8.88423 7.99854H3.55078V9.33165H8.88423V7.99854Z" fill="#444444"/>
-                    <path d="M8.88423 5.33398H3.55078V6.6671H8.88423V5.33398Z" fill="#444444"/>
-                    <path d="M8.88423 2.66602H3.55078V3.99913H8.88423V2.66602Z" fill="#444444"/>
-                  </svg>
-                  ARTICLE
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/1-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
+          <?php 
+            $i = 0;
 
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">2</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.38681 11.9983H5.38589V5.99902H2.38681C1.55872 5.99902 0.886719 6.67102 0.886719 7.49911V10.4993C0.886719 11.3274 1.55872 11.9994 2.38681 11.9994V11.9983ZM2.38681 8.99921V7.49911H3.8869V10.4993H2.38681V8.99921Z" fill="#444444"/>
-                    <path d="M11.3868 5.99916H9.88672V11.9984H12.8858C13.7139 11.9984 14.3859 11.3264 14.3859 10.4983V7.49814C14.3859 6.67004 13.7139 5.99805 12.8858 5.99805H11.3857L11.3868 5.99916ZM12.8869 8.99934V10.4994H11.3868V7.49925H12.8869V8.99934Z" fill="#444444"/>
-                    <path d="M5.38153 0H3.88144C3.05335 0 2.38135 0.671998 2.38135 1.50009V4.50028H3.88144V1.50009H11.3808V4.50028H12.8809V1.50009C12.8809 0.671998 12.2089 0 11.3808 0H5.38153Z" fill="#444444"/>
-                  </svg>
-                  Podcast
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/2-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'resource-cms' ),
+              'posts_per_page'         => '4',
+              'offset'                 => '1',
+            );
 
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">3</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.99934 10.6674H1.33257V1.33355H2.66612V0H1.27942C0.572788 0 0 0.572788 0 1.27942V10.631C0 11.3869 0.613136 12 1.36898 12H7.9649C8.72074 12 9.33388 11.3869 9.33388 10.631V5.33322H8.00033V10.6664L7.99934 10.6674Z" fill="#444444"/>
-                    <path d="M9.09657 3.21823L5.8803 0.000976562H3.99463H3.99561V5.3342H9.32883V3.44951L9.09657 3.21823ZM5.32818 4.00065V1.33453L6.67945 2.68678L7.9943 4.00065H5.32818Z" fill="#444444"/>
-                  </svg>
-                  White Paper
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
-            </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/3-mini-thumb.png" alt="" />
-          </div>
-          <!-- cat -->
+            // The Query
+            $query = new WP_Query( $args );
 
-          <div class="col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between bg-secondary-deepLilac rounded-miniCard overflow-hidden">
-            <div class="relative flex flex-col gap-s2 py-s2 pl-s7 pr-s2">
-                <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 text-h5Mobile md:text-h5Tablet lg:text-h5 rounded-full aspect-square bg-secondary-lilac">4</span>
-                <span class="flex items-center gap-s1 pt-1 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">
-                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.442 0H2.3314C1.53389 0 0.886719 0.647175 0.886719 1.44468V13H2.3314V1.44468H12.442V11.5553H3.77502V13H12.442C13.2395 13 13.8867 12.3528 13.8867 11.5553V1.44468C13.8867 0.647175 13.2395 0 12.442 0Z" fill="#444444"/>
-                    <path d="M6.57088 3.94824V3.95784H5.46631V9.09792H6.50158L9.65215 6.99753V6.00278L6.57088 3.94824ZM6.85235 5.80127L7.90041 6.49962L6.85235 7.19798V5.80021V5.80127Z" fill="#444444"/>
-                    <path d="M12.442 0H2.3314C1.53389 0 0.886719 0.647175 0.886719 1.44468V13H2.3314V1.44468H12.442V11.5553H3.77502V13H12.442C13.2395 13 13.8867 12.3528 13.8867 11.5553V1.44468C13.8867 0.647175 13.2395 0 12.442 0Z" fill="#444444"/>
-                    <path d="M6.57088 3.94824V3.95784H5.46631V9.09792H6.50158L9.65215 6.99753V6.00278L6.57088 3.94824ZM6.85235 5.80127L7.90041 6.49962L6.85235 7.19798V5.80021V5.80127Z" fill="#444444"/>
+            // The Loop
+            if ( $query->have_posts() ) {
+              while ( $query->have_posts() ) {
+                $query->the_post();
+                
+                // Get category by post
+                $category = '';
+                $categorySlug = '';
+                $post_type = get_post_type(get_the_ID());   
+                $taxonomies = get_object_taxonomies($post_type);   
+                $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names"));
+                if(!empty($taxonomy_names)) :
+                  foreach($taxonomy_names as $tax_name) :
+                    $category = $tax_name;
+                    $categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+                    $categorySlug = str_replace('&amp;', '', strtolower($categorySlugs)); 
+                  endforeach;
+                endif;
+          ?>
+
+          <div class="relative col-span-12 md:col-span-6 lg:col-span-12 flex flex-col-reverse md:flex-row items-stretch md:justify-between text-neutral-dgray rounded-miniCard overflow-hidden <?php echo $categorySlug; ?>">
+            <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
+            <div class="relative flex flex-col md:w-2/3 gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepLilac">
+              <span class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac tracking-normal"><?php echo $i+1; ?></span>
+              <span class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
+                <?php if ($categorySlug == 'thought-leadership'): ?>
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none"">
+                    <path d="M13.2812 2.95199V11.6183H11.837V1.14727C11.837 0.547848 11.3517 0.0625 10.7523 0.0625H1.36601C0.766593 0.0625 0.28125 0.547848 0.28125 1.14727V11.6183C0.28125 12.4157 0.92802 13.0625 1.72545 13.0625H13.2812C14.0787 13.0625 14.7255 12.4157 14.7255 11.6183V2.95199H13.2812ZM1.72545 11.6183V1.50671H10.3918V11.6172H1.72545V11.6183Z" class="fill-current"/>
+                    <path d="M8.94587 8.72754H3.16797V10.1717H8.94587V8.72754Z" class="fill-current"/>
+                    <path d="M8.94587 5.84082H3.16797V7.28503H8.94587V5.84082Z" class="fill-current"/>
+                    <path d="M8.94587 2.9502H3.16797V4.3944H8.94587V2.9502Z" class="fill-current"/>
                   </svg>
-                  Media
-                </span>
-                <h3 class="text-h3Mobile md:text-h3Tablet lg:text-h3">Lorem ipsum dolor sit amet</h3>
+                  <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
+                      <path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" class="fill-current" />
+                      <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+                      <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+                      <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+                      <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+                      <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+                    </svg>
+                  <?php elseif ($categorySlug == 'e-books--white-papers'): ?>
+                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
+                      <path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
+                      <path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
+                    </svg>
+								<?php endif; ?>
+                <span class="-mt-[2px]"><?php echo $category; ?></span>
+              </span>
+              <h3 class="heading-5"><?php truncate(get_the_title(), 140); ?></h3>
             </div>
-            <img class="w-full md:w-[175px] max-h-[144px] md:max-h-full" src="<?php bloginfo('template_url'); ?>/images/resources/4-mini-thumb.png" alt="" />
+            <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+
+              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+              <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img class="w-full md:w-full h-[144px] md:h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+              </div>
+
+              <?php 
+              else :
+                if ($categorySlug === 'e-books--white-papers'): 
+              ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+
+                <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+
+                <?php elseif ($categorySlug == 'thought-leadership'): ?>
+
+                <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png" class="w-full md:w-full h-[144px] md:h-full object-cover"   />
+                </div>
+                <?php endif; ?>
+
+            <?php endif; ?>
+            <!-- Thumbnail -->
           </div>
+          <!-- Top stories item -->
+
+          <?php
+              $i++;
+              }
+            } else {
+              echo 'Not post found.';
+            }
+
+            // Restore original Post Data
+            wp_reset_postdata();
+          ?>
+          
           <!-- cat -->
 
         </div>
 
       </div>
-      <!-- Category -->
+      <!-- Top stories -->
 
 		</div>
+    <!-- Featured posts -->
 
 	</div>
 
 </section>
-<!-- Main banner -->
+<!-- Main posts -->
 
+<?php
+  $purpleSection = get_field('purple_section');
+?>
 
-<section class="section w-full pt-s8 md:pt-s10 lg:pt-s8 pb-s8 md:pb-s2 lg:pb-s4 bg-primary-violet bg-no-repeat bg-cover bg-left-top text-white" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/bg-purple.png);">
+<section class="section w-full pt-s8 md:pt-s10 lg:pt-s8 pb-s8 md:pb-s2 lg:pb-s4 bg-primary-violet text-neutral-nwhite bg-purple-section-mobile md:bg-purple-section-tablet lg:bg-purple-section-desktop bg-no-repeat bg-cover bg-left-top">
 
 	<div class="container mx-auto">
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-0">
 
-      <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">LOREM IPSUM</h4>
-
+      <!-- <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 heading-4 uppercase"><?php //echo $purpleSection['eye_text']; ?></h4> -->
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-10 lg:col-start-2 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Lorem Ipsum Dolor</h2>
-        <h2 class="col-span-3 md:col-span-5 col-start-4 md:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Sit Amet</h2>
+        <h2 class="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-12 heading-2 capitalize gap-s2 lg:pt-s6">
+            <?php if($purpleSection['first_line_title']): ?>
+            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['first_line_title']; ?></span>
+            <?php endif; ?>
+            <?php if($purpleSection['second_line_title']): ?>
+              <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['second_line_title']; ?></span>
+            <?php endif; ?>
+        </h2>
       </div>
 
-      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-5 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
-      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
+      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-5 pt-s10 md:pt-s8 lg:pt-0 body-3 text-neutral-nwhite"><?php echo $purpleSection['first_paragraph']; ?></p>
+      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 body-3 text-neutral-nwhite"><?php echo $purpleSection['second_paragraph']; ?></p>
 
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-5 pt-s5 md:pt-s6 md:pb-s10 lg:pb-s8">
-				<a href="#" class="btn-linear-white">Read More</a>
+        <a href="<?php echo $purpleSection['url_cta']['url']; ?>" class="btn-tertiary-white" target="<?php echo $purpleSection['url_cta']['target'] ? $purpleSection['url_cta']['target'] : '_self' ?>"><?php echo $purpleSection['url_cta']['title']; ?></a>
 			</div>
 
     </div>
@@ -161,74 +274,69 @@
 <!-- Purple section -->
 
 
+<?php
+
+$categories = array();
+$args = array(
+  'taxonomy' => 'resources-taxonomies',
+  'style' => 'list',
+  'hide_empty' => 1,
+);
+
+$result = get_categories($args);
+
+// var_dump($result);
+if (count($result) > 0 ){
+  $categories = $result;
+}
+
+?>
+
 <section class="section w-full pt-s8 pb-s8 md:pb-s10 md:pt-s10 lg:pt-s8 lg:pb-s8 bg-white">
 
 	<div class="container mx-auto">
 
 		<div class="grid grid-cols-12 gap-s2">
 
-      <div class="col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 grid grid-cols-12 gap-s2">
+      <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 flex justify-center w-full flex-wrap gap-s2 md:gap-s4 text-neutral-sgray">
 
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase bg-neutral-dgray text-neutral-nwhite" href="#">All resources</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">EBOOKS & WHITE PAPERS</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">THOUGHT LEADERSHIP</a>
-        <a class="col-span-6 lg:col-span-3 flex items-center justify-center h-[38px] text-h4Mobile md:text-h4Tablet lg:text-h4 text-center rounded-button uppercase hover:bg-neutral-nude" href="#">MEDIA</a>
+        <input type="hidden" id="category" value="0" data-catName="Last Articles">
+
+        <a href="javascript:void(0)" data-id="0" data-name="Latest Resources" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link  bg-neutral-dgray  active-filter">All</a>
+
+        <?php foreach($categories as $category): ?>
+        <a href="javascript:void(0)" data-id="<?php echo $category->term_id; ?>" data-name="Latest <?php echo $category->name; ?>" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray"><?= $category->name ?></a>
+        <?php endforeach; ?>
 
       </div>
+
       <div class="col-span-12 pt-0 pb-s4 md:pt-s1 md:pb-s10 lg:pb-s6">
-        <h2 class="text-h2Mobile md:text-h2Tablet lg:text-h2">Latest Articles</h2>
+        <h2 id="title-section" class="text-h2Mobile md:text-h2Tablet lg:text-h2">Latest Articles</h2>
       </div>
+      <!-- Displaying data -->
 
-      <div class="card col-span-12 md:col-span-6 lg:col-span-8 relative lg:flex lg:items-stretch w-full rounded-card overflow-hidden bg-primary-glaciar">
-        <a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-        <div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] lg:h-full bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/mask-group8.png)">
-          <!-- <img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
-        </div>
-        <div class="flex flex-col lg:w-1/2 lg:justify-end p-7 gap-2">
-          <div class="flex items-center gap-3 text-neutral-dgray uppercase">
-            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.8327 0H1.72202C0.924517 0 0.277344 0.647175 0.277344 1.44468V13H1.72202V1.44468H11.8327V11.5553H3.16564V13H11.8327C12.6302 13 13.2773 12.3528 13.2773 11.5553V1.44468C13.2773 0.647175 12.6302 0 11.8327 0Z" fill="#444444"/>
-              <path d="M5.9615 3.94824V3.95784H4.85693V9.09792H5.8922L9.04278 6.99753V6.00278L5.9615 3.94824ZM6.24297 5.80127L7.29104 6.49962L6.24297 7.19798V5.80021V5.80127Z" fill="#444444"/>
-              <path d="M11.8327 0H1.72202C0.924517 0 0.277344 0.647175 0.277344 1.44468V13H1.72202V1.44468H11.8327V11.5553H3.16564V13H11.8327C12.6302 13 13.2773 12.3528 13.2773 11.5553V1.44468C13.2773 0.647175 12.6302 0 11.8327 0Z" fill="#444444"/>
-              <path d="M5.9615 3.94824V3.95784H4.85693V9.09792H5.8922L9.04278 6.99753V6.00278L5.9615 3.94824ZM6.24297 5.80127L7.29104 6.49962L6.24297 7.19798V5.80021V5.80127Z" fill="#444444"/>
-            </svg>
-            <span>Events</span>
-          </div>
-          <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
-        </div>
-      </div>
-
-      <?php for($i=1;$i<=7;$i++): ?>
-      <div class="<?php echo $i; ?> card col-span-12 md:col-span-6 lg:col-span-4 relative w-full rounded-card overflow-hidden <?php if ($i===1 || $i === 6): ?> bg-secondary-green text-neutral-nwhite <?php elseif ($i===2 || $i===4): ?> bg-primary-glaciar text-neutral-dgray <?php elseif ($i===3 || $i===5 || $i===7): ?> bg-neutral-offwhite text-neutral-dgray<?php endif; ?>">
-        <a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-        <div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/resources/mask-group<?php echo $i; ?>.png)">
-          <!-- <img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
-        </div>
-        <div class="flex flex-col p-7 gap-2">
-          <div class="flex items-center gap-3 uppercase">
-            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.2773 2.88949V11.5558H11.8331V1.08477C11.8331 0.485348 11.3478 0 10.7484 0H1.36211C0.762687 0 0.277344 0.485348 0.277344 1.08477V11.5558C0.277344 12.3532 0.924114 13 1.72155 13H13.2773C14.0748 13 14.7215 12.3532 14.7215 11.5558V2.88949H13.2773ZM1.72155 11.5558V1.44421H10.3879V11.5547H1.72155V11.5558Z" class=" fill-current"/>
-              <path d="M8.94196 8.66504H3.16406V10.1092H8.94196V8.66504Z" class="fill-current"/>
-              <path d="M8.94196 5.77832H3.16406V7.22253H8.94196V5.77832Z" class="fill-current"/>
-              <path d="M8.94196 2.8877H3.16406V4.3319H8.94196V2.8877Z" class="fill-current"/>
-            </svg>
-            <span>Category</span>
-          </div>
-          <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
-        </div>
-      </div>
-      <?php endfor; ?>
-
+      <div id="category-post-content">
+      </div> 
+<!--      <div class="post-paginator">-->
+<!--          <ul class="pagination" id="paginador-blog">-->
+<!--          </ul>-->
+<!--      </div>-->
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
-        <a class="btn-secondary" href="#">See More</a>
+        <a id="btn-see-more" class="btn-secondary text-cta md:text-ctaMobile" href="#">See More</a>
       </div>
-
+            <input type="hidden" value="1" id="current-page"/>
     </div>
 
   </div>
 
 </section>
 
+<!-- List posts resources -->
+
+<?php
+  $eventSection = get_field('events_section');
+  if($eventSection):
+?>
 
 <section class="section w-full lg:pt-s8 pb-s8 md:pb-s10 lg:pb-s4 bg-secondary-carbon text-white relative">
 
@@ -236,20 +344,30 @@
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-4 lg:gap-y-0 pt-[320px] lg:pt-0">
 
-      <img class="absolute top-0 left-0 w-full h-[320px] lg:max-w-[500px] lg:h-full" src="<?php bloginfo('template_url'); ?>/images/resources/thumb-main-events.png" alt="Events" />
+      <img class="absolute top-0 left-0 w-full h-[320px] lg:max-w-[500px] lg:h-full" src="<?php echo $eventSection['image']; ?>" alt="Events" />
 
-      <h4 class="col-span-4 col-start-1 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-6 pt-s4 md:pt-s8 lg:pt-s4 text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">EVENTS</h4>
+      <h4 class="col-span-4 col-start-1 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-6 pt-s4 md:pt-s8 lg:pt-s4 heading-4 uppercase">EVENTS</h4>
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s6 md:pt-s5 md:pb-s5">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Lorem Ipsum Dolor</h2>
-        <h2 class="col-span-3 md:col-span-6 lg:col-span-3 col-start-4 md:col-start-6 lg:col-start-10 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize">Sit Amet</h2>
+
+        <h2 class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12">
+          
+          <?php if ($eventSection['first_line_title'] !== ''): ?>
+          <span class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['first_line_title']; ?></span>
+          <?php endif; ?>
+          <?php if ($eventSection['second_line_title'] !== ''): ?>
+          <span class="col-span-3 md:col-span-6 lg:col-span-6 col-start-4 md:col-start-6 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?></span>
+          <?php endif; ?>
+          
+        </h2>
+
       </div>
 
-      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-6 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
-      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 text-b3Mobile md:text-b3Tablet lg:text-b3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in morbi id nec aliquet risus nunc amet only. </p>
+      <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-6 body-3"><?php echo $eventSection['first_paragraph']; ?></p>
+      <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-9 body-3"><?php echo $eventSection['second_paragraph']; ?></p>
       
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-6 pt-s5 lg:pb-s8 md:pt-s5">
-				<a href="#" class="btn-linear-white">Read More</a>
+				<a href="<?php echo $eventSection['link_cta']['url']; ?>" class="btn-tertiary-white" target="<?php echo $eventSection['link_cta']['target'] ? $eventSection['link_cta']['target'] : '_self' ?>"><?php echo $eventSection['link_cta']['title']; ?></a>
 			</div>
 
     </div>
@@ -257,7 +375,10 @@
   </div>
 
 </section>
-<!-- Main events -->
+
+<?php endif; ?>
+<!-- Banner events -->
+
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
 	<div class="container mx-auto px-s4 lg:px-0">
@@ -265,12 +386,40 @@
 			<h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Events</h2>
 			<div class="relative w-full">
 				<div class="related">
-					<?php for($i=1;$i<7;$i++): ?>
+					<?php 
+
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'event' ),
+              'posts_per_page'         => '9',
+            );
+
+            // The Query
+            $query = new WP_Query( $args );
+            // The Loop
+            if ( $query->have_posts() ) {
+              while ( $query->have_posts() ) {
+                $query->the_post();
+                
+            //for($i=1;$i<7;$i++): 
+          ?>
 						<div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
-							<a href="#" class="absolute top-0 left-0 w-full h-full z-10"></a>
-							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square" style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
-								<img src="<?php bloginfo('template_url'); ?>/images/home/mini-logo.png" />
+
+							<a href="<?php echo get_home_url() ?>/events" class="absolute top-0 left-0 w-full h-full z-10"></a>
+
+							<div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square " style="background-image: url(<?php bloginfo('template_url'); ?>/images/home/thumb-slider.png)">
+
+								<!-- <img src="<?php //bloginfo('template_url'); ?>/images/home/mini-logo.png" /> -->
+
+                <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+                  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+                  <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+                  <?php else: ?>
+                    <img class="block" src="<?php bloginfo('template_url'); ?>/images/events/icon-calendar.png" alt="<?php the_title(); ?>" />
+                <?php endif; ?>
+
 							</div>
+
 							<div class="flex flex-col p-7 gap-2 bg-neutral-nwhite">
 								<div class="flex items-center gap-3 text-primary-violet uppercase">
 									<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -284,22 +433,39 @@
 									</svg>
 									<span>Events</span>
 								</div>
-								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray">Lorem Ipsum Dolor Lorem Ipsum Dolor</h3>
+								<h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray"><?php truncate(get_the_title(), 140); ?></h3>
 							</div>
+
 						</div>
-						<?php endfor; ?>
+						<?php 
+              //endfor; 
+                }
+              } else {
+                // no posts found
+              }
+
+              // Restore original Post Data
+              wp_reset_postdata();
+            ?>
 				</div>
+
+        <div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4 max-sm:pt-s6 max-lg:pt-s10">
+          <div class="prev lg:absolute lg:-left-20 lg:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+          <div class="next lg:absolute lg:-right-20 lg:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center pt-s5 md:pt-s10">
+          <a href="<?php echo get_home_url(); ?>/events" class="btn-secondary">See all</a>
+        </div>
 					
-				<div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4 max-sm:pt-s6 max-lg:pt-s10">
-					<div class="prev lg:absolute lg:-left-20 lg:top-1/4 cursor-pointer">
-						<img class="block w-[54px] h-[54px] aspect-square rotate-180" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
-					</div>
-					<div class="next lg:absolute lg:-right-20 lg:top-1/4 cursor-pointer">
-						<img class="block w-[54px] h-[54px] aspect-square" src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- Events carousel -->
+
+
