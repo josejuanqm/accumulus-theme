@@ -356,7 +356,7 @@ if (count($result) > 0 ){
           <span class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['first_line_title']; ?></span>
           <?php endif; ?>
           <?php if ($eventSection['second_line_title'] !== ''): ?>
-          <span class="col-span-3 md:col-span-6 lg:col-span-6 col-start-4 md:col-start-6 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?>sdf</span>
+          <span class="col-span-3 md:col-span-6 lg:col-span-6 col-start-4 md:col-start-6 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?></span>
           <?php endif; ?>
           
         </h2>
