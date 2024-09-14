@@ -249,9 +249,13 @@
 
       <!-- <h4 class="col-span-4 col-start-3 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-5 pt-s2 lg:pt-s4 heading-4 uppercase"><?php //echo $purpleSection['eye_text']; ?></h4> -->
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s8 md:pt-s3 md:pb-s10 lg:pt-s6 lg:pb-s6">
-        <h2 class="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-12 heading-2 capitalize gap-s2">
-            <!-- <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php //echo $purpleSection['first_line_title']; ?></span> -->
-            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['second_line_title']; ?></span>
+        <h2 class="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-12 heading-2 capitalize gap-s2 lg:pt-s6">
+            <?php if($purpleSection['first_line_title']): ?>
+            <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['first_line_title']; ?></span>
+            <?php endif; ?>
+            <?php if($purpleSection['second_line_title']): ?>
+              <span class="col-span-12 md:col-span-12 lg:col-span-12"><?php echo $purpleSection['second_line_title']; ?></span>
+            <?php endif; ?>
         </h2>
       </div>
 
@@ -259,7 +263,7 @@
       <p class="col-span-3 col-start-4 md:col-span-6 lg:col-span-3 md:col-start-7 lg:col-start-8 pt-s10 md:pt-s8 lg:pt-0 body-3 text-neutral-nwhite"><?php echo $purpleSection['second_paragraph']; ?></p>
 
       <div class="col-span-6 md:col-span-12 lg:col-span-2 lg:col-start-5 pt-s5 md:pt-s6 md:pb-s10 lg:pb-s8">
-				<a href="<?php echo $purpleSection['url_cta']; ?>" target="_blank" class="btn-tertiary-white">Read More</a>
+        <a href="<?php echo $purpleSection['url_cta']['url']; ?>" class="btn-tertiary-white" target="<?php echo $purpleSection['url_cta']['target'] ? $purpleSection['url_cta']['target'] : '_self' ?>"><?php echo $purpleSection['url_cta']['title']; ?></a>
 			</div>
 
     </div>
@@ -327,8 +331,11 @@ if (count($result) > 0 ){
 
 </section>
 
+<!-- List posts resources -->
+
 <?php
   $eventSection = get_field('events_section');
+  if($eventSection):
 ?>
 
 <section class="section w-full lg:pt-s8 pb-s8 md:pb-s10 lg:pb-s4 bg-secondary-carbon text-white relative">
@@ -342,8 +349,18 @@ if (count($result) > 0 ){
       <h4 class="col-span-4 col-start-1 md:col-span-12 md:col-start-1 lg:col-span-3 lg:col-start-6 pt-s4 md:pt-s8 lg:pt-s4 heading-4 uppercase">EVENTS</h4>
 
       <div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-s1 pt-s6 pb-s6 md:pt-s5 md:pb-s5">
-        <h2 class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['first_line_title']; ?></h2>
-        <h2 class="col-span-3 md:col-span-6 lg:col-span-3 col-start-4 md:col-start-6 lg:col-start-10 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?></h2>
+
+        <h2 class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12">
+          
+          <?php if ($eventSection['first_line_title'] !== ''): ?>
+          <span class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['first_line_title']; ?></span>
+          <?php endif; ?>
+          <?php if ($eventSection['second_line_title'] !== ''): ?>
+          <span class="col-span-3 md:col-span-6 lg:col-span-6 col-start-4 md:col-start-6 lg:col-start-6 text-h2Mobile md:text-h2Tablet lg:text-h2 capitalize"><?php echo $eventSection['second_line_title']; ?>sdf</span>
+          <?php endif; ?>
+          
+        </h2>
+
       </div>
 
       <p class="col-span-3 md:col-span-6 lg:col-span-3 lg:col-start-6 body-3"><?php echo $eventSection['first_paragraph']; ?></p>
@@ -358,7 +375,9 @@ if (count($result) > 0 ){
   </div>
 
 </section>
-<!-- Main events -->
+
+<?php endif; ?>
+<!-- Banner events -->
 
 
 <section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">

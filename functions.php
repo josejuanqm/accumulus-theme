@@ -7638,7 +7638,7 @@ add_action( 'acf/include_fields', function() {
 							'class' => '',
 							'id' => '',
 						),
-						'return_format' => 'url',
+						'return_format' => 'array',
 					),
 				),
 			),
