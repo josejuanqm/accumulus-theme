@@ -831,7 +831,7 @@ function getEvents() {
     }
 
     $months_per_page = 3;
-    $months_ago = date('Ymd', strtotime($future_date . ' -' . (($page - 1) * $months_per_page + $months_per_page) . ' months'));
+    $months_ago = date('Ymd', strtotime($future_date . ' - ' . (($page - 1) * $months_per_page + $months_per_page) . ' months'));
 
     $months_past = $page * 3;
     $months_to_past = date('Ymd', strtotime('-'.$months_past.' months'));
@@ -851,7 +851,7 @@ function getEvents() {
                 'relation' => 'OR',
                 array(
                     'key' => 'date_event',
-                    'value' => array($months_ago, $future_date),
+                    'value' => array("20000101", $future_date),
                     'compare' => 'BETWEEN',
                     'type' => 'NUMERIC'
                 ),
@@ -867,7 +867,7 @@ function getEvents() {
             $args['meta_query'] = array(
                 array(
                     'key' => 'date_event',
-                    'value' => array($months_to_past, current_time('Ymd')),
+                    'value' => array("20000101", current_time('Ymd')),
                     'compare' => 'BETWEEN',
                     'type' => 'NUMERIC'
                 ),
@@ -877,7 +877,7 @@ function getEvents() {
             $args['meta_query'] = array(
 		    array(
                 'key' => 'date_event',
-                'value' => array($months_ago, $future_date),
+                'value' => array("20000101", $future_date),
                 'compare' => 'BETWEEN',
                 'type' => 'NUMERIC'
             )
