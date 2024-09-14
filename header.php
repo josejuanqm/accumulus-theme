@@ -39,7 +39,7 @@
             <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/regulator-forum">Regulator Forum</a></li>
             <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/contact-us">Contact Us</a></li>
             <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/careers">Careers</a></li>
-            <li><a class="hover:underline" href="#">LinkedIn</a></li>
+            <li><a class="hover:underline" href="https://www.linkedin.com/search/results/all/?keywords=accumulus%20synergy&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=37ca01f3-03fe-4e1e-a196-85393eaef876&sid=%2Ci3" target="_blank">LinkedIn</a></li>
           </ul>
         </div> 
       </div>
