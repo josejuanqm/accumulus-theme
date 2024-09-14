@@ -32,7 +32,7 @@
           <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Company</p></li>
           <li><a href="/about-us/" class="font-normal">About Us</a></li>
           <li><a href="/team/" class="font-normal">Our Team</a></li>
-          <li><a href="/news/" class="font-normal">News</a></li>
+          <li><a href="/news/" class="font-normal">News and Media</a></li>
           <li><a href="/events/" class="font-normal">Events</a></li>
           <!-- <li><a href="">Case For Change</a></li> -->
           <li><a href="/regulator-forum/" class="font-normal">Regulator Forum</a></li>
