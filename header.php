@@ -28,6 +28,7 @@
   $url_path = explode('/', $url_path);
   $url_path = $url_path[1];
   $primary_menu_items = wp_get_nav_menu_items('Primary');
+  $secondary_menu_items = wp_get_nav_menu_items('Secondary');
 ?>
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
@@ -36,10 +37,9 @@
       <div class="container mx-auto px-s2 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
-            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/regulator-forum">Regulator Forum</a></li>
-            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/contact-us">Contact Us</a></li>
-            <li><a class="hover:underline" href="<?php echo get_home_url(); ?>/careers">Careers</a></li>
-            <li><a class="hover:underline" href="https://www.linkedin.com/search/results/all/?keywords=accumulus%20synergy&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=37ca01f3-03fe-4e1e-a196-85393eaef876&sid=%2Ci3" target="_blank">LinkedIn</a></li>
+              <?php foreach ($secondary_menu_items as $menu_item) : ?>
+	      <li><a class="hover:underline" href="<?php echo $menu_item->url; ?>" target="<?php echo $menu_item->title == "LinkedIn" ? "_blank" : ""; ?>"><?php echo $menu_item->title; ?></a></li>
+              <?php endforeach; ?>
           </ul>
         </div> 
       </div>
@@ -177,7 +177,7 @@
   </header> 
   <section id="mobile-menu" style="display: none;" class="section fixed bg-white lg:!hidden top-0 left-0 w-screen h-screen z-[999] pb-s4">
     <div class="container mx-auto w-full flex-col items-center justify-between h-full flex pt-s6">
-      <ul class="w-full flex flex-col items-start gap-s3 md:gap-s2 body-1 px-s2">
+      <ul class="w-full flex flex-col items-start gap-s5 md:gap-s2 body-1 px-s2">
         <?php foreach ($primary_menu_items as $menu_item) : ?>
           <?php $post_id = get_post_meta($menu_item->ID, '_menu_item_object_id', true ); ?>
           <?php
@@ -185,7 +185,7 @@
           ?>
           <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
             <div class="flex flex-row items-center justify-between w-full group">
-              <a class="py-s2 heading-2" href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
+              <a class="md:py-s2 heading-2" href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a>
               <?php if ($fields["menu_items"]) : ?>
                 <svg class="dropdown-arrow stroke-neutral-sgray" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.4502 0.825684L6.76582 6.14131L12.0814 0.825684" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -215,6 +215,14 @@
             </section>
           </li>
         <?php endforeach; ?>
+  	<hr class="w-full bg-gray-medium"/>
+        <?php foreach ($secondary_menu_items as $menu_item) : ?>
+          <li class="menu-item-mobile menu-item-dropdown-mobile flex flex-col items-start gap-s1 w-full group" data-identifier="<?php echo $fields["identifier"]; ?>">
+            <div class="flex flex-row items-center justify-between w-full group">
+              <a class="md:py-s2 heading-5 text-neutral-sgray" href="<?php echo $menu_item->url; ?>" target="<?php echo $menu_item->title == "LinkedIn" ? "_blank" : ""; ?>"><?php echo $menu_item->title; ?></a>
+	    </div>
+          </li>
+        <?php endforeach; ?>
       </ul>
       <div class="flex flex-col items-center justify-between w-full">
         <a href="/get-started/" class="btn btn-primary w-full">
@@ -225,6 +233,7 @@
   </section>
 
   <script>
+    let lastScrollPosition = 0;
     function setMobileMenuOpened() {
       const mobileMenu = document.querySelector('#mobile-menu');
       const opened = mobileMenu.style.display === 'none';
@@ -305,7 +314,7 @@
     document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
   });
 
-	function modifyNavigationColor() {
+  function modifyNavigationColor() {
     let firstSection = document.querySelector('.translucent-navigation');
     let isLight = firstSection?.classList.contains('light') || false;
     let tint = !isLight ? 'neutral-sgray' : 'white';
@@ -314,6 +323,7 @@
     const darkLogo = document.querySelector('svg.logo.fill-cta-dark');
     const menuLightLogo = document.querySelector('svg.hamburger.fill-white');
     const menuDarkLogo = document.querySelector('svg.hamburger.fill-neutral-sgray');
+    const displayMode = window.scrollY > 0 && lastScrollPosition < window.scrollY ? 'hidden' : 'shown';
 
     if (!firstSection) {
       darkLogo.style.display = 'block';
@@ -321,6 +331,11 @@
       menuLightLogo.style.display = 'none';
       menuDarkLogo.style.display = 'block';
       header.forEach(function(h) {
+	if (displayMode == 'hidden') {
+		h.style = "transform: translateY(-200%);";
+	} else {
+		h.style = "transform: translateY(0%);";
+	}
         h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-white');
@@ -329,6 +344,7 @@
         h.classList.add('[&>*]:fill-' + tint);
         h.classList.remove('[&>*]:stroke-white');
       });
+      lastScrollPosition = window.scrollY;
       return;
     }
 
@@ -338,6 +354,11 @@
       menuDarkLogo.style.display = 'block';
       menuLightLogo.style.display = 'none';
       header.forEach(function(h) {
+	if (displayMode == 'hidden') {
+		h.style = "transform: translateY(-200%);";
+	} else {
+		h.style = "transform: translateY(0%);";
+	}
         h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-' + tint);
@@ -352,6 +373,11 @@
       menuDarkLogo.style.display = isLight ? 'none' : 'block';
       menuLightLogo.style.display = isLight ? 'block' : 'none';
       header.forEach(function(h) {
+	if (displayMode == 'hidden') {
+		h.style = "transform: translateY(-200%);";
+	} else {
+		h.style = "transform: translateY(0%);";
+	}
         h.classList.remove('bg-white');
         h.classList.remove('bg-' + tint)
         h.classList.add('bg-opacity-0');
@@ -362,6 +388,8 @@
         h.classList.add('[&>*]:stroke-' + tint);
       });
     }
+
+    lastScrollPosition = window.scrollY
 	}
 
   // turn white the header when the user scrolls
