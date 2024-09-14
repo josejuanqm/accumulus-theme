@@ -137,11 +137,11 @@ foreach($platform_row as $row) :
 					<?php echo $row['better_way']['resume']; ?>
 				</p>
 
-				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8">
+				<div class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-y-s6 md:gap-y-s8 md:gap-x-s2">
 					<?php foreach($row['better_way']['list_items'] as $item) : ?>
-					<div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start gap-s2">
-						<img class="w-[39px] md:w-[64px] aspect-square" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
-						<div class="description-wysiwyg w-auto">
+					<div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start gap-3">
+						<img class="w-[39px] md:w-[60px] aspect-square" src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>" />
+						<div class="description-wysiwyg w-auto lg:pr-s1">
 							<h3 class="heading-7"><?php echo $item['title']; ?></h3>
 						</div>
 					</div>

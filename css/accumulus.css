@@ -4557,6 +4557,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 1.5rem;
   }
 
+  .md\:w-\[60px\] {
+    width: 60px;
+  }
+
   .md\:min-w-\[64px\] {
     min-width: 64px;
   }
@@ -5367,6 +5371,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     row-gap: 4rem;
   }
 
+  .lg\:gap-x-s3 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+
   .lg\:bg-404-desktop {
     background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png');
   }
@@ -5610,6 +5619,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s5 {
     padding-top: 2.5rem;
+  }
+
+  .lg\:pr-s1 {
+    padding-right: 0.5rem;
+  }
+
+  .lg\:pr-1 {
+    padding-right: 0.25rem;
   }
 
   .lg\:text-b2 {
