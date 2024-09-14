@@ -1789,6 +1789,10 @@ video {
   --tw-bg-opacity: 0;
 }
 
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
 .bg-404-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/404/bg-404-mobile.png');
 }
@@ -2366,6 +2370,10 @@ video {
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.opacity-30 {
+  opacity: 0.3;
 }
 
 .mix-blend-screen {
@@ -5606,10 +5614,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
-  }
-
-  .lg\:pt-s5 {
-    padding-top: 2.5rem;
   }
 
   .lg\:text-b2 {

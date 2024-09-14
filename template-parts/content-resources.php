@@ -241,8 +241,9 @@
   $purpleSection = get_field('purple_section');
 ?>
 
-<section class="section w-full pt-s8 md:pt-s10 lg:pt-s8 pb-s8 md:pb-s2 lg:pb-s4 bg-primary-violet text-neutral-nwhite bg-purple-section-mobile md:bg-purple-section-tablet lg:bg-purple-section-desktop bg-no-repeat bg-cover bg-left-top">
+<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s8 pb-s8 md:pb-s2 lg:pb-s4 bg-primary-violet text-neutral-nwhite bg-purple-section-mobile md:bg-purple-section-tablet lg:bg-purple-section-desktop bg-no-repeat bg-cover bg-left-top isolate">
 
+	<div class="absolute top-0 left-0 right-0 bottom-0 bg-primary-violet -z-10 opacity-70"></div>
 	<div class="container mx-auto">
 
     <div class="grid grid-cols-6 md:grid-cols-12 gap-4 gap-y-0">
