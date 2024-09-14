@@ -72,7 +72,7 @@
             
             <?php if ($categorySlug == 'media-coverage'): ?>
               <a href="<?php echo $url_new_realice; ?>" target="_blank" class="absolute top-0 left-0 w-full h-full z-10"></a>
-            <?php elseif ($categorySlug == 'new-releases'): ?>
+            <?php elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): ?>
               <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
             <?php endif; ?>
             <div class="relative md:w-2/3 flex flex-col gap-s2 py-s2 pl-s7 pr-s2 bg-secondary-deepAqua">
@@ -85,7 +85,7 @@
                     <path d="M2.94434 7.86238H4.41718H5.89003H7.36179H8.83464V6.39062H7.36179H5.89003H4.41718H2.94434V7.86238Z" class="fill-current"/>
                   </svg>
 
-                <?php elseif ($categorySlug == 'new-releases'): ?>
+                <?php elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): ?>
                   <svg width="11" height="14" viewBox="0 0 11 14" fill="none">
                     <path d="M9.23366 13.1719L9.23366 0.177338C10.0308 0.177338 10.6777 0.824241 10.6777 1.62141L10.6777 11.7278C10.6777 12.525 10.0308 13.1719 9.23366 13.1719Z" class="fill-current"/>
                     <path d="M2.01367 10.2734H0.569597L0.569597 1.61965C0.569597 0.822477 1.2165 0.175574 2.01367 0.175574L2.01367 10.2734Z" class="fill-current"/>
@@ -116,7 +116,7 @@
                   <img src="<?php bloginfo('template_url'); ?>/images/tumb-media-coverage.png" class="w-full md:w-full h-[144px] md:h-full object-cover" />
                 </div>
 
-              <?php elseif ($categorySlug == 'new-releases'): ?>
+              <?php elseif ($categorySlug == 'new-releases' || $categorySlug == 'news'): ?>
 
                 <div class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
                   <img src="<?php bloginfo('template_url'); ?>/images/tumb-new-releases.png" class="w-full md:w-full h-[144px] md:h-full object-cover" />
