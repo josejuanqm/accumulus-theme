@@ -43,9 +43,9 @@
       <?php
         foreach($teamLeadership as $key => $team_member) {
       ?>
-        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
-          <img class="aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
-          <div class="flex flex-row items-center justify-between w-full">
+	      <figure data-post="<?php echo $key; ?>" data-id="<? echo $team_member; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
+          <img class="pointer-events-none aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
+          <div class="pointer-events-none flex flex-row items-center justify-between w-full">
             <h3 class="heading-6"><?php echo $team_member['name']; ?></h3>
             <!-- <svg style="display:none;" class="open" width="17" height="18" viewBox="0 0 17 18" fill="none">
               <path d="M7.83008 3.32325V4.95453V6.58461V8.21589V9.84717V11.4785V13.1085V14.7398V16.3711H9.46136V14.7398V13.1085V11.4785V9.84717V8.21589V6.58461V4.95453V3.32325V1.69197H7.83008V3.32325Z" fill="#444444"/>
@@ -55,7 +55,7 @@
               <path d="M14.3467 8.21094H12.7154H11.0853H9.45403H7.82275H6.19147H4.56139H2.93011H1.29883V9.84222H2.93011H4.56139H6.19147H7.82275H9.45403H11.0853H12.7154H14.3467H15.978V8.21094H14.3467Z" fill="#444444"/>
             </svg> -->
           </div>
-          <span class="body-4 text-neutral-sgray"><?php echo $team_member['position']; ?></span>
+          <span class="pointer-events-none body-4 text-neutral-sgray"><?php echo $team_member['position']; ?></span>
           <!-- <div style="display:none;" class="summary flex-col items-start gap-s2 col-span-2"> -->
           <div style="display:block;" class="summarys flex-col items-start gap-s2 col-span-2">
             <!-- <p class="body-4 text-neutral-sgray">
@@ -96,8 +96,8 @@
         foreach($teamDirectors as $key => $team_member) {
       ?>
         <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
-          <img class="aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
-          <div class="flex flex-row items-center justify-between w-full">
+          <img class="pointer-events-none aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
+          <div class="pointer-events-none flex flex-row items-center justify-between w-full">
             <h3 class="heading-6"><?php echo $team_member['name']; ?></h3>
             <!-- <svg style="display:none;" class="open" width="17" height="18" viewBox="0 0 17 18" fill="none">
               <path d="M7.83008 3.32325V4.95453V6.58461V8.21589V9.84717V11.4785V13.1085V14.7398V16.3711H9.46136V14.7398V13.1085V11.4785V9.84717V8.21589V6.58461V4.95453V3.32325V1.69197H7.83008V3.32325Z" fill="#444444"/>
@@ -107,7 +107,7 @@
               <path d="M14.3467 8.21094H12.7154H11.0853H9.45403H7.82275H6.19147H4.56139H2.93011H1.29883V9.84222H2.93011H4.56139H6.19147H7.82275H9.45403H11.0853H12.7154H14.3467H15.978V8.21094H14.3467Z" fill="#444444"/>
             </svg> -->
           </div>
-          <span class="body-4 text-neutral-sgray"><?php echo $team_member['position']; ?></span>
+          <span class="pointer-events-none body-4 text-neutral-sgray"><?php echo $team_member['position']; ?></span>
           <!-- <div style="display:none;" class="summary flex-col items-start gap-s2 col-span-2"> -->
           <div style="display:block;" class="summarys flex-col items-start gap-s2 col-span-2">
             <!-- <p class="body-4 text-neutral-sgray">
@@ -161,3 +161,38 @@
   );
 ?>
 <!-- End form module -->
+
+<script>
+document.querySelectorAll('figure').forEach(figure => {
+	figure.addEventListener('click', onTeamClick);
+})
+
+function onTeamClick(e) {
+	hideHeader();
+	let parent = e.parentElement;
+	let members = <?php echo json_encode($teamLeadership); ?>;
+	let member = members[e.target.dataset.post];
+	console.log(member);
+	let popup = document.querySelector('#popup-section');	
+	let popupContent = document.querySelector('#popup-section .content');	
+	popup.classList.remove('hidden');
+	popupContent.classList.remove('opacity-0');
+	popup.classList.add('flex');
+
+	let img = popupContent.querySelector('img').src = member.image;
+	let name = popupContent.querySelector('h3').innerHTML = member.name;
+	let role = popupContent.querySelector('.position').innerHTML = member.position;
+	let description = popupContent.querySelector('.description').innerHTML = member.description;
+}
+</script>
+
+<section id="popup-section" class="fixed hidden flex-col items-center justify-center top-0 left-0 right-0 bottom-0 isolate bg-black bg-opacity-20">
+	<div class="content p-s4 opacity-0 transition-all duration-700 bg-white w-1/2 max-h-[80vh] rounded-xl m-auto flex flex-col items-start gap-s2">
+		<img class="target-element aspect-square rounded-lg"/>
+		<div class="flex flex-col items-start gap-s1">
+			<h3 class="heading-3"></h3>
+			<p class="position heading-5"></p>
+		</div>
+		<p class="description body-3"></p>
+	</div>
+</section>

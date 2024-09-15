@@ -234,6 +234,8 @@
 
   <script>
     let lastScrollPosition = 0;
+    let forceHeaderHidden = false;
+
     function setMobileMenuOpened() {
       const mobileMenu = document.querySelector('#mobile-menu');
       const opened = mobileMenu.style.display === 'none';
@@ -314,6 +316,22 @@
     document.querySelector('#mobile-menu').style.paddingTop = document.querySelector('header').offsetHeight + 'px';
   });
 
+  function hideHeader() {
+    const header = document.querySelectorAll('header#navigation > .content');
+    forceHeaderHidden = true;
+    header.forEach(h => {
+	h.style = "transform: translateY(-200%);";
+    });
+  }
+  
+  function showHeader() {
+    const header = document.querySelectorAll('header#navigation > .content');
+    forceHeaderHidden = false;
+    header.forEach(h => {
+	h.style = "transform: translateY(0%);";
+    });
+  }
+
   function modifyNavigationColor() {
     let firstSection = document.querySelector('.translucent-navigation');
     let isLight = firstSection?.classList.contains('light') || false;
@@ -331,7 +349,7 @@
       menuLightLogo.style.display = 'none';
       menuDarkLogo.style.display = 'block';
       header.forEach(function(h) {
-	if (displayMode == 'hidden') {
+	if (displayMode == 'hidden' || forceHeaderHidden) {
 		h.style = "transform: translateY(-200%);";
 	} else {
 		h.style = "transform: translateY(0%);";
@@ -354,7 +372,7 @@
       menuDarkLogo.style.display = 'block';
       menuLightLogo.style.display = 'none';
       header.forEach(function(h) {
-	if (displayMode == 'hidden') {
+	if (displayMode == 'hidden' || forceHeaderHidden) {
 		h.style = "transform: translateY(-200%);";
 	} else {
 		h.style = "transform: translateY(0%);";
@@ -373,7 +391,7 @@
       menuDarkLogo.style.display = isLight ? 'none' : 'block';
       menuLightLogo.style.display = isLight ? 'block' : 'none';
       header.forEach(function(h) {
-	if (displayMode == 'hidden') {
+	if (displayMode == 'hidden' || forceHeaderHidden) {
 		h.style = "transform: translateY(-200%);";
 	} else {
 		h.style = "transform: translateY(0%);";
