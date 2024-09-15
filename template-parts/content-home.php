@@ -535,7 +535,7 @@ if($how_it_works):
 	</div>
 </section>
 
-<!-- Events carousel -->
+<!-- Related resources -->
 
 <!-- Form Module -->
 <?php

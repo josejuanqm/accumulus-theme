@@ -188,7 +188,7 @@
         </div>
 
         <div class="col-span-12 lg:col-span-6 lg:col-span-6 items-start gap-s3">
-          <video id="anim-video" class="mix-blend-screen" width="100%" muted playsinline>
+          <video id="anim-video" class="mix-blend-screen" width="100%" playsinline autoplay loop muted>
             <source src="<?php echo get_template_directory_uri() . "/videos/about-us/video-anim.mp4"; ?>" type="video/mp4">
           </video>
         </div>
