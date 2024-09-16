@@ -5131,6 +5131,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-column-end: 12;
   }
 
+  .lg\:col-end-auto {
+    grid-column-end: auto;
+  }
+
   .lg\:row-start-1 {
     grid-row-start: 1;
   }
