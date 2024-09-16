@@ -87,10 +87,10 @@
 								<?php endif; ?>
                 <?php echo $category; ?>
               </span>
-              <span class="body-2 text-neutral-dgray !leading-none">|</span>
-              <span class="flex items-center gap-s1 heading-4 text-neutral-dgray uppercase">
-                By <?php echo get_the_author(); ?>
-              </span>
+              <!-- <span class="body-2 text-neutral-dgray !leading-none">|</span> -->
+              <!-- <span class="flex items-center gap-s1 heading-4 text-neutral-dgray uppercase">
+                By <?php //echo get_the_author(); ?>
+              </span> -->
             </div>
           </div>
 

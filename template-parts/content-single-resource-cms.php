@@ -36,7 +36,7 @@
     <h4 class="text-neutral-nwhite heading-4 uppercase pt-s1 md:pt-s3"><?php echo $category; ?></h4>
     <div class="flex flex-col gap-s3 lg:gap-8 max-w-[465px] pt-s5 lg:pt-s3">
       <h1 class="text-neutral-nwhite text-h2Mobile md:text-h2Tablet lg:text-h2"><?php the_title(); ?></h1>
-      <span class="text-neutral-nwhite uppercase heading-4">By <?php echo get_the_author(); ?></span>
+      <!-- <span class="text-neutral-nwhite uppercase heading-4">By <?php //echo get_the_author(); ?></span> -->
     </div>
   </div>
 </section>
