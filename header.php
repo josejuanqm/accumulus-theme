@@ -30,6 +30,7 @@
   $primary_menu_items = wp_get_nav_menu_items('Primary');
   $secondary_menu_items = wp_get_nav_menu_items('Secondary');
 ?>
+<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/6a8bd37ef5551587060acab2/script.js"></script> <!-- End cookieyes banner -->
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
   <header id="navigation" class="lg:bg-auto fixed w-full z-[999999] text-neutral-sgray group">
