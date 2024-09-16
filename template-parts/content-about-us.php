@@ -31,7 +31,7 @@
 				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
 			</div>
 			<div class="col-span-12 md:col-span-12 lg:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
-        <a href="<?php echo $link_learn_more ?>" class="btn-secondary" target="_blank" download><?php echo 	$text_cta; ?></a>
+        <a href="<?php echo $link_learn_more ?>" class="btn-secondary"><?php echo 	$text_cta; ?></a>
 			</div>
 		</div>
 	</div>

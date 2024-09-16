@@ -12,7 +12,7 @@ if( $show_form_free_pdf ):
       if($form_access_content):
 ?>
 
-<section class="relative w-full bg-primary-violet">
+<section id="get-free-pdf" class="relative w-full bg-primary-violet">
   <div class="grid grid-cols-6 md:grid-cols-12 gap-x-4">
     <div class="col-span-6 md:col-span-12 lg:col-span-4">
       <picture class="block w-full h-full">
