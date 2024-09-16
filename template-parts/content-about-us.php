@@ -152,16 +152,28 @@
 <?php
   $years = [
     [
-      'year' => '2005',
-      'paragraph' => 'We’re delivering a next-generation data exchange platform to improve collaboration and efficiency for the global regulatory ecosystem…',
+      'year' => '2019',
+      'paragraph' => 'Our journey starts with a call to action – to modernize how information flows between industry and regulators.',
     ],
     [
-      'year' => '2014',
-      'paragraph' => 'We’re delivering a next-generation data exchange platform to improve collaboration and efficiency for the global regulatory ecosystem…',
+      'year' => '2020',
+      'paragraph' => 'Accumulus forms as a nonprofit technology developer – backed by 10 Sponsors – to build a transformative collaboration platform.',
     ],
     [
-      'year' => 'Today',
-      'paragraph' => 'We’re delivering a next-generation data exchange platform to improve collaboration and efficiency for the global regulatory ecosystem…',
+      'year' => '2021',
+      'paragraph' => 'We engage with national regulators to advance our mission of accelerating critical therapies to citizens of the world.',
+    ],
+    [
+      'year' => '2022',
+      'paragraph' => 'Accumulus adds two more life sciences Sponsors and begins staffing a workforce with more than 30 full-time employees.'
+    ],
+    [
+      'year' => '2023',
+      'paragraph' => 'Our organization grows to over 70 full-time employees to support our platform’s development and we launch the Regulator Forum.'
+    ],
+    [
+      'year' => '2024',
+      'paragraph' => 'Accumulus launches version one of its cloud platform to improve how drug developers and regulators interact internationally.'
     ],
   ];
 ?>
