@@ -89,7 +89,7 @@
 </div><!-- #page -->
 
 <script>
-  let showingCookies = true
+  let showingCookies = false
 
   function hideCookies() {
     showingCookies = false
