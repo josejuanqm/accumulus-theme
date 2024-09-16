@@ -183,7 +183,7 @@
 </script>
 
 <section id="slider" class="translucent-navigation section w-full bg-primary-violet text-neutral-nwhite overflow-hidden py-s12">
-    <div class="container mx-auto px-s2">
+    <div class="container mx-auto">
       <div class="grid grid-cols-12 gap-x-s2 gap-y-s6">
         <div class="relative flex flex-col col-span-12 lg:col-span-6 lg:col-span-6 items-start gap-s3">
           <h4 class="heading-4 uppercase pt-s1">Our Story</h4>
@@ -207,14 +207,14 @@
         
         <div class="grid grid-cols-12 gap-s2 lg:gap-x-s2 lg:gap-x-s2 col-span-12 items-center justify-between">
           <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4 uppercase" style="transform: translateX(5px);">2005</p>
-          <button onclick="animatePrev()" class="col-span-2 lg:col-span-1 row-start-3 lg:row-start-2 min-w-s7 lg:min-w-0">
+          <button onclick="animatePrev()" class="col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 min-w-s7 lg:min-w-0">
             <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-neutral-500">
               <path d="M28.8623 55.7519C43.7885 55.7519 55.8886 43.6518 55.8886 28.7256C55.8886 13.7993 43.7885 1.69922 28.8623 1.69922C13.936 1.69922 1.83594 13.7993 1.83594 28.7256C1.83594 43.6518 13.936 55.7519 28.8623 55.7519Z" stroke-width="1.86732" stroke-miterlimit="10"/>
               <path d="M33.1451 39.7941L22.0781 28.7271L33.1451 17.6602" stroke-width="1.86732" stroke-miterlimit="10"/>
             </svg>
           </button>
 
-          <span id="slider-prev-label" class="heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 lg:row-start-2 uppercase">
+          <span id="slider-prev-label" class="heading-4 text-neutral-sgray col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 uppercase">
             <?php echo $years[0]['year']; ?>
           </span>
 
@@ -280,11 +280,11 @@
             </div>
           </div>
 
-          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-2 lg:col-span-1 row-start-3 lg:row-start-2 col-start-9 col-end-11 lg:col-start-auto uppercase">
-            <?php echo $years[count($years ) - 1]['year']; ?>
+          <span id="slider-next-label" class="text-right heading-4 text-neutral-sgray col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 lg:col-start-auto uppercase">
+            <?php echo $years[min($index + 1, count($years) - 1)]['year']; ?>
           </span>
 
-          <button onclick="animateNext()" class="flex flex-row items-end justify-end col-span-2 lg:col-span-1 row-start-3 lg:row-start-2 col-start-11 lg:col-start-auto min-w-s7 lg:min-w-0">
+          <button onclick="animateNext()" class="flex flex-row items-end justify-end col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 lg:col-start-auto lg:col-end-auto min-w-s7 lg:min-w-0">
             <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-neutral-500">
               <path d="M28.917 55.7519C43.8432 55.7519 55.9433 43.6518 55.9433 28.7256C55.9433 13.7993 43.8432 1.69922 28.917 1.69922C13.9907 1.69922 1.89062 13.7993 1.89062 28.7256C1.89062 43.6518 13.9907 55.7519 28.917 55.7519Z" stroke-width="1.86732" stroke-miterlimit="10"/>
               <path d="M24.6328 17.6602L35.6998 28.7271L24.6328 39.7941" stroke-width="3" stroke-miterlimit="10"/>

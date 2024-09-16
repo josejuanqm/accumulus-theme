@@ -1039,6 +1039,14 @@ video {
   grid-column-start: 9;
 }
 
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+.col-start-10 {
+  grid-column-start: 10;
+}
+
 .col-end-11 {
   grid-column-end: 11;
 }
@@ -1049,6 +1057,14 @@ video {
 
 .col-end-2 {
   grid-column-end: 2;
+}
+
+.col-end-9 {
+  grid-column-end: 9;
+}
+
+.col-end-7 {
+  grid-column-end: 7;
 }
 
 .row-start-1 {
@@ -1239,6 +1255,10 @@ video {
   height: 100vh;
 }
 
+.h-\[57px\] {
+  height: 57px;
+}
+
 .max-h-\[144px\] {
   max-height: 144px;
 }
@@ -1313,6 +1333,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[57px\] {
+  width: 57px;
 }
 
 .\!min-w-\[190px\] {
@@ -1923,6 +1947,11 @@ video {
 
 .stroke-1 {
   stroke-width: 1;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
@@ -5129,6 +5158,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:col-end-12 {
     grid-column-end: 12;
+  }
+
+  .lg\:col-end-auto {
+    grid-column-end: auto;
   }
 
   .lg\:row-start-1 {
