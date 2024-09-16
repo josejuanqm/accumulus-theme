@@ -1263,6 +1263,10 @@ video {
   max-height: 80vh;
 }
 
+.max-h-screen {
+  max-height: 100vh;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -1644,6 +1648,10 @@ video {
   overflow: visible;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1704,6 +1712,11 @@ video {
 
 .rounded-\[24\] {
   border-radius: 24;
+}
+
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 
 .border-2 {
@@ -2316,6 +2329,10 @@ video {
   font-weight: 400;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -2403,6 +2420,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .opacity-100 {
@@ -4624,6 +4646,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 1.5rem;
   }
 
+  .md\:w-\[60px\] {
+    width: 60px;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:min-w-\[64px\] {
     min-width: 64px;
   }
@@ -4670,6 +4700,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:items-end {
     align-items: flex-end;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:justify-normal {
@@ -4753,6 +4787,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:overflow-hidden {
     overflow: hidden;
+  }
+
+  .md\:rounded-b-xl {
+    border-bottom-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
   }
 
   .md\:bg-404-tablet {
@@ -5210,6 +5249,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     grid-row-start: 4;
   }
 
+  .lg\:m-auto {
+    margin: auto;
+  }
+
   .lg\:-ml-s2 {
     margin-left: -1rem;
   }
@@ -5284,6 +5327,14 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
   }
 
   .lg\:min-w-0 {
@@ -5673,6 +5724,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
+  }
+
+  .lg\:pr-s1 {
+    padding-right: 0.5rem;
   }
 
   .lg\:text-b2 {

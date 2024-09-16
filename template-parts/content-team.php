@@ -95,7 +95,7 @@
       <?php
         foreach($teamDirectors as $key => $team_member) {
       ?>
-        <figure data-post="<?php echo $key; ?>" class="select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
+        <figure data-post="<?php echo $key; ?>" class="board select-none member [&>div>.open]:!flex flex flex-col items-start justify-stretch gap-s2 col-span-6 md:col-span-4 lg:col-span-3">
           <img class="pointer-events-none aspect-square w-full rounded-[40px] bg-[#EBEBEB] mb-s1" src="<?php echo $team_member['image']; ?>" alt="<?php echo $team_member['name']; ?>">
           <div class="pointer-events-none flex flex-row items-center justify-between w-full">
             <h3 class="heading-6"><?php echo $team_member['name']; ?></h3>
@@ -164,13 +164,15 @@
 
 <script>
 document.querySelectorAll('figure').forEach(figure => {
-	figure.addEventListener('click', onTeamClick);
+	figure.addEventListener('click', (e) => {
+		onTeamClick(e, e.target.classList.contains('board'));
+	});
 })
 
-function onTeamClick(e) {
+function onTeamClick(e, boardSelection) {
 	hideHeader();
 	let parent = e.parentElement;
-	let members = <?php echo json_encode($teamLeadership); ?>;
+	let members = boardSelection ? <?php echo json_encode($teamDirectors); ?> : <?php echo json_encode($teamLeadership); ?>;
 	let member = members[e.target.dataset.post];
 	console.log(member);
 	let popup = document.querySelector('#popup-section');	
@@ -183,16 +185,30 @@ function onTeamClick(e) {
 	let name = popupContent.querySelector('h3').innerHTML = member.name;
 	let role = popupContent.querySelector('.position').innerHTML = member.position;
 	let description = popupContent.querySelector('.description').innerHTML = member.description;
+	let link = popupContent.querySelector('a').href = member.linkedin;
+}
+
+function hidePopup() {
+	let popup = document.querySelector('#popup-section');	
+	popup.classList.add('hidden');
+	showHeader();
 }
 </script>
 
-<section id="popup-section" class="fixed hidden flex-col items-center justify-center top-0 left-0 right-0 bottom-0 isolate bg-black bg-opacity-20">
-	<div class="content p-s4 opacity-0 transition-all duration-700 bg-white w-1/2 max-h-[80vh] rounded-xl m-auto flex flex-col items-start gap-s2">
+<section id="popup-section" class="fixed hidden flex-col items-end md:items-center justify-end md:justify-center top-0 left-0 right-0 bottom-0 isolate bg-black bg-opacity-20">
+	<button onclick="hidePopup()" class="absolute top-0 left-0 right-0 bottom-0 z-0"></button>
+	<div class="content relative z-10 p-s4 opacity-0 transition-all duration-700 bg-white w-full md:w-1/2 lg:w-1/3 max-h-[80vh] rounded-t-xl md:rounded-b-xl lg:m-auto flex flex-col items-start gap-s2 overflow-scroll md:overflow-hidden max-h-screen">
 		<img class="target-element aspect-square rounded-lg"/>
-		<div class="flex flex-col items-start gap-s1">
+		<div class="flex flex-col items-start">
 			<h3 class="heading-3"></h3>
-			<p class="position heading-5"></p>
+			<p class="position body-3 text-neutral-500"></p>
 		</div>
 		<p class="description body-3"></p>
+		    <a href="" target="_blank">
+		      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+			<path d="M0.738907 5.15332H3.92293V15.3947H0.738907V5.15332ZM2.331 0.0625C3.34866 0.0625 4.17568 0.889524 4.17568 1.90888C4.17568 2.92722 3.34866 3.75424 2.331 3.75424C1.31096 3.75424 0.486328 2.92722 0.486328 1.90888C0.486328 0.889524 1.31096 0.0625 2.331 0.0625Z" fill="#444444"/>
+			<path d="M5.91797 5.15399H8.9711V6.55444H9.01461C9.43956 5.74892 10.4782 4.90039 12.0263 4.90039C15.2495 4.90039 15.8445 7.02086 15.8445 9.7784V15.3954H12.6628V10.415C12.6628 9.22699 12.6422 7.6994 11.0088 7.6994C9.35235 7.6994 9.0996 8.99421 9.0996 10.3296V15.3954H5.91797V5.15399Z" fill="#444444"/>
+		      </svg>
+		    </a>
 	</div>
 </section>
