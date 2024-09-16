@@ -51,17 +51,27 @@
 			<h4 class="text-h4Mobile md:text-h4Tablet lg:text-h4 uppercase">Supported by</h4>
 		</div>
 		<div class="w-full">
-			<div id="logoMarqueeSection">
-				<div class="relative overflow-hidden w-full">
-					<div class="marquee">
-							<?php for( $i=1;$i<24;$i++ ): ?>
+			<div>
+				<div class="scroll w-full">
+							<?php 
+								$arr = [1,2];
+								foreach( $arr as $item ): 
+							?>
+
+						<div>
+
+							<?php 
+								$arr = [1,2];
+								foreach( $arr as $item ): 
+							?>
 								<?php foreach( $marquee as $logo ): ?>
-									<div class="marquee-item inline-block align-middle px-7">
+									<figure class="inline-block align-middle px-7">
 										<img src="<?php echo $logo['logo']; ?>" alt="<?php echo $logo['name']; ?>" />
-									</div>
+									</figure>
 								<?php endforeach; ?>
-							<?php endfor; ?>
+							<?php endforeach; ?>
 						</div>
+							<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
