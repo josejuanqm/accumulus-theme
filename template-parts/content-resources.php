@@ -55,7 +55,7 @@
 
         <div class="relative col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
           <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
-          <div class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-resources-general bg-cover bg-no-repeat bg-center">
+          <div class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-resources-general bg-cover bg-no-repeat bg-center bg-secondary-carbon">
             <!-- <?php //if (has_post_thumbnail( get_the_ID() ) ): ?>
               <?php //$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
               <img class="block" src="<?php //echo $image[0]; ?>" alt="<?php //the_title(); ?>" />
