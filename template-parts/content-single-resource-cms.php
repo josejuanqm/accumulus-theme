@@ -22,19 +22,19 @@
 
 ?>
 
-<section class="relative grid grid-cols-12 items-stretch gap-x-4 md:min-h-screen bg-secondary-carbon">
-  <div class="col-span-12 md:col-span-6 lg:h-full">
+<section class="relative grid grid-cols-12 items-stretch gap-x-4 bg-secondary-carbon">
+  <div class="col-span-12 md:col-span-6 lg:h-full relative">
     <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
-      <img class="block w-full h-full object-cover" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+        <img class="block w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
       <?php else : ?>
-        <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url') //echo $image[0]; ?>/images/resources/bg-main-post.png" alt="<?php the_title(); ?>" />
+        <img class="block w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" src="<?php bloginfo('template_url') //echo $image[0]; ?>/images/resources/bg-main-post.png" alt="<?php the_title(); ?>" />
       <?php endif; ?>
     <?php //accumulus_website_post_thumbnail(); ?>
   </div>
-  <div class="col-span-12 md:col-span-6 flex flex-col justify-between lg:h-full px-s4 lg:px-0 py-s6 md:pt-s14 lg:pt-52 2xl:pt-60 lg:pb-24 lg:pl-20">
-    <h4 class="text-neutral-nwhite heading-4 uppercase pt-s1 md:pt-s3"><?php echo $category; ?></h4>
-    <div class="flex flex-col gap-s3 lg:gap-8 max-w-[465px] pt-s5 lg:pt-s3">
+  <div class="col-span-12 md:col-span-6 flex flex-col justify-between lg:h-full px-s4 lg:px-0 py-s6 lg:pb-24 lg:pl-20">
+    <h4 class="text-neutral-nwhite heading-4 uppercase pt-s1"><?php echo $category; ?></h4>
+    <div class="flex flex-col gap-s3 lg:gap-8 max-w-[465px] pt-s5 lg:pt-s10">
       <h1 class="text-neutral-nwhite text-h2Mobile md:text-h2Tablet lg:text-h2"><?php the_title(); ?></h1>
       <!-- <span class="text-neutral-nwhite uppercase heading-4">By <?php //echo get_the_author(); ?></span> -->
     </div>
@@ -70,7 +70,7 @@
       </li> -->
     </ul>
   </div>
-  <div class="relative detail flex flex-col items-end gap-s4 md:gap-s10">
+  <div class="relative detail flex flex-col items-end gap-s4 md:gap-s5">
     <?php
       the_content(
         sprintf(
