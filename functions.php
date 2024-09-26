@@ -909,6 +909,7 @@ function getEvents() {
     foreach ($posts as $post) {
         $date = get_field('date_event', $post->ID, false);
         $file = get_field('metting_summary_2', $post->ID, false);
+        $text_cta_download_file = get_field('text_cta_download_file', $post->ID, false);
         $dateEvent = new DateTime($date);
         $year = $dateEvent->format('Y');
         $month = $dateEvent->format('F');
@@ -956,7 +957,8 @@ function getEvents() {
 
                 $date = get_field( 'date_event', $posts[0]->ID );
                 $file = get_field( 'metting_summary_2', $posts[0]->ID );
-									$field = $posts[0]->ID;
+                $text_cta_download_file = get_field( 'text_cta_download_file', $posts[0]->ID );
+								$field = $posts[0]->ID;
                 $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
 
 		//$html .= implode(wp_get_object_terms($posts[0]->ID, $taxonomies, array("fields" => 'slugs')));
@@ -979,7 +981,7 @@ function getEvents() {
                 $html .= '<h3 class="text-h10">'. get_the_title($posts[0]->ID) .'</h3>';
 								$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt($posts[0]->ID) .'</p>';
 								if ($file) {
-									$html .= '<a class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2" href="'.$file['url'].'" target="_blank" download><span>Download Meeting Summary</span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									$html .= '<a class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2" href="'.$file['url'].'" target="_blank" download><span>'.$text_cta_download_file.'</span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.7009 8.01855V11.0175H2.20313V8.01855H0.703125V11.0175V12.5175H14.2009V11.0175V8.01855H12.7009Z" fill="#444444"/>
 											<path d="M6.70167 7.39582V0.51795H8.20057V7.3925L10.3172 5.27589L11.3766 6.33531L8.20057 9.51243V9.51465H6.70167L3.52344 6.33531L4.58285 5.27589L6.70167 7.39582Z" fill="#444444"/>
 											</svg>
@@ -3114,6 +3116,26 @@ add_action( 'acf/include_fields', function() {
 				'display_format' => 'm/d/Y',
 				'return_format' => 'Ymd',
 				'first_day' => 1,
+			),
+			array(
+				'key' => 'field_66f5b87517245',
+				'label' => 'Text cta download file',
+				'name' => 'text_cta_download_file',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => 'Download Meeting Summary',
+				'maxlength' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
 			),
 			array(
 				'key' => 'field_66e3018716109',
