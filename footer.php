@@ -20,7 +20,7 @@
       <div class="grid grid-cols-12 gap-x-s3 gap-y-s12">
         <div class="flex-col items-start justify-between h-full gap-s7 flex col-span-12 col-start-1 row-start-1 md:col-span-5 md:col-start-1 md:row-start-1 lg:col-span-3 lg:col-start-1 lg:row-start-1">
           <p class="flex-1 whitespace-nowrap font-normal">
-            Accumulus Synergy <br/>
+            Accumulus Synergy® <br/>
             A Nonprofit Industry  <br class="hidden lg:block"/>
             Association
           </p>
@@ -70,6 +70,7 @@
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 md:col-span-4 md:col-start-1 md:row-start-4 lg:col-span-3 lg:col-start-7 lg:row-start-3">
           <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Resources</p></li>
           <li><a href="/resources/" class="font-normal">Resources</a></li>
+          <li><a href="/news/" class="font-normal">News and Media</a></li>
         </ul>
         <ul class="flex flex-basis-full flex-col items-start gap-s2 list-none col-span-6 row-start-3 col-start-7 md:col-span-4 md:col-start-5 md:row-start-4 lg:col-span-2 lg:col-start-11 lg:row-start-3">
           <li><p class="pb-s1 text-secondary-mpurple heading-6 font-normal">Legal</p></li>

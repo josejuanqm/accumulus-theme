@@ -200,8 +200,8 @@
               <?php foreach ($years as $index=>$year) { ?>
                 <div class="flex flex-col w-full lg:gap-s10 lg:gap-s6 gap-s2 basis-full shrink-0 slider-content-element">
                   <h2 id="slide-title-<?php echo $index; ?>" class="heading-1 slide-title" data-order="<?php echo $index; ?>"><?php echo $year['year']; ?></h2>
-                  <p id="slide-paragraph-<?php echo $index; ?>" class="heading-3 slide-paragraph pe-s4" data-order="<?php echo $index; ?>">
-                    <span class="block font-bold"><?php echo $year['title']; ?></span>
+                  <p id="slide-paragraph-<?php echo $index; ?>" style="font-weight: 400;" class="heading-3 slide-paragraph pe-s4" data-order="<?php echo $index; ?>">
+                    <span class="block !font-bold pb-s2" style="font-weight: 500 !important;"><?php echo $year['title']; ?></span>
                     <?php echo $year['paragraph']; ?>
                   </p>
                 </div>
