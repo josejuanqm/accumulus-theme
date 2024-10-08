@@ -1600,11 +1600,6 @@ video {
   row-gap: 3.5rem;
 }
 
-.gap-x-s4 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
 .self-end {
   align-self: flex-end;
 }
@@ -2159,10 +2154,6 @@ video {
   text-align: end;
 }
 
-.align-top {
-  vertical-align: top;
-}
-
 .align-middle {
   vertical-align: middle;
 }
@@ -2256,16 +2247,16 @@ video {
   line-height: 1.25rem;
 }
 
+.\!font-bold {
+  font-weight: 700 !important;
+}
+
 .\!font-medium {
   font-weight: 500 !important;
 }
 
 .\!font-normal {
   font-weight: 400 !important;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .font-normal {
@@ -4149,27 +4140,21 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 .scroll {
   position: relative;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap:nowrap;
   white-space: nowrap;
   flex-direction: row;
-  align-items: center;
+  align-items:center;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #fff 10%,
-    #fff 90%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 90%, transparent);
   --t: 50s;
 }
 
 .scroll div {
-  width: -moz-max-content;
-  width: max-content;
+  width:-moz-max-content;
+  width:max-content;
   white-space: nowrap;
   animation: animate var(--t) linear infinite;
-  animation-delay: calc(var(--t) / -1);
+  animation-delay: calc(var(--t)/-1);
 }
 
 .scroll div figure {
@@ -4180,7 +4165,7 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
 .scroll div:nth-child(2) {
   animation: animate2 var(--t) linear infinite;
-  animation-delay: calc(var(--t) / -2);
+  animation-delay: calc(var(--t)/-2);
 }
 
 @keyframes animate {
