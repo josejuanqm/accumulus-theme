@@ -1600,6 +1600,11 @@ video {
   row-gap: 3.5rem;
 }
 
+.gap-x-s4 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
 .self-end {
   align-self: flex-end;
 }
@@ -2152,6 +2157,10 @@ video {
 
 .text-end {
   text-align: end;
+}
+
+.align-top {
+  vertical-align: top;
 }
 
 .align-middle {

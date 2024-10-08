@@ -86,8 +86,8 @@ jQuery(document).ready(function ($) {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.benefit-prev'),
+    nextArrow: $('.benefit-next'),
     responsive: [
       {
         breakpoint: 1025,
