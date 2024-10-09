@@ -1218,6 +1218,106 @@ add_action( 'acf/include_fields', function() {
 	add_mega_menu_items();
 
 	acf_add_local_field_group( array(
+		'key' => 'group_6706f0698cf7c',
+		'title' => 'Announcement bar',
+		'fields' => array(
+			array(
+				'key' => 'field_6706f06aea5a5',
+				'label' => 'Announcement',
+				'name' => 'announcement',
+				'aria-label' => '',
+				'type' => 'group',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_6706f36aacbab',
+						'label' => 'Show announcement bar',
+						'name' => 'show_announcement_bar',
+						'aria-label' => '',
+						'type' => 'true_false',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'message' => '',
+						'default_value' => 0,
+						'ui' => 0,
+						'ui_on_text' => '',
+						'ui_off_text' => '',
+					),
+					array(
+						'key' => 'field_6706f087ea5a6',
+						'label' => 'Text bar',
+						'name' => 'text_bar',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => 'Help transform the life sciences-regulatory ecosystem. Start with Accumulus today',
+						'maxlength' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+					),
+					array(
+						'key' => 'field_6706f0a6ea5a7',
+						'label' => 'Url bar',
+						'name' => 'url_bar',
+						'aria-label' => '',
+						'type' => 'url',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+					),
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'theme-options',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+
+	acf_add_local_field_group( array(
 		'key' => 'group_66d9eed290749',
 		'title' => 'About us - Page',
 		'fields' => array(
@@ -9699,6 +9799,13 @@ add_action( 'acf/init', function() {
 		'menu_slug' => 'careers-section',
 		'redirect' => false,
 	) );
+
+	acf_add_options_page( array(
+		'page_title' => 'Theme options',
+		'menu_slug' => 'theme-options',
+		'position' => 62,
+		'redirect' => false,
+	) );
 } );
 
 // General template
@@ -15577,10 +15684,12 @@ add_action( 'acf/include_fields', function() {
     'instruction_placement' => 'label',
     'hide_on_screen' => array(
       0 => 'the_content',
-      1 => 'excerpt',
-      2 => 'discussion',
-      3 => 'comments',
-      4 => 'author',
+			1 => 'excerpt',
+			2 => 'discussion',
+			3 => 'comments',
+			4 => 'slug',
+			5 => 'author',
+			6 => 'featured_image',
     ),
     'active' => true,
     'description' => '',

@@ -33,21 +33,79 @@
 <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/6a8bd37ef5551587060acab2/script.js"></script> <!-- End cookieyes banner -->
 <div id="page" class="site relative [&>.opened]:fixed [&>.opened]:h-screen [&>.opened>section.mobile-menu]:block">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'accumulus-website' ); ?></a>
+
+  
   <header id="navigation" class="lg:bg-auto fixed w-full z-[999999] text-neutral-sgray group">
-    <div class="bg-white text-neutral-sgray stroke-cta-dark hidden lg:block section border-b-[1px] border-b-neutral-200 content transition-color duration-150">
-      <div class="container mx-auto px-s2 py-s2">
+    <div class="bg-white text-neutral-sgray stroke-cta-dark hidden lg:block border-b-[1px] border-b-neutral-200 content transition-color duration-150">
+
+      <?php 
+        $announcement = get_field('announcement', 'option');
+
+        if($announcement):
+          if($announcement['show_announcement_bar']):
+      ?>
+      <div class="flag hidden lg:block py-s2 w-full relative bg-primary-violet text-neutral-nwhite">
+        <?php if($announcement['url_bar'] !== ''): ?>
+        <p class="text-ctaMobile md:text-ctaTablet lg:text-cta text-center">
+          <a href="<?php echo $announcement['url_bar'] ?>" class="text-neutral-nwhite underline"><?php echo $announcement['text_bar'] ?></a>
+        </p>
+        <?php else: ?>
+        <p class="text-ctaMobile md:text-ctaTablet lg:text-cta text-center">
+          <?php echo $announcement['text_bar'] ?>
+        </p>
+        <?php endif; ?>
+        <span class="js-close-flag absolute right-s5 top-s2 cursor-pointer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      <?php 
+        endif; 
+      endif; 
+      ?>
+
+      <div class="container mx-auto px-s2 lg:px-s4 py-s2">
         <div class="flex flex-row items-center justify-end">
           <ul class="flex flex-row items-center justify-end gap-s2 text-sm heading-5">
-              <?php foreach ($secondary_menu_items as $menu_item) : ?>
-	      <li><a class="hover:underline" href="<?php echo $menu_item->url; ?>" target="<?php echo $menu_item->title == "LinkedIn" ? "_blank" : ""; ?>"><?php echo $menu_item->title; ?></a></li>
-              <?php endforeach; ?>
+            <?php foreach ($secondary_menu_items as $menu_item) : ?>
+            <li><a class="hover:underline" href="<?php echo $menu_item->url; ?>" target="<?php echo $menu_item->title == "LinkedIn" ? "_blank" : ""; ?>"><?php echo $menu_item->title; ?></a></li>
+            <?php endforeach; ?>
           </ul>
         </div> 
       </div>
     </div>
-    <div class="section bg-white text-neutral-sgray stroke-cta-dark content transition-color duration-150 border-b-neutral-200">
+    <div class="bg-white text-neutral-sgray stroke-cta-dark content transition-color duration-150 border-b-neutral-200">
+      
+      <?php 
+        if($announcement):
+          if($announcement['show_announcement_bar']):
+      ?>
+      <div class="lg:hidden flag pt-s5 pb-s2 px-s4 w-full relative bg-primary-violet text-neutral-nwhite z-[9999]">
+        <?php if($announcement['url_bar'] !== ''): ?>
+        <p class="text-ctaMobile md:text-ctaTablet lg:text-cta text-center">
+          <a href="<?php echo $announcement['url_bar'] ?>" class="text-neutral-nwhite underline"><?php echo $announcement['text_bar'] ?></a>
+        </p>
+        <?php else: ?>
+        <p class="text-ctaMobile md:text-ctaTablet lg:text-cta text-center">
+          <?php echo $announcement['text_bar'] ?>
+        </p>
+        <?php endif; ?>
+        <span class="js-close-flag absolute right-s5 top-s2 cursor-pointer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      <?php 
+          endif; 
+        endif; 
+      ?>
+
       <div class="container mx-auto px-s2">
-        <div class="flex flex-row items-center">
+        <div class="flex flex-row items-center px-s2 md:px-s4 lg:px-0">
           <div class="flex flex-row items-center me-auto">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="py-s2 flex flex-row items-center relative isolate overflow-hidden">
               <svg width="241" height="61" viewBox="0 0 241 61" class="logo fill-white stroke-none" xmlns="http://www.w3.org/2000/svg">
@@ -233,77 +291,87 @@
     </div>
   </section>
 
-  <script>
-    let lastScrollPosition = 0;
+<script>
+  let flag = document.querySelectorAll('.flag');
+  let closeFlag = document.querySelectorAll('.js-close-flag');
+  closeFlag.forEach(function(item){
+    item.addEventListener('click', function(){
+      flag.forEach(function(item){
+        item.classList.add('!hidden');
+      })
+    })
+  });
+
+  let lastScrollPosition = 0;
   let mobileOpened = false;
-    function setMobileMenuOpened() {
-      const mobileMenu = document.querySelector('#mobile-menu');
-      const opened = mobileMenu.style.display === 'none';
-      mobileOpened = !mobileOpened
-      if (opened) {
-        mobileMenu.style.display = 'block';
-      } else {
-        mobileMenu.style.display = 'none';
-      }
+  function setMobileMenuOpened() {
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const opened = mobileMenu.style.display === 'none';
+    mobileOpened = !mobileOpened
+    if (opened) {
+      mobileMenu.style.display = 'block';
+    } else {
+      mobileMenu.style.display = 'none';
     }
+  }
 
-    function setMegaMenuOpened(opened, id) {
-      const page = document.querySelector('#page > header');
-      if (opened) {
-        page.classList.add('mm-opened');
-        page.dataset.mm_opened = id;
-      } else {
-        page.classList.remove('mm-opened');
-        page.dataset.mm_opened = '';
-      }
-
-      reloadMegaMenu(id);
-    }
-
-    function reloadMegaMenu(id) {
-      const page = document.querySelector('#page > header');
-
-      if (!page.dataset.mm_opened) {
-        document.querySelectorAll('.mm').forEach(function(mm) {
-          mm.style.display = 'none';
-        });
-        return;
-      }
-
-      const mm = document.querySelector('.mm[data-identifier="' + page.dataset.mm_opened + '"]');
-      console.log(mm, page.dataset);
-
-      if (page.classList.contains('mm-opened')) {
-        mm.style.display = 'block';
-      } else {
-        mm.style.display = 'none';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const page = document.querySelector('#page > header');
-      page.dataset.mm_opened = '';
+  function setMegaMenuOpened(opened, id) {
+    const page = document.querySelector('#page > header');
+    if (opened) {
+      page.classList.add('mm-opened');
+      page.dataset.mm_opened = id;
+    } else {
       page.classList.remove('mm-opened');
-      reloadMegaMenu();
-      let navigationItems = document.querySelectorAll('.menu-item-dropdown');
-      navigationItems.forEach(function(item) {
-        item.addEventListener('mouseenter', function(event) {
-	  setMegaMenuOpened(false, null);
-  	  page.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
-  	  	item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
-  	  });
-          setMegaMenuOpened(true, event.target.dataset.identifier);  
-          event.target.querySelector(".dropdown-arrow")?.classList.add('rotate-180');
-        });
-      });
+      page.dataset.mm_opened = '';
+    }
 
-      page.addEventListener('mouseleave', function(event) {
+    reloadMegaMenu(id);
+  }
+
+  function reloadMegaMenu(id) {
+    const page = document.querySelector('#page > header');
+
+    if (!page.dataset.mm_opened) {
+      document.querySelectorAll('.mm').forEach(function(mm) {
+        mm.style.display = 'none';
+      });
+      return;
+    }
+
+    const mm = document.querySelector('.mm[data-identifier="' + page.dataset.mm_opened + '"]');
+    console.log(mm, page.dataset);
+
+    if (page.classList.contains('mm-opened')) {
+      mm.style.display = 'block';
+    } else {
+      mm.style.display = 'none';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const page = document.querySelector('#page > header');
+    page.dataset.mm_opened = '';
+    page.classList.remove('mm-opened');
+    reloadMegaMenu();
+    let navigationItems = document.querySelectorAll('.menu-item-dropdown');
+    navigationItems.forEach(function(item) {
+      item.addEventListener('mouseenter', function(event) {
         setMegaMenuOpened(false, null);
-	event.target.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
-	  item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
-	});
+        page.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
+          item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
+        });
+        setMegaMenuOpened(true, event.target.dataset.identifier);  
+        event.target.querySelector(".dropdown-arrow")?.classList.add('rotate-180');
       });
     });
+
+    page.addEventListener('mouseleave', function(event) {
+      setMegaMenuOpened(false, null);
+      event.target.querySelectorAll('.menu-item-dropdown').forEach(function(item) {
+        item.querySelector(".dropdown-arrow")?.classList.remove('rotate-180');
+      });
+    });
+  });
 
   // place bottom margin to the body to avoid the content to be hidden by the fixed header
   document.addEventListener('DOMContentLoaded', function() {
@@ -334,11 +402,11 @@
       menuLightLogo.style.display = 'none';
       menuDarkLogo.style.display = 'block';
       header.forEach(function(h) {
-	if (displayMode == 'hidden') {
-		h.style = "transform: translateY(-200%);";
-	} else {
-		h.style = "transform: translateY(0%);";
-	}
+        if (displayMode == 'hidden') {
+          h.style = "transform: translateY(-100%);";
+        } else {
+          h.style = "transform: translateY(0%);";
+        }
         h.classList.add('bg-white');
         h.classList.remove('bg-opacity-0');
         h.classList.remove('[&>*]:!text-white');
@@ -351,36 +419,36 @@
       return;
     }
 
-    if (window.scrollY > 0) {
-      darkLogo.style.display = 'block';
-      lightLogo.style.display = 'none';
-      menuDarkLogo.style.display = 'block';
-      menuLightLogo.style.display = 'none';
-      header.forEach(function(h) {
-	if (displayMode == 'hidden') {
-		h.style = "transform: translateY(-200%);";
-	} else {
-		h.style = "transform: translateY(0%);";
-	}
-        h.classList.add('bg-white');
-        h.classList.remove('bg-opacity-0');
-        h.classList.remove('[&>*]:!text-' + tint);
-        h.classList.add('text-neutral-sgray');
-        h.classList.add('[&>*]:stroke-neutral-sgray');
-        h.classList.add('[&>*]:fill-neutral-sgray');
-        h.classList.remove('[&>*]:stroke-' + tint);
-      });
-    } else {
-      darkLogo.style.display = isLight ? 'none' : 'block';
-      lightLogo.style.display = isLight ? 'block' : 'none';
-      menuDarkLogo.style.display = isLight ? 'none' : 'block';
-      menuLightLogo.style.display = isLight ? 'block' : 'none';
-      header.forEach(function(h) {
-	if (displayMode == 'hidden') {
-		h.style = "transform: translateY(-200%);";
-	} else {
-		h.style = "transform: translateY(0%);";
-	}
+      if (window.scrollY > 0) {
+        darkLogo.style.display = 'block';
+        lightLogo.style.display = 'none';
+        menuDarkLogo.style.display = 'block';
+        menuLightLogo.style.display = 'none';
+        header.forEach(function(h) {
+          if (displayMode == 'hidden') {
+            h.style = "transform: translateY(-200%);";
+          } else {
+            h.style = "transform: translateY(0%);";
+          }
+          h.classList.add('bg-white');
+          h.classList.remove('bg-opacity-0');
+          h.classList.remove('[&>*]:!text-' + tint);
+          h.classList.add('text-neutral-sgray');
+          h.classList.add('[&>*]:stroke-neutral-sgray');
+          h.classList.add('[&>*]:fill-neutral-sgray');
+          h.classList.remove('[&>*]:stroke-' + tint);
+        });
+      } else {
+        darkLogo.style.display = isLight ? 'none' : 'block';
+        lightLogo.style.display = isLight ? 'block' : 'none';
+        menuDarkLogo.style.display = isLight ? 'none' : 'block';
+        menuLightLogo.style.display = isLight ? 'block' : 'none';
+        header.forEach(function(h) {
+        if (displayMode == 'hidden') {
+          h.style = "transform: translateY(-200%);";
+        } else {
+          h.style = "transform: translateY(0%);";
+        }
         h.classList.remove('bg-white');
         h.classList.remove('bg-' + tint)
         h.classList.add('bg-opacity-0');
