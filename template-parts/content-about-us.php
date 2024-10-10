@@ -155,26 +155,32 @@
   $years = [
     [
       'year' => '2019',
+      'title' => 'A Call to Action',
       'paragraph' => 'Our journey starts with a call to action – to modernize how information flows between industry and regulators.',
     ],
     [
       'year' => '2020',
+      'title' => 'Formation and Foundation',
       'paragraph' => 'Accumulus forms as a nonprofit technology developer – backed by 10 Sponsors – to build a transformative collaboration platform.',
     ],
     [
       'year' => '2021',
+      'title' => 'Engaging with Regulators',
       'paragraph' => 'We engage with national regulators to advance our mission of accelerating critical therapies to citizens of the world.',
     ],
     [
       'year' => '2022',
+      'title' => 'Growing Stronger',
       'paragraph' => 'Accumulus adds two more life sciences Sponsors and begins staffing a workforce with more than 30 full-time employees.'
     ],
     [
       'year' => '2023',
+      'title' => 'Expanding our Reach',
       'paragraph' => 'Our organization grows to over 70 full-time employees to support our platform’s development and we launch the Regulator Forum.'
     ],
     [
       'year' => '2024',
+      'title' => 'Platform Launch',
       'paragraph' => 'Accumulus launches version one of its cloud platform to improve how drug developers and regulators interact internationally.'
     ],
   ];
@@ -194,7 +200,10 @@
               <?php foreach ($years as $index=>$year) { ?>
                 <div class="flex flex-col w-full lg:gap-s10 lg:gap-s6 gap-s2 basis-full shrink-0 slider-content-element">
                   <h2 id="slide-title-<?php echo $index; ?>" class="heading-1 slide-title" data-order="<?php echo $index; ?>"><?php echo $year['year']; ?></h2>
-                  <p id="slide-paragraph-<?php echo $index; ?>" class="heading-3 slide-paragraph pe-s4" data-order="<?php echo $index; ?>"><?php echo $year['paragraph']; ?></p>
+                  <p id="slide-paragraph-<?php echo $index; ?>" style="font-weight: 400;" class="heading-3 slide-paragraph pe-s4" data-order="<?php echo $index; ?>">
+                    <span class="block !font-bold pb-s2" style="font-weight: 500 !important;"><?php echo $year['title']; ?></span>
+                    <?php echo $year['paragraph']; ?>
+                  </p>
                 </div>
               <?php } ?>
             </div>

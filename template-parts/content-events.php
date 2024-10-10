@@ -85,11 +85,11 @@
   
       <div class="filters col-span-12 pt-0 pb-s8 md:pt-s2 md:pb-s10 lg:pt-s4 lg:pb-s8 flex justify-center w-full flex-wrap gap-s2 md:gap-s4 text-neutral-sgray">
     
-        <input type="hidden" id="category" value="0" data-catName="Last Articles">
+        <input type="hidden" id="category" value="2" data-catName="Last Articles">
         
-        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s3 heading-4 text-center rounded-button uppercase bg-neutral-dgray active-filter">All</a>
+        <a href="javascript:void(0)" data-id="0" data-name="All" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray">All</a>
         <a href="javascript:void(0)" data-id="1" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray">Past events</a>
-        <a href="javascript:void(0)" data-id="2" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray">Upcoming events</a>
+        <a href="javascript:void(0)" data-id="2" class="col-span-6 w-auto flex items-center justify-center h-[38px] px-s2 lg:px-s3 heading-4 text-center rounded-button uppercase btn-text-link text-neutral-sgray active-filter">Upcoming events</a>
           
       </div>
 

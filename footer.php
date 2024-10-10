@@ -20,7 +20,7 @@
       <div class="grid grid-cols-12 gap-x-s3 gap-y-s12">
         <div class="flex-col items-start justify-between h-full gap-s7 flex col-span-12 col-start-1 row-start-1 md:col-span-5 md:col-start-1 md:row-start-1 lg:col-span-3 lg:col-start-1 lg:row-start-1">
           <p class="flex-1 whitespace-nowrap font-normal">
-            Accumulus Synergy <br/>
+            Accumulus Synergy® <br/>
             A Nonprofit Industry  <br class="hidden lg:block"/>
             Association
           </p>

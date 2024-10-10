@@ -939,6 +939,14 @@ video {
   top: 1rem;
 }
 
+.right-s2 {
+  right: 1rem;
+}
+
+.right-s5 {
+  right: 2.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -965,6 +973,10 @@ video {
 
 .z-\[999\] {
   z-index: 999;
+}
+
+.z-\[9999\] {
+  z-index: 9999;
 }
 
 .order-last {
@@ -1161,6 +1173,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .aspect-square {
@@ -2247,6 +2263,17 @@ video {
   line-height: 1.25rem;
 }
 
+.text-ctaMobile {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.\!font-bold {
+  font-weight: 700 !important;
+}
+
 .\!font-medium {
   font-weight: 500 !important;
 }
@@ -2346,6 +2373,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-100 {
@@ -4560,10 +4591,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-height: 100%;
   }
 
-  .md\:min-h-screen {
-    min-height: 100vh;
-  }
-
   .md\:w-1\/3 {
     width: 33.333333%;
   }
@@ -4682,6 +4709,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:gap-s4 {
     gap: 2rem;
+  }
+
+  .md\:gap-s5 {
+    gap: 2.5rem;
   }
 
   .md\:gap-s6 {
@@ -5031,6 +5062,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:text-h8Tablet {
     font-size: 11.25rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .md\:text-ctaTablet {
+    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -5519,6 +5557,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-bottom: 3rem;
   }
 
+  .lg\:px-s4 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -5721,6 +5764,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:text-h8 {
     font-size: 8.75rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .lg\:text-cta {
+    font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
