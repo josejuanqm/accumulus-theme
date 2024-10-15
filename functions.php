@@ -957,11 +957,12 @@ function getEvents() {
 
                 $date = get_field( 'date_event', $posts[0]->ID );
                 $file = get_field( 'metting_summary_2', $posts[0]->ID );
+                $detail_view_enabled = get_field( 'detail_view_enabled', $posts[0]->ID );
                 $text_cta_download_file = get_field( 'text_cta_download_file', $posts[0]->ID );
 								$field = $posts[0]->ID;
                 $dateEvent = DateTime::createFromFormat( 'Ymd', $date );
 
-		//$html .= implode(wp_get_object_terms($posts[0]->ID, $taxonomies, array("fields" => 'slugs')));
+				//$html .= implode(wp_get_object_terms($posts[0]->ID, $taxonomies, array("fields" => 'slugs')));
                 $html .= '<div class="relative col-span-12 max-md:flex max-md:flex-col md:grid md:grid-cols-12 md:gap-s2 items-center bg-neutral-offwhite text-neutral-dgray rounded-miniCard overflow-hidden '. $categorySlug . ' ' . (($today <= $date) ? ' opacity-100' : ' opacity-50') . '">';
                 $html .= '<div class="max-md:w-full md:col-span-2 flex md:flex-col max-md:order-2 items-center justify-start md:justify-center gap-s2 text-center pt-s4 md:py-0 px-s4 md:px-0 md:pl-s2">';
                 $html .= '<h5 class="text-h2Mobile md:text-h2Tablet lg:text-h2">'. $dateEvent->format( 'j' ) .'</h5>';
@@ -980,7 +981,9 @@ function getEvents() {
                 $html .= '</span>';
                 $html .= '<h3 class="text-h10">'. get_the_title($posts[0]->ID) .'</h3>';
 								$html .= '<p class="body-2 lg:max-w-[460px]">'. get_the_excerpt($posts[0]->ID) .'</p>';
-								if ($file) {
+								if ($detail_view_enabled) {
+									$html .= '<a href="'.get_permalink($posts[0]->ID).'" class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2"><span>See More</span></a>';
+								} else if ($file) {
 									$html .= '<a class="uppercase heading-4 text-neutral-dgray flex items-center gap-s2" href="'.$file['url'].'" target="_blank" download><span>'.($text_cta_download_file ?? 'Download Meeting Summary').'</span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.7009 8.01855V11.0175H2.20313V8.01855H0.703125V11.0175V12.5175H14.2009V11.0175V8.01855H12.7009Z" fill="#444444"/>
 											<path d="M6.70167 7.39582V0.51795H8.20057V7.3925L10.3172 5.27589L11.3766 6.33531L8.20057 9.51243V9.51465H6.70167L3.52344 6.33531L4.58285 5.27589L6.70167 7.39582Z" fill="#444444"/>
@@ -1216,7 +1219,7 @@ add_action( 'acf/include_fields', function() {
 	}
 
 	add_mega_menu_items();
-
+	
 	acf_add_local_field_group( array(
 		'key' => 'group_6706f0698cf7c',
 		'title' => 'Announcement bar',
@@ -3256,6 +3259,19 @@ add_action( 'acf/include_fields', function() {
 				'min_size' => '',
 				'max_size' => '',
 				'mime_types' => '',
+			),
+			array(
+				'key' => 'detail_view_field',
+				'label' => 'Has detail view',
+				'name' => 'detail_view_enabled',
+				'aria-label' => '',
+				'type' => 'true_false',
+				'message' => 'Detail view enabled',
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
 			),
 		),
 		'location' => array(
@@ -15684,20 +15700,18 @@ add_action( 'acf/include_fields', function() {
     'instruction_placement' => 'label',
     'hide_on_screen' => array(
       0 => 'the_content',
-			1 => 'excerpt',
-			2 => 'discussion',
-			3 => 'comments',
-			4 => 'slug',
-			5 => 'author',
-			6 => 'featured_image',
+      1 => 'excerpt',
+      2 => 'discussion',
+      3 => 'comments',
+	  4 => 'slug',
+	  5 => 'author',
+	  6 => 'featured_image',
     ),
     'active' => true,
     'description' => '',
     'show_in_rest' => 1,
   ) );
 } );
-
-
 
 
 /* 
@@ -15721,34 +15735,15 @@ add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax
 	$confirmation .= GFCommon::get_inline_script_tag( "window.open('$url', '_blank');" );
 
 	return $confirmation;
-}, 10, 4 );
+}, 10, 4 );}
 
-add_filter('pre_set_site_transient_update_themes', 'automatic_GitHub_updates', 100, 1);
-function automatic_GitHub_updates($data) {
-	// Theme information
-	$theme   = get_stylesheet(); // Folder name of the current theme
-	$current = wp_get_theme()->get('Version'); // Get the version of the current theme
-	// GitHub information
-	$user = 'josejuanqm'; // The GitHub username hosting the repository
-	$repo = 'accumulus-theme'; // Repository name as it appears in the URL
-	// Get the latest release tag from the repository. The User-Agent header must be sent, as per
-	// GitHub's API documentation: https://developer.github.com/v3/#user-agent-required
-	$file = @json_decode(@file_get_contents('https://api.github.com/repos/'.$user.'/'.$repo.'/releases/latest', false,
-		stream_context_create(['http' => ['header' => "User-Agent: ".$user."\r\n"]])
-	));
-	if($file) {
-		$update = filter_var($file->tag_name, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-		// Only return a response if the new version number is higher than the current version
-		if($update > $current) {
-			$data->response[$theme] = array(
-				'theme'       => $theme,
-				// Strip the version number of any non-alpha characters (excluding the period)
-				// This way you can still use tags like v1.1 or ver1.1 if desired
-				'new_version' => $update,
-				'url'         => 'https://github.com/'.$user.'/'.$repo,
-				'package'     => $file->assets[0]->browser_download_url,
-			);
-		}
-	}
-	return $data;
-}
+add_filter( 'single_template', function( $template ) {
+    global $post;
+    if ( $post->post_type === 'event' ) {
+        $locate_template = locate_template( "single-event.php" );
+        if ( ! empty( $locate_template ) ) {
+            $template = $locate_template;
+        }
+    }
+    return $template;
+} );
