@@ -230,7 +230,7 @@ function getResources() {
 	$args = array(
 		'post_type' => 'resource-cms',
 		'post_status' => 'publish',
-        'offset' => $offset,
+		'offset' => $offset,
 		'posts_per_page' => $per_page,
 		'order' => 'DESC',
 	);

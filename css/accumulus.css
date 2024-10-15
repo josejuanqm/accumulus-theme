@@ -919,6 +919,10 @@ video {
   right: 0px;
 }
 
+.right-s5 {
+  right: 2.5rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -937,14 +941,6 @@ video {
 
 .top-s2 {
   top: 1rem;
-}
-
-.right-s2 {
-  right: 1rem;
-}
-
-.right-s5 {
-  right: 2.5rem;
 }
 
 .isolate {
@@ -971,12 +967,12 @@ video {
   z-index: 999999;
 }
 
-.z-\[999\] {
-  z-index: 999;
-}
-
 .z-\[9999\] {
   z-index: 9999;
+}
+
+.z-\[999\] {
+  z-index: 999;
 }
 
 .order-last {
@@ -1171,12 +1167,12 @@ video {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-square {
@@ -1849,6 +1845,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
+.bg-ebooks-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png');
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -2202,6 +2202,13 @@ video {
   font-weight: 500;
 }
 
+.text-ctaMobile {
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
 .text-h10 {
   font-size: 1.625rem;
   line-height: 120%;
@@ -2261,13 +2268,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-ctaMobile {
-  font-size: 1.125rem;
-  line-height: 120%;
-  letter-spacing: 0;
-  font-weight: 500;
 }
 
 .\!font-bold {
@@ -5004,6 +5004,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     font-weight: 500;
   }
 
+  .md\:text-ctaTablet {
+    font-size: 1.625rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
   .md\:text-h1Tablet {
     font-size: 4.5rem;
     line-height: 106%;
@@ -5062,13 +5069,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .md\:text-h8Tablet {
     font-size: 11.25rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    font-weight: 500;
-  }
-
-  .md\:text-ctaTablet {
-    font-size: 1.625rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
@@ -5522,6 +5522,11 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     padding-right: 1.5rem;
   }
 
+  .lg\:px-s4 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:py-s10 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -5555,11 +5560,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   .lg\:py-s6 {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .lg\:px-s4 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .lg\:pb-0 {
@@ -5720,6 +5720,13 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     font-weight: 400;
   }
 
+  .lg\:text-cta {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
   .lg\:text-h1 {
     font-size: 5.938rem;
     line-height: 106%;
@@ -5764,13 +5771,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:text-h8 {
     font-size: 8.75rem;
-    line-height: 120%;
-    letter-spacing: 0;
-    font-weight: 500;
-  }
-
-  .lg\:text-cta {
-    font-size: 1.125rem;
     line-height: 120%;
     letter-spacing: 0;
     font-weight: 500;
