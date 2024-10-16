@@ -1809,6 +1809,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-citations-mobile.png');
 }
 
+.bg-ebooks-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png');
+}
+
 .bg-events-general {
   background-image: url('/wp-content/themes/accumulus-website/images/events/bg-default-events.png');
 }
@@ -1843,10 +1847,6 @@ video {
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
-.bg-ebooks-general {
-  background-image: url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png');
 }
 
 .bg-contain {
@@ -5308,12 +5308,24 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 100%;
   }
 
+  .lg\:\!min-w-\[180px\] {
+    min-width: 180px !important;
+  }
+
   .lg\:min-w-0 {
     min-width: 0px;
   }
 
   .lg\:min-w-\[64px\] {
     min-width: 64px;
+  }
+
+  .lg\:\!min-w-\[170px\] {
+    min-width: 170px !important;
+  }
+
+  .lg\:\!min-w-\[130px\] {
+    min-width: 130px !important;
   }
 
   .lg\:max-w-\[368px\] {
