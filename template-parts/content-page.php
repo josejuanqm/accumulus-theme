@@ -332,7 +332,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'statics_home_layout') : ?>
 
-<section class="section relative w-full pt-s10 lg:pt-s12 bg-neutral-nude">
+<section id="statics_home_layout" class="section relative w-full pt-s10 lg:pt-s12 bg-neutral-nude">
   <div class="container mx-auto">
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s4 md:pb-s6">
@@ -408,7 +408,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'quote_home_layout') : ?>
 
-<section
+<section id="quote_home_layout"
   class="relative section py-s10 lg:py-s20 bg-quote-home-mobile md:bg-quote-home-tablet lg:bg-quote-home-desktop bg-no-repeat bg-cover bg-center">
   <div class="container max-w-[1170px] mx-auto">
     <h2 class="heading-2"><?php echo $row['quote_group']['resume'] ?></h2>
@@ -424,7 +424,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'how_it_works_home_layout') : ?>
 
-<section
+<section id="how_it_works_home_layout"
   class="relative section py-s8 md:py-s12 lg:py-s10 bg-secondary-carbon bg-how-works-home-mobile md:bg-how-works-home-tablet lg:bg-how-works-home-desktop bg-no-repeat bg-center bg-cover">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
@@ -496,7 +496,8 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'single_testimonial_home_layout') : ?>
 
-<section class="relative section w-full pt-s8 md:pt-s12 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12">
+<section id="single_testimonial_home_layout"
+  class="relative section w-full pt-s8 md:pt-s12 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-x-s2 md:gap-y-s10">
       <h3 class="col-span-6 md:col-span-10 lg:col-span-9 heading-3 text-neutral-dgray">
@@ -529,7 +530,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'what_we_do_home_layout') : ?>
 
-<section
+<section id="what_we_do_home_layout"
   class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s16 lg:pt-s20 pb-s14 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-tablet lg:bg-what-we-do-desktop bg-transparent">
 
   <div class="container mx-auto md:pt-s14 lg:pt-s14 lg:pb-s14">
@@ -579,7 +580,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'mission_challenges_layout'): ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 lg:pb-s6 bg-neutral-nude">
+<section id="mission_challenges_layout" class="relative section w-full pt-s12 md:pt-s10 lg:pb-s6 bg-neutral-nude">
   <div class="container mx-auto">
 
     <?php if($row['acf_fc_layout'] == 'mission_challenges_layout') : ?>
@@ -627,7 +628,7 @@ foreach($website_sections as $row) :
 
 <?php if( $row['acf_fc_layout'] == 'better_way_platform_layout'): ?>
 
-<section class="relative section w-full pt-s10 md:pt-s12 pb-s10 bg-neutral-nude">
+<section id="better_way_platform_layout" class="relative section w-full pt-s10 md:pt-s12 pb-s10 bg-neutral-nude">
   <div class="container mx-auto">
 
     <?php if($row['acf_fc_layout'] == 'better_way_platform_layout') : ?>
@@ -673,7 +674,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'case_study_platform_layout') : ?>
 
-<section class="section relative w-full py-s10 bg-secondary-aqua flex flex-col gap-s9">
+<section id="case_study_platform_layout" class="section relative w-full py-s10 bg-secondary-aqua flex flex-col gap-s9">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:py-s6 md:py-s8">
       <h4 class="col-span-12 heading-4 uppercase"><?php echo $row['case_study_group']['eyebrown']; ?></h4>
@@ -759,7 +760,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'benefits_platform_layout') : ?>
 
-<section
+<section id="benefits_platform_layout"
   class="relative section w-full pt-s8 md:pt-s12 pb-s8 md:pb-s12 bg-primary-glaciar bg-benefits-mobile md:bg-benefits-tablet lg:bg-benefits-desktop bg-cover bg-no-repeat bg-left-bottom">
   <div class="container mx-auto flex flex-col gap-s8 md:gap-s10 lg:gap-s8">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s4">
@@ -786,7 +787,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'key_features_platform_layout') : ?>
 
-<section class="relative section py-s8 md:py-s12 lg:py-s10 bg-primary-violet ">
+<section id="key_features_platform_layout" class="relative section py-s8 md:py-s12 lg:py-s10 bg-primary-violet ">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s5 md:gap-y-s6 lg:gap-y-s13 text-neutral-nwhite">
       <h2 class="col-span-6 md:col-span-12 heading-1"><?php echo $row['key_features_group']['title']; ?></h2>
@@ -847,7 +848,8 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'value_proposition_platform_layout') : ?>
 
-<section class="relative section w-full pt-s13 md:pt-s12 lg:pt-s8 pb-s4 md:pb-s6 lg:pb-s12">
+<section id="value_proposition_platform_layout"
+  class="relative section w-full pt-s13 md:pt-s12 lg:pt-s8 pb-s4 md:pb-s6 lg:pb-s12">
 
   <div class="container mx-auto">
     <?php if($row['value_propositions_group']) : ?>
@@ -877,7 +879,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'values_list_platform_layout') : ?>
 
-<section class="relative section w-full pt-s10 lg:pb-s10">
+<section id="values_list_platform_layout" class="relative section w-full pt-s10 lg:pb-s10">
 
 
   <?php if($row['eyebrown'] !== ''): ?>
@@ -1033,7 +1035,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'envision_block_about_us_layout') : ?>
 
-<section
+<section id="envision_block_about_us_layout"
   class="relative section w-full pt-s5 md:pt-s10 pb-s8 md:pb-s12 -mt-[2.3rem] md:-mt-s10 lg:-mt-s10  bg-primary-glaciar bg-about-envision-mobile md:bg-about-envision-tablet lg:bg-about-envision-desktop bg-cover bg-no-repeat bg-left-bottom">
   <div class="container mx-auto flex flex-col gap-s8 md:gap-s10 lg:gap-s8">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s6">
@@ -1120,7 +1122,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'what_we_do_about_us_layout') : ?>
 
-<section
+<section id="what_we_do_about_us_layout"
   class="what-we-do-home relative z-10 section w-full pt-s10 md:pt-s20 lg:pt-s20 pb-s14 md:pb-s20 lg:pb-s12 -mt-s10 lg:-mt-s12 bg-cover bg-no-repeat bg-center bg-what-we-do-mobile md:bg-what-we-do-about-tablet lg:bg-what-we-do-desktop bg-transparent">
 
   <div class="container mx-auto md:pt-s1 lg:pt-s18 pb-s1 lg:pb-s18">
@@ -1153,7 +1155,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'culture_pillars_careers_layout') : ?>
 
-<section class="section">
+<section id="culture_pillars_careers_layout" class="section">
   <div class="container mx-auto px-s2 flex flex-col items-stretch">
     <div class="flex flex-col items-stretch py-s8 md:py-s12 gap-s4 md:gap-s6">
       <h2 class="heading-1"><?php echo $row['culture_pillars_group']['title']; ?></h2>
@@ -1188,7 +1190,8 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'why_accumulus_careers_layout') : ?>
 
-<section class="section relative w-full py-s8 md:py-s10 lg:py-s12 bg-neutral-offwhite">
+<section id="why_accumulus_careers_layout"
+  class="section relative w-full py-s8 md:py-s10 lg:py-s12 bg-neutral-offwhite">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 pb-s8 md:pb-s6">
       <h2 class="grid grid-cols-12 grid-rows-2 col-span-12 heading-1 text-neutral-dgray">
@@ -1263,7 +1266,8 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'testimonial_slider_careers_layout') : ?>
 
-<section class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
+<section id="testimonial_slider_careers_layout"
+  class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
   <div class="relative container mx-auto">
 
     <h4 class="heading-4 pb-s4 md:pb-s6">TESTIMONIALS</h4>
@@ -1319,7 +1323,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'citations_case_for_change_layout') : ?>
 
-<section
+<section id="citations_case_for_change_layout"
   class="relative section w-full pt-s8 md:pt-s10 lg:pt-s12 pb-s8 md:pb-s10 lg:pb-s12 bg-neutral-dgray text-neutral-nwhite bg-citation-mobile md:bg-citation-tablet lg:bg-citation-desktop bg-no-repeat bg-contain bg-right-top">
   <div class="container mx-auto">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s4 md:gap-y-s10 lg:gap-y-s6">
@@ -1349,7 +1353,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'contact_form_contact_us_layout') : ?>
 
-<section
+<section id="contact_form_contact_us_layout"
   class="translucent-navigation relative section w-full pb-s8 md:pb-s7 lg:pb-s12 min-h-full bg-cover lg:bg-contain bg-left-bottom lg:bg-left-top bg-no-repeat"
   style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/contact/bg-contact.png);">
 
@@ -1429,7 +1433,7 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'benefits_core_capabilities_layout') : ?>
 
-<section
+<section id="benefits_core_capabilities_layout"
   class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac max-lg:!pr-0 max-md:!pr-s2">
   <div class="container mx-auto px-s4 md:px-0 lg:px-0">
     <div class="flex flex-col gap-s8">
@@ -1490,7 +1494,8 @@ if($join_the_forum):
 
 ?>
 
-<section class="relative section w-full pt-s8 md:pt-s10 pb-s8 md:pb-s12 bg-neutral-nwhite">
+<section id="join_the_forum_get_started_layout"
+  class="relative section w-full pt-s8 md:pt-s10 pb-s8 md:pb-s12 bg-neutral-nwhite">
   <div class="container mx-auto px-s2 md:px-0">
     <div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-y-s5 gap-x-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
 
@@ -1543,7 +1548,7 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
 	if($benefits):
 ?>
 
-<section class="section relative w-full bg-neutral-nude">
+<section id="benefits_get_started_layout" class="section relative w-full bg-neutral-nude">
   <div class="container mx-auto">
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s4 pt-s10 md:pt-s12 md:pb-s6">
@@ -1594,7 +1599,7 @@ endif;
 if($row['acf_fc_layout'] == 'ready_to_join_us_get_started_layout') :
 ?>
 
-<section
+<section id="ready_to_join_us_get_started_layout"
   class="relative section w-full pt-s12 pb-s12 bg-neutral-nude bg-get-started-section-mobile md:bg-get-started-section-tablet lg:bg-get-started-section-desktop bg-cover bg-no-repeat bg-center">
   <div class="container mx-auto">
 
@@ -1637,7 +1642,7 @@ $quote = $row['quote_group'];
 if($quote):
 ?>
 
-<section
+<section id="quote_regulator_forum_layout"
   class="relative section py-s8 md:py-s12 lg:py-s10 bg-purple-300 bg-regulator-quote-mobile md:bg-regulator-quote-tablet lg:bg-regulator-quote-desktop bg-cover bg-current bg-no-repeat">
   <div class="container mx-auto px-s2 lg:px-0">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s2">
@@ -1672,7 +1677,8 @@ $repeater = $regulatory_authorities['list_authorities'];
 $order = array();
 
 ?>
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite">
+<section id="regulatory_authorities_regulator_forum_layout"
+  class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-offwhite">
   <div class="container mx-auto px-s2 lg:px-0">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s2 md:gap-s6">
 
@@ -1753,7 +1759,8 @@ $participation_looks = $row['participation_looks_group'];
 if($participation_looks): 
 
 ?>
-<section class="relative section w-full pt-s8 md:pt-s12 lg:pt-s14 pb-s10 md:pb-s12">
+<section id="participation_looks_regulator_forum_layout"
+  class="relative section w-full pt-s8 md:pt-s12 lg:pt-s14 pb-s10 md:pb-s12">
   <div class="container mx-auto px-s2 md:px-0">
     <div class="grid grid-cols-6 md:grid-cols-12 gap-s8 md:gap-y-s11">
 
@@ -1799,7 +1806,8 @@ if($join_the_forum):
 
 ?>
 
-<section class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
+<section id="join_the_forum_regulator_forum_layout"
+  class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-neutral-nwhite">
   <div class="container mx-auto px-s2 md:px-0">
     <div class="grid grid-cols-6 md:grid-cols-12 lg:grid-cols-12 gap-s2 md:gap-x-s2 md:gap-s10 lg:gap-s12">
 
@@ -1851,7 +1859,7 @@ endif;
   $teamLeadership = get_field('team-list', 'option');
 ?>
 
-<section class="section py-s8 md:py-s10 lg:py-s13">
+<section id="leadership_team_layout" class="section py-s8 md:py-s10 lg:py-s13">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s4 lg:gap-y-s10">
 
@@ -1913,7 +1921,7 @@ endif;
   $teamDirectors = get_field('team-directors', 'option');
 ?>
 
-<section class="section py-s8 md:py-s10 bg-neutral-offwhite">
+<section id="directors_team_layout" class="section py-s8 md:py-s10 bg-neutral-offwhite">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s4 lg:gap-y-s10">
       <div class="flex flex-col items-start gap-s4 lg:gap-s3 col-span-12 md:col-span-9 lg:col-span-6">
@@ -2014,7 +2022,8 @@ $form_access_content = $row['form_access_group'];
   if($carreers_footer):
 ?>
 
-<section class="section bg-neutral-900 py-s7 md:py-s12 relative isolate overflow-hidden">
+<section id="join_our_team_careers_layout"
+  class="section bg-neutral-900 py-s7 md:py-s12 relative isolate overflow-hidden">
   <picture class="absolute top-0 left-0 w-full h-full -z-10">
     <source media="(min-width:1024px)"
       srcset="<?php echo get_template_directory_uri() . "/images/careers-footer/careers-footer-bg.jpg"; ?>">
@@ -2092,7 +2101,8 @@ $obj = json_decode($json);
 }
 </style>
 
-<section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
+<section id="open_roles_careers_layout"
+  class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
   <div class="container mx-auto px-s4 lg:px-0">
     <div class="flex flex-col gap-s8">
       <h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Open Roles</h2>
@@ -2150,10 +2160,6 @@ $obj = json_decode($json);
 
 <?php if($row['acf_fc_layout'] == 'time_line_about_us_layout') : ?>
 
-<?php 
-  //$open_roles_group = $row['open_roles_group'];
-  //if($open_roles_group):
-?>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
@@ -2587,12 +2593,165 @@ function animatePrev(duration = animationDuration) {
 </script>
 
 <?php
-	//endif;
 	endif; 
 ?>
 
-<?php //if($row['acf_fc_layout'] == '') : ?>
-<?php //endif; ?>
+<?php if($row['acf_fc_layout'] == 'related_resources_home_layout') : ?>
+
+<?php 
+$related_resources_group = $row['related_resources_group'];
+if($related_resources_group):
+?>
+
+<section id="related_resources_group"
+  class="relative section w-full pt-s12 md:pt-s10 pb-s10 md:pb-s12 bg-secondary-lilac">
+  <div class="container mx-auto">
+    <div class="flex flex-col gap-s8">
+      <h2 class="w-full heading-2"><?php echo $related_resources_group['title']; ?></h2>
+      <div class="relative w-full">
+        <div class="related">
+          <?php 
+
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'resource-cms' ),
+              'posts_per_page'         => '9',
+              'post__not_in' => array( get_the_ID() )
+            );
+
+            // The Query
+            $query = new WP_Query( $args );
+            // The Loop
+            if ( $query->have_posts() ) {
+              while ( $query->have_posts() ) {
+                $query->the_post();
+
+								$category = '';
+								$categorySlug = '';
+								$post_type = get_post_type(get_the_ID());   
+								$taxonomies = get_object_taxonomies($post_type);   
+								$taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names")); 
+								if(!empty($taxonomy_names)) :
+									foreach($taxonomy_names as $tax_name) : ?>
+          <?php 
+												$category = $tax_name; 
+												$categorySlugs = str_replace(' ', '-', strtolower($tax_name)); 
+												$categorySlug = str_replace('&amp;', '', strtolower($categorySlugs));
+											?>
+          <?php endforeach;
+								endif;
+                
+            //for($i=1;$i<7;$i++): 
+          ?>
+          <div class="card relative w-full max-w-[370px] rounded-card overflow-hidden mx-2">
+
+            <a href="<?php the_permalink(); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
+
+            <div
+              class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+
+              <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+
+              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+              <img class="block" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
+
+              <?php 
+								else :
+									if ($categorySlug === 'e-books--white-papers'): 
+								?>
+
+              <div
+                class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png"
+                  class="w-full md:w-full h-full object-cover" />
+              </div>
+
+              <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+
+              <div
+                class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png"
+                  class="w-full md:w-full h-full object-cover" />
+              </div>
+
+              <?php elseif ($categorySlug == 'thought-leadership'): ?>
+
+              <div
+                class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+                <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png"
+                  class="w-full md:w-full h-full object-cover" />
+              </div>
+              <?php endif; ?>
+              <?php endif; ?>
+
+            </div>
+
+            <div class="flex flex-col p-7 gap-2 bg-neutral-nwhite lg:min-h-[152px]">
+              <div class="flex items-center gap-3 text-primary-violet uppercase">
+                <?php if ($categorySlug == 'thought-leadership'): ?>
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z"
+                    class="fill-current" />
+                </svg>
+                <?php elseif ($categorySlug == 'regulatory-insights'): ?>
+                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z"
+                    class="fill-current" />
+                  <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+                  <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+                  <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+                  <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+                  <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+                </svg>
+                <?php elseif ($categorySlug == 'e-books--white-papers'): ?>
+                <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z"
+                    class="fill-current" />
+                  <path
+                    d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z"
+                    class="fill-current" />
+                </svg>
+                <?php endif; ?>
+                <?php echo $category; ?>
+              </div>
+              <h3 class="heading-6 color-neutral-dgray"><?php the_title(); ?></h3>
+            </div>
+
+          </div>
+          <?php 
+              //endfor; 
+                }
+              } else {
+                // no posts found
+              }
+
+              // Restore original Post Data
+              wp_reset_postdata();
+            ?>
+        </div>
+
+        <div class="max-xl:flex max-xl:items-center max-xl:justify-center max-xl:gap-4 max-sm:pt-s6 max-xl:pt-s10">
+          <div class="prev xl:absolute xl:-left-20 xl:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square rotate-180"
+              src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+          <div class="next xl:absolute xl:-right-20 xl:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square"
+              src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php 
+		endif;
+	endif; 
+?>
 
 <?php //if($row['acf_fc_layout'] == '') : ?>
 <?php //endif; ?>
