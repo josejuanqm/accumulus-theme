@@ -2047,6 +2047,558 @@ $form_access_content = $row['form_access_group'];
 endif; 
 ?>
 
+<!-- End Get free pdf  -->
+
+
+<!-- Open roles - careers -->
+
+<?php if($row['acf_fc_layout'] == 'open_roles_careers_layout') : ?>
+
+<?php 
+  $open_roles_group = $row['open_roles_group'];
+  if($open_roles_group):
+?>
+
+<?php 
+
+$json = file_get_contents('https://boards-api.greenhouse.io/v1/boards/accumulussynergyinc/jobs?content=true');
+$obj = json_decode($json);
+  
+?>
+<style>
+.roles h2,
+.roles p,
+.roles h3:not(.text-h3Mobile),
+.roles ul {
+  display: none;
+}
+
+.roles .content-intro {
+  display: none;
+}
+
+.roles .content-intro+h2+p {
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.roles .content-intro>p+p {
+  display: none;
+}
+</style>
+
+<section class="relative section w-full pt-s12 md:pt-s10 lg:pt-s12 pb-s10 md:pb-s12 bg-secondary-lilac">
+  <div class="container mx-auto px-s4 lg:px-0">
+    <div class="flex flex-col gap-s8">
+      <h2 class="w-full text-h2Mobile md:text-h2Tablet lg:text-h2">Open Roles</h2>
+      <div class="relative w-full">
+        <div class="roles">
+          <?php 
+            foreach($obj->jobs  as $role): 
+          ?>
+          <div class="card relative flex flex-col w-full max-w-[370px] rounded-card overflow-hidden mx-2">
+
+
+            <div
+              class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
+              <img class="block w-full h-full object-cover"
+                src="<?php bloginfo('template_url'); ?>/images/careers/place-roles.png" alt="Lorem Ipsum Dolor" />
+            </div>
+
+            <div class="flex flex-col py-s4 px-s3 gap-2 bg-neutral-nwhite">
+              <h3 class="text-h3Mobile md:text-h6Tablet lg:text-h3 color-neutral-dgray lg:pr-s4">
+                <?php echo $role->title; ?></h3>
+              <div class="body-2 pb-s1">
+                <?php echo html_entity_decode($role->content); ?>
+              </div>
+              <a href="<?php echo $role->absolute_url; ?>" target="_blank"
+                class="btn-primary !w-[190px] !min-w-[190px] mx-auto">Apply Now</a>
+            </div>
+
+          </div>
+          <?php 
+              endforeach; 
+            ?>
+        </div>
+
+        <div class="max-xl:flex max-xl:items-center max-xl:justify-center max-xl:gap-4 max-sm:pt-s6 max-xl:pt-s10">
+          <div class="prevs xl:absolute xl:-left-20 xl:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square rotate-180"
+              src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+          <div class="nexts xl:absolute xl:-right-20 xl:top-1/4 cursor-pointer">
+            <img class="block w-[54px] h-[54px] aspect-square"
+              src="<?php bloginfo('template_url'); ?>/images/arrow.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+	endif;
+	endif; 
+?>
+
+<!-- End Open roles - careers -->
+
+<?php if($row['acf_fc_layout'] == 'time_line_about_us_layout') : ?>
+
+<?php 
+  //$open_roles_group = $row['open_roles_group'];
+  //if($open_roles_group):
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<script>
+gsap.registerPlugin(MotionPathPlugin);
+</script>
+
+<?php
+  $years = [
+    [
+      'year' => '2019',
+      'title' => 'A Call to Action',
+      'paragraph' => 'Our journey starts with a call to action – to modernize how information flows between industry and regulators.',
+    ],
+    [
+      'year' => '2020',
+      'title' => 'Formation and Foundation',
+      'paragraph' => 'Accumulus forms as a nonprofit technology developer – backed by 10 Sponsors – to build a transformative collaboration platform.',
+    ],
+    [
+      'year' => '2021',
+      'title' => 'Engaging with Regulators',
+      'paragraph' => 'We engage with national regulators to advance our mission of accelerating critical therapies to citizens of the world.',
+    ],
+    [
+      'year' => '2022',
+      'title' => 'Growing Stronger',
+      'paragraph' => 'Accumulus adds two more life sciences Sponsors and begins staffing a workforce with more than 30 full-time employees.'
+    ],
+    [
+      'year' => '2023',
+      'title' => 'Expanding our Reach',
+      'paragraph' => 'Our organization grows to over 70 full-time employees to support our platform’s development and we launch the Regulator Forum.'
+    ],
+    [
+      'year' => '2024',
+      'title' => 'Platform Launch',
+      'paragraph' => 'Accumulus launches version one of its cloud platform to improve how drug developers and regulators interact internationally.'
+    ],
+  ];
+?>
+
+<script>
+let years = <?php echo json_encode($years); ?>;
+</script>
+
+<section id="slider"
+  class="translucent-navigation section w-full bg-primary-violet text-neutral-nwhite overflow-hidden py-s12">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6">
+      <div class="relative flex flex-col col-span-12 lg:col-span-6 lg:col-span-6 items-start gap-s3">
+        <h4 class="heading-4 uppercase pt-s1">Our Story</h4>
+        <div class="flex flex-row flex-nowrap overflow-visible w-full">
+          <div id="slider-content-container" class="flex flex-row items-start justify-start w-full basis-full shrink-0">
+            <?php foreach ($years as $index=>$year) { ?>
+            <div class="flex flex-col w-full lg:gap-s10 lg:gap-s6 gap-s2 basis-full shrink-0 slider-content-element">
+              <h2 id="slide-title-<?php echo $index; ?>" class="heading-1 slide-title"
+                data-order="<?php echo $index; ?>"><?php echo $year['year']; ?></h2>
+              <p id="slide-paragraph-<?php echo $index; ?>" style="font-weight: 400;"
+                class="heading-3 slide-paragraph pe-s4" data-order="<?php echo $index; ?>">
+                <span class="block !font-bold pb-s2"
+                  style="font-weight: 500 !important;"><?php echo $year['title']; ?></span>
+                <?php echo $year['paragraph']; ?>
+              </p>
+            </div>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-12 lg:col-span-6 lg:col-span-6 items-start gap-s3">
+        <video id="anim-video" class="mix-blend-screen" width="100%" playsinline autoplay loop muted>
+          <source src="<?php echo get_template_directory_uri() . "/videos/about-us/video-anim.mp4"; ?>"
+            type="video/mp4">
+        </video>
+      </div>
+
+      <div class="grid grid-cols-12 gap-s2 lg:gap-x-s2 lg:gap-x-s2 col-span-12 items-center justify-between">
+        <p class="col-span-12 row-start-1 text-center current-year-indicator heading-4 uppercase"
+          style="transform: translateX(5px);">2005</p>
+        <button onclick="animatePrev()" class="col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 min-w-s7 lg:min-w-0">
+          <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="stroke-neutral-500">
+            <path
+              d="M28.8623 55.7519C43.7885 55.7519 55.8886 43.6518 55.8886 28.7256C55.8886 13.7993 43.7885 1.69922 28.8623 1.69922C13.936 1.69922 1.83594 13.7993 1.83594 28.7256C1.83594 43.6518 13.936 55.7519 28.8623 55.7519Z"
+              stroke-width="1.86732" stroke-miterlimit="10" />
+            <path d="M33.1451 39.7941L22.0781 28.7271L33.1451 17.6602" stroke-width="1.86732" stroke-miterlimit="10" />
+          </svg>
+        </button>
+
+        <span id="slider-prev-label"
+          class="heading-4 text-neutral-sgray col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 uppercase">
+          <?php echo $years[0]['year']; ?>
+        </span>
+
+        <div class="relative flex-1 lg:h-full col-span-12 lg:col-span-8 row-start-2 h-s6" style="
+              -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+              mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+            ">
+          <div class="absolute top-0 left-0 container" id="timeline-container">
+            <div id="slider-canvas"
+              class="flex-1 h-s6 flex-row items-center justify-center flex-nowrap whitespace-nowrap overflow-visible [&>svg]:max-w-none [&>svg]:inline-block [&>svg]:w-full [&>svg]:h-full appearance-none no-scrollbar">
+              <svg viewBox="0 0 789 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="timeline-path-0" d="M0.242188 24.8175H265.127 
+                    C279.271 24.8175 293.374 23.3067 307.197 20.3108
+                    L318.682 17.8216
+                    C327.635 15.8811 336.988 17.2367 345.022 21.6393
+                    V21.6393
+                    C354.41 26.7841 366.147 24.3278 372.684 15.85
+                    L377.068 10.1637
+                    C385.935 -1.33502 403.189 -1.60835 412.416 9.60376
+                    L418.142 16.5627
+                    C424.828 24.6877 436.353 26.8984 445.571 21.8241
+                    V21.8241
+                    C453.776 17.3073 463.353 15.9568 472.488 18.0283
+                    L482.258 20.2442
+                    C495.66 23.2835 509.359 24.8175 523.101 24.8175
+                    H788.539" class="stroke-neutral-nwhite stroke-1" />
+              </svg>
+              <svg viewBox="0 0 789 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="timeline-path" d="M0.242188 24.8175H265.127 
+                    C279.271 24.8175 293.374 23.3067 307.197 20.3108
+                    L318.682 17.8216
+                    C327.635 15.8811 336.988 17.2367 345.022 21.6393
+                    V21.6393
+                    C354.41 26.7841 366.147 24.3278 372.684 15.85
+                    L377.068 10.1637
+                    C385.935 -1.33502 403.189 -1.60835 412.416 9.60376
+                    L418.142 16.5627
+                    C424.828 24.6877 436.353 26.8984 445.571 21.8241
+                    V21.8241
+                    C453.776 17.3073 463.353 15.9568 472.488 18.0283
+                    L482.258 20.2442
+                    C495.66 23.2835 509.359 24.8175 523.101 24.8175
+                    H788.539" class="stroke-neutral-nwhite stroke-1" />
+              </svg>
+              <svg viewBox="0 0 789 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="timeline-path-2" d="M0.242188 24.8175H265.127 
+                    C279.271 24.8175 293.374 23.3067 307.197 20.3108
+                    L318.682 17.8216
+                    C327.635 15.8811 336.988 17.2367 345.022 21.6393
+                    V21.6393
+                    C354.41 26.7841 366.147 24.3278 372.684 15.85
+                    L377.068 10.1637
+                    C385.935 -1.33502 403.189 -1.60835 412.416 9.60376
+                    L418.142 16.5627
+                    C424.828 24.6877 436.353 26.8984 445.571 21.8241
+                    V21.8241
+                    C453.776 17.3073 463.353 15.9568 472.488 18.0283
+                    L482.258 20.2442
+                    C495.66 23.2835 509.359 24.8175 523.101 24.8175
+                    H788.539" class="stroke-neutral-nwhite stroke-1" />
+              </svg>
+            </div>
+            <div id="ball" class="absolute top-1 left-0 w-3 h-3 rounded-full bg-white" data-title="2005"></div>
+          </div>
+        </div>
+
+        <span id="slider-next-label"
+          class="text-right heading-4 text-neutral-sgray col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 lg:col-start-auto uppercase">
+          <?php echo $years[min($index + 1, count($years) - 1)]['year']; ?>
+        </span>
+
+        <button onclick="animateNext()"
+          class="flex flex-row items-end justify-end col-span-3 lg:col-span-1 row-start-3 lg:row-start-2 lg:col-start-auto lg:col-end-auto min-w-s7 lg:min-w-0">
+          <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="stroke-neutral-500">
+            <path
+              d="M28.917 55.7519C43.8432 55.7519 55.9433 43.6518 55.9433 28.7256C55.9433 13.7993 43.8432 1.69922 28.917 1.69922C13.9907 1.69922 1.89062 13.7993 1.89062 28.7256C1.89062 43.6518 13.9907 55.7519 28.917 55.7519Z"
+              stroke-width="1.86732" stroke-miterlimit="10" />
+            <path d="M24.6328 17.6602L35.6998 28.7271L24.6328 39.7941" stroke-width="3" stroke-miterlimit="10" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let slider = document.getElementById('slider');
+let sliderCanvas = document.getElementById('slider-canvas');
+let svg = sliderCanvas.querySelector('svg');
+let path = document.getElementById('timeline-path');
+let ball = document.getElementById('ball');
+let animationDuration = 2;
+let selectedSlide = 0;
+let video = document.getElementById('anim-video');
+let videoPulseAnimation = TweenLite.to(video, 2, {
+  currentTime: 2,
+  repeat: -1,
+  yoyo: true
+});
+
+function prepareLogo() {
+  video.currentTime = 1;
+  videoPulseAnimation.play();
+}
+
+document.addEventListener('DOMContentLoaded', prepareLogo);
+window.addEventListener('resize', resetAnimation);
+
+resetAnimation();
+updateSlide(selectedSlide, false);
+
+function disablePrevNextButtons() {
+  document.querySelectorAll('button').forEach(button => {
+    button.disabled = true;
+  });
+}
+
+function enablePrevNextButtons() {
+  document.querySelectorAll('button').forEach(button => {
+    button.disabled = false;
+  });
+}
+
+function resetAnimation() {
+  resetBall();
+  resetTimeline();
+  prepareLogo();
+}
+
+function resetTimeline() {
+  gsap.set("#timeline-container", {
+    duration: 0,
+    x: "-100%",
+  });
+  videoPulseAnimation.kill();
+  videoPulseAnimation = TweenLite.to(video, 2, {
+    currentTime: 2,
+    repeat: -1,
+    yoyo: true
+  });
+}
+
+function resetBall() {
+  gsap.to("#ball", {
+    duration: 0,
+    ease: 'power4.out',
+    motionPath: {
+      path: "#timeline-path",
+      align: "#timeline-path",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+      start: 0,
+      end: 0.5,
+    }
+  });
+}
+
+function updateSlide(index, timeline, animated = true) {
+  let reverse = index < selectedSlide;
+  let duration = animated ? animationDuration : 0
+  if (index === selectedSlide) {
+    animated = false;
+  }
+  selectedSlide = index;
+  let sliderElements = Array.from(slider.getElementsByClassName('slider-content-element'));
+
+  if (sliderElements.length > 0) {
+    let container = sliderElements[0].parentElement;
+    let width = container.getBoundingClientRect().width;
+    (timeline || gsap).to(container, {
+      x: -width * index,
+      duration,
+      ease: animated ? "pow4.inout" : "linear"
+    }, timeline ? 0 : undefined);
+
+    sliderElements.forEach((el, idx) => {
+      (timeline || gsap).to(el, {
+        opacity: idx == index ? 1 : 0,
+        duration,
+        ease: animated ? "pow4.inout" : "linear"
+      }, timeline ? 0 : undefined)
+    });
+
+    document.querySelector('.current-year-indicator').innerText = years[selectedSlide].year;
+  }
+}
+
+function animateNext(duration = animationDuration) {
+  // update slide, loop if needed
+  let currentIndex = years.findIndex(year => year.year === document.getElementById('slide-title-' + selectedSlide)
+    .innerText);
+  let nextIndex = currentIndex + 1;
+  if (nextIndex >= years.length) {
+    return;
+  }
+
+  TweenLite.to(video, duration, {
+    currentTime: video.duration * nextIndex / years.length,
+    onComplete: () => {
+      videoPulseAnimation.kill();
+      videoPulseAnimation = TweenLite.to(video, 2, {
+        currentTime: (video.duration * nextIndex / years.length) + 2,
+        repeat: -1,
+        yoyo: true
+      });
+    }
+  });
+
+  return new Promise(
+    (resolve) => {
+      let timeline = gsap.timeline({
+        onStart: disablePrevNextButtons,
+        onComplete: () => {
+          enablePrevNextButtons();
+          resolve();
+        },
+      });
+
+      updateSlide(nextIndex, timeline);
+
+      timeline.fromTo("#timeline-container", {
+        x: "-100%",
+      }, {
+        x: "-150%",
+        duration: duration / 2,
+        ease: 'power4.in',
+      }, 0);
+
+      timeline.to("#ball", {
+        duration: duration / 2,
+        ease: 'power4.in',
+        motionPath: {
+          path: "#timeline-path",
+          align: "#timeline-path",
+          autoRotate: true,
+          alignOrigin: [0.5, 0.5],
+          start: 0.5,
+          end: 1,
+        }
+      }, 0);
+
+      timeline.fromTo("#timeline-container", {
+        x: "-150%",
+      }, {
+        x: "-200%",
+        duration: duration / 2,
+        ease: 'power4.out',
+      }, duration / 2);
+
+      timeline.to("#ball", {
+        duration: duration / 2,
+        ease: 'power4.out',
+        motionPath: {
+          path: "#timeline-path-2",
+          align: "#timeline-path-2",
+          autoRotate: true,
+          alignOrigin: [0.5, 0.5],
+          start: 0,
+          end: 0.5,
+        }
+      }, duration / 2);
+    }
+  );
+}
+
+function animatePrev(duration = animationDuration) {
+  // update slide, loop if needed
+  let currentIndex = years.findIndex(year => year.year === document.getElementById('slide-title-' + selectedSlide)
+    .innerText);
+  let prevIndex = currentIndex - 1;
+  if (prevIndex < 0) {
+    return;
+  }
+
+  let timeline = gsap.timeline({
+    onStart: disablePrevNextButtons,
+    onComplete: () => {
+      enablePrevNextButtons();
+    },
+  });
+
+  TweenLite.to(video, duration, {
+    currentTime: video.duration * prevIndex / years.length,
+    onComplete: () => {
+      videoPulseAnimation.kill();
+      videoPulseAnimation = TweenLite.to(video, 2, {
+        currentTime: (video.duration * prevIndex / years.length) + 2,
+        repeat: -1,
+        yoyo: true
+      });
+    }
+  });
+
+  updateSlide(prevIndex, timeline);
+
+  timeline.fromTo("#timeline-container", {
+    x: "-100%",
+  }, {
+    x: "-50%",
+    duration: duration / 2,
+    ease: 'linear',
+  }, 0);
+
+  timeline.to("#ball", {
+    duration: duration / 2,
+    ease: 'power4.in',
+    motionPath: {
+      path: "#timeline-path",
+      align: "#timeline-path",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+      start: 0.5,
+      end: 0,
+    }
+  }, 0);
+
+  timeline.fromTo("#timeline-container", {
+    x: "-50%",
+  }, {
+    x: "0%",
+    duration: duration / 2,
+    ease: 'power4.out',
+  }, duration / 2);
+
+  timeline.to("#ball", {
+    duration: duration / 2,
+    ease: 'power4.out',
+    motionPath: {
+      path: "#timeline-path-0",
+      align: "#timeline-path-0",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+      start: 1,
+      end: 0.5,
+    }
+  }, duration / 2);
+}
+</script>
+
+<?php
+	//endif;
+	endif; 
+?>
+
+<?php //if($row['acf_fc_layout'] == '') : ?>
+<?php //endif; ?>
+
+<?php //if($row['acf_fc_layout'] == '') : ?>
+<?php //endif; ?>
+
+
+
 <?php 
 endforeach;
 ?>
