@@ -20,7 +20,6 @@
 	$text_cta_learn_more_home = get_field('text_cta_learn_more_home');
 	$link_learn_more_home = get_field('link_learn_more_home');
 	$marquee = get_field('marquee_images');
-
 ?>
 
 <section class="translucent-navigation section w-full pb-s12 md:pb-s7 lg:pb-s12 bg-cover bg-no-repeat bg-center bg-neutral-offwhite" style="background-image: url(<?php echo $bg_image_main ?>)">
