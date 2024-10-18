@@ -270,8 +270,12 @@ foreach($website_sections as $row) :
 
 <?php if($row['acf_fc_layout'] == 'main_banner_inner_pages_layout') : ?>
 
+<?php 
+	$main_banner_inner = $row['main_banner_inner_pages_group'];
+?>
+
 <section
-  class="translucent-navigation light relative section w-full pb-s12 md:pb-s7 lg:pb-s12 text-neutral-fnude bg-secondary-carbon">
+  class="translucent-navigation light relative section w-full pb-s12 md:pb-s7 lg:pb-s12 <?php echo $main_banner_inner ? '' : 'text-neutral-fnude'; ?>  bg-secondary-carbon">
 
   <picture class="absolute top-0 left-0 w-full h-full">
     <source media="(min-width:1024px)"
@@ -286,13 +290,13 @@ foreach($website_sections as $row) :
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end">
 
-      <h4 class="col-span-12 heading-4 uppercase pt-s1 text-neutral-nude">
+      <h4 class="col-span-12 heading-4 uppercase pt-s1 <?php echo $main_banner_inner ? '' : 'text-neutral-fnude'; ?>">
         <?php echo $row['main_banner_inner_pages_group']['title_tag']; ?></h4>
-      <h1 class="col-span-12 heading-1 text-neutral-nude">
+      <h1 class="col-span-12 heading-1 <?php echo $main_banner_inner ? '' : 'text-neutral-fnude'; ?>">
         <?php echo $row['main_banner_inner_pages_group']['main_title']; ?></h1>
 
       <div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-        <p class="body-2 md:max-w-550 lg:max-w-full text-neutral-nwhite">
+        <p class="body-2 md:max-w-550 lg:max-w-full <?php echo $main_banner_inner ? '' : 'text-neutral-nwhite'; ?>">
           <?php echo $row['main_banner_inner_pages_group']['resume_text']; ?></p>
       </div>
       <?php
@@ -311,7 +315,8 @@ foreach($website_sections as $row) :
 
         <?php if($row['main_banner_inner_pages_group']['link_learn_more']): ?>
         <a target="<?php echo $row['main_banner_inner_pages_group']['link_learn_more']['target'] ? $row['main_banner_inner_pages_group']['link_learn_more']['target'] : '_self'; ?>"
-          href="<?php echo  $row['main_banner_inner_pages_group']['link_learn_more']['url']; ?>" class="btn-tertiary">
+          href="<?php echo  $row['main_banner_inner_pages_group']['link_learn_more']['url']; ?>"
+          class="<?php echo $main_banner_inner ? 'btn-secondary' : 'btn-tertiary'; ?>">
           <?php echo  $row['main_banner_inner_pages_group']['link_learn_more']['title']; ?>
         </a>
         <?php endif; ?>
