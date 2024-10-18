@@ -42,7 +42,7 @@
         <p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
       </div>
       <div class="col-span-12 md:col-span-12 lg:col-span-6 lg:col-start-6 flex flex-col md:items-end lg:items-start">
-        <a class="btn-secondary" href="#join-the-forum" </a>
+        <a class="btn-secondary" href="#join-the-forum"><?php echo $text_cta; ?></a>
       </div>
 
     </div>
