@@ -10803,6 +10803,26 @@ Collaborate.',
 							'layout' => 'block',
 							'sub_fields' => array(
 								array(
+									'key' => 'field_6711dfdf18165',
+									'label' => 'Text white',
+									'name' => 'text_white',
+									'aria-label' => '',
+									'type' => 'true_false',
+									'instructions' => 'Check if the text color inside the banner must be white',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'message' => 'Text color white',
+									'default_value' => 0,
+									'ui' => 0,
+									'ui_on_text' => '',
+									'ui_off_text' => '',
+								),
+								array(
 									'key' => 'field_66fc1279dc1dd',
 									'label' => 'Title tag',
 									'name' => 'title_tag',
@@ -15845,6 +15865,8 @@ Together, let’s make a difference!',
 	'show_in_rest' => 1,
 ) );
 } );
+
+
 
 
 
