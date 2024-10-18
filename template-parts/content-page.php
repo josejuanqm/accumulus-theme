@@ -275,7 +275,7 @@ foreach($website_sections as $row) :
 ?>
 
 <section
-  class="translucent-navigation light relative section w-full pb-s12 md:pb-s7 lg:pb-s12 <?php echo $main_banner_inner ? '' : 'text-neutral-fnude'; ?>  bg-secondary-carbon">
+  class="translucent-navigation <?php echo $main_banner_inner ? '' : 'light'; ?> relative section w-full pb-s12 md:pb-s7 lg:pb-s12 <?php echo $main_banner_inner ? '' : 'text-neutral-fnude'; ?>  bg-secondary-carbon">
 
   <picture class="absolute top-0 left-0 w-full h-full">
     <source media="(min-width:1024px)"
