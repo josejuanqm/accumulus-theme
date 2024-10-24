@@ -1849,6 +1849,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
+.bg-thought-leadership-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png');
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -2373,10 +2377,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .opacity-100 {
@@ -5308,8 +5308,8 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 100%;
   }
 
-  .lg\:\!min-w-\[180px\] {
-    min-width: 180px !important;
+  .lg\:\!min-w-\[130px\] {
+    min-width: 130px !important;
   }
 
   .lg\:min-w-0 {
@@ -5318,14 +5318,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:min-w-\[64px\] {
     min-width: 64px;
-  }
-
-  .lg\:\!min-w-\[170px\] {
-    min-width: 170px !important;
-  }
-
-  .lg\:\!min-w-\[130px\] {
-    min-width: 130px !important;
   }
 
   .lg\:max-w-\[368px\] {

@@ -610,6 +610,9 @@ module.exports = {
         // ebooks general
         'ebooks-general':
           "url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png')",
+        // thought leadership
+        'thought-leadership-general':
+          "url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png')",
         // 404
         '404-desktop':
           "url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png')",
