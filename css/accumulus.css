@@ -1845,12 +1845,16 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png');
 }
 
+.bg-thought-leadership-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png');
+}
+
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
-.bg-thought-leadership-general {
-  background-image: url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png');
+.bg-regulatory-insights-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/tumb-regulatory-insights.png');
 }
 
 .bg-contain {
@@ -5290,6 +5294,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:min-h-\[152px\] {
     min-height: 152px;
+  }
+
+  .lg\:min-h-\[650px\] {
+    min-height: 650px;
   }
 
   .lg\:w-1\/2 {
