@@ -27,7 +27,7 @@
       </div>
       <div
         class="col-span-12 md:col-span-12 lg:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
-        <a href="<?php echo $link_learn_more ?>" class="btn-secondary"><?php echo 	$text_cta; ?></a>
+        <!-- <a href="<?php //echo $link_learn_more ?>" class="btn-secondary"><?php //echo $text_cta; ?></a> -->
       </div>
     </div>
   </div>
@@ -133,12 +133,12 @@
       <div class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6">
         <p class="body-2"><?php echo $case_study['resume']; ?></p>
       </div>
-      <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
-        <?php if( $case_study['link_cta'] !== '' ): ?>
-        <a class="btn-secondary" href="<?php echo $case_study['link_cta']; ?>" target="_blank"
-          download><?php echo $case_study['text_cta']; ?></a>
-        <?php endif; ?>
-      </div>
+      <!-- <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
+        <?php //if( $case_study['link_cta'] !== '' ): ?>
+        <a class="btn-secondary" href="<?php //echo $case_study['link_cta']; ?>" target="_blank"
+          download><?php //echo $case_study['text_cta']; ?></a>
+        <?php //endif; ?>
+      </div> -->
       <div class="col-span-6 md:col-span-12 lg:col-span-9 lg:col-start-2 pt-s5 md:pt-s6 lg:pt-s6">
         <ul>
           <?php foreach($case_study['credits'] as $key => $value): ?>
