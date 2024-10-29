@@ -173,7 +173,7 @@
                 else :
                   if ($categorySlug === 'e-books--white-papers'): 
                 ?>
-	
+
                   <div class="relative w-full flex items-center justify-center h-[275px] lg:h-[320px] bg-cover bg-no-repeat bg-center aspect-square">
                     <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png" class="w-full md:w-full h-full object-cover"   />
                   </div>
