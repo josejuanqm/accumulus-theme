@@ -17,24 +17,26 @@
 	$link_learn_more = get_field('link_learn_more');
 ?>
 
-<section class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
-	<picture class="absolute top-0 left-0 w-full h-full">
-		<source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
-		<source media="(min-width:768px)" srcset="<?php echo $bg_image_for_tablet; ?>">
-		<img src="<?php echo $bg_image_for_mobile; ?>" alt="Flowers" class="w-full h-full">
-	</picture>
-	<div class="relative container mx-auto">
-		<div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
-			<h4 class="col-span-12 heading-4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
-			<h1 class="col-span-12 heading-1"><?php echo $main_title; ?></h1>
-			<div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
-				<p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
-			</div>
-			<div class="col-span-12 md:col-span-12 lg:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
-        <a href="<?php echo $link_learn_more ?>" class="btn-secondary"><?php echo 	$text_cta; ?></a>
-			</div>
-		</div>
-	</div>
+<section
+  class="relative section w-full pt-s3 md:pt-s14 lg:pt-52 2xl:pt-60 pb-s12 md:pb-s10 lg:pb-s12 bg-neutral-nwhite">
+  <picture class="absolute top-0 left-0 w-full h-full">
+    <source media="(min-width:1024px)" srcset="<?php echo $bg_image_for_desktop; ?>">
+    <source media="(min-width:768px)" srcset="<?php echo $bg_image_for_tablet; ?>">
+    <img src="<?php echo $bg_image_for_mobile; ?>" alt="Flowers" class="w-full h-full">
+  </picture>
+  <div class="relative container mx-auto">
+    <div class="grid grid-cols-12 gap-x-s2 gap-y-s6 lg:justify-end pt-s10 md:pt-0 lg:pt-0">
+      <h4 class="col-span-12 heading-4 uppercase pt-s1"><?php echo $title_tag; ?></h4>
+      <h1 class="col-span-12 heading-1"><?php echo $main_title; ?></h1>
+      <div class="col-span-12 md:col-span-6 md:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4">
+        <p class="body-2 md:max-w-550 lg:max-w-full"><?php echo $resume_text; ?></p>
+      </div>
+      <div
+        class="col-span-12 md:col-span-12 lg:col-start-6 flex flex-col md:items-end lg:items-start gap-s8 lg:gap-s4 pb-s8 md:pb-s10">
+        <!-- <a href="<?php //echo $link_learn_more ?>" class="btn-secondary"><?php //echo $text_cta; ?></a> -->
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -126,11 +128,12 @@
       <div class="col-span-6 md:col-span-12 lg:col-span-7 lg:col-start-6">
         <p class="body-2"><?php echo $case_study['resume']; ?></p>
       </div>
-      <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
-        <?php if( $case_study['link_cta'] !== '' ): ?>
-        <a class="btn-secondary" href="<?php echo $case_study['link_cta']; ?>" target="_blank" download><?php echo $case_study['text_cta']; ?></a>
-        <?php endif; ?>
-      </div>
+      <!-- <div class="col-span-6 md:col-span-12 lg:col-span-4 lg:col-start-6 pt-s5 md:pt-s8 lg:pt-s10">
+        <?php //if( $case_study['link_cta'] !== '' ): ?>
+        <a class="btn-secondary" href="<?php //echo $case_study['link_cta']; ?>" target="_blank"
+          download><?php //echo $case_study['text_cta']; ?></a>
+        <?php //endif; ?>
+      </div> -->
       <div class="col-span-6 md:col-span-12 lg:col-span-9 lg:col-start-2 pt-s5 md:pt-s6 lg:pt-s6">
         <ul>
           <?php foreach($case_study['credits'] as $key => $value): ?>

@@ -607,7 +607,15 @@ module.exports = {
         // Resources
         'resources-general':
           "url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png')",
-
+        // ebooks general
+        'ebooks-general':
+          "url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png')",
+        // thought leadership
+        'thought-leadership-general':
+          "url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png')",
+        // regulatory insights
+        'regulatory-insights-general':
+          "url('/wp-content/themes/accumulus-website/images/tumb-regulatory-insights.png')",
         // 404
         '404-desktop':
           "url('/wp-content/themes/accumulus-website/images/404/bg-404-desktop.png')",
