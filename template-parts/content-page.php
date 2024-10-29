@@ -1982,6 +1982,53 @@ endif;
 <!-- Team -->
 
 
+<!-- Careers - team -->
+
+
+<?php if($row['acf_fc_layout'] == 'careers_banner_team_layout') : ?>
+
+<?php 
+  $carreers_footer = $row['careers_group'];
+  if($carreers_footer):
+?>
+
+<section id="join_our_team_careers_layout"
+  class="section bg-neutral-900 py-s7 md:py-s12 relative isolate overflow-hidden">
+  <picture class="absolute top-0 left-0 w-full h-full -z-10">
+    <source media="(min-width:1024px)"
+      srcset="<?php echo get_template_directory_uri() . "/images/careers-footer/careers-footer-bg.jpg"; ?>">
+    <source media="(min-width:768px)"
+      srcset="<?php echo get_template_directory_uri() . "/images/careers-footer/careers-footer-bg-tablet.jpg"; ?>">
+    <img src="<?php echo get_template_directory_uri() . "/images/careers-footer/careers-footer-bg-mobile.jpg"; ?>"
+      alt="Flowers" class="w-full h-full">
+  </picture>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-12 gap-x-s2 items-start gap-y-s6">
+      <h4 class="heading-4 text-neutral-100 uppercase col-span-12"><?php echo $carreers_footer['eyebrown'] ?></h4>
+      <h2 class="heading-2 text-neutral-100 col-span-12 md:col-span-10 lg:col-span-9 row-start-2">
+        <?php echo $carreers_footer['title'] ?></h2>
+      <div class="body-3 text-neutral-100 col-span-12 md:col-span-5 row-start-3">
+        <?php echo $carreers_footer['resume'] ?>
+      </div>
+      <?php if($carreers_footer['cta_link']): ?>
+      <a target="<?php echo $carreers_footer['cta_link']['target'] ? $carreers_footer['cta_link']['target'] : '_self'; ?>"
+        href="<?php echo  $carreers_footer['cta_link']['url']; ?>"
+        class="btn btn-tertiary-white row-start-4 col-span-12 md:col-span-12 lg:col-auto">
+        <?php echo  $carreers_footer['cta_link']['title']; ?>
+      </a>
+      <?php endif; ?>
+      <!-- <a href="<?php echo $carreers_footer['cta_link']['url']; ?>" class="btn btn-tertiary-white row-start-4 col-span-12 md:col-span-12 lg:col-auto"><?php echo $carreers_footer['cta_link']['title'] ?></a> -->
+    </div>
+  </div>
+</section>
+<?php 
+	endif; 
+endif; 
+?>
+
+<!-- End Careers - team -->
+
+
 <?php if($row['acf_fc_layout'] == 'form_get_free_pdf_section_layout') : ?>
 
 <?php 
@@ -2021,15 +2068,15 @@ $form_access_content = $row['form_access_group'];
 <!-- Get free pdf  -->
 
 
-<?php if($row['acf_fc_layout'] == 'join_our_team_careers_layout') : ?>
+<?php if($row['acf_fc_layout'] == 'join_us_careers_layout') : ?>
 
 <?php 
   $carreers_footer = $row['join_our_team_group'];
   if($carreers_footer):
 ?>
 
-<section id="join_our_team_careers_layout"
-  class="section bg-neutral-900 py-s7 md:py-s12 relative isolate overflow-hidden">
+
+<section class="section bg-neutral-900 py-s8 md:py-s12 relative isolate overflow-hidden">
   <picture class="absolute top-0 left-0 w-full h-full -z-10">
     <source media="(min-width:1024px)"
       srcset="<?php echo get_template_directory_uri() . "/images/careers-footer/careers-footer-bg.jpg"; ?>">
@@ -2039,13 +2086,14 @@ $form_access_content = $row['form_access_group'];
       alt="Flowers" class="w-full h-full">
   </picture>
   <div class="container mx-auto">
-    <div class="grid grid-cols-12 gap-x-s2 items-start gap-y-s6">
-      <h4 class="heading-4 text-neutral-100 uppercase col-span-12"><?php echo $carreers_footer['eyebrown'] ?></h4>
-      <h2 class="heading-2 text-neutral-100 col-span-12 md:col-span-10 lg:col-span-9 row-start-2">
-        <?php echo $carreers_footer['title'] ?></h2>
-      <div class="body-3 text-neutral-100 col-span-12 md:col-span-5 row-start-3">
-        <?php echo $carreers_footer['resume'] ?>
-      </div>
+    <div class="grid grid-cols-12 gap-x-s2 items-start gap-y-s3 md:gap-y-s6">
+      <h4 class="heading-4 text-neutral-offwhite uppercase col-span-12">Careers</h4>
+      <h2 class="heading-2 text-neutral-offwhite col-span-12 md:col-span-10 lg:col-span-9 row-start-2 pb-s2 md:pb-0"><?php echo $carreers_footer['title'] ?></h2>
+      <p class="body-3 text-neutral-offwhite col-span-12 md:col-span-6 lg:col-span-7 md:row-start-3"> <?php echo $carreers_footer['resume'] ?></p>
+      <p
+        class="body-4 text-secondary-aqua col-span-12 md:col-span-4 lg:col-span-3 md:col-start-9 lg:col-start-9 md:row-start-3 lg:pt-s1">
+          <?php echo $carreers_footer['restrictions'] ?>
+        </p>
       <?php if($carreers_footer['cta_link']): ?>
       <a target="<?php echo $carreers_footer['cta_link']['target'] ? $carreers_footer['cta_link']['target'] : '_self'; ?>"
         href="<?php echo  $carreers_footer['cta_link']['url']; ?>"
@@ -2053,10 +2101,10 @@ $form_access_content = $row['form_access_group'];
         <?php echo  $carreers_footer['cta_link']['title']; ?>
       </a>
       <?php endif; ?>
-      <!-- <a href="<?php echo $carreers_footer['cta_link']['url']; ?>" class="btn btn-tertiary-white row-start-4 col-span-12 md:col-span-12 lg:col-auto"><?php echo $carreers_footer['cta_link']['title'] ?></a> -->
     </div>
   </div>
 </section>
+
 <?php 
 	endif; 
 endif; 
