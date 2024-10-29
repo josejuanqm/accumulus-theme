@@ -253,7 +253,8 @@ foreach($website_sections as $row) :
         <p class="body-2"><?php echo $row['main_banner_group']['first_resume']; ?></p>
       </div>
       <div class="col-span-6 md:col-span-12 lg:row-start-4 flex flex-col lg:flex-row gap-s2 lg:gap-s4">
-        <a href="<?php echo $row['main_banner_group']['link_cta']; ?>" class="btn-secondary">More about the platform</a>
+        <a href="<?php echo $row['main_banner_group']['link_cta']['url']; ?>"
+          class="btn-secondary"><?php echo $row['main_banner_group']['link_cta']['title']; ?></a>
       </div>
 
     </div>
@@ -1570,7 +1571,8 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
     <!-- Title -->
 
 
-    <div class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 lg:pb-s12 md:pt-0">
+    <div
+      class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 lg:pb-s12 md:pt-0">
 
       <?php 
 				foreach($benefits['benefit_list'] as $item): 
@@ -2088,12 +2090,14 @@ $form_access_content = $row['form_access_group'];
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-x-s2 items-start gap-y-s3 md:gap-y-s6">
       <h4 class="heading-4 text-neutral-offwhite uppercase col-span-12">Careers</h4>
-      <h2 class="heading-2 text-neutral-offwhite col-span-12 md:col-span-10 lg:col-span-9 row-start-2 pb-s2 md:pb-0"><?php echo $carreers_footer['title'] ?></h2>
-      <p class="body-3 text-neutral-offwhite col-span-12 md:col-span-6 lg:col-span-7 md:row-start-3"> <?php echo $carreers_footer['resume'] ?></p>
+      <h2 class="heading-2 text-neutral-offwhite col-span-12 md:col-span-10 lg:col-span-9 row-start-2 pb-s2 md:pb-0">
+        <?php echo $carreers_footer['title'] ?></h2>
+      <p class="body-3 text-neutral-offwhite col-span-12 md:col-span-6 lg:col-span-7 md:row-start-3">
+        <?php echo $carreers_footer['resume'] ?></p>
       <p
         class="body-4 text-secondary-aqua col-span-12 md:col-span-4 lg:col-span-3 md:col-start-9 lg:col-start-9 md:row-start-3 lg:pt-s1">
-          <?php echo $carreers_footer['restrictions'] ?>
-        </p>
+        <?php echo $carreers_footer['restrictions'] ?>
+      </p>
       <?php if($carreers_footer['cta_link']): ?>
       <a target="<?php echo $carreers_footer['cta_link']['target'] ? $carreers_footer['cta_link']['target'] : '_self'; ?>"
         href="<?php echo  $carreers_footer['cta_link']['url']; ?>"
