@@ -1570,7 +1570,7 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
     <!-- Title -->
 
 
-    <div class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 md:pt-0">
+    <div class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 lg:pb-s12 md:pt-0">
 
       <?php 
 				foreach($benefits['benefit_list'] as $item): 
@@ -1583,6 +1583,7 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
       <p class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 body-2">
         <?php echo $benefits['resume']; ?>
       </p>
+
     </div>
     <!-- Items -->
 
