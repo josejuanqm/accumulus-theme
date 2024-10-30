@@ -19,7 +19,7 @@
 
 
 
-<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
+<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac translucent-navigation">
 
   <div class="container mx-auto lg:pt-s9">
 
@@ -63,7 +63,7 @@
       <div class="relative col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9">
         <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
         <div
-          class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-ebooks-general bg-cover bg-no-repeat bg-center">
+          class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-ebooks-general bg-cover bg-no-repeat bg-center lg:min-h-[550px]">
           <h1
             class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-dgray md:w-[570px] lg:w-full">
             <?php truncate(get_the_title(), 140); ?></h1>
@@ -251,7 +251,7 @@ if (count($result) > 0 ){
       <div id="category-post-content">
       </div>
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
-        <a id="btn-see-more" class="btn-secondary text-cta md:text-ctaMobile" href="#">See More</a>
+        <a id="btn-see-more" class="btn-secondary text-ctaMobile md:text-ctaTablet lg:text-cta" href="#">See More</a>
       </div>
       <input type="hidden" value="1" id="current-page" />
     </div>

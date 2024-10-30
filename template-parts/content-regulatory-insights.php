@@ -63,7 +63,7 @@
       <div class="relative col-span-12 lg:col-span-7 flex flex-col gap-s3 lg:pr-9 lg:min-h-[650px]">
         <a href="<?php the_permalink( get_the_ID() ); ?>" class="absolute top-0 left-0 w-full h-full z-10"></a>
         <div
-          class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-regulatory-insights-general bg-cover bg-no-repeat bg-center">
+          class="relative h-full w-full max-lg:h-[416px] flex items-center justify-center bg-regulatory-insights-general bg-cover bg-no-repeat bg-center lg:min-h-[550px]">
           <h1
             class="absolute bottom-s3 left-0 pl-s2 md:pl-s4 lg:pl-s6 pr-s2 lg:pr-s2 heading-3 text-neutral-nwhite md:w-[570px] lg:w-full">
             <?php truncate(get_the_title(), 140); ?></h1>
