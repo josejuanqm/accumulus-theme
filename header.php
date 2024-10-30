@@ -262,7 +262,7 @@
                     d="M22.9551 15.7412H19.1283H15.3016H11.4749H7.65095H3.82422V19.6766H7.65095H11.4749H15.3016H19.1283H22.9551H26.779H30.6057V15.7412H26.779H22.9551Z" />
                 </svg>
               </button>
-              <a href="/get-started/" class="hidden lg:block my-s2 btn btn-primary">
+              <a href="/get-started-2/" class="hidden lg:block my-s2 btn btn-primary">
                 Get Started
               </a>
             </div>
