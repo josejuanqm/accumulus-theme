@@ -1003,7 +1003,7 @@ function getEvents() {
 
 									} else {
 
-									$html .= '<div class="max-md:w-full max-md:order-1 md:col-span-4 flex items-center justify-center bg-events-general h-[144px] md:h-full lg:h-full">';
+									$html .= '<div class="max-md:w-full max-md:order-1 md:col-span-4 flex items-center justify-center bg-events-general bg-cover h-[144px] md:h-full lg:h-full">';
 									$html .= '<img class="block max-w-[80px]" src="'. get_bloginfo('stylesheet_directory') .'/images/events/icon-accumulus.png" />';
 									$html .= '</div>';
 
