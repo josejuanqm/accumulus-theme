@@ -19,7 +19,7 @@
 
 
 
-<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac">
+<section class="w-full pb-s12 md:pb-s7 lg:pb-s12 bg-secondary-lilac translucent-navigation">
 
   <div class="container mx-auto lg:pt-s9">
 
@@ -153,7 +153,7 @@
                 class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac tracking-normal"><?php echo $i+1; ?></span>
               <span
                 class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
-                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1 " width="13" height="14" viewBox="0 0 13 14"
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1" width="13" height="14" viewBox="0 0 13 14"
                   fill="none">
                   <path d=" M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151
                   3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444" />
@@ -165,7 +165,7 @@
                 </svg>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
-              <h3 class="heading-5"><?php truncate(get_the_title(), 140); ?></h3>
+              <h3 class="heading-5 break-all"><?php truncate(get_the_title(), 140); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
 
@@ -253,7 +253,7 @@ if (count($result) > 0 ){
       <div id="category-post-content">
       </div>
       <div class="col-span-12 flex justify-center pt-s5 md:pt-s8">
-        <a id="btn-see-more" class="btn-secondary text-cta md:text-ctaMobile" href="#">See More</a>
+        <a id="btn-see-more" class="btn-secondary text-ctaMobile md:text-ctaTablet lg:text-cta" href="#">See More</a>
       </div>
       <input type="hidden" value="1" id="current-page" />
     </div>
