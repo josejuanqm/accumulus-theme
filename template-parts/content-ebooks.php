@@ -152,8 +152,8 @@
                 class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac tracking-normal"><?php echo $i+1; ?></span>
               <span
                 class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
-                <svg width="11" height="14" viewBox="0 0 11 14" fill="none"
-                  class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1" width="11" height="14" viewBox="0 0 11 14"
+                  fill="none">
                   <path
                     d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z"
                     class="fill-current" />
@@ -163,7 +163,7 @@
                 </svg>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
-              <h3 class="heading-5"><?php truncate(get_the_title(), 140); ?></h3>
+              <h3 class="heading-5 break-words"><?php truncate(get_the_title(), 140); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
 

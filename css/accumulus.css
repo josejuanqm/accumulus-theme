@@ -1638,6 +1638,10 @@ video {
   text-wrap: wrap;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .break-all {
   word-break: break-all;
 }
@@ -4406,6 +4410,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:pr-s4 {
     padding-right: 2rem;
+  }
+
+  .max-md\:pl-s3 {
+    padding-left: 1.5rem;
   }
 
   .last-of-type\:max-md\:pb-s8:last-of-type {

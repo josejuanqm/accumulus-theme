@@ -340,12 +340,15 @@ function getResources() {
 			$html .= '<div class="flex items-center gap-3 uppercase">';
 			// Show icons
 			if ($categorySlug == 'thought-leadership'):
-			$html.= '<svg width="15" height="14" viewBox="0 0 15 14" fill="none"">
-			<path d="M13 3.38949V12.0558H11.5558V1.58477C11.5558 0.985348 11.0704 0.5 10.471 0.5H1.08476C0.485343 0.5 0 0.985348 0 1.58477V12.0558C0 12.8532 0.64677 13.5 1.4442 13.5H13C13.7974 13.5 14.4442 12.8532 14.4442 12.0558V3.38949H13ZM1.4442 12.0558V1.94421H10.1105V12.0547H1.4442V12.0558Z" class="fill-current"/>
-			</svg>
+			$html.= '<svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+				<path d="M13.2812 2.95199V11.6183H11.837V1.14727C11.837 0.547848 11.3517 0.0625 10.7523 0.0625H1.36601C0.766593 0.0625 0.28125 0.547848 0.28125 1.14727V11.6183C0.28125 12.4157 0.92802 13.0625 1.72545 13.0625H13.2812C14.0787 13.0625 14.7255 12.4157 14.7255 11.6183V2.95199H13.2812ZM1.72545 11.6183V1.50671H10.3918V11.6172H1.72545V11.6183Z" class="fill-current"/>
+				<path d="M8.94587 8.72754H3.16797V10.1717H8.94587V8.72754Z" class="fill-current"/>
+				<path d="M8.94587 5.84082H3.16797V7.28503H8.94587V5.84082Z" class="fill-current"/>
+				<path d="M8.94587 2.9502H3.16797V4.3944H8.94587V2.9502Z" class="fill-current"/>
+				</svg>
 			';
 			elseif ($categorySlug == 'regulatory-insights'):
-			$html.= '<svg width="13" height="14" viewBox="0 0 13 14" fill="none"">
+			$html.= '<svg width="13" height="14" viewBox="0 0 13 14" fill="none">
 			<path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444"/>
 			<path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
 			<path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
@@ -355,7 +358,7 @@ function getResources() {
 			</svg>
 			';
 			elseif ($categorySlug == 'e-books--white-papers'): 
-			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
+			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none">
 			<path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
 			<path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
 			</svg>
@@ -449,14 +452,14 @@ function getResources() {
 		$html .= '<div class="flex items-center gap-3 uppercase">';
 			// Show icons
 			if ($categorySlug == 'thought-leadership'):
-			$html.= '<svg width="15" height="14" viewBox="0 0 15 14" fill="none"">
+			$html.= '<svg width="15" height="14" viewBox="0 0 15 14" fill="none">
 				<path d="M13.2812 2.95199V11.6183H11.837V1.14727C11.837 0.547848 11.3517 0.0625 10.7523 0.0625H1.36601C0.766593 0.0625 0.28125 0.547848 0.28125 1.14727V11.6183C0.28125 12.4157 0.92802 13.0625 1.72545 13.0625H13.2812C14.0787 13.0625 14.7255 12.4157 14.7255 11.6183V2.95199H13.2812ZM1.72545 11.6183V1.50671H10.3918V11.6172H1.72545V11.6183Z" class="fill-current"/>
 				<path d="M8.94587 8.72754H3.16797V10.1717H8.94587V8.72754Z" class="fill-current"/>
 				<path d="M8.94587 5.84082H3.16797V7.28503H8.94587V5.84082Z" class="fill-current"/>
 				<path d="M8.94587 2.9502H3.16797V4.3944H8.94587V2.9502Z" class="fill-current"/>
 				</svg>';
 			elseif ($categorySlug == 'regulatory-insights'):
-			$html.= '<svg width="13" height="14" viewBox="0 0 13 14" fill="none"">
+			$html.= '<svg width="13" height="14" viewBox="0 0 13 14" fill="none">
 			<path d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444"/>
 			<path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
 			<path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
@@ -466,7 +469,7 @@ function getResources() {
 			</svg>
 			';
 			elseif ($categorySlug == 'e-books--white-papers'): 
-			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none"">
+			$html.= '<svg width="11" height="14" viewBox="0 0 11 14" fill="none">
 			<path d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z" class="fill-current"/>
 			<path d="M9.85523 3.98634L6.37093 0.500977H4.32812H4.32919V6.27864H10.1068V4.23689L9.85523 3.98634ZM5.77281 4.83396V1.94566L7.23668 3.4106L8.6611 4.83396H5.77281Z" class="fill-current"/>
 			</svg>

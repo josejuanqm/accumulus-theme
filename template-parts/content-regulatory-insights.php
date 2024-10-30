@@ -153,14 +153,15 @@
                 class="absolute top-s2 left-s2 flex items-center justify-center w-s3 h-s3 leading-none text-h4Mobile md:text-h5 rounded-full aspect-square bg-secondary-lilac tracking-normal"><?php echo $i+1; ?></span>
               <span
                 class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"">
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1 " width="13" height="14" viewBox="0 0 13 14"
+                  fill="none">
                   <path d=" M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151
                   3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444" />
-                <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
-                <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
-                <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
-                <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
-                <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+                  <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+                  <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+                  <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+                  <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+                  <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
                 </svg>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
@@ -182,7 +183,7 @@
 
             <div
               class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png"
+              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png"
                 class="w-full md:w-full h-[144px] md:h-full object-cover" />
             </div>
 
