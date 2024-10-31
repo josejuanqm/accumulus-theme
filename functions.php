@@ -211,6 +211,8 @@ function custom_mtypes( $m ){
 }
 add_filter( 'upload_mimes', 'custom_mtypes' );
 
+add_filter( 'show_admin_bar', '__return_true' );
+
 /**
 * 
 * GET RESOURCES CMS
