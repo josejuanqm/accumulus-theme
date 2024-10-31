@@ -180,9 +180,9 @@
               ?>
 
             <div
-              class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png"
-                class="w-full md:w-full h-[144px] md:h-full" />
+              class="w-full md:w-1/3 h-[144px] md:h-full flex items-center justify-center bg-thought-bg-thumb bg-cover bg-no-repeat bg-center">
+              <img src="<?php bloginfo('template_url') ?>/images/thought-bg-icon.svg" class="block" width="66"
+                height="66" />
             </div>
 
             <?php endif; ?>

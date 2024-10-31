@@ -1845,6 +1845,14 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/regulator-forum/bg-quote-mobile.png');
 }
 
+.bg-regulatory-bg-thumb {
+  background-image: url('/wp-content/themes/accumulus-website/images/regulatory-bg-thumb.png');
+}
+
+.bg-regulatory-insights-general {
+  background-image: url('/wp-content/themes/accumulus-website/images/tumb-regulatory-insights.png');
+}
+
 .bg-resources-general {
   background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png');
 }
@@ -1857,8 +1865,12 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
 }
 
-.bg-regulatory-insights-general {
-  background-image: url('/wp-content/themes/accumulus-website/images/tumb-regulatory-insights.png');
+.bg-thought-bg-thumb {
+  background-image: url('/wp-content/themes/accumulus-website/images/thought-bg-thumb.png');
+}
+
+.bg-ebooks-bg-thumb {
+  background-image: url('/wp-content/themes/accumulus-website/images/ebooks-bg-thumb.png');
 }
 
 .bg-contain {
@@ -4227,11 +4239,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
   padding-top: 0px;
 }
 
-.last-of-type\:bg-red-500:last-of-type {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .hover\:border-neutral-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -4410,10 +4417,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:pr-s4 {
     padding-right: 2rem;
-  }
-
-  .max-md\:pl-s3 {
-    padding-left: 1.5rem;
   }
 
   .last-of-type\:max-md\:pb-s8:last-of-type {
@@ -5309,16 +5312,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     min-height: 152px;
   }
 
-  .lg\:min-h-\[650px\] {
-    min-height: 650px;
-  }
-
-  .lg\:min-h-\[500px\] {
-    min-height: 500px;
-  }
-
   .lg\:min-h-\[550px\] {
     min-height: 550px;
+  }
+
+  .lg\:min-h-\[650px\] {
+    min-height: 650px;
   }
 
   .lg\:w-1\/2 {

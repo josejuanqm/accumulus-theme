@@ -72,14 +72,14 @@
           <div class="body-2"><?php the_excerpt(); ?></div>
           <div class="flex items-center max-lg:flex-wrap gap-s2">
             <span class="flex items-center gap-s1 heading-4 text-neutral-dgray uppercase">
-              <svg width="13" height="14" viewBox="0 0 13 14" fill="none"">
-			          <path d=" M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151
+              <svg width="13" height="14" viewBox="0 0 13 14" fill="none">
+                <path d=" M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151
                 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444" />
-              <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
-              <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
-              <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
-              <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
-              <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
+                <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
+                <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
+                <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
+                <path d="M5.53971 6.37402H4.15918V10.9105H5.53971V6.37402Z" class="fill-current" />
+                <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
               </svg>
               <?php echo $category; ?>
             </span>
@@ -182,9 +182,9 @@
               ?>
 
             <div
-              class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png"
-                class="w-full md:w-full h-[144px] md:h-full object-cover" />
+              class="w-full md:w-1/3 h-[144px] md:h-full flex items-center justify-center bg-regulatory-bg-thumb bg-cover bg-no-repeat bg-center">
+              <img src="<?php bloginfo('template_url') ?>/images/regulatory-bg-icon.svg" class="block" width="66"
+                height="60" />
             </div>
 
             <?php endif; ?>

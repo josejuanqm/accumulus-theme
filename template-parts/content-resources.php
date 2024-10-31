@@ -166,22 +166,20 @@
               <span
                 class="relative flex items-start gap-s1 pt-1 heading-4 uppercase text-neutral-dgray max-lg:pl-s3 <?php echo $categorySlug; ?>">
                 <?php if ($categorySlug == 'thought-leadership'): ?>
-                <svg width="15" height="14" viewBox="0 0 15 14" fill="none"">
-                    <path d=" M13.2812 2.95199V11.6183H11.837V1.14727C11.837 0.547848 11.3517 0.0625 10.7523
-                  0.0625H1.36601C0.766593 0.0625 0.28125 0.547848 0.28125 1.14727V11.6183C0.28125 12.4157 0.92802
-                  13.0625 1.72545 13.0625H13.2812C14.0787 13.0625 14.7255 12.4157 14.7255
-                  11.6183V2.95199H13.2812ZM1.72545 11.6183V1.50671H10.3918V11.6172H1.72545V11.6183Z"
-                  class="fill-current" />
-                <path d="M8.94587 8.72754H3.16797V10.1717H8.94587V8.72754Z" class="fill-current" />
-                <path d="M8.94587 5.84082H3.16797V7.28503H8.94587V5.84082Z" class="fill-current" />
-                <path d="M8.94587 2.9502H3.16797V4.3944H8.94587V2.9502Z" class="fill-current" />
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1" width="15" height="14" viewBox="0 0 15 14"
+                  fill="none">
+                  <path
+                    d="M13.2812 2.95199V11.6183H11.837V1.14727C11.837 0.547848 11.3517 0.0625 10.7523 0.0625H1.36601C0.766593 0.0625 0.28125 0.547848 0.28125 1.14727V11.6183C0.28125 12.4157 0.92802 13.0625 1.72545 13.0625H13.2812C14.0787 13.0625 14.7255 12.4157 14.7255 11.6183V2.95199H13.2812ZM1.72545 11.6183V1.50671H10.3918V11.6172H1.72545V11.6183Z"
+                    class="fill-current" />
+                  <path d="M8.94587 8.72754H3.16797V10.1717H8.94587V8.72754Z" class="fill-current" />
+                  <path d="M8.94587 5.84082H3.16797V7.28503H8.94587V5.84082Z" class="fill-current" />
+                  <path d="M8.94587 2.9502H3.16797V4.3944H8.94587V2.9502Z" class="fill-current" />
                 </svg>
                 <?php elseif ($categorySlug == 'regulatory-insights'): ?>
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
-                  class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
-                  <path
-                    d="M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151 3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z"
-                    class="fill-current" />
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1" width="13" height="14" viewBox="0 0 13 14"
+                  fill="none">
+                  <path d=" M12.4646 5.07567H0.000976562V2.68595L6.23279 0.5L12.4646 2.68595V5.07567ZM1.38151
+                  3.78419H11.0841V3.58138L6.23279 1.87949L1.38151 3.58138V3.78419Z" fill="#444444" />
                   <path d="M2.76823 6.37402H1.3877V10.9105H2.76823V6.37402Z" class="fill-current" />
                   <path d="M11.0807 6.37402H9.7002V10.9105H11.0807V6.37402Z" class="fill-current" />
                   <path d="M8.31022 6.37402H6.92969V10.9105H8.31022V6.37402Z" class="fill-current" />
@@ -189,8 +187,8 @@
                   <path d="M12.4688 12.208H0V13.4995H12.4688V12.208Z" class="fill-current" />
                 </svg>
                 <?php elseif ($categorySlug == 'e-books--white-papers'): ?>
-                <svg width="11" height="14" viewBox="0 0 11 14" fill="none"
-                  class="max-lg:absolute max-lg:left-0 max-lg:top-1 ">
+                <svg class="max-lg:absolute max-lg:left-0 max-lg:top-1" width="11" height="14" viewBox="0 0 11 14"
+                  fill="none">
                   <path
                     d="M8.66595 12.0564H1.44361V1.94468H2.88829V0.5H1.38604C0.62052 0.5 0 1.12052 0 1.88604V12.0169C0 12.8358 0.664231 13.5 1.48306 13.5H8.62864C9.44747 13.5 10.1117 12.8358 10.1117 12.0169V6.27766H8.66702V12.0553L8.66595 12.0564Z"
                     class="fill-current" />
@@ -201,7 +199,7 @@
                 <?php endif; ?>
                 <span class="-mt-[2px]"><?php echo $category; ?></span>
               </span>
-              <h3 class="heading-5"><?php truncate(get_the_title(), 140); ?></h3>
+              <h3 class="heading-5 break-words"><?php truncate(get_the_title(), 140); ?></h3>
             </div>
             <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
 
@@ -218,25 +216,25 @@
               ?>
 
             <div
-              class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-ebooks.png"
-                class="w-full md:w-full h-[144px] md:h-full object-cover" />
+              class="w-full md:w-1/3 h-[144px] md:h-full flex items-center justify-center bg-ebooks-bg-thumb bg-cover bg-no-repeat bg-center">
+              <img src="<?php bloginfo('template_url') ?>/images/ebooks-bg-icon.svg" class="block" width="56"
+                height="66" />
             </div>
 
             <?php elseif ($categorySlug == 'regulatory-insights'): ?>
 
             <div
-              class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-regulatory-insights.png"
-                class="w-full md:w-full h-[144px] md:h-full object-cover" />
+              class="w-full md:w-1/3 h-[144px] md:h-full flex items-center justify-center bg-regulatory-bg-thumb bg-cover bg-no-repeat bg-center">
+              <img src="<?php bloginfo('template_url') ?>/images/regulatory-bg-icon.svg" class="block" width="66"
+                height="60" />
             </div>
 
             <?php elseif ($categorySlug == 'thought-leadership'): ?>
 
             <div
-              class="w-full md:w-1/3 h-[144px] md:h-full object-cover flex items-center justify-center bg-events-general">
-              <img src="<?php bloginfo('template_url') ?>/images/resources/thumb-thought-leadership.png"
-                class="w-full md:w-full h-[144px] md:h-full object-cover" />
+              class="w-full md:w-1/3 h-[144px] md:h-full flex items-center justify-center bg-thought-bg-thumb bg-cover bg-no-repeat bg-center">
+              <img src="<?php bloginfo('template_url') ?>/images/thought-bg-icon.svg" class="block" width="66"
+                height="66" />
             </div>
             <?php endif; ?>
 
