@@ -306,21 +306,22 @@ function getResources() {
 
 				if ($categorySlug == 'e-books--white-papers'):
 
-					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-ebooks-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/ebooks-bg-icon.svg" class="block" width="136" height="146" />';
 					$html .= '</div>';
 
 				elseif ($categorySlug == 'regulatory-insights'):
 
-					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-regulatory-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/regulatory-bg-icon.svg" class="block" width="106" height="100" />';
 					$html .= '</div>';
 				
 					elseif ($categorySlug == 'thought-leadership'):
 
-					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full h-[275px] md:h-[500px] lg:h-full object-cover"   />';
+					$html .= '<div class="relative w-full lg:w-1/2 flex items-center justify-center h-[275px] md:h-[500px] lg:h-full bg-thought-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+					$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/thought-bg-icon.svg" class="block" width="116" height="116"" class="block"   />';
 					$html .= '</div>';
+					
 
 				endif;
 
@@ -419,20 +420,20 @@ function getResources() {
 
 			if ($categorySlug == 'e-books--white-papers'):
 
-				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-ebooks.png" class="block w-full h-full object-cover"   />';
+				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-ebooks-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/ebooks-bg-icon.svg" class="block" width="76" height="86" />';
 				$html .= '</div>';
 
 			elseif ($categorySlug == 'regulatory-insights'):
 
-				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-regulatory-insights.png" class="block w-full h-full object-cover"   />';
+				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-regulatory-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/regulatory-bg-icon.svg" class="block" width="86" height="80" />';
 				$html .= '</div>';
 			
 				elseif ($categorySlug == 'thought-leadership'):
 
-				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-events-general bg-cover bg-no-repeat bg-center aspect-square">';
-				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/resources/thumb-thought-leadership.png" class="block w-full h-full object-cover"   />';
+				$html .= '<div class="relative w-full flex items-center justify-center h-[150px] md:h-[300px] lg:h-[320px] bg-thought-bg-thumb bg-cover bg-no-repeat bg-center aspect-square">';
+				$html .= '<img src="'. get_bloginfo('stylesheet_directory') .'/images/thought-bg-icon.svg" class="block" width="86" height="86" />';
 				$html .= '</div>';
 
 			endif;
