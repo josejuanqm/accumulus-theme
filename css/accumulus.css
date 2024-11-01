@@ -4340,6 +4340,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     min-height: 100%;
   }
 
+  .max-lg\:w-3\/4 {
+    width: 75%;
+  }
+
   .max-lg\:max-w-\[380px\] {
     max-width: 380px;
   }
@@ -4417,6 +4421,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .max-md\:w-full {
     width: 100%;
+  }
+
+  .max-md\:w-3\/4 {
+    width: 75%;
   }
 
   .max-md\:max-w-full {
@@ -5490,6 +5498,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:gap-s8 {
     gap: 4rem;
+  }
+
+  .lg\:gap-0 {
+    gap: 0px;
   }
 
   .lg\:gap-x-s10 {

@@ -1572,12 +1572,12 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
     <div
       class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 pb-s6 lg:pb-s12 md:pt-0">
       <?php foreach($benefits['benefit_list'] as $item) : ?>
-      <div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start lg:grid lg:grid-cols-4 gap-3">
-        <div class="w-40px md:col-span-1">
+      <div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start lg:grid lg:grid-cols-4 gap-3 lg:gap-0">
+        <div class="max-lg:w-40px md:col-span-1">
           <img class="w-[39px] md:w-[60px] aspect-square" src="<?php echo $item['icon']; ?>"
             alt="<?php echo $item['title']; ?>" />
         </div>
-        <div class="w-3/4 md:col-span-3 description-wysiwyg">
+        <div class="max-lg:w-3/4 md:col-span-3 description-wysiwyg">
           <h3 class="heading-7"><?php echo $item['title'] ?></h3>
         </div>
       </div>
