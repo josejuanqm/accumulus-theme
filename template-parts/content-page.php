@@ -386,7 +386,7 @@ foreach($website_sections as $row) :
         class="col-span-6 md:col-span-8 lg:col-span-8 col-start-2 md:col-start-3 lg:col-start-4 md:pt-s4 lg:pt-0 md:pb-s4 lg:pb-0 body-2">
         <?php echo $row['statistics_group']['resume_testimonial']; ?></p>
       <div
-        class="col-span-6 md:col-span-7 lg:col-span-4 md:col-start-6 lg:col-start-6 flex items-center justify-start pt-s3 md:pt-0">
+        class="col-span-6 md:col-span-7 lg:col-span-4 md:col-start-3 lg:col-start-6 flex items-center justify-start pt-s3 md:pt-0">
         <img class="max-w-[145px] md:max-w-full" src="<?php echo $row['statistics_group']['photo_testimonial']; ?>"
           alt="<?php echo $row['statistics_group']['name_testimonial']; ?>" />
         <div class="flex flex-col pl-s2 md:pl-s6 lg:pl-s2 md:pr-s3 lg:pr-0 gap-s2">
@@ -447,18 +447,17 @@ foreach($website_sections as $row) :
         <p class="body-2 col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2">
           <?php echo $row['how_it_works_group']['resume']; ?></p>
 
-        <div
-          class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 grid grid-cols-12 gap-x-s2 lg:gap-x-s10 gap-y-s7">
+        <div class="col-span-6 md:col-span-12 lg:col-span-11 lg:col-start-2 grid grid-cols-12 gap-x-s2 lg:gap-x-s10 gap-y-s7">
 
           <?php 
 						foreach($row['how_it_works_group']['how_it_works_list'] as $value): 
 					?>
           <div class="col-span-12 md:col-span-6">
-            <div class="grid grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
-              <div class="col-span-1 col-start-1 flex flex-col items-start">
-                <img class="min-w-[55px] md:min-w-[64px] aspect-square" src="<?php echo $value['icon'] ?>" alt="Icon" />
+            <div class="grid grid-cols-6 md:grid-cols-8 lg:grid-cols-6 gap-y-s2 lg:gap-y-s6 gap-x-s2">
+              <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-start">
+                <img class="w-100 max-w-[55px] md:max-w-[64px] aspect-square" src="<?php echo $value['icon'] ?>" alt="Icon" />
               </div>
-              <p class="col-span-5 lg:col-span-5 col-start-2 body-2 pl-s2 md:pl-0"><?php echo $value['description']; ?>
+              <p class="col-span-5 md:col-span-6 lg:col-span-5 body-2 pl-s2 md:pl-0"><?php echo $value['description']; ?>
               </p>
             </div>
           </div>
@@ -510,7 +509,7 @@ foreach($website_sections as $row) :
         <?php echo $row['testimonial_group']['testimonial']; ?>
       </h3>
       <div
-        class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-6 lg:col-start-6 lg:pl-s6 flex items-center justify-start">
+        class="col-span-6 md:col-span-7 lg:col-span-5 md:col-start-3 lg:col-start-6 lg:pl-s6 flex items-center justify-start">
         <img class="max-w-[145px] md:max-w-full" src="<?php echo $row['testimonial_group']['image']; ?>"
           alt="<?php echo $row['testimonial_group']['name']; ?>" />
         <div class="flex flex-col pl-s2 gap-s2">
@@ -1559,7 +1558,7 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
 
     <div class="grid grid-cols-12 gap-x-s2 gap-y-s4 pt-s10 md:pt-s12 md:pb-s6">
       <h2
-        class="flex flex-col md:grid md:grid-cols-12 md:grid-rows-2 col-span-12 md:gap-s2 heading-1 justify-start items-start">
+        class="flex flex-col md:grid md:grid-cols-12 col-span-12 lg:gap-s2 heading-1 justify-start items-start">
         <span class="col-span-12">
           <?php echo $benefits['title_first_line']; ?>
         </span>
@@ -1570,22 +1569,22 @@ if($row['acf_fc_layout'] == 'benefits_get_started_layout') :
     </div>
     <!-- Title -->
 
-
     <div
-      class="grid grid-cols-6 md:grid-cols-12 grid-rows-auto  gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 lg:pb-s12 md:pt-0">
-
-      <?php 
-				foreach($benefits['benefit_list'] as $item): 
-			?>
-      <img class="w-full md:w-[64px] lg:min-w-[64px] aspect-square self-end col-span-1"
-        src="<?php echo $item['icon'] ?>" alt="<?php echo $item['title'] ?>" />
-      <h3 class="heading-7 col-span-5 md:col-span-3"><?php echo $item['title'] ?></h3>
+      class="col-span-6 md:col-span-12 grid grid-cols-6 md:grid-cols-12 gap-x-s2 gap-y-s6 md:gap-y-s10 pt-s4 lg:pt-s6 pb-s6 lg:pb-s12 md:pt-0">
+      <?php foreach($benefits['benefit_list'] as $item) : ?>
+      <div class="col-span-6 md:col-span-4 lg:col-span-4 flex items-start lg:grid lg:grid-cols-4 gap-3">
+        <div class="w-40px md:col-span-1">
+          <img class="w-[39px] md:w-[60px] aspect-square" src="<?php echo $item['icon']; ?>"
+            alt="<?php echo $item['title']; ?>" />
+        </div>
+        <div class="w-3/4 md:col-span-3 description-wysiwyg">
+          <h3 class="heading-7"><?php echo $item['title'] ?></h3>
+        </div>
+      </div>
       <?php endforeach; ?>
-
       <p class="col-span-6 md:col-span-7 lg:col-span-6 md:col-start-6 lg:col-start-6 body-2">
         <?php echo $benefits['resume']; ?>
       </p>
-
     </div>
     <!-- Items -->
 
