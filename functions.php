@@ -1,4 +1,13 @@
 <?php
+
+function admin_bar(){
+
+  if(is_user_logged_in()){
+    add_filter( 'show_admin_bar', '__return_true' , 1000 );
+  }
+}
+add_action('init', 'admin_bar' );
+
 /**
 * accumulus-website functions and definitions
 *
@@ -200,8 +209,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/* Disable WordPress Admin Bar for all users */
-add_filter( 'show_admin_bar', '__return_false' );
 
 // enable svg upload
 function custom_mtypes( $m ){
