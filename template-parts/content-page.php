@@ -20,6 +20,7 @@ foreach($website_sections as $row) :
 <?php //if($row['acf_fc_layout'] == '') : ?>
 <?php //endif; ?>
 
+
 <!-- Main banner marquee -->
 
 <?php if($row['acf_fc_layout'] == 'main_banner_with_marquee_layout') : ?>

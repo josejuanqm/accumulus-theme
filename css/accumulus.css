@@ -1015,10 +1015,6 @@ video {
   grid-column: span 9 / span 9;
 }
 
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1323,14 +1319,6 @@ video {
   width: 100vw;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
 .\!min-w-\[190px\] {
   min-width: 190px !important;
 }
@@ -1371,16 +1359,16 @@ video {
   max-width: 465px;
 }
 
+.max-w-\[55px\] {
+  max-width: 55px;
+}
+
 .max-w-\[80px\] {
   max-width: 80px;
 }
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[55px\] {
-  max-width: 55px;
 }
 
 .flex-1 {
@@ -1454,18 +1442,6 @@ video {
 
 .grid-cols-\[auto_auto\] {
   grid-template-columns: auto auto;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-8 {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1841,6 +1817,10 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/case-for-change/bg-citations-mobile.png');
 }
 
+.bg-ebooks-bg-thumb {
+  background-image: url('/wp-content/themes/accumulus-website/images/ebooks-bg-thumb.png');
+}
+
 .bg-ebooks-general {
   background-image: url('/wp-content/themes/accumulus-website/images/thumb-ebooks.png');
 }
@@ -1885,20 +1865,16 @@ video {
   background-image: url('/wp-content/themes/accumulus-website/images/resources/bg-main-post.png');
 }
 
+.bg-thought-bg-thumb {
+  background-image: url('/wp-content/themes/accumulus-website/images/thought-bg-thumb.png');
+}
+
 .bg-thought-leadership-general {
   background-image: url('/wp-content/themes/accumulus-website/images/tumb-thought-leadership.png');
 }
 
 .bg-what-we-do-mobile {
   background-image: url('/wp-content/themes/accumulus-website/images/home/bg-what-we-do-mobile.png');
-}
-
-.bg-thought-bg-thumb {
-  background-image: url('/wp-content/themes/accumulus-website/images/thought-bg-thumb.png');
-}
-
-.bg-ebooks-bg-thumb {
-  background-image: url('/wp-content/themes/accumulus-website/images/ebooks-bg-thumb.png');
 }
 
 .bg-contain {
@@ -2208,6 +2184,10 @@ video {
 
 .pt-s9 {
   padding-top: 4.5rem;
+}
+
+.pt-s16 {
+  padding-top: 8rem;
 }
 
 .text-center {
@@ -4423,10 +4403,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     width: 100%;
   }
 
-  .max-md\:w-3\/4 {
-    width: 75%;
-  }
-
   .max-md\:max-w-full {
     max-width: 100%;
   }
@@ -4699,12 +4675,12 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     max-width: 195px;
   }
 
-  .md\:max-w-full {
-    max-width: 100%;
-  }
-
   .md\:max-w-\[64px\] {
     max-width: 64px;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
   }
 
   .md\:grid-flow-col {
@@ -5464,6 +5440,10 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
     justify-content: space-between;
   }
 
+  .lg\:gap-0 {
+    gap: 0px;
+  }
+
   .lg\:gap-8 {
     gap: 2rem;
   }
@@ -5498,10 +5478,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:gap-s8 {
     gap: 4rem;
-  }
-
-  .lg\:gap-0 {
-    gap: 0px;
   }
 
   .lg\:gap-x-s10 {
@@ -5796,22 +5772,6 @@ div.wpforms-container .wpforms-form .choices__list--dropdown .choices__item:last
 
   .lg\:pt-s9 {
     padding-top: 4.5rem;
-  }
-
-  .lg\:pr-3 {
-    padding-right: 0.75rem;
-  }
-
-  .lg\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .lg\:pr-5 {
-    padding-right: 1.25rem;
-  }
-
-  .lg\:pr-6 {
-    padding-right: 1.5rem;
   }
 
   .lg\:text-b2 {
